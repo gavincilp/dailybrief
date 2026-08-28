@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住建政策每日简报 · 2026年8月26日</title>
+<style>
+  :root{
+    --navy:#16375f; --navy-dark:#0f2a4a; --navy-light:#2a5a9e;
+    --warm:#faf7f0; --warm-card:#ffffff; --line:#e4dccb;
+    --ink:#2b2b2b; --ink-soft:#5a5a5a;
+    --red:#b3402a; --green:#2e7d5b; --gold:#9a7b2d; --blue:#2a5a9e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:var(--warm); color:var(--ink); line-height:1.7; font-size:14px;
+    padding:0 0 40px 0;
+  }
+  .container{max-width:980px; margin:0 auto; padding:0 20px;}
+
+  /* 页头 */
+  .header{
+    background:linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color:#fff; padding:36px 40px 30px; border-radius:0 0 14px 14px;
+  }
+  .header .badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+    color:#ffe9c9; font-size:12px; letter-spacing:2px; padding:3px 12px; border-radius:20px; margin-bottom:12px;}
+  .header h1{font-size:26px; font-weight:700; letter-spacing:1px;}
+  .header .date{font-size:14px; color:#cdd9ea; margin-top:6px;}
+  .header .sub{font-size:12px; color:#aebfd8; margin-top:10px;}
+
+  /* 统计摘要 */
+  .stats{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 8px;}
+  .stat{flex:1; min-width:150px; background:var(--warm-card); border:1px solid var(--line); border-left:4px solid var(--navy);
+    border-radius:8px; padding:14px 16px; text-align:center;}
+  .stat .num{font-size:26px; font-weight:700; color:var(--navy);}
+  .stat .lbl{font-size:12px; color:var(--ink-soft); margin-top:2px;}
+  .stat.orange{border-left-color:var(--gold);} .stat.orange .num{color:var(--gold);}
+  .stat.green{border-left-color:var(--green);} .stat.green .num{color:var(--green);}
+  .stat.red{border-left-color:var(--red);} .stat.red .num{color:var(--red);}
+
+  /* 章节标题 */
+  h2.sec{
+    font-size:18px; color:var(--navy); margin:34px 0 14px; padding:8px 0 8px 12px;
+    border-left:5px solid var(--navy); background:linear-gradient(90deg, rgba(22,55,95,.08), transparent);
+    letter-spacing:1px;
+  }
+  h3.sub{font-size:15px; color:var(--navy-dark); margin:18px 0 10px;}
+
+  /* 动态条目 */
+  .item{background:var(--warm-card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:14px;}
+  .item-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin-bottom:6px;}
+  .item-head .src{font-size:12px; color:#fff; background:var(--navy-light); padding:2px 10px; border-radius:4px; white-space:nowrap;}
+  .item-head .time{font-size:12px; color:var(--ink-soft); white-space:nowrap;}
+  .item h4{font-size:16px; color:var(--navy-dark); font-weight:700;}
+  .item h4 a{color:var(--navy); text-decoration:none; border-bottom:1px dashed var(--navy-light);}
+  .item h4 a:hover{color:var(--navy-light);}
+  .tags{margin:6px 0 8px; display:flex; flex-wrap:wrap; gap:6px;}
+  .tag{font-size:12px; padding:2px 10px; border-radius:14px; white-space:nowrap;}
+  .tag.first{background:#fdecea; color:var(--red); border:1px solid #eec4bb;}
+  .tag.multi{background:#fdf6e3; color:var(--gold); border:1px solid #e8d5a3;}
+  .tag.follow{background:#e8f1ec; color:var(--green); border:1px solid #bfd9ca;}
+  .tag.field{background:#edf2fa; color:var(--blue); border:1px solid #c8d6ee;}
+  .item .abs{font-size:13.5px; color:var(--ink); text-align:justify; margin-top:4px;}
+  .item .diff{font-size:13px; color:var(--ink-soft); background:#f7f3e8; border-radius:6px; padding:8px 12px; margin-top:8px;}
+  .item .diff b{color:var(--gold);}
+  .item .yt{font-size:13px; color:var(--navy-dark); background:#eef3fa; border-left:3px solid var(--navy); border-radius:6px; padding:8px 12px; margin-top:8px;}
+  .item .yt b{color:var(--navy);}
+
+  /* 表格 */
+  table{width:100%; border-collapse:collapse; background:var(--warm-card); font-size:13px; margin:10px 0 6px;}
+  th{background:var(--navy); color:#fff; padding:9px 10px; text-align:left; font-weight:600; border:1px solid var(--navy);}
+  td{padding:9px 10px; border:1px solid var(--line); vertical-align:top; color:var(--ink);}
+  tr:nth-child(even) td{background:#fbf8f1;}
+  td.topic{font-weight:600; color:var(--navy-dark);}
+
+  /* 评级 */
+  .rate-h{color:var(--red); font-weight:700;}
+  .rate-m{color:var(--gold); font-weight:700;}
+  .rate-l{color:var(--ink-soft); font-weight:700;}
+
+  /* 未获取来源 */
+  .miss{background:#fdf6f6; border:1px solid #ecd4cd; border-radius:10px; padding:16px 20px; margin-top:10px;}
+  .miss li{margin-left:18px; margin-bottom:4px; font-size:13px; color:var(--ink-soft);}
+
+  /* 页脚 */
+  .footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft); text-align:center;}
+  .note{font-size:12px; color:var(--ink-soft); background:#f7f3e8; border-radius:6px; padding:10px 14px; margin-top:14px;}
+  .local{background:#eef6f0; border:1px solid #bfd9ca; border-radius:10px; padding:14px 18px; margin-top:12px; font-size:13px;}
+  .local b{color:var(--green);}
+
+  @media print{
+    body{background:#fff;}
+    .header{border-radius:0;}
+    .item, table, .stat{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <span class="badge">住建政策动态追踪 · 每日简报</span>
+    <h1>住建政策每日简报</h1>
+    <div class="date">2026年8月26日（星期三）· 追踪系列第 2 期</div>
+    <div class="sub">信息采集范围：住房和城乡建设部官网 · 各省住建厅/住建委 · 重点城市住建部门（上海、杭州、宁波、苏州、青岛、济南、广州、深圳）· 并行子代理分组抓取（Agent A-F）</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 统计摘要 -->
+  <div class="stats">
+    <div class="stat"><div class="num">15</div><div class="lbl">今日收录（条）</div></div>
+    <div class="stat red"><div class="num">10</div><div class="lbl">【首次出现】</div></div>
+    <div class="stat orange"><div class="num">5</div><div class="lbl">【多次出现】</div></div>
+    <div class="stat green"><div class="num">0</div><div class="lbl">【延续跟进】</div></div>
+  </div>
+  <div class="note">说明：本期为追踪系列第 2 期。当日动态以新政策为主（延续跟进 0 条，即上一期收录主题当日无新进展）。采集采用 6 组并行子代理（住建部+国家级 / 重点省份组1 / 重点省份组2 / 重点城市组 / 其余省份 / 烟台基准），全部来源经 gov.cn 官网原文核实，链接已逐一校验。收录范围：政策、试点、规划、条例、专项行动、监管制度调整、经验清单等实质内容；职称评审、项目公示、具体项目配租配售公告等例行工作不收录。每条动态均附【与烟台现行政策对比】（以烟台市住建局官网及 2026-04《烟台市房地产政策集成工具箱》45 条等公开信息为基准，无法核实处标注"待核实"）。首次出现 = 政策主题首次进入追踪系列且检索确认此前无其他地区先行；多次出现 = 已有 2 个及以上地区推行同类政策（已注明先行地区及时间）；延续跟进 = 长期性政策的最新进展。与上一期（08-25）相比：本期新增 12 个新政策主题、5 个地区性政策推进（成都、上海、湖北、杭州、江苏），上一期收录的诉调对接、打非治违、好房子、儿童友好空间等主题当日无新动态。</div>
+
+  <!-- 重点动态 -->
+  <h2 class="sec">一、今日重点政策与动态（按对烟台住建工作重要程度排序）</h2>
+
+  <div class="item">
+    <div class="item-head"><span class="src">成都市住建局 · 市规自局 · 市财政局 · 成都住房公积金管理中心</span><span class="time">2026-08-25 印发（当日施行）</span></div>
+    <h4><a href="https://www.chengdu.gov.cn/cdsrmzf/c169603/2026-08/25/content_af74f69107664c3aa33715e30b01f14f.shtml" target="_blank">关于进一步优化促进房地产市场平稳健康发展相关政策措施的通知（成都房地产"十条"）</a></h4>
+    <div class="tags"><span class="tag multi">多次出现</span><span class="tag field">房地产调控 · 以旧换新</span></div>
+    <p class="abs">成都四部门联合发布十条举措，自 8 月 25 日起施行：公积金贷款最低首付降至 15%，并对 2026 年底前购买新建商品住房的贷款给予一年期 20% 利息补贴（最高 2.5 万元），购买绿建一星级以上住房公积金最高额度上浮 20%；鼓励区（市）县发放购房补贴、支持"拆旧建好"（城市更新实施主体"地随房走"开发"好房子"）；探索市场主体收购二手住房用作保租房、财政补贴支持"卖旧买新"；探索收购存量商办用作保租房及菜市场、养老、社区中心等公服配套设施；房票安置适用范围从住宅拓展至商业、办公用房等非住宅物业征收补偿；将房地产自媒体承销行为纳入统一监管。</p>
+    <div class="diff"><b>变化对比：</b>以旧换新/置换支持此前郑州（2022 年首创）、南京、杭州及上海"沪八条"（08-20）等已推行；成都本轮首次将"公积金最低首付 15%+一年期 20% 利息补贴（最高 2.5 万元）"组合落地，属本轮调控中少见的"首付+利息双重让利"，并将房票安置扩围至商办等非住宅、收购范围扩至存量商办，存量盘活维度更宽。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台 2026-04 工具箱：商贷首付已统一降至 15% 并"认房不认贷"，公积金对多子女、高层次人才、"好房子"等上浮额度，片区更新已推行房票安置，已鼓励收购存量房转保租，以旧换新按 2% 补贴最高 5 万元。差异：①成都新增"公积金贷款利息补贴（一年期 20%、最高 2.5 万）"，烟台暂无此补贴项；②成都房票安置扩至商办等非住宅征收补偿，烟台房票目前主要用于片区更新住宅（未扩至商办，待核实）；③成都收购存量商办转保租/公服设施，烟台收储以住宅为主。启示：可研究将公积金利息补贴与现有以旧换新补贴叠加，增强置换吸引力；并关注房票安置向非住宅征收场景扩展的可行性。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">上海市人民政府办公厅（沪府办发〔2026〕15号）</span><span class="time">2026-07-24 成文 · 08-20 公开发布</span></div>
+    <h4><a href="https://www.shanghai.gov.cn/nw12344/20260820/f584d873f87045148c7eccce1ae637b3.html" target="_blank">关于印发《上海市城市更新和住房发展"十五五"规划》的通知</a></h4>
+    <div class="tags"><span class="tag multi">多次出现</span><span class="tag field">城市更新 · 住房保障</span></div>
+    <p class="abs">上海首次将城市更新与住房发展两大领域合并编制"十五五"规划，围绕"惠民生、促发展、提品质、续文脉、优生态、强韧性"六维度部署 23 项重点任务。量化目标：到 2030 年实施老旧小区改造 3000—4000 万平方米、旧住房成套改造 120 万平方米，推动 150 栋商办楼宇更新，盘活低效产业用地 75 平方公里，新增保障性租赁住房 25—27 万套（间）；部署加快构建房地产发展新模式、推进融资协调"白名单"扩围增效等住房发展举措。</p>
+    <div class="diff"><b>变化对比：</b>四川（08-21）、湖北（08-22）、福建（08-24 解读）已陆续发布城市更新"十五五"规划；上海本轮首次将"城市更新+住房发展"合并编制，将保租房新增套数、老旧小区改造面积、商办楼宇更新栋数等纳入同一张规划蓝图，规划维度更综合。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台暂无公开的城市更新"十五五"规划（待核实），老旧小区改造以年度计划推进（2026 年牟平区非直供电小区改造 17 个、福山区电梯更新 155 部等）；烟台保障房明确"以存量转化为主、不再新增建设"。差异：上海以合并规划将老旧小区改造、旧住房成套改造、保租房新增套数全部量化并纳入政府目标体系。启示：烟台编制"十五五"城市更新规划时，可借鉴"更新+住房"合并编制思路，将电梯加装、老旧小区改造、保租房房源筹集等统一量化，形成可考核的五年任务清单。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">河南省住房和城乡建设厅</span><span class="time">2026-08-19 印发</span></div>
+    <h4><a href="https://hnjs.henan.gov.cn/2026/08-19/3400603.html" target="_blank">河南省住建厅关于贯彻落实《住房城乡建设部关于进一步加强建筑市场监管持续优化建筑市场环境的通知》的通知</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">建筑业 · 建筑市场监管</span></div>
+    <p class="abs">为落实住建部建市规〔2026〕2号文件，河南省五方面部署全省工作：严格建筑市场准入（1 年内变更注册单位 2 次及以上的专业技术人员再次申请注册须审核申报材料、注册轨迹公开展示并标注提醒）；加强招标评标监管（深化"评定分离"）；规范发包承包活动；防范工程款拖欠（进度款支付不低于已完成工程量 80%、结算审核最长不超 6 个月、全面推行工程款支付担保）；提升数智化监管（推进"人工智能+招标投标监管"）。属本轮全国较早落地住建部建筑市场监管新规的省份之一。</p>
+    <div class="diff"><b>要点：</b>住建部建市规〔2026〕2号（全国建筑市场监管新规）的地方落地样板，将注册人员轨迹公示、支付担保、进度款比例、AI 监管等要求系统化。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台执行住建部及山东省建筑市场监管制度（招投标依托公共资源交易平台监管、落实省《招标人主体责任清单 2025 年版》）。差异：河南将"注册轨迹公示提醒、进度款支付不低于 80%、支付担保全面推行、结算审核不超 6 个月"等细化成可操作清单，颗粒度明确。启示：烟台可对照住建部 2 号文及河南落地清单，梳理本地建筑市场监管短板（尤其是工程款支付担保覆盖率、进度款支付比例约束），出台市级实施细则。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">苏州市住房和城乡建设局</span><span class="time">2026-08-25 印发</span></div>
+    <h4><a href="https://zfcjj.suzhou.gov.cn/szszjj/tzgg/202608/014bf36d317343a5b5ab7ba4b988e9cb.shtml" target="_blank">关于暂停我市建筑业企业和监理企业信用评价有关事项的通知</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">建筑业 · 监管制度调整</span></div>
+    <p class="abs">为贯彻国办《关于建立企业信用状况综合评价体系的实施方案》（国办发〔2026〕8号）及国家发改委等 8 部门《招标投标领域信用管理暂行办法》（2026 年第 44 号令），苏州市决定自通知印发之日起暂停建筑业企业和监理企业信用评价工作；为平稳过渡，2026 年 10 月 31 日（含）前发布资格预审/招标公告的项目仍按原规定应用信用评价结果，之后发布的项目暂停信用评价结果应用。</p>
+    <div class="diff"><b>要点：</b>全国信用评价体系重构的市级先声：国家发改委等 8 部门第 44 号令《招标投标领域信用管理暂行办法》将于 2027 年 1 月 1 日施行，地方原有信用评价体系面临与国家新框架衔接调整，苏州率先暂停、设置过渡期。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>山东省及烟台招投标领域信用评价应用情况待核实（山东执行省公共资源交易信用管理办法及招投标主体责任清单）。差异：苏州直接暂停信用评价并按项目发布时间设置过渡期，属对国家信用新框架的提前响应。启示：烟台应关注发改委 44 号令施行前的制度衔接窗口，评估本地建筑业信用评价与"企业信用状况综合评价体系"的兼容性，避免新规施行后地方规则与国家框架冲突。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">湖北省住房和城乡建设厅（鄂建设规〔2026〕4号）</span><span class="time">2026-08-18 印发</span></div>
+    <h4><a href="https://zjt.hubei.gov.cn/zfxxgk/zc/gfxwj/202608/t20260819_5997334.shtml" target="_blank">关于进一步规范房屋建筑和市政基础设施工程结算工作的通知</a></h4>
+    <div class="tags"><span class="tag multi">多次出现</span><span class="tag field">建筑业 · 工程结算治理</span></div>
+    <p class="abs">从加强前期管理预防结算争议、规范结算审核行为、推行分类支付机制、完善争议解决与管理机制、加强监督管理五方面构建全流程结算规范：明确无争议价款先行确认并出具报告后 28 天内支付，严禁以政府审计、财政评审等事由拖延付款；全面推行施工过程结算，政府、国企投资项目过程结算支付比例不低于已完工程量 85%；同一项目原则上委托一家造价咨询机构，不得将"审减额"作为唯一考核导向。</p>
+    <div class="diff"><b>变化对比：</b>本主题系列内江西 08-23 已就《在全省房屋市政工程推行无争议价款结算支付的实施意见》征求意见（本系列 08-25 首次收录）；湖北 08-18 正式印发，时间更早、要求更硬——无争议价款 28 天内支付、过程结算比例 85%、审减额不作唯一考核，治理颗粒度更细。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台按国家及山东省造价与结算规定执行（政府投资项目结算审核时限按省要求），暂无市级专门工程结算治理文件（待核实）。差异：湖北明确"无争议价款先行支付 28 天"、过程结算 85% 硬性比例。启示：烟台可研究推行施工过程结算和无争议价款先行支付机制，重点解决政府投资项目"以审计拖延付款"问题，保障施工企业工程款及时支付、减少结算纠纷。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">杭州市城乡建设委员会</span><span class="time">2026-08-20 / 08-21 征求意见（截止 09-20）</span></div>
+    <h4><a href="https://cxjw.hangzhou.gov.cn/api-gateway/jpaas-jsurvey-web-server/front/dczj/showJsurveys.do?formId=f1b2a047fb454f69bc4ecb6991cf4d11" target="_blank">公开征求《关于支持城市更新项目审批的若干意见（试行）（征求意见稿）》意见的通知</a></h4>
+    <div class="tags"><span class="tag multi">多次出现</span><span class="tag field">城市更新 · 制度配套</span></div>
+    <p class="abs">配合《杭州市城市更新条例》立法（条例草案 08-07 已征求意见），杭州同步编制城市更新配套制度：①《支持城市更新项目审批的若干意见》围绕"前置联合审查—差异化审批—政策保障"构建审批支持机制，改善类项目适用简易审验路径（政府投资项目免立项、免办规划用地许可、取消施工图审查等），拆除重建类优化规划衔接、零星用地协议出让、开工"一件事"合并审批；②《既有建筑改造项目消防设计审查验收工作指引》明确改造项目遵循"先评估、后设计、再施工"、现行标准适用规则及五类不降低消防条件改造工程的清单化豁免管理。</p>
+    <div class="diff"><b>变化对比：</b>城市更新条例/立法主题（深圳 2021 年 3 月全国首部施行）继续深化：杭州在条例征求意见的同时推进审批、消防审验两项配套制度，形成"条例+配套"的 1+2 制度组合，将城市更新的差异化审批与消防审验豁免清单化，属本轮立法城市的配套创新。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台无城市更新地方立法，更新项目按常规工程建设项目审批流程办理，中心城区已试点"自主更新、原拆原建"（2026 年工具箱明确）。差异：杭州针对改善类/拆除重建类项目分别设计"简易审验/差异化审批"路径，并对既有建筑改造消防审验实行豁免清单。启示：烟台可先行出台城市更新项目审批简化措施（如改善类项目免办规划许可、取消施工图审查的条件清单），为"自主更新、原拆原建"试点项目开辟审批绿色通道，同时明确既有建筑改造消防审验适用规则。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">贵州省住房和城乡建设厅</span><span class="time">2026-08-04 成文 · 08-21 官网公开</span></div>
+    <h4><a href="https://zfcxjst.guizhou.gov.cn/zwgk/zcwj/zxwj/202608/t20260821_90765662.html" target="_blank">关于印发《关于规范全省住宅小区公共收益管理的指导意见》的通知</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">物业管理</span></div>
+    <p class="abs">依据民法典及省物业管理条例，首次以省级文件明确住宅小区公共收益范围（停车、广告、场地使用费、快递柜等九类）及"收益归全体业主所有"原则，对业主委员会、物业管理委员会、物业服务人等管理人的职责、账目公示、财务审计作出系统规范，为公共收益"看得见、管得住"提供省级制度依据。</p>
+    <div class="diff"><b>要点：</b>省级层面系统规范住宅小区公共收益管理的制度性文件，明确九类收益范围+归全体业主+公示审计闭环，弥补物业管理领域公共收益监管的制度空白。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台物业公共收益管理按《民法典》及《山东省物业管理条例》执行，业主共有部分收益归业主共有、账目定期公示；烟台推行"幸福信托制"物业（黄渤海新区试点、目标覆盖 300 个小区）已内含公共收益透明化机制。差异：贵州以省级专门文件将公共收益范围、管理人职责、审计要求清单化。启示：烟台可结合"幸福信托制"物业推广，出台市级公共收益管理操作细则（明确收益类型、公示频次、审计要求），把信托制下的公共收益监管做实。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">上海市住房和城乡建设管理委员会</span><span class="time">2026-08-25 发布</span></div>
+    <h4><a href="https://zjw.sh.gov.cn/gsgg/20260825/3af2d9611144437a9b30c5ca297dc7da.html" target="_blank">新型建设工程材料推广指引目录（1.0）</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">绿色低碳 · 建筑业</span></div>
+    <p class="abs">上海公布新型建设工程材料推广指引目录（1.0），分绿色低碳无机胶凝材料、预制混凝土构件、墙体材料、保温（隔声）系统部件、防水材料五大类，逐类明确推广方向，并分别给出"导向性指标（高于国家标准）"与"基础性指标（符合国家标准）"两级指标体系，引导低碳固碳、装配式、高性能保温隔声防水等新型建材推广应用，目录将在委门户网站动态更新。</p>
+    <div class="diff"><b>要点：</b>以"推广目录+两级指标"方式引导新型建材应用，将绿色建材推广从鼓励性宣导升级为可对照、可考核的指标目录。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台执行国家和山东省绿色建材推广政策（省绿色建材产品认证推广应用要求），暂无市级新型建材推广目录（待核实）。差异：上海以两级指标（导向性/基础性）明确各类新型建材的具体性能门槛。启示：烟台可结合装配式建筑、超低能耗建筑推广，研究发布市级新型建材推广指引，为绿色建材应用提供量化对照标准。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">浙江省住房和城乡建设厅（浙建〔2026〕7号）</span><span class="time">2026-08-20 印发 · 09-21 施行</span></div>
+    <h4><a href="https://jst.zj.gov.cn/col/col1229159239/art/2026/art_8833a90f35d34fdcbb43f78d9e8331f0.html" target="_blank">关于印发《浙江省既有公共建筑节能改造重点项目管理办法（试行）》的通知</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">绿色低碳 · 建筑节能</span></div>
+    <p class="abs">为推进城乡建设绿色低碳转型，规范既有公共建筑节能改造重点项目申报、实施与验收管理：明确改造面积原则上不低于 1 万平方米、综合节能率原则上不低于 15%、单位面积改造投资不少于 80 元/平方米等入库条件，规定重点项目库动态管理、验收复核及退出机制，符合条件的项目可由省建筑业碳达峰碳中和奖补资金支持。</p>
+    <div class="diff"><b>要点：</b>将既有公建节能改造"项目化、库化、奖补化"管理，明确量化入库门槛与省级碳达峰碳中和奖补挂钩，属绿色低碳转型的制度化推进。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台既有建筑节能改造主要按山东省既有建筑能效提升部署推进，暂无市级重点项目库与专项奖补（待核实）。差异：浙江设置面积、节能率、投资强度三项硬性入库条件，并与省级奖补资金挂钩。启示：烟台可研究建立既有建筑节能改造项目储备库，明确改造标准与资金支持路径，争取中央及省级绿色低碳奖补资金。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">江苏省住房和城乡建设厅（苏建规字〔2026〕19号）</span><span class="time">2026-08-20 印发 · 10-01 施行</span></div>
+    <h4><a href="https://jsszfhcxjst.jiangsu.gov.cn/art/2026/8/20/art_91895_11818726.html" target="_blank">关于印发《江苏省建筑施工特种作业人员管理办法》的通知</a></h4>
+    <div class="tags"><span class="tag multi">多次出现</span><span class="tag field">工程质量安全</span></div>
+    <p class="abs">为落实《建筑施工特种作业人员管理规定》（住建部令第 60 号），江苏省对特种作业人员职业资格认定、从业及监督管理作出系统规范：明确省级委托设区市实施考核、培训管理、报名考核、证书延期复核与继续教育等要求，自 10 月 1 日起施行。</p>
+    <div class="diff"><b>变化对比：</b>本主题系列内安徽 08-21 已印发证书调整通知（9 月 1 日换发、9 月 20 日与应急部门证书互认）；江苏随后以省级规章性文件系统规范特种作业人员管理（委托设区市考核、延期复核继续教育），两省同期强化特种作业人员监管，反映住建部令 60 号后各省细则密集落地。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>山东省及烟台按住建部令第 60 号管理建筑施工特种作业人员（考核发证、持证上岗、延期复核），与应急管理部门证书互认机制待核实。差异：江苏明确"省级委托设区市实施考核"的组织方式。启示：烟台可关注省厅考核组织方式调整，强化特种作业人员培训、继续教育与持证动态核查，防范无证上岗。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">国家发展改革委（住房城乡建设部等 10 部门参会）</span><span class="time">2026-08-25 会议</span></div>
+    <h4><a href="https://www.ndrc.gov.cn/xwdt/xwfb/202608/t20260825_1407189.html" target="_blank">国家发展改革委召开"六网协同"协调推进工作会 研究"六张网"投融资机制和支持政策</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">城市更新 · 地下管网</span></div>
+    <p class="abs">国家发改委副主任岳修虎主持召开"六网协同"协调推进工作会，专题研究"六张网"（水网、新型电网、算力网、新一代通信网、城市地下管网、物流网）多元化投融资模式，分类细化财政、金融、投资、价格等支持政策。住房城乡建设部等 10 个部门有关司局负责同志参会，城市地下管网等重大基础设施工程投融资机制为研究重点。</p>
+    <div class="diff"><b>要点：</b>国家层面研究城市地下管网等"六张网"投融资支持政策，预示地下管网改造将获得财政、金融等专项政策支撑，对各地城市更新和地下管网建设具有前瞻信号意义。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台地下管网改造、海绵城市建设资金来源以财政投入、专项债和国企平台为主（具体结构待核实）。启示：烟台可密切关注"六张网"投融资政策落地，提前储备地下管网改造项目库，争取纳入国家支持盘子；结合城市更新"十五五"规划编制将管网改造投资需求清单化。</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><span class="src">住房城乡建设部（建设要闻）</span><span class="time">2026-08-24</span></div>
+    <h4><a href="https://www.mohurd.gov.cn/xinwen/gzdt/art/2026/art_bfc036537bab43c180d370026a2e81b3.html" target="_blank">建设项目开工"一件事"如何让企业轻装上阵？</a></h4>
+    <div class="tags"><span class="tag first">首次出现</span><span class="tag field">建筑业 · 营商环境</span></div>
+    <p class="abs">国务院"高效办成一件事"2025 年度第一批重点事项将"建设项目开工"纳入清单，多地推行集成审批改革。报道以上海为例：依托"一网通办"实现一次告知、一表申请、一口受理、并联审批，开工审批周期减半，已有 527 个项目享受改革红利，并推行 BIM 智能辅助审图，反映住建领域行政审批改革与营商环境优化的最新推进成效。</p>
+    <div class="diff"><b>要点：</b>住建领域行政审批改革的全国性部署成效（"开工一件事"集成审批+BIM 辅助审图），为地方工程建设项目审批制度改革提供对标样本。</div>
+    <div class="yt"><b>与烟台现行政策对比：</b>烟台已按国家及山东省部署推行工程建设项目审批制度改革（"一网通办"、并联审批、区域评估等），开工审批流程持续优化。差异：上海将开工事项集成"一件事"并引入 BIM 智能辅助审图，审批周期减半。启示：烟台可对标"开工一件事"集成模式，梳理施工许可前各环节的集成空间，探索 BIM 辅助审图等数字化手段，进一步压减开工审批时间。</div>
+  </div>
+
+  <!-- 速览 -->
+  <h3 class="sub">其他政策动态速览</h3>
+  <div class="item" style="padding:14px 18px;">
+    <ul style="list-style:none; font-size:13.5px; line-height:2;">
+      <li><b style="color:var(--navy);">[住建部]</b> <a href="https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2026/art_6af4ea70cbb04a6da90cde4b9fa51e57.html" target="_blank">就 6 项工程建设国家标准修订公开征求意见</a>（08-20，含《混凝土质量控制标准》《混凝土结构现场检测技术标准》《钢—混凝土组合桥梁技术标准》《重型工程结构和设备整体提升技术标准》《城市绿地设计标准》《墙体材料应用统一技术标准》，反馈截止 09-21）<span class="tag first" style="display:inline-block; margin-left:6px;">首次出现</span><br><span style="color:var(--navy-dark);font-size:13px;">与烟台对比：国家标准制修订属全国统一技术依据，烟台施工、检测、审图环节将按新国标执行，建议跟踪修订要点并做好宣贯准备。</span></li>
+      <li><b style="color:var(--navy);">[湖北]</b> <a href="https://www.hubei.gov.cn/zwgk/hbyw/hbywqb/202608/t20260824_5999425.shtml" target="_blank">中共湖北省委、省政府印发《关于推动湖北城市高质量发展的实施意见》</a>（08-24 公开，成文 04-22）：以城市更新为抓手推动城市从外延扩张转向存量提质，提出优化现代化城市体系、分类推进以县城为重要载体的城镇化等部署，到 2035 年现代化人民城市基本建成<span class="tag first" style="display:inline-block; margin-left:6px;">首次出现</span><br><span style="color:var(--navy-dark);font-size:13px;">与烟台对比：省级城市高质量发展战略框架，烟台可关注"以县城为重要载体"的城镇化路径及城市更新政策导向，为市级城市高质量发展部署提供参考。</span></li>
+      <li><b style="color:var(--navy);">[河北]</b> <a href="https://zfcxjst.hebei.gov.cn/hbzjt/zcwj/tfwj/101783042048290.html" target="_blank">发布《钢丝网片硅凝胶复合保温板系统建筑构造》《被动式超低能耗建筑节能构造（二十四）》两项标准设计</a>（08-25，11-01 实施）<span class="tag first" style="display:inline-block; margin-left:6px;">首次出现</span><br><span style="color:var(--navy-dark);font-size:13px;">与烟台对比：被动式超低能耗建筑构造标准系列持续推进，烟台可关注相关构造做法，为超低能耗建筑示范项目提供技术参考。</span></li>
+    </ul>
+  </div>
+
+  <!-- 烟台本地动态 -->
+  <div class="local">
+    <b>【烟台本地动态】</b>据烟台市住建局官网（zjj.yantai.gov.cn）核查，近 2 日烟台住建领域无重大新政策发布，以行政公示类动态为主（8-25 建筑业企业资质注销公告、南站连续梁合龙工程进展、主城区控规批前公示等，均属例行/项目层面不收录）。当前唯一在推进的政策事项：<b>商品房预售资金监管改革试点《实施细则》处于征求意见阶段</b>，建议后续跟踪正式印发稿的落地时间与监管要点。
+  </div>
+
+  <!-- 政策追踪表 -->
+  <h2 class="sec">二、政策追踪表（多地同类政策对比）</h2>
+  <table>
+    <tr><th style="width:16%;">政策主题</th><th style="width:26%;">先行地区及时间</th><th style="width:26%;">今日新增地区</th><th>主要差异</th></tr>
+    <tr><td class="topic">楼市以旧换新/置换支持</td><td>郑州（2022 年首创）、南京、杭州等；上海"沪八条"（08-20）、北京（08-07）</td><td>成都（08-25，"十条"）</td><td>成都新增"公积金首付 15%+一年期 20% 利息补贴（最高 2.5 万）"组合，房票安置扩围至商办等非住宅、收购范围扩至存量商办；烟台为 2% 补贴最高 5 万元（2026-04 工具箱），无公积金利息补贴项</td></tr>
+    <tr><td class="topic">城市更新"十五五"规划</td><td>四川（08-21）、湖北（08-22）、福建（08-24 解读）</td><td>上海（08-20 公开）</td><td>上海首次将城市更新与住房发展合并编制，含保租房新增 25—27 万套、老旧小区改造 3000—4000 万㎡等量化目标；其余省份以更新任务量化为主</td></tr>
+    <tr><td class="topic">房屋市政工程结算治理（无争议价款结算）</td><td>江西（08-23 征求意见，本系列 08-25 首录）</td><td>湖北（08-18 正式印发，鄂建设规〔2026〕4号）</td><td>湖北为正式文件且更硬：无争议价款 28 天内支付、过程结算支付比例不低于 85%（政府国企项目）、审减额不作唯一考核；江西为征求意见稿</td></tr>
+    <tr><td class="topic">城市更新条例/立法配套</td><td>深圳（2021-03 全国首部施行）；杭州条例草案（08-07 征求意见）</td><td>杭州（08-20/21 两项配套制度征求意见）</td><td>杭州在条例立法同时推进"审批若干意见+消防审验指引"配套，改善类项目简易审验、五类改造消防豁免清单化</td></tr>
+    <tr><td class="topic">建筑施工特种作业人员管理</td><td>安徽（08-21 印发证书调整通知）</td><td>江苏（08-20 印发管理办法，苏建规字〔2026〕19号）</td><td>江苏以省级规章性文件系统规范（委托设区市考核、延期复核继续教育）；安徽聚焦证书换发与应急部门证书互认</td></tr>
+  </table>
+
+  <!-- 附录 -->
+  <h2 class="sec">三、附录：与烟台相关度评级及参考价值</h2>
+  <table>
+    <tr><th style="width:30%;">动态</th><th style="width:10%;">相关度</th><th>对烟台住建工作的参考价值</th></tr>
+    <tr><td>成都房地产"十条"新政</td><td class="rate-h">高</td><td>公积金利息补贴+以旧换新组合打法、房票安置扩围商办，为烟台优化置换支持政策提供直接参考</td></tr>
+    <tr><td>上海城市更新和住房发展"十五五"规划</td><td class="rate-h">高</td><td>"更新+住房"合并规划、量化目标体系，为烟台"十五五"城市更新规划编制提供模板</td></tr>
+    <tr><td>河南落实住建部建筑市场监管新规</td><td class="rate-h">高</td><td>住建部 2 号文省级落地清单（进度款 80%、支付担保、注册轨迹公示），烟台可对照梳理市级监管短板</td></tr>
+    <tr><td>苏州暂停建筑业企业信用评价</td><td class="rate-h">高</td><td>国家信用评价体系重构信号，烟台需评估本地建筑业信用评价与国办 8 号文、发改委 44 号令的衔接</td></tr>
+    <tr><td>湖北规范工程结算通知</td><td class="rate-h">高</td><td>无争议价款 28 天支付、过程结算 85% 硬性要求，为烟台治理工程款拖欠、结算纠纷提供机制样本</td></tr>
+    <tr><td>杭州城市更新配套制度</td><td class="rate-h">高</td><td>改善类项目简易审验、既有建筑改造消防豁免清单，可直接用于烟台"自主更新、原拆原建"试点审批提速</td></tr>
+    <tr><td>贵州住宅小区公共收益管理</td><td class="rate-h">高</td><td>公共收益九类范围+归全体业主+公示审计闭环，与烟台"幸福信托制"物业推广形成互补</td></tr>
+    <tr><td>上海新型建设工程材料推广目录</td><td class="rate-m">中</td><td>"推广目录+导向性/基础性两级指标"模式，可为烟台绿色建材应用提供量化对照标准</td></tr>
+    <tr><td>浙江既有公建节能改造重点项目管理办法</td><td class="rate-m">中</td><td>项目库+量化入库条件+省级奖补挂钩，为烟台既有建筑节能改造争取中央/省级资金提供路径</td></tr>
+    <tr><td>江苏建筑施工特种作业人员管理办法</td><td class="rate-m">中</td><td>同行业监管动态，烟台特种作业人员考核、延期复核、持证核查可横向比较</td></tr>
+    <tr><td>国家发改委"六网协同"投融资机制</td><td class="rate-m">中</td><td>地下管网等投融资支持政策前瞻，烟台可提前储备管网改造项目争取政策资金</td></tr>
+    <tr><td>住建部"开工一件事"改革</td><td class="rate-m">中</td><td>集成审批+BIM 辅助审图经验，供烟台工程建设项目审批制度改革对标</td></tr>
+    <tr><td>住建部 6 项国标修订征求意见 / 湖北城市高质量发展实施意见 / 河北被动房标准设计</td><td class="rate-l">低</td><td>技术标准与省级战略动态，供烟台相关领域跟踪参考</td></tr>
+  </table>
+
+  <!-- 未获取来源 -->
+  <h2 class="sec">四、未获取/未覆盖来源说明</h2>
+  <div class="miss">
+    <p style="margin-bottom:8px;"><b>说明：</b>本期采用 6 组并行子代理分组采集，以下来源本日未能获取到可核实的实质动态，或访问受限，特此注明（不视为"无动态"）：</p>
+    <ul>
+      <li>山东省住房和城乡建设厅官网（zjt.shandong.gov.cn）：本日 HTTP/HTTPS 访问均被拒（403），无法直接核实网页动态；经搜索引擎交叉检索，窗口内仅见职称评审申报通知（8-24）、科技计划立项公示（8-20）等例行内容，未发现实质政策，特此注明；</li>
+      <li>河北省住建厅标准设计公告、成都市政府门户正文页：curl 直连返回 412（WAF 反爬拦截），已改用浏览器解析核实原文，链接可用、标题一致；</li>
+      <li>宁波市住建局（zjw.ningbo.gov.cn）、青岛市住建局（sjw.qingdao.gov.cn）、济南市住建局（jncc.jinan.gov.cn）、深圳市住建局（zjj.sz.gov.cn）：窗口内仅常规公示/培训/配租事务性内容，未发现实质政策；深圳"全屋智能应用试点项目名单"（08-25）属试点名单公布类，未收录；</li>
+      <li>广州市住建局（zfcj.gz.gov.cn）：窗口内实质监管文件（实名制管理、工人工资分账等）发布于 08-17 之前，超出本期窗口未收录；市城管局《非许可类装饰装修废弃物管理办法》（08-24）属城管市容领域，不收录；</li>
+      <li>辽宁省住建厅（zjt.ln.gov.cn）、天津市住建委（zfcxjs.tj.gov.cn）、甘肃省住建厅（zjt.gansu.gov.cn）、广西住建厅（zjt.gxzf.gov.cn）、海南省住建厅（zjt.hainan.gov.cn）：窗口内官网新发布多为资质公示、职称评审、处罚通报等例行内容，无实质政策收录项；</li>
+      <li>青海省住建厅官网（zjt.qinghai.gov.cn）：访问失败，多篇政策原文 URL 未能核实（含绿色金融支持绿色建筑实施意见），本期未收录，待官网恢复后补录；</li>
+      <li>其余省份（黑龙江 8 月 10-11 日举牌验收制度、安全生产标准化细则，西藏物业服务办法 08-11、绿色建材措施 08-17，云南存量建设用地盘活意见 08-17 等）：发布/公开时间超出本期"08-20 之后"收录窗口且非本期新动态，未收录正文，供后续轮巡关注；其中云南意见为九部门联合发文（含住建厅）但发布于省自然资源厅官网，按"住建部门官网"来源约束亦不符合收录条件；</li>
+      <li>烟台市预售资金监管改革试点《实施细则》：正处于征求意见阶段，正式印发稿内容与落地时间待核实；</li>
+      <li>上一期待核实事项：石家庄市《绿色建筑发展条例》施行时间仍待核实（河北省住建厅官网未见进一步公开）。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    住建政策每日简报 · 2026-08-26 · 追踪系列第 2 期 · 由住建领域政策动态分析自动生成<br>
+    数据来源：住房和城乡建设部及各省市住建部门官网公开发布（gov.cn）· 以官网实际发布为准，信息不确定处已标注"待核实"
+  </div>
+
+</div>
+</body>
+</html>

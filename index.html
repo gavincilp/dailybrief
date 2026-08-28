@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住建政策每日简报 · 汇总索引</title>
+<style>
+  :root{
+    --navy:#16375f; --navy-dark:#0f2a4a; --navy-light:#2a5a9e;
+    --warm:#faf7f0; --warm-card:#ffffff; --line:#e4dccb;
+    --ink:#2b2b2b; --ink-soft:#5a5a5a;
+    --red:#b3402a; --green:#2e7d5b; --gold:#9a7b2d; --blue:#2a5a9e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:var(--warm); color:var(--ink); line-height:1.7; font-size:14px; padding-bottom:40px;
+  }
+  .container{max-width:920px; margin:0 auto; padding:0 20px;}
+
+  .header{
+    background:linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color:#fff; padding:30px 40px 26px; border-radius:0 0 14px 14px;
+  }
+  .header .badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+    color:#ffe9c9; font-size:12px; letter-spacing:2px; padding:3px 12px; border-radius:20px; margin-bottom:10px;}
+  .header h1{font-size:24px; font-weight:700; letter-spacing:1px;}
+  .header .date{font-size:13px; color:#cdd9ea; margin-top:6px;}
+  .header .sub{font-size:12px; color:#aebfd8; margin-top:8px;}
+
+  /* 工具栏：搜索 + 收放按钮 */
+  .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin:20px 0 6px; align-items:center;}
+  .search-box{flex:1; min-width:260px; position:relative;}
+  .search-box input{
+    width:100%; padding:10px 14px 10px 38px; font-size:14px; color:var(--ink);
+    border:1px solid var(--line); border-radius:8px; background:var(--warm-card);
+    outline:none; transition:border .2s;
+  }
+  .search-box input:focus{border-color:var(--navy-light); box-shadow:0 0 0 2px rgba(42,90,158,.12);}
+  .search-box .icon{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--ink-soft); font-size:15px; pointer-events:none;}
+  .btn{
+    padding:9px 16px; font-size:13px; border-radius:8px; cursor:pointer; border:1px solid var(--navy-light);
+    background:var(--warm-card); color:var(--navy); transition:background .2s;
+  }
+  .btn:hover{background:var(--navy); color:#fff;}
+  .hint{font-size:12px; color:var(--ink-soft); margin:4px 2px 14px;}
+
+  /* 日期分组 */
+  details.day-group{
+    background:var(--warm-card); border:1px solid var(--line); border-radius:10px;
+    margin-bottom:12px; overflow:hidden;
+  }
+  details.day-group summary{
+    list-style:none; cursor:pointer; padding:14px 18px; display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+    background:linear-gradient(90deg, rgba(22,55,95,.06), transparent); user-select:none;
+  }
+  details.day-group summary::-webkit-details-marker{display:none;}
+  details.day-group summary .arrow{color:var(--navy); font-size:12px; transition:transform .2s; display:inline-block;}
+  details.day-group[open] summary .arrow{transform:rotate(90deg);}
+  details.day-group summary .d{font-size:16px; font-weight:700; color:var(--navy-dark);}
+  details.day-group summary .m{font-size:12px; color:var(--ink-soft); background:#f7f3e8; border:1px solid var(--line);
+    padding:2px 10px; border-radius:14px;}
+  details.day-group summary .cnt{font-size:12px; color:var(--blue); margin-left:auto; white-space:nowrap;}
+  .group-body{padding:4px 18px 14px;}
+
+  /* 条目 */
+  .entry{
+    border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin-top:10px;
+    background:#fffdf8; transition:background .2s;
+  }
+  .entry:hover{background:#fbf7ee;}
+  .entry .t{font-size:14.5px; font-weight:700; color:var(--navy-dark);}
+  .entry .t a{color:var(--navy); text-decoration:none;}
+  .entry .t a:hover{text-decoration:underline;}
+  .entry .meta{font-size:12px; color:var(--ink-soft); margin-top:3px;}
+  .entry .meta b{color:var(--navy-light);}
+  .entry .abs{font-size:13px; color:var(--ink); margin-top:6px; text-align:justify;}
+  .entry .tags{margin-top:6px;}
+  .tag{display:inline-block; font-size:11.5px; padding:1px 9px; border-radius:12px; margin-right:6px;}
+  .tag.f{background:#fdecea; color:var(--red); border:1px solid #eec4bb;}
+  .tag.m{background:#fdf6e3; color:var(--gold); border:1px solid #e8d5a3;}
+  .tag.l{background:#e8f1ec; color:var(--green); border:1px solid #bfd9ca;}
+
+  .no-result{display:none; text-align:center; padding:40px 0; color:var(--ink-soft); font-size:14px;}
+
+  .footer{margin-top:26px; padding-top:16px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft); text-align:center;}
+  @media print{ body{background:#fff;} .toolbar{display:none;} }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <span class="badge">住建政策动态追踪 · 简报汇总</span>
+    <h1>住建政策每日简报 · 汇总索引</h1>
+    <div class="date">共收录 <span id="totalIssue">4</span> 期简报 · 覆盖全国住建部及各省市住建部门官网政策动态 · 更新于 2026-08-28</div>
+    <div class="sub">点击条目打开对应简报 · 支持按日期收放、按标题/内容关键字搜索</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="icon">🔍</span>
+      <input id="q" type="text" placeholder="搜索：日期 / 标题 / 政策主题 / 领域 / 标签…" autocomplete="off">
+    </div>
+    <button class="btn" onclick="setAll(true)">全部展开</button>
+    <button class="btn" onclick="setAll(false)">全部折叠</button>
+  </div>
+  <div class="hint" id="hint">共 <span id="visibleCount">4</span> 期 · 输入关键字实时过滤，搜索时自动展开命中分组</div>
+
+  <!-- 按日期分组（新期在上） -->
+  <details class="day-group" open>
+    <summary>
+      <span class="arrow">▶</span>
+      <span class="d">2026-08-28（周五）</span>
+      <span class="m">第 4 期</span>
+      <span class="cnt">收录 23 条 · 首次 11 · 多次 9 · 延续 3</span>
+    </summary>
+    <div class="group-body">
+      <div class="entry" data-search="2026-08-28 住建动态简报 第4期 首次出现 11 多次出现 9 延续跟进 3 湖北城市更新用地支持 鄂自然资发 山东招投标监管 暗标评审 浙江青年安居 泰州共有产权 广西三板 预制楼梯板 贵州保障房租赁合同 吉林城市更新十五五规划 黑龙江质量信息公示 举牌验收 湖南消防审验机构 安徽消防审验 浙江施工合同范本 陕西城市更新贷 贵州维修资金 内蒙古物业退出 辽宁物业招投标 四川绿建标准 深圳废止奖励 上海物业治理 广东地铁装配 广州合同检查 青海计价依据 海南审查要点 西藏绿建材 城市更新 招投标监管 住房保障 装配式建筑 物业管理 消防审验 绿色建筑 建筑业 工程造价 容积率 自主更新">
+        <div class="t"><a href="住建动态简报_2026-08-28.html" target="_blank">住建动态简报_2026-08-28.html</a></div>
+        <div class="meta">2026-08-28（周五）· <b>第 4 期</b> · 收录 <b>23</b> 条（首次 11 / 多次 9 / 延续 3）</div>
+        <div class="abs">今日重点：湖北城市更新用地支持 21 条（容积率豁免、带押改造"四联办"、危旧房自主更新——直接对标烟台原拆原建试点）、山东省厅招投标监管服务通知（暗标评审全省强制，烟台直接适用）、浙江"青年安居"指导意见征求意见、泰州共有产权新政（取消户籍收入限制）、广西"三板"应用比例≥60%、贵州保障房租赁合同示范文本、吉林城市更新"十五五"规划、黑龙江质量信息公示+举牌验收（补录）、湖南/安徽消防审验制度、内蒙古物业退出办法、深圳废止建筑业稳增长奖励等；每条动态含【与烟台现行政策对比】。</div>
+        <div class="tags">
+          <span class="tag f">首次出现 11 条</span>
+          <span class="tag m">多次出现 9 条</span>
+          <span class="tag l">延续跟进 3 条</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="day-group">
+    <summary>
+      <span class="arrow">▶</span>
+      <span class="d">2026-08-27（周四）</span>
+      <span class="m">第 3 期</span>
+      <span class="cnt">收录 15 条 · 首次 9 · 多次 4 · 延续 2</span>
+    </summary>
+    <div class="group-body">
+      <div class="entry" data-search="2026-08-27 住建动态简报 第3期 首次出现 9 多次出现 4 延续跟进 2 山东小城镇创新提升 安徽建筑业高质量发展 倪虹调研城市更新 上海二手住房收购 广州模块化建筑监理 内蒙古前期物业招投标 青岛施工合同范本 黑龙江安全标准化 青海农房抗震 福建安责险 浙江计价依据 山西概算定额 宁夏消防手册 杭州消火栓导则 吉林消防指南 村镇建设 建筑业 房地产调控 城市更新 物业管理 质量安全 绿色低碳 造价 消防">
+        <div class="t"><a href="住建动态简报_2026-08-27.html" target="_blank">住建动态简报_2026-08-27.html</a></div>
+        <div class="meta">2026-08-27（周四）· <b>第 3 期</b> · 收录 <b>15</b> 条（首次 9 / 多次 4 / 延续 2）</div>
+        <div class="abs">今日重点：山东省12部门小城镇创新提升行动意见（直接覆盖烟台）、安徽建筑业高质量发展征求意见（政府项目禁垫资、进度款85%）、住建部部长倪虹调研城市更新（鼓励地方立法+多元投融资）、上海中心城区全面推进二手住房收购（以旧换新落地细化）、广州模块化建筑监理指引、内蒙古前期物业招投标办法、青海农房抗震试点等；每条动态含【与烟台现行政策对比】。</div>
+        <div class="tags">
+          <span class="tag f">首次出现 9 条</span>
+          <span class="tag m">多次出现 4 条</span>
+          <span class="tag l">延续跟进 2 条</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="day-group">
+    <summary>
+      <span class="arrow">▶</span>
+      <span class="d">2026-08-26（周三）</span>
+      <span class="m">第 2 期</span>
+      <span class="cnt">收录 15 条 · 首次 10 · 多次 5 · 延续 0</span>
+    </summary>
+    <div class="group-body">
+      <div class="entry" data-search="2026-08-26 住建动态简报 第2期 首次出现 10 多次出现 5 延续跟进 0 成都房地产十条 上海城市更新住房发展十五五规划 河南建筑市场监管 苏州暂停信用评价 湖北工程结算 杭州城市更新配套 贵州公共收益 上海新型建材目录 浙江节能改造 江苏特种作业 六网协同 开工一件事 国标征求意见 湖北城市高质量发展 河北被动房 房地产调控 建筑业 城市更新 物业管理 绿色低碳 工程质量安全 招投标监管 建筑市场监管 工程结算 以旧换新 房票安置 公共收益 特种作业 信用评价 地下管网">
+        <div class="t"><a href="住建动态简报_2026-08-26.html" target="_blank">住建动态简报_2026-08-26.html</a></div>
+        <div class="meta">2026-08-26（周三）· <b>第 2 期</b> · 收录 <b>15</b> 条（首次 10 / 多次 5 / 延续 0）</div>
+        <div class="abs">今日重点：成都房地产"十条"新政（公积金首付15%+20%利息补贴、房票安置扩围商办）、上海城市更新和住房发展"十五五"规划、河南落实住建部建筑市场监管新规、苏州暂停建筑业企业信用评价（国家信用框架重构信号）、湖北工程结算治理（无争议价款28天支付）、杭州城市更新配套制度、贵州住宅小区公共收益管理等；每条动态含【与烟台现行政策对比】。</div>
+        <div class="tags">
+          <span class="tag f">首次出现 10 条</span>
+          <span class="tag m">多次出现 5 条</span>
+          <span class="tag l">延续跟进 0 条</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="day-group">
+    <summary>
+      <span class="arrow">▶</span>
+      <span class="d">2026-08-25（周二）</span>
+      <span class="m">第 1 期</span>
+      <span class="cnt">收录 20 条 · 首次 8 · 多次 10 · 延续 2</span>
+    </summary>
+    <div class="group-body">
+      <div class="entry" data-search="2026-08-25 住建动态简报 第1期 首次出现 8 多次出现 10 延续跟进 2 住建部 诉调对接 上海沪八条 江苏金融支持城市更新 杭州城市更新条例 四川湖北城市更新十五五规划 湖南存量房交易 四川预看房 广东打非治违 福州业委会 连云港 北京房地产 广州好房子 山东招投标 儿童友好 襄阳老旧小区 江西业委会 江西无争议价款结算 安徽特种作业证书 湖南安许 物业管理 房地产调控 城市更新 工程质量安全 招投标监管 住房保障 好房子">
+        <div class="t"><a href="住建动态简报_2026-08-25.html" target="_blank">住建动态简报_2026-08-25.html</a></div>
+        <div class="meta">2026-08-25（周二）· <b>第 1 期</b> · 收录 <b>20</b> 条（首次 8 / 多次 10 / 延续 2）</div>
+        <div class="abs">今日重点：住建部+最高法深化"总对总"在线诉调对接（山东为 6 试点）、上海"沪八条"楼市新政、江苏金融支持城市更新 12 条、杭州城市更新条例（草案）征求意见、四川/湖北城市更新"十五五"规划、湖南存量房交易管理强化、四川住宅"预看房"试点、广东房屋市政"打非治违"、福州业委会指导规范等；每条动态含【与烟台现行政策对比】。</div>
+        <div class="tags">
+          <span class="tag f">首次出现 8 条</span>
+          <span class="tag m">多次出现 10 条</span>
+          <span class="tag l">延续跟进 2 条</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <div class="no-result" id="noResult">未找到匹配的简报，请尝试其他关键字。</div>
+
+  <div class="footer">
+    住建政策每日简报 · 汇总索引 · 本页自动维护，每次生成当日简报后同步更新<br>
+    数据来源：住房和城乡建设部及各省市住建部门官网公开发布（gov.cn）
+  </div>
+
+</div>
+
+<script>
+  var groups = document.querySelectorAll('details.day-group');
+
+  function setAll(open){
+    groups.forEach(function(g){ g.open = open; });
+  }
+
+  function doSearch(){
+    var kw = document.getElementById('q').value.trim().toLowerCase();
+    var visible = 0;
+    var anyVisible = false;
+    groups.forEach(function(g){
+      var entries = g.querySelectorAll('.entry');
+      var gShow = false;
+      entries.forEach(function(e){
+        var hit = !kw || (e.getAttribute('data-search') || '').toLowerCase().indexOf(kw) !== -1;
+        e.style.display = hit ? '' : 'none';
+        if(hit){ gShow = true; }
+      });
+      g.style.display = gShow ? '' : 'none';
+      if(kw && gShow){ g.open = true; }      // 搜索时自动展开命中分组
+      if(gShow){ visible++; anyVisible = true; }
+    });
+    document.getElementById('visibleCount').textContent = visible;
+    document.getElementById('noResult').style.display = anyVisible ? 'none' : 'block';
+  }
+
+  document.getElementById('q').addEventListener('input', doSearch);
+</script>
+</body>
+</html>
