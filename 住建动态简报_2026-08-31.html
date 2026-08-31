@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住建政策每日简报 · 2026-08-31（第7期）</title>
+<style>
+  :root{
+    --navy:#16375f; --navy-dark:#0f2a4a; --navy-light:#2a5a9e;
+    --warm:#faf7f0; --warm-card:#ffffff; --line:#e4dccb;
+    --ink:#2b2b2b; --ink-soft:#5a5a5a;
+    --red:#b3402a; --green:#2e7d5b; --gold:#9a7b2d; --blue:#2a5a9e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:var(--warm); color:var(--ink); line-height:1.75; font-size:14px; padding-bottom:40px;
+  }
+  .container{max-width:960px; margin:0 auto; padding:0 20px;}
+
+  .header{
+    background:linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color:#fff; padding:28px 40px 24px; border-radius:0 0 14px 14px;
+  }
+  .header .badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+    color:#ffe9c9; font-size:12px; letter-spacing:2px; padding:3px 12px; border-radius:20px; margin-bottom:10px;}
+  .header h1{font-size:23px; font-weight:700; letter-spacing:1px;}
+  .header .date{font-size:13px; color:#cdd9ea; margin-top:6px;}
+  .header .sub{font-size:12px; color:#aebfd8; margin-top:8px;}
+  .stats{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+  .stat{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:8px;
+    padding:6px 14px; font-size:13px;}
+  .stat b{font-size:17px; color:#ffe9c9; margin-right:4px;}
+
+  h2{
+    font-size:17px; color:var(--navy-dark); margin:26px 0 12px; padding-left:12px;
+    border-left:4px solid var(--navy-light); line-height:1.4;
+  }
+  .lead{font-size:13px; color:var(--ink-soft); margin-bottom:6px;}
+
+  .item{
+    background:var(--warm-card); border:1px solid var(--line); border-radius:10px;
+    padding:16px 20px; margin-bottom:14px;
+  }
+  .item h3{font-size:15.5px; color:var(--navy-dark); margin-bottom:6px;}
+  .item h3 .no{color:var(--navy-light); margin-right:6px; font-weight:700;}
+  .meta{font-size:12.5px; color:var(--ink-soft); margin-bottom:8px; line-height:1.9;}
+  .meta b{color:var(--navy-light);}
+  .meta a{color:var(--blue); text-decoration:none; word-break:break-all;}
+  .meta a:hover{text-decoration:underline;}
+  .field{display:inline-block; font-size:12px; color:var(--navy); background:#eef3fa; border:1px solid #c9d8ec;
+    padding:0 10px; border-radius:12px; margin-right:8px;}
+  .tags{margin:4px 0 8px;}
+  .tag{display:inline-block; font-size:12px; padding:1px 10px; border-radius:12px; margin-right:6px;}
+  .tag.f{background:#fdecea; color:var(--red); border:1px solid #eec4bb;}
+  .tag.m{background:#fdf6e3; color:var(--gold); border:1px solid #e8d5a3;}
+  .tag.l{background:#e8f1ec; color:var(--green); border:1px solid #bfd9ca;}
+  .abs{font-size:13.5px; margin:6px 0; text-align:justify;}
+  .cmp{
+    font-size:13px; background:#f7f3e8; border-left:3px solid var(--gold);
+    padding:8px 12px; margin-top:8px; border-radius:0 6px 6px 0; text-align:justify;
+  }
+  .cmp b{color:var(--navy-dark);}
+  .yt{
+    font-size:13px; background:#eef3fa; border-left:3px solid var(--navy-light);
+    padding:8px 12px; margin-top:8px; border-radius:0 6px 6px 0; text-align:justify;
+  }
+  .yt b{color:var(--navy-dark);}
+
+  table{width:100%; border-collapse:collapse; background:var(--warm-card); font-size:13px; margin-top:8px;}
+  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--navy); color:#fff; font-weight:600; font-size:12.5px;}
+  tr:nth-child(even) td{background:#fbf9f3;}
+
+  .appendix{background:var(--warm-card); border:1px solid var(--line); border-radius:10px; padding:14px 20px; margin-bottom:14px;}
+  .appendix table td{font-size:12.5px;}
+
+  .missing{background:#fdf6f2; border:1px solid #eed6c8; border-radius:10px; padding:14px 20px; margin-bottom:14px;}
+  .missing ul{margin:6px 0 0 20px;}
+  .missing li{font-size:12.5px; margin:4px 0; color:var(--ink);}
+  .missing li a{color:var(--blue); text-decoration:none; word-break:break-all;}
+
+  .footer{margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft); text-align:center;}
+  .note{font-size:12px; color:var(--ink-soft); background:#f5f0e4; border-radius:8px; padding:10px 14px; margin:12px 0;}
+  @media print{ body{background:#fff;} .header{border-radius:0;} }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <span class="badge">住建政策动态追踪 · 每日简报</span>
+    <h1>住建政策每日简报</h1>
+    <div class="date">2026-08-31（周一）· 第 7 期 · 面向烟台市住房和城乡建设局</div>
+    <div class="sub">来源：住房和城乡建设部及各省市住建部门官网（gov.cn）· 全部动态含【与烟台现行政策对比】· 6 组并行子代理采集</div>
+    <div class="stats">
+      <div class="stat">今日收录 <b>5</b> 条</div>
+      <div class="stat">首次出现 <b>4</b> 条</div>
+      <div class="stat">多次出现 <b>1</b> 条</div>
+      <div class="stat">延续跟进 <b>0</b> 条</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<h2>一、今日重点政策与动态（按对烟台住建工作重要程度排序）</h2>
+<p class="lead">本期（2026-08-31，第 7 期）窗口为 08-29~08-31，其中 08-29（周六）、08-30（周日）为周末，各部委、各省市住建官网基本不上新，08-31（周一）上午各站当日内容尚未上网，经 6 组并行子代理逐一核实，<b>窗口期内几乎无新增发布</b>。本期收录 5 条，均为 08-21~08-28 发布、此前各期因官网无法直访等原因<b>遗漏未收录的补录项</b>，集中于广西住建厅"十五五"规划三连发（住房发展/建筑业/城市更新）与湖南、河北两项质量安全制度动态。核心看点：①<b>广西住建厅一周内连发 3 部"十五五"规划征求意见</b>（住房发展 08-24、城市更新 08-21、建筑业 08-28），为本周省级规划密度最高的省份，其中《住房发展"十五五"规划》以"促消费"为主线并明确"卖旧买新"置换支持，与烟台以旧换新政策直接对标；②<b>湖南印发安全防护、文明施工措施费用使用管理通知</b>（湘建质〔2026〕80号），将措施费"计取-拨付-使用-监管"全流程制度化；③广西城市更新规划写入"探索原拆原建"并与湖北"自主更新 100 个"呼应，烟台原拆原建试点已先行一步。整体呈"周末空窗 + 广西规划集中补录"格局。</p>
+
+<!-- 1 广西住房发展规划 -->
+<div class="item">
+  <h3><span class="no">1.</span>广西壮族自治区住建厅公开征求《广西住房发展"十五五"规划》（公开征求意见稿）意见</h3>
+  <div class="meta">
+    <b>来源单位：</b>广西壮族自治区住房和城乡建设厅　<b>发布时间：</b>2026-08-24（意见反馈截至 2026-09-22）　<b>领域：</b><span class="field">住房保障 / 房地产调控</span>
+    <br><b>原文链接：</b><a href="http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28068165.shtml" target="_blank">http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28068165.shtml</a>
+  </div>
+  <div class="tags"><span class="tag f">首次出现</span><span class="tag l">补录</span></div>
+  <div class="abs">广西首个住房发展"十五五"专项规划（征求意见稿），依据《全国城镇住房发展"十五五"规划》等编制，提出加快构建房地产发展新模式、推动房地产高质量发展。规划以"促消费"为主线：加力促进商品住房消费——持续开展"寄情山水住广西""好房子·悦生活"系列促消费活动，搭建"线下展销+线上直播"联动展销平台，推广旅居康养类优质房源，促进"商文旅体健居"融合消费；优化商品住房销售定价机制、降低购房交易成本，支持二手房交易，<b>鼓励住房梯度消费，完善"卖小买大""卖旧买新"配套支持政策，畅通住房置换链条</b>；深化房地产"白名单"制度扩围增效、常态化运行，督促金融机构"应贷尽贷""快审快贷"；住房保障延续公租房、保障性租赁住房、配售型保障性住房为主体的供应体系（"十四五"期间广西新增筹集保租房 22.57 万套（间）、配售型保障房 1 万套、发放租赁补贴 4.7 万户）。</div>
+  <div class="cmp"><b>【变化对比】</b>住房发展"十五五"规划系本系列首次出现的主题（此前各省多为"城市更新/建筑业"规划，住房发展专项规划少见）；广西特色在于将"促消费"作为住房规划主线（旅居康养、商文旅体健居融合），并将"白名单常态化扩围"与"卖旧买新置换链条"系统写入省级规划，属规划层面的消费支持集成。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台促消费政策体系已较成熟（2026 年"工具箱"45 条：以旧换新最高补 5 万元、群团购券 2 万/张、多孩定向券、首付 15% 等），且以旧换新已含"收旧换新/卖旧买新"双路径——与广西"卖旧买新"方向一致，烟台执行层面走在前；②广西将"优化销售定价机制、降低交易成本、畅通置换链条"上升为省级规划目标，烟台可对照检查本地置换链条（存量房网签"一套合同用到底"、税费减免）是否已系统集成进"十五五"住房规划；③"白名单"常态化：烟台已有 143 个项目纳入白名单、授信 182.8 亿元，与广西方向一致，可关注"应进尽进、常态化运行"机制细化；④旅居康养、跨区域直播展销等广西特色打法，烟台可结合滨海宜居城市特点研究适用性（如文旅康养地产专项促消费）。</div>
+</div>
+
+<!-- 2 广西建筑业规划 -->
+<div class="item">
+  <h3><span class="no">2.</span>广西壮族自治区住建厅公开征求《广西建筑业高质量发展"十五五"规划》（公开征求意见稿）意见</h3>
+  <div class="meta">
+    <b>来源单位：</b>广西壮族自治区住房和城乡建设厅　<b>发布时间：</b>2026-08-28（意见反馈截至 2026-09-07）　<b>领域：</b><span class="field">建筑业（高质量发展）</span>
+    <br><b>原文链接：</b><a href="http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28082213.shtml" target="_blank">http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28082213.shtml</a>
+  </div>
+  <div class="tags"><span class="tag f">首次出现</span><span class="tag l">补录</span></div>
+  <div class="abs">广西建筑业"十五五"规划（征求意见稿），明确十大任务：推动产业提质升级、规范建筑市场秩序、提升新型建筑工业化水平、全面推行绿色建造、大力发展智能建造、创新生产组织模式、打造现代建筑产业工人队伍、确保工程质量安全管控贯穿全生命周期、推动工程勘察设计行业高质量发展、强化住建领域防灾减灾。提出<b>构建以"全链条协同"为核心的建筑产业互联网平台，以装配式建筑为载体推进建筑工业化，重点推动智能化建筑机器人应用，培育智能建造产业体系</b>。规划直面问题：部分建设单位拖欠工程款、基层监督机构弱化（人员与能力"双短缺"）、信用评价缺乏全生命周期管理、智能建造核心技术自主可控不足、本土企业市场占有率低。"十四五"成就：广西建筑业产值年均增速 4.8%、入统企业由 2087 家增至 3383 家（+62.1%）、特级资质企业由 14 家增至 19 家、实名制考勤覆盖率全国领先、农民工工资"一金七制度"合同上传率超 80%。</div>
+  <div class="cmp"><b>【变化对比】</b>建筑业"十五五"规划系本系列首次出现的主题（此前各期建筑业领域多为省级实施意见/专项行动）；广西首次以五年规划形式系统集成"智能建造（建筑机器人、产业互联网平台）+ 绿色建造 + 建筑工业化 + 质量安全全生命周期"十大任务，并将"工程款拖欠、信用评价短板、监管弱化"等痛点写入规划，属省级建筑业转型的纲领性部署。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台已遴选 50 家骨干建筑企业"一企一策"扶持、6 家入选省"齐鲁建造"品牌企业，7 月启动"人工智能辅助招投标"试点（覆盖招/投/开评/定标/监管 6 大环节 17 个场景）——在"AI+建筑"切入上烟台起步早；②广西"建筑产业互联网平台+建筑机器人"指向智能建造向施工环节延伸，烟台可评估从"AI 辅助招投标"向现场施工智能化（机器人、物联网、智慧工地）扩展的路径；③广西点名"建设单位拖欠工程款、信用评价缺乏全生命周期"——烟台可结合山东暗标评审、标后履约监管（第 4 期收录）等既有部署，完善工程款支付保障与建筑业企业信用全周期管理（本地物业信用办法烟建住房〔2022〕13号已到期，建筑业信用口径需按国家新框架衔接）；④装配式（烟台 2026 上半年新开工占比 58%）与绿色建造优势可纳入烟台"十五五"建筑业规划编制参照。</div>
+</div>
+
+<!-- 3 广西城市更新规划 -->
+<div class="item">
+  <h3><span class="no">3.</span>广西壮族自治区住建厅公开征求《广西城市更新"十五五"规划》（征求意见稿）意见</h3>
+  <div class="meta">
+    <b>来源单位：</b>广西壮族自治区住房和城乡建设厅　<b>发布时间：</b>2026-08-21（意见反馈截至 2026-09-19）　<b>领域：</b><span class="field">城市更新</span>
+    <br><b>原文链接：</b><a href="http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28064458.shtml" target="_blank">http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t28064458.shtml</a>
+  </div>
+  <div class="tags"><span class="tag m">多次出现</span><span class="tag l">补录</span></div>
+  <div class="abs">广西城市更新"十五五"规划（征求意见稿），贯彻落实《城市更新"十五五"规划》及《广西持续推进城市更新五年行动方案（2026—2030年）》编制。量化目标：<b>拟新开工改造城镇老旧小区 2000 个</b>，基本完成 2005 年以前建成且需改造小区的改造任务；推进完整社区建设 250 个、一刻钟便民生活圈 350 个；<b>新增实施城市危旧房改造 4 万套、改造城中村 30 个，基本消除 D 级危险住房安全隐患</b>，按"先危后旧"原则加快拆除改造 D 级危房，<b>鼓励产权人自主更新、探索原拆原建等模式</b>；新增划定公布历史文化街区 3 片、历史建筑 150 处；推动南宁站等老旧火车站与周边街区统筹更新，建立工业遗产分级分类保护名录；推进"人工智能+城市治理"，推广建筑机器人、"机器代人"，加快城市全域数字化转型。</div>
+  <div class="cmp"><b>【变化对比】</b>城市更新"十五五"规划系本系列已有主题（上海 08-20、四川 08-21、湖北 08-22、福建 08-24、吉林 08-25 等已陆续发布/征求意见）；广西量化指标含"危旧房 4 万套+城中村 30 个+基本消除 D 级危房隐患"，并将"探索原拆原建"写入省级规划，与湖北"自主更新 100 个项目"（第 6 期）形成省级呼应，反映"危旧房改造+原拆原建"成为多省城市更新规划标配。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台已出台自主更新"原拆原建"18 条支持政策（土地、规划、金融、民生四维度），首批确定芝罘区三勘大院、通世里 5-6 号 2 个项目（征求居民意愿、需 100% 同意），片区更新采用房票等货币化安置——推进深度领先于广西"探索原拆原建"表述；②广西"危旧房 4 万套、城中村 30 个、D 级危房清零"量化入规，烟台"十五五"已谋划城建重点项目 725 项（中心城区 69 个重点更新项目），可借鉴其"危房清零"量化考核与完成时限设定；③广西"历史文化街区 3 片+历史建筑 150 处"目标与烟台历史文化名城保护职责相关，可对照评估本地历史建筑名录与活化利用进度；④广西"AI+城市治理、建筑机器人"与烟台智能建造方向一致，可结合本地更新项目试点。</div>
+</div>
+
+<!-- 4 湖南安全文明施工费 -->
+<div class="item">
+  <h3><span class="no">4.</span>湖南省住建厅印发《关于进一步加强全省房屋市政工程安全防护、文明施工措施费用使用管理的通知》（湘建质〔2026〕80号）</h3>
+  <div class="meta">
+    <b>来源单位：</b>湖南省住房和城乡建设厅　<b>发布时间：</b>2026-08-19（发文；官网 08-27 公开）　<b>领域：</b><span class="field">质量安全（安全文明施工费管理）</span>
+    <br><b>原文链接：</b><a href="https://zjt.hunan.gov.cn/zjt/c101183/c101185/202608/t20260827_34051920.html" target="_blank">https://zjt.hunan.gov.cn/zjt/c101183/c101185/202608/t20260827_34051920.html</a>
+  </div>
+  <div class="tags"><span class="tag f">首次出现</span><span class="tag l">补录</span></div>
+  <div class="abs">湖南省住建厅以规范性文件（湘建质〔2026〕80号，信息时效期至 2031-08-31）进一步规范全省房屋市政工程安全防护、文明施工措施费用管理，明确费用<b>计取、拨付、使用和监管</b>各环节要求，保障施工现场安全文明施工投入足额、及时、专款落地，防止措施费被挤占挪用导致安全投入不足。属施工安全基础性制度的省级细化。</div>
+  <div class="cmp"><b>【变化对比】</b>安全防护、文明施工措施费管理系施工安全基础制度，各省均有计价依据规定；湖南以专门规范性文件将"计取-拨付-使用-监管"全流程固化，与第 3 期收录的福建"安责险费用并入安全文明施工费"（费用构成调整）形成"构成+管理"完整链条，反映省级层面对施工安全投入保障的监管颗粒度细化。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台工地扬尘治理（限建筑工地范围）执行"六个百分百"标准并出台《烟台市建设工程扬尘防治工作导则》，安全文明施工费按山东省计价依据计取，市级是否有专项"措施费使用管理"文件待核实；②湖南"计取-拨付-使用-监管"全流程管理可对照烟台检查措施费是否足额计取、专款专用，避免因费用不到位引发扬尘管控与安全防护投入不足；③结合福建安责险费用列支做法（第 3 期），烟台可完善本地安全文明施工费与安责险费用的衔接管理，确保安全投入"钱到位、用到位"。</div>
+</div>
+
+<!-- 5 河北高强混凝土规程 -->
+<div class="item">
+  <h3><span class="no">5.</span>河北省住建厅发布工程建设地方标准《高强混凝土强度检测技术规程》（2026 年第 48 号公告）</h3>
+  <div class="meta">
+    <b>来源单位：</b>河北省住房和城乡建设厅　<b>发布时间：</b>2026-08-25（自 2026-11-01 实施）　<b>领域：</b><span class="field">标准规范 / 质量安全</span>
+    <br><b>原文链接：</b><a href="https://zfcxjst.hebei.gov.cn/hbzjt/zcwj/gggs/101783042048784.html" target="_blank">https://zfcxjst.hebei.gov.cn/hbzjt/zcwj/gggs/101783042048784.html</a>
+  </div>
+  <div class="tags"><span class="tag f">首次出现</span><span class="tag l">补录</span></div>
+  <div class="abs">《高强混凝土强度检测技术规程》（DB13(J)/T8119-2026）经审查批准为河北省工程建设地方标准，自 2026-11-01 实施，原《高强混凝土强度检测技术规程》（DB13(J)/T 119-2011）同时废止。规程规范高强混凝土（高标号）强度检测方法与评定要求，是房屋建筑工程质量检测的重要技术依据，反映高标号混凝土质量控制标准更新趋势。</div>
+  <div class="cmp"><b>【变化对比】</b>工程建设地方标准发布为常态化批次动态；河北以新规程替代 2011 版，主要差异为检测方法、仪器设备与评定口径随行业技术进步更新，属标准迭代的常规节奏，本系列首次以"省级地方标准发布"建档。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台预拌混凝土质量监管（2026-02-11 印发加强房屋市政工程预拌混凝土质量监管通知）与工程质量检测以国家和山东省标准为基准，市级未见同类地方标准；②高强混凝土检测标准更新对高层、大跨结构的高标号混凝土质量控制有参考意义，烟台工程质量检测机构可关注同类标准修订动态，适时衔接山东省检测标准体系；③本条与烟台相关工作关联度较低，作为行业标准动态了解即可。</div>
+</div>
+
+<h2>二、政策追踪表（今日涉及的多地同类政策对比）</h2>
+<table>
+  <tr><th style="width:20%">政策主题</th><th style="width:27%">先行地区及时间</th><th style="width:23%">今日新增地区</th><th>主要差异</th></tr>
+  <tr><td>城市更新"十五五"规划</td><td>上海（08-20）、四川（08-21）、湖北（08-22 解读/08-28 正式印发）、福建（08-24）、吉林（08-25）等</td><td>广西（08-21 征求意见，本期补录）</td><td>广西量化目标：老旧小区 2000 个、完整社区 250 个、危旧房 4 万套、城中村 30 个、基本消除 D 级危房隐患、历史文化街区 3 片+历史建筑 150 处，并写入"探索原拆原建"</td></tr>
+  <tr><td>安全防护/文明施工措施费管理</td><td>福建（第 3 期收录：安责险费用并入安全文明施工费）</td><td>湖南（湘建质〔2026〕80号，08-19 成文）</td><td>湖南为费用"计取-拨付-使用-监管"全流程使用管理；福建为费用"构成调整"（安责险列支），两者配套成链</td></tr>
+  <tr><td>住房发展"十五五"规划</td><td>本系列首次出现（各省以城市更新/建筑业规划为主，住房发展专项规划较少见）</td><td>广西（08-24 征求意见）</td><td>以"促消费"为主线：旅居康养房源、"卖旧买新"置换链条、白名单常态化扩围，属规划层面消费支持集成</td></tr>
+  <tr><td>建筑业高质量发展"十五五"规划</td><td>本系列首次出现（此前建筑业领域多为实施意见/专项行动）</td><td>广西（08-28 征求意见）</td><td>十大任务系统集成：建筑产业互联网平台、装配式建筑工业化、建筑机器人、绿色建造、质量安全全生命周期</td></tr>
+</table>
+
+<h2>三、烟台基准观察（本期 Agent F 核实，不计入收录条数）</h2>
+<div class="note">
+<b>① 近 2-3 日动态：</b>烟台市住建局官网通知公告最新为 08-11《关于公布 2025 年度房地产开发企业信用等级评价结果的通知》，08-29~31 窗口内无新政发布；08-28 官网批量发布施工图审查机构资质认定、建筑业企业资质审查、安许审批、建造师注册、房企二级资质核准等日常行政许可公告（均属排除项）。<br>
+<b>② 待跟踪事项状态（5 项）：</b>1）预售资金监管改革试点《实施细则》（莱山/高新两区，07-28 至 08-05 征求意见）——截至 08-31 仍未见正式印发公告，全文仅见媒体解读、无 gov.cn 原文；2）《公租房管理办法》修订稿（08-03 至 08-11 征求意见，拟将稳定就业未落户常住人口纳入保障、户籍落户年限 3 年放宽至 1 年等）——未见正式印发；3）"幸福信托制"物业实施方案——已印发但无 gov.cn 官方全文，2026 年目标启动 300 个小区、上半年已成功推行 113 个；4）自主更新"原拆原建"18 条——无单独 gov.cn 原文，芝罘区三勘大院、通世里 5-6 号 2 个项目处征求居民意愿阶段（需 100% 同意）；5）以旧换新、购房补贴——近 2-3 日无调整，现行标准仍为补贴最高 5 万元（4/3 工具箱口径）。<br>
+<b>③ 民生热线披露（08-28，仅见媒体转载、无 gov.cn 原文）：</b>市住房保障和房产交易中心介绍住宅专项维修资金与公共收益管理：维修资金审查覆盖 1134 个小区；公共收益排查 841 个小区、发现 148 个问题小区、涉及资金 771 万元。<br>
+<b>④ 对照信号：</b>国家三部门建房规〔2026〕3号（08-28）要求预售资金全额监管+封顶预售+优先现房销售，烟台莱山/高新试点已先行（全额入账公积金专户+安居码+政银联动），需关注《实施细则》正式印发与试点扩面节奏。
+</div>
+
+<h2>四、附录：与烟台相关度评级及参考价值</h2>
+<div class="appendix">
+<table>
+  <tr><th style="width:34%">动态</th><th style="width:10%">相关度</th><th>对烟台住建工作的参考价值</th></tr>
+  <tr><td>1. 广西住房发展"十五五"规划（征求意见）</td><td><b>高</b></td><td>"卖旧买新"置换链条、白名单常态化、促消费集成打法，可直接对标烟台以旧换新与"十五五"住房规划编制</td></tr>
+  <tr><td>2. 广西建筑业"十五五"规划（征求意见）</td><td><b>高</b></td><td>智能建造（产业互联网平台、建筑机器人）延伸方向、工程款拖欠与信用全周期治理，供烟台建筑业转型参考</td></tr>
+  <tr><td>3. 广西城市更新"十五五"规划（征求意见）</td><td><b>高</b></td><td>危旧房/城中村量化入规、"D 级危房清零"考核、原拆原建省级写入，供烟台城市更新规划量化与考核参考</td></tr>
+  <tr><td>4. 湖南安全防护、文明施工措施费管理通知</td><td>中</td><td>措施费"计取-拨付-使用-监管"全流程规范，对照烟台扬尘治理与安全投入保障</td></tr>
+  <tr><td>5. 河北高强混凝土强度检测技术规程</td><td>低</td><td>行业标准迭代动态，供烟台检测机构了解衔接</td></tr>
+</table>
+</div>
+
+<h2>五、与最近一期（2026-08-30 第 6 期）对比</h2>
+<div class="note">
+<b>本期新增主题（首次出现，4 个）：</b>住房发展"十五五"规划（广西）、建筑业高质量发展"十五五"规划（广西）、安全防护/文明施工措施费用使用管理（湖南）、省级工程建设地方标准发布批次（河北高强混凝土检测规程）。均为 08-21~08-28 发布、此前因广西官网无法直访等原因遗漏的补录项。<br>
+<b>本期延续主题（有新进展，1 个）：</b>城市更新"十五五"规划——新增广西地区（08-21 征求意见），各省规划家族扩大至 7 个（上海、四川、湖北、福建、吉林、浙江、广西）。<br>
+<b>已无新动态主题：</b>"好房子"建设指南、商品住房销售制度（建房规〔2026〕3号）、湖南存量房交易监管、建筑业信用评价暂停（广西/苏州）、城市基础设施生命线安全工程、湖北楼盘"体检平台"、业主大会/业委会规范化、建设工程招投标监管、特种作业证书管理、合同专项检查、绿色建筑/装配式等——上述主题本期均无新发布。<br>
+<b>空窗说明：</b>本期窗口（08-29~31）恰逢周末+周一上午，部委及 31 省官网均无新增实质性政策发布（广东省住建厅 08-29 转发现房销售通知已计入第 6 期，不重复收录），属正常发布节奏，建议下期（09-01）关注各官网周一集中更新。
+</div>
+
+<h2>六、未获取来源清单</h2>
+<div class="missing">
+  <ul>
+    <li>山东省住建厅（<a href="https://zjt.shandong.gov.cn" target="_blank">zjt.shandong.gov.cn</a>）：全站 403（WAF 拦截），经搜索核实 08-29~31 无新发布；08-28《老旧市政管网改造技术标准》拟批准发布公示超出窗口期未收录</li>
+    <li>上海市房屋管理局（<a href="https://shfgj.sh.gov.cn" target="_blank">shfgj.sh.gov.cn</a>）：多次访问失败，经搜索核实窗口期内无新发布</li>
+    <li>广西壮族自治区住建厅（<a href="http://zjt.gxzf.gov.cn" target="_blank">zjt.gxzf.gov.cn</a>）：HTTPS 握手异常，本期改用 HTTP 成功访问"意见征集"栏目（补录 3 条"十五五"规划）；"文件通知"等其他栏目未全量覆盖，存在遗漏可能</li>
+    <li>吉林省住建厅（<a href="https://jst.jl.gov.cn" target="_blank">jst.jl.gov.cn</a>）：多次直访失败，经搜索核实最新业务内容停留在 7 月</li>
+    <li>深圳市住建局（<a href="https://zjj.sz.gov.cn" target="_blank">zjj.sz.gov.cn</a>）政策法规栏目：404，经通知公告/工作动态栏目核实窗口内无新发布</li>
+    <li>西藏住建厅（<a href="https://zjt.xizang.gov.cn" target="_blank">zjt.xizang.gov.cn</a>）"住建厅文件"栏目：最新显示 2025-11，疑似栏目更新滞后，存在覆盖盲区</li>
+    <li>杭州（fgj.hangzhou.gov.cn）、苏州（zfcjj.suzhou.gov.cn）等 JS 动态渲染页面：部分栏目未逐一翻页核实；窗口内未见实质政策发布</li>
+  </ul>
+</div>
+
+<div class="footer">
+  住建政策每日简报 · 2026-08-31（第 7 期）· 数据来源：住房和城乡建设部及各省市住建部门官网（gov.cn）<br>
+  本文由 WorkBuddy 自动生成 · 所有原文链接均经核实为 gov.cn 官网 · 信息以官网实际发布为准
+</div>
+
+</div>
+</body>
+</html>
