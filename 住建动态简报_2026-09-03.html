@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住建政策每日简报 · 2026-09-03（第10期）</title>
+<style>
+  :root{
+    --navy:#16375f; --navy-dark:#0f2a4a; --navy-light:#2a5a9e;
+    --warm:#faf7f0; --warm-card:#ffffff; --line:#e4dccb;
+    --ink:#2b2b2b; --ink-soft:#5a5a5a;
+    --red:#b3402a; --green:#2e7d5b; --gold:#9a7b2d; --blue:#2a5a9e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:var(--warm); color:var(--ink); line-height:1.75; font-size:14px; padding-bottom:40px;
+  }
+  .container{max-width:960px; margin:0 auto; padding:0 20px;}
+
+  .header{
+    background:linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    color:#fff; padding:28px 40px 24px; border-radius:0 0 14px 14px;
+  }
+  .header .badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+    color:#ffe9c9; font-size:12px; letter-spacing:2px; padding:3px 12px; border-radius:20px; margin-bottom:10px;}
+  .header h1{font-size:23px; font-weight:700; letter-spacing:1px;}
+  .header .date{font-size:13px; color:#cdd9ea; margin-top:6px;}
+  .header .sub{font-size:12px; color:#aebfd8; margin-top:8px;}
+  .stats{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+  .stat{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:8px;
+    padding:6px 14px; font-size:13px;}
+  .stat b{font-size:17px; color:#ffe9c9; margin-right:4px;}
+
+  h2{
+    font-size:17px; color:var(--navy-dark); margin:26px 0 12px; padding-left:12px;
+    border-left:4px solid var(--navy-light); line-height:1.4;
+  }
+  .lead{font-size:13px; color:var(--ink-soft); margin-bottom:6px;}
+
+  .item{
+    background:var(--warm-card); border:1px solid var(--line); border-radius:10px;
+    padding:16px 20px; margin-bottom:14px;
+  }
+  .item h3{font-size:15.5px; color:var(--navy-dark); margin-bottom:6px;}
+  .item h3 .no{color:var(--navy-light); margin-right:6px; font-weight:700;}
+  .meta{font-size:12.5px; color:var(--ink-soft); margin-bottom:8px; line-height:1.9;}
+  .meta b{color:var(--navy-light);}
+  .meta a{color:var(--blue); text-decoration:none; word-break:break-all;}
+  .meta a:hover{text-decoration:underline;}
+  .field{display:inline-block; font-size:12px; color:var(--navy); background:#eef3fa; border:1px solid #c9d8ec;
+    padding:0 10px; border-radius:12px; margin-right:8px;}
+  .tags{margin:4px 0 8px;}
+  .tag{display:inline-block; font-size:12px; padding:1px 10px; border-radius:12px; margin-right:6px;}
+  .tag.f{background:#fdecea; color:var(--red); border:1px solid #eec4bb;}
+  .tag.m{background:#fdf6e3; color:var(--gold); border:1px solid #e8d5a3;}
+  .tag.l{background:#e8f1ec; color:var(--green); border:1px solid #bfd9ca;}
+  .abs{font-size:13.5px; margin:6px 0; text-align:justify;}
+  .cmp{
+    font-size:13px; background:#f7f3e8; border-left:3px solid var(--gold);
+    padding:8px 12px; margin-top:8px; border-radius:0 6px 6px 0; text-align:justify;
+  }
+  .cmp b{color:var(--navy-dark);}
+  .yt{
+    font-size:13px; background:#eef3fa; border-left:3px solid var(--navy-light);
+    padding:8px 12px; margin-top:8px; border-radius:0 6px 6px 0; text-align:justify;
+  }
+  .yt b{color:var(--navy-dark);}
+
+  table{width:100%; border-collapse:collapse; background:var(--warm-card); font-size:13px; margin-top:8px;}
+  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--navy); color:#fff; font-weight:600; font-size:12.5px;}
+  tr:nth-child(even) td{background:#fbf9f3;}
+
+  .appendix{background:var(--warm-card); border:1px solid var(--line); border-radius:10px; padding:14px 20px; margin-bottom:14px;}
+  .appendix table td{font-size:12.5px;}
+
+  .missing{background:#fdf6f2; border:1px solid #eed6c8; border-radius:10px; padding:14px 20px; margin-bottom:14px;}
+  .missing ul{margin:6px 0 0 20px;}
+  .missing li{font-size:12.5px; margin:4px 0; color:var(--ink);}
+  .missing li a{color:var(--blue); text-decoration:none; word-break:break-all;}
+
+  .footer{margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-soft); text-align:center;}
+  .note{font-size:12px; color:var(--ink-soft); background:#f5f0e4; border-radius:8px; padding:10px 14px; margin:12px 0;}
+  @media print{ body{background:#fff;} .header{border-radius:0;} }
+</style>
+</head>
+<body>
+<div class="header">
+  <span class="badge">住建政策动态追踪 · 第 10 期</span>
+  <h1>住建政策每日简报</h1>
+  <div class="date">2026 年 9 月 3 日（星期四）｜采集窗口：2026-09-02 08:30 — 09-03 08:30（含高价值补录）</div>
+  <div class="sub">面向烟台市住房和城乡建设局职责范围 · 仅收录 gov.cn 官方来源 · 全部链接已逐一校验</div>
+  <div class="stats">
+    <div class="stat"><b>7</b>今日收录</div>
+    <div class="stat"><b>2</b>首次出现</div>
+    <div class="stat"><b>5</b>多次出现</div>
+    <div class="stat"><b>0</b>延续跟进</div>
+  </div>
+</div>
+
+<div class="container">
+
+<p class="lead" style="margin-top:14px;">本期要点：住宅质量通病防治成为多省同频动作（浙江 09-02 印发"堵漏裂臭"防治指南试行版、湖南同日就"一隔四防"导则征求意见、山西《好房子技术标准》09-01 起施行并给出层高≥3m、耐久≥70 年等量化刚性指标）；内蒙古《住宅小区公共收益管理办法》09-01 施行，公共收益监管再添省级制度样本。国家级层面 09-02 以来住建部无新制度性发布（仅资质公示类）；多地 9 月"质量月"活动部署（山东/广东/济南/广州等）属年度例行专项行动，本期未单列收录。本期窗口恰逢周三至周四官网低更新期，收录条数较上期回落属正常。</p>
+
+<h2>一、今日重点政策与动态（按对烟台住建工作重要程度排序）</h2>
+
+<div class="item">
+  <h3><span class="no">1.</span>山西省《好房子技术标准》（DBJ04/T523-2026）9 月 1 日起施行（本期补录）</h3>
+  <div class="meta">
+    <b>来源单位：</b>山西省住房和城乡建设厅（建设科技与标准定额处）　
+    <b>发布时间：</b>2026-06-11 发布、2026-09-01 实施（本期补录）　
+    <span class="field">好房子 / 住宅品质</span><span class="field">工程质量</span><span class="field">绿色低碳</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://zjt.shanxi.gov.cn/zfxxgk/zfxxgkml/bzgf/bzgg/202606/t20260611_10144429.shtml">https://zjt.shanxi.gov.cn/zfxxgk/zfxxgkml/bzgf/bzgg/202606/t20260611_10144429.shtml</a>（标准正文下载：<a href="https://zjt.shanxi.gov.cn/zfxxgk/zfxxgkml/bzgf/bzk/202606/t20260612_10145289.shtml">zjt.shanxi.gov.cn 标准正文页</a>）</div>
+  <div class="tags"><span class="tag m">多次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>山西以省级地方标准形式把"好房子"从概念转为刚性量化指标，覆盖规划选址、设计、建造、验收、运维及既有建筑改造全过程。核心硬指标：新建住宅层高不应小于 3 米（设户式中央空调时不小于 3.15 米）；结构设计使用年限不应低于 70 年、鼓励按 100 年设计；抗震设防烈度 7 度及以上地区结构措施宜达 8 度要求并宜采用减隔震技术；"好房子"采用装配式建造为必选项且装配率不宜低于 50%，绿色建材使用比例不低于 30%；全装修交付宜达绿色建筑一星级以上、宜按超低能耗居住建筑要求建设；并将物业管理制度（服务内容/标准/收费公示、24 小时客服、智慧物业）首次纳入住宅标准要求。配套 2026 年全省打造不少于 50 个"好房子"项目部署。</div>
+  <div class="cmp"><b>【变化对比】</b>此前"好房子"推进以住建部《"好房子"建设经验做法（第二批）》（建办标函〔2026〕206 号，08-28 印发）"经验清单"式引导为主，北京、上海、成都等地标准多以评价导则为主；山西首次以"省级地方标准 + 刚性数值"落地（层高、耐久年限、装配率、绿材占比均设硬约束，物业入标在全国亦属少见），示范了"可测量、可验收"的省级路径，标志"好房子"建设由概念引导进入量化规范阶段。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台"好房子"建设依托山东省统一部署，以先验房后收房、住宅工程质量信息公示及 9 月"质量月""堵漏裂臭"防治清单等省级质量抓手为主，市级暂无独立"好房子"量化技术标准（待核实）；山东省级亦尚未出台量化型"好房子"标准。②山东"质量月"部署将印发《住房城乡建设领域标准体系建设指南（2026—2030 年）》并发布住宅隔声等技术标准，可跟踪其是否参照量化路径。③启示：山西"层高≥3 米、耐久 70 年+、装配率≥50%、绿材≥30%"等指标可作为烟台编制本地"好房子"实施导则、或在土地出让条件与施工图审查环节附加品质约束的参考模板；建议烟台在山东省标准体系指南印发后跟进衔接。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">2.</span>浙江省印发《浙江省住宅"堵漏裂臭"问题防治和整治指南（试行）》（浙建质安发〔2026〕111 号）</h3>
+  <div class="meta">
+    <b>来源单位：</b>浙江省住房和城乡建设厅　
+    <b>发布时间：</b>2026-09-02　
+    <span class="field">工程质量安全</span><span class="field">住宅质量通病</span><span class="field">好房子</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://jst.zj.gov.cn/col/col1229159346/art/2026/art_fa1245a437f64bd2b520bbd7b0a5856f.html">https://jst.zj.gov.cn/col/col1229159346/art/2026/art_fa1245a437f64bd2b520bbd7b0a5856f.html</a></div>
+  <div class="tags"><span class="tag f">首次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>浙江围绕住宅工程"堵、漏、裂、臭"四类多发质量通病，编制防治与整治技术指南并先行试行，明确各项通病的防治技术措施与整治要求，要求各市建委（建设局）结合本地实际贯彻落实，作为推进"好房子"建设、提升住宅工程质量的重要省级技术文件。与山东、广东等地 9 月"质量月"将"堵漏裂臭"列为治理主题相呼应，系本追踪系列首份以省级专门技术文件部署该类通病防治的指南。</div>
+  <div class="cmp"><b>【变化对比】</b>以往住宅质量通病治理多散见于"质量月"活动部署、专项检查通知，属"活动式整治"；浙江以"指南（试行）"专文将防治与整治技术路径制度化，监管工具向"技术指引固化"转变。湖南同日（09-02）就"一隔四防"导则征求意见（见第 3 条），显示多省正在住宅通病治理上形成同步动作。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台住宅通病治理依托山东省统一部署（先验房后收房、质量信息公示、9 月"质量月""堵漏裂臭"防治技术清单等），暂无市级专门通病防治技术指南；②山东"质量月"明确将发布省级"堵漏裂臭"防治技术清单，烟台为执行市；③启示：建议烟台在省级清单印发前，先对照浙江指南梳理本地 12345 工单中渗漏、裂缝、异味等高频投诉点位，形成本地化防治检查要点，嵌入竣工验收与先验房环节。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">3.</span>湖南省征求《住宅工程"一隔四防"质量控制技术导则（征求意见稿）》意见</h3>
+  <div class="meta">
+    <b>来源单位：</b>湖南省住房和城乡建设厅　
+    <b>发布时间：</b>2026-09-02（征求意见至 2026-09-13）　
+    <span class="field">工程质量安全</span><span class="field">住宅质量通病</span><span class="field">好房子</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202609/t20260902_34055452.html">https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202609/t20260902_34055452.html</a></div>
+  <div class="tags"><span class="tag m">多次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>湖南组织编制住宅工程"一隔四防"质量控制技术导则，针对隔声、防串味、防水、防堵塞、防裂五类住宅质量通病提出全过程质量控制要求，落实住建部提升住宅工程质量、"好房子"建设部署，现向社会公开征求意见，截止 9 月 13 日。</div>
+  <div class="cmp"><b>【变化对比】</b>同类先行：浙江省住建厅 2026-09-02 同日印发"堵漏裂臭"防治指南（试行），山东 09-01"质量月"部署防治技术清单。湖南"一隔四防"较浙江"堵漏裂臭"覆盖面更宽（多出隔声、防串味两项），但尚处征求意见、未定稿。同日"一省印发、一省征求"，表明住宅通病治理正由单一整治走向系统化技术导则，且各地指标口径开始分化，需跟踪湖南正式稿是否被更多省份借鉴。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①同第 2 条：烟台暂无市级同类导则，执行山东省级部署；②湖南"一隔四防"（隔声/防串味/防水/防堵/防裂）与浙江"堵漏裂臭"、山西《好房子技术标准》"六不"要求同属住宅通病治理谱系，可互相对照口径，为烟台承接山东省级清单实施储备检查要点；③启示：山东若参照湖南做法编制导则，烟台应提前组织质监、验收条线学习比对，重点覆盖隔声、串味等新列入项。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">4.</span>内蒙古印发《内蒙古自治区住宅小区公共收益管理办法》（09-01 施行，本期补录）</h3>
+  <div class="meta">
+    <b>来源单位：</b>内蒙古自治区住房和城乡建设厅（内建物〔2026〕116 号）　
+    <b>发布时间：</b>2026-08-07 成文、08-18 挂网，2026-09-01 起施行（本期补录）　
+    <span class="field">物业管理</span><span class="field">公共收益监管</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://zjt.nmg.gov.cn/zwgk/zfxxgkn/zc/xzgfxwj/xxyxgfxwjk/202608/t20260818_2941954.html">https://zjt.nmg.gov.cn/zwgk/zfxxgkn/zc/xzgfxwj/xxyxgfxwjk/202608/t20260818_2941954.html</a></div>
+  <div class="tags"><span class="tag m">多次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>办法明确住宅小区公共收益（停车、广告、场地使用、快递柜等）归全体业主所有、须专户管理，规范收益来源范围、使用范围、账目公示与审计要求，并规定物业服务人退出项目时公共收益账目移交程序，自 09-01 起施行。继贵州（省级指导意见）、上海（市级办法 04-01 施行）之后，公共收益监管再添省级制度样本。</div>
+  <div class="cmp"><b>【变化对比】</b>同类先行：贵州 2026-08-04 成文/08-21 官网公开省级指导意见（规范九类公共收益、公示与审计）；上海 2026-04-01 施行市级办法、08-25 通报治理成效（9814 个小区开设监管账户、查处挪用侵占案件 71 起）。三地路径呈"指导意见 → 管理办法 → 执法攻坚"递进：贵州框架引导、内蒙古以"办法"细化专户管理与退出移交、上海重执行落地；内蒙古将"退出时账目移交"明确为义务，补齐了此前多地监管盲点。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台已出台公共收益实施细则（2025-12，据前期跟踪），并在幸福信托制物业服务框架下推动收益透明化（本期核实约 113 个小区，与此前 300 个口径不一致，具体覆盖范围待核实）——烟台有同类政策基础；②建议对照内蒙古办法核查烟台细则在"专户管理、审计频次、退出移交义务、业主查询渠道"等条款的完备度，若未覆盖"退出时账目移交"可研究补强；③启示：公共收益属 12345 物业类工单高发领域，可借鉴内蒙古"办法+专户+移交"闭环，结合烟台幸福信托制试点推广。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">5.</span>上海市发布住建管理"十五五"规划"一图读懂"（规划要点解读）</h3>
+  <div class="meta">
+    <b>来源单位：</b>上海市住房和城乡建设管理委员会　
+    <b>发布时间：</b>2026-09-02（图解发布）　
+    <span class="field">综合规划</span><span class="field">住建"十五五"规划</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://zjw.sh.gov.cn/zcjd/20260902/e37a15365b7e4b2ba88fd29dd4172b54.html">https://zjw.sh.gov.cn/zcjd/20260902/e37a15365b7e4b2ba88fd29dd4172b54.html</a>（官方图解页）</div>
+  <div class="tags"><span class="tag m">多次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>上海市住建委以"一图读懂"形式发布《上海市住房和城乡建设管理"十五五"规划》要点解读，规划覆盖住房保障、房地产市场、城市更新、绿色低碳、智能建造与"好房子"建设等住建管理主要领域，系直辖市住建领域"十五五"纲领性文件（规划文本近日发布，图解为官方解读入口）。</div>
+  <div class="cmp"><b>【变化对比】</b>同类先行：四川 2026-08-21 成文、08-31 官网公开省级住建综合"十五五"规划（"1 项目标/20 项指标/10 项任务/重大项目库"，国家 12 项指标省级传导）；广西 08-24 就住房发展"十五五"规划征求意见。上海以直辖市视角将"好房子"品质管控、城市更新与绿色低碳列为主线，一线城市规划在住房保障与品质指标颗粒度上通常更细，可为计划编制城市提供章节结构参照。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①烟台市级住建"十五五"规划编制情况未检索到公开文本（待核实；省级层面山东已有部署，烟台或随省统一安排推进）；②上海规划主线（住房保障体系 + 品质提升 + 城市更新 + 绿色建造）与烟台局职责高度对应，可作为烟台编制"十五五"规划的框架参照；③启示：重点比照上海规划中"好房子"建设、保障性住房体系与城市更新机制设计，结合山东特色指标形成烟台版任务清单。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">6.</span>四川省发布《基坑工程鉴定与加固技术标准》等 5 项工程建设地方标准</h3>
+  <div class="meta">
+    <b>来源单位：</b>四川省住房和城乡建设厅　
+    <b>发布时间：</b>2026-09-02（成文 2026-08-28）　
+    <span class="field">工程质量安全</span><span class="field">绿色低碳</span><span class="field">标准</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="https://jst.sc.gov.cn/scjst/c101428/2026/9/2/5126dc5c8b22412a878f499737f1be2d.shtml">https://jst.sc.gov.cn/scjst/c101428/2026/9/2/5126dc5c8b22412a878f499737f1be2d.shtml</a></div>
+  <div class="tags"><span class="tag m">多次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>四川一次性发布 5 项工程建设地方标准：《基坑工程鉴定与加固技术标准》《智慧公园建设标准》《近零能耗建筑技术标准》《模块化钢结构房屋技术标准》《建筑垃圾分类减量及资源化利用技术标准》，自发布之日起实施，覆盖深基坑安全、近零能耗建筑、钢结构装配式与建筑垃圾资源化等领域。</div>
+  <div class="cmp"><b>【变化对比】</b>同类先行：河北 2026-08-25 发布《高强混凝土强度检测技术规程》（省级地方标准批次主题首现）。河北为单批单标（混凝土检测），四川单批 5 标且覆盖"近零能耗建筑 + 基坑加固 + 建筑垃圾资源化"等多主题打包发布，显示省级标准供给进入"按领域批量补短板"阶段；其中近零能耗建筑标准对北方地区住宅节能有参照意义。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①工程建设地方标准由省级统一管理发布，烟台市级一般不单独发布（待核实），执行国家与山东省级标准；②四川"近零能耗建筑 + 建筑垃圾资源化"两标与烟台绿色建造（装配式占比约 58%、绿色建筑累计约 300 万㎡）及建筑垃圾管理（烟台 2021 年烟政办发〔2021〕17 号实施意见 + 处置核准细则）直接相关；③启示：建议烟台关注山东省级近零能耗/超低能耗及建筑垃圾资源化标准的编制进度，四川标准名称与框架可作观察样本。</div>
+</div>
+
+<div class="item">
+  <h3><span class="no">7.</span>山东省废止《关于在社区居民委员会下设环境和物业管理委员会的通知》（鲁建物字〔2021〕2 号）</h3>
+  <div class="meta">
+    <b>来源单位：</b>山东省住房和城乡建设厅　
+    <b>发布时间：</b>2026-09-02　
+    <span class="field">物业管理</span><span class="field">社区治理衔接</span>
+  </div>
+  <div class="meta"><b>原文链接：</b><a href="http://zjt.shandong.gov.cn/art/2026/9/2/art_102884_10356817.html">http://zjt.shandong.gov.cn/art/2026/9/2/art_102884_10356817.html</a></div>
+  <div class="tags"><span class="tag f">首次出现</span></div>
+  <div class="abs"><b>内容摘要：</b>山东决定废止《关于在社区居民委员会下设环境和物业管理委员会的通知》（鲁建物字〔2021〕2 号），要求各市物业主管部门落实《城市居民委员会组织法》及省加强居委会下属委员会建设相关文件，继续加强对环境和物业管理委员会设立与业务能力建设的指导，发挥其在指导协助设立业主大会、选举业委会及监督物业服务企业履职等方面的作用。属省级物业治理制度的"废改衔接"——旧专文废止、职能归入居委会组织法框架，并不取消环物委制度本身。</div>
+  <div class="cmp"><b>【变化对比】</b>与威海市 09-01 公布 2026 年度规范性文件集中清理结果（保留 16 件/废止若干）相呼应，山东省级以单件废止方式为基层物业治理制度"瘦身"：废止 2021 年支持性专文是因《城市居民委员会组织法》及省级居委会下属委员会建设文件已涵盖环物委设立与运行规则，避免政策叠床架屋，功能定位与指导职责保持不变。</div>
+  <div class="yt"><b>【与烟台现行政策对比】</b>①山东文件直接适用于烟台：各区市原依据鲁建物字〔2021〕2 号推进的居委会环物委建设，此后改按《城市居民委员会组织法》与省居委建设文件执行；②该废止不改变环物委"协助业委会成立、监督物业履职"功能，烟台物业主管部门指导职责不变；③启示：烟台市级如有参照该文制定的配套文件建议同步评估清理，同时可将环物委作为党建引领物业治理与 12345 物业类工单源头化解的基层抓手。</div>
+</div>
+
+<h2>二、政策追踪表（今日涉及的多地同类政策对比）</h2>
+<table>
+  <tr><th style="width:20%;">政策主题</th><th style="width:27%;">先行地区及时间</th><th style="width:16%;">今日新增地区</th><th style="width:37%;">主要差异</th></tr>
+  <tr>
+    <td>"好房子"量化技术标准</td>
+    <td>北京/上海/成都等（此前制定标准/导则）；住建部办公厅 2026-08-28 印发"好房子"经验做法第二批（建办标函〔2026〕206 号）</td>
+    <td>山西（《好房子技术标准》DBJ04/T523-2026，09-01 施行，补录）</td>
+    <td>山西首次以省级地方标准给出层高≥3m、结构耐久≥70 年（鼓励 100 年）、装配率≥50%、绿材占比≥30%等刚性量化指标，并将物业管理纳入标准；此前多为经验清单/评价导则式引导</td>
+  </tr>
+  <tr>
+    <td>住宅质量通病防治技术文件（堵漏裂臭/一隔四防）</td>
+    <td>山东 2026-09-01"质量月"部署将发布"堵漏裂臭"防治技术清单（文本未现）；浙江 2026-09-02 印发试行指南（系列内首个省级专门技术文件，实质先行）</td>
+    <td>湖南（09-02 就"一隔四防"导则征求意见，至 09-13）</td>
+    <td>浙江"堵漏裂臭"已印发试行；湖南"一隔四防"扩至隔声、防串味且处征求意见阶段；两地口径分化，需跟踪湖南正式稿；山东省级清单亦待发布</td>
+  </tr>
+  <tr>
+    <td>住宅小区公共收益管理</td>
+    <td>贵州 2026-08-04 成文/08-21 官网公开（省级指导意见）；上海 2026-04-01 施行市级办法、08-25 通报执行成效</td>
+    <td>内蒙古（《住宅小区公共收益管理办法》内建物〔2026〕116 号，09-01 施行，补录）</td>
+    <td>贵州以指导意见作框架规范；内蒙古以"办法"细化专户管理、公示审计并把"退出时账目移交"列为义务；上海重执行攻坚（9814 小区监管账户全覆盖）——监管颗粒度由"指导"向"办法+执法"递进</td>
+  </tr>
+  <tr>
+    <td>省级住建综合"十五五"规划</td>
+    <td>四川 2026-08-31 官网公开（省级住建"十五五"规划）；广西 08-24 就住房发展"十五五"规划征求意见</td>
+    <td>上海（住建管理"十五五"规划，09-02 图解发布）</td>
+    <td>上海以直辖市视角突出"好房子"品质管控、城市更新、绿色低碳主线；四川公布"1 项目标/20 项指标/10 项任务/项目库"框架并传导国家 12 项指标</td>
+  </tr>
+  <tr>
+    <td>省级工程建设地方标准批次</td>
+    <td>河北 2026-08-25（《高强混凝土强度检测技术规程》DB13(J)/T8119-2026，11-01 实施）</td>
+    <td>四川（09-02 发布 5 项：基坑鉴定加固/智慧公园/近零能耗/模块化钢结构/建筑垃圾资源化）</td>
+    <td>河北单批单标；四川单批 5 标多主题打包，覆盖近零能耗建筑、建筑垃圾资源化等绿色低碳与安全领域</td>
+  </tr>
+</table>
+
+<h2>三、烟台基准观察（本期 Agent F 核实，不计入收录条数）</h2>
+<div class="appendix">
+  <p style="font-size:13px;"><b>近 2 日动态：</b>烟台市住建局官网通知公告栏目仍停留在 2026-08-11，工作动态无 9 月窗口新发布；公众号"烟台住建"未检索到 9 月明确新推文。烟台市级 09-01 至 09-03 无新政策文件（龙口市公租房办法征求意见 09-01 已计入上期基准，不再重复）。</p>
+  <table style="margin-top:10px;">
+    <tr><th style="width:24%;">现行政策/事项</th><th style="width:34%;">状态与依据</th><th style="width:42%;">本期核实要点</th></tr>
+    <tr><td>楼市以旧换新</td><td>现行（烟建住房〔2026〕6 号，试行至 2026-12-31）</td><td>按购房款 2% 补贴、单套最高 5 万元（较早期标准已上调），年底是否延期需跟踪</td></tr>
+    <tr><td>房地产融资白名单/保交房</td><td>现行</td><td>143 个项目、授信 182.8 亿元、放款 141.1 亿元（2026-08-17 披露口径，本期无更新）</td></tr>
+    <tr><td>配售型保障性住房</td><td>已续期（烟建住房〔2026〕10 号，2026-04-27 施行、有效期 2 年）</td><td>上期"2026-03-26 到期是否续期"事项已销号</td></tr>
+    <tr><td>公租房管理</td><td>新办法 2026-07-01 施行后启动修订</td><td>因国家层面政策（国发〔2026〕11 号 等）正在修订，市级征求意见 08-11 已结束，正式修订文本待发布</td></tr>
+    <tr><td>商品房预售资金监管</td><td>现行办法沿用</td><td>《实施细则》仍未检索到正式印发文本；莱山/高新试点细则 07-28—08-05 征求意见后无下文——持续跟踪</td></tr>
+    <tr><td>先验房后收房 / 质量信息公示</td><td>山东省级统一部署，烟台执行中</td><td>本期浙江/湖南/山西质量通病治理动态可作技术口径参照（见第 2、3、1 条）</td></tr>
+    <tr><td>物业信托制/公共收益</td><td>公共收益实施细则（2025-12）+ 幸福信托制试点</td><td>幸福信托制小区数口径约 113 个，与此前 300 个不一致，待核实；可对照内蒙古办法核查细则完备度</td></tr>
+    <tr><td>绿色建造/城市更新</td><td>装配式占比约 58%、绿建累计约 300 万㎡；自主更新"18 条"在推进</td><td>与本期四川近零能耗标准、上海"十五五"规划动态相关，建议纳入烟台"十五五"规划编制参考</td></tr>
+  </table>
+  <p style="font-size:12.5px; margin-top:8px; color:#5a5a5a;"><b>持续跟踪事项（待核实）：</b>预售资金监管《实施细则》正式印发｜公租房办法修订版印发｜市级老旧小区改造年度总盘｜保交楼全市汇总口径｜以旧换新年底是否延期｜幸福信托制小区数与覆盖口径｜烟台市级"好房子"文件是否存在｜山东省级"堵漏裂臭"防治技术清单与标准体系指南（2026—2030 年）发布。</p>
+</div>
+
+<h2>四、附录：与烟台相关度评级及参考价值</h2>
+<div class="appendix">
+<table>
+  <tr><th style="width:6%;">序号</th><th style="width:44%;">动态</th><th style="width:9%;">相关度</th><th style="width:41%;">对烟台住建工作的参考价值</th></tr>
+  <tr><td>1</td><td>山西《好房子技术标准》09-01 施行（补录）</td><td>高</td><td>"好房子"量化指标模板，可用于烟台编制实施导则或在土地出让/图审环节附加品质约束</td></tr>
+  <tr><td>2</td><td>浙江"堵漏裂臭"防治指南印发（试行）</td><td>高</td><td>省级通病治理技术指引样本；为烟台承接山东省级清单、治理高频质量投诉提供口径</td></tr>
+  <tr><td>3</td><td>湖南"一隔四防"导则征求意见</td><td>高</td><td>覆盖面更宽（隔声/防串味），供烟台对比三省口径、储备检查要点</td></tr>
+  <tr><td>4</td><td>内蒙古住宅小区公共收益管理办法 09-01 施行（补录）</td><td>高</td><td>公共收益"专户+审计+退出移交"闭环；12345 物业类工单源头治理直接相关，可对照核查烟台细则</td></tr>
+  <tr><td>5</td><td>上海住建管理"十五五"规划发布（图解）</td><td>中</td><td>规划框架参照（住房保障+品质+城市更新+绿色建造），供烟台"十五五"规划编制借鉴章节结构</td></tr>
+  <tr><td>6</td><td>四川发布 5 项地方标准</td><td>中</td><td>近零能耗/建筑垃圾资源化标准命名与框架可作山东同类标准观察样本</td></tr>
+  <tr><td>7</td><td>山东废止居委会环物委通知（鲁建物字〔2021〕2 号）</td><td>中</td><td>省级制度直接适用烟台；提示市级配套文件同步评估清理，环物委仍可作物业治理基层抓手</td></tr>
+</table>
+</div>
+
+<h2>五、与最近一期（2026-09-02 第 9 期）对比</h2>
+<div class="appendix">
+  <ul style="margin:0 0 0 20px; font-size:13px;">
+    <li><b>新增主题（首次出现，2 个）：</b>①住宅"堵漏裂臭"问题防治技术指南（浙江印发试行）——系列内首个省级专门通病治理技术文件；②居委会环境和物业管理委员会制度衔接与省级清理（山东废止鲁建物字〔2021〕2 号）。</li>
+    <li><b>延续/拓展既有主题（多次出现，5 个）：</b>①"好房子"建设 ← 山西《好房子技术标准》09-01 施行（补录，量化升级）；②住宅质量通病治理 ← 湖南"一隔四防"导则征求意见（浙江先行）；③住宅小区公共收益管理 ← 内蒙古省级办法 09-01 施行（补录，贵州/上海后第三省）；④省级住建综合"十五五"规划 ← 上海 09-02 图解发布（四川先行）；⑤省级工程建设地方标准批次 ← 四川 5 项标准 09-02（河北先行）。</li>
+    <li><b>无新动态的主题（本期未再出现）：</b>国家级层面——住建部 09-02 以来仅资质公示类（建办受理函〔2026〕20/21 号）与同意西藏二级造价工程师电子注册证书函，无新制度性发布；城市更新项目贷款、商品住房销售制度（建房规〔2026〕3 号）等重磅主题本期无新的省级配套落地公开；房地产调控/住房保障类无新增省级制度文件。</li>
+    <li><b>说明：</b>第 9 期已于 09-02 上午覆盖 09-01 集中发布（17 条），本期窗口（09-02 中段至 09-03 上午）恰逢周三至周四官网低更新期，收录回落属正常。山东/广东/济南/广州/江苏等地 9 月"质量月"活动部署（09-01 前后集中发布）属年度例行专项行动，未单列收录；其中山东"质量月"明确将印发《住房城乡建设领域标准体系建设指南（2026—2030 年）》并发布住宅隔声等技术标准，建议后续跟踪其正式文件（对烟台有直接适用性）。</li>
+  </ul>
+</div>
+
+<h2>六、未获取来源清单（本期未能覆盖/访问受限）</h2>
+<div class="missing">
+  <ul>
+    <li><b>住房和城乡建设部（mohurd.gov.cn）：</b>09-02 以来栏目仅资质公示等事务性内容，无新制度性发布；"通知公告"栏目路径返回 404，已以"政策发布/文件库"栏目交叉覆盖。</li>
+    <li><b>山东省住建厅（zjt.shandong.gov.cn）：</b>全站含 WAF 反爬，脚本直连与检索快照交叉核实后收录第 7 条；其余 9 月窗口内条目（质量月、标准宣贯等）按筛选规则未收录。</li>
+    <li><b>广西住建厅（zjt.gxzf.gov.cn）：</b>《城市轨道交通工程预算清单综合单价组价表》《广西住房发展规划（2026—2030 年）征求意见》等页面受 WAF/JS 防护未能打开核实原文，未收录（待核实）。</li>
+    <li><b>青海住建厅（zjt.qinghai.gov.cn）：</b>《青海省房屋市政工程质量投诉处理办法》（青建工〔2026〕212 号，09-01 施行）官网原文链接未能定位到 gov.cn 原文（仅见官方图解与第三方转载），按来源约束未收录（待核实）。</li>
+    <li><b>辽宁省住建厅（zjt.ln.gov.cn）：</b>栏目动态加载受限，未发现新制度性条目。</li>
+    <li><b>杭州市建委（cjhw.hangzhou.gov.cn）：</b>原域名不可达，改用 cxjw.hangzhou.gov.cn / fgj.hangzhou.gov.cn 核查，窗口内无新制度性条目。</li>
+    <li><b>苏州市住建局（sjsj.suzhou.gov.cn）：</b>原域名失效，实际官网为 zfcjj.suzhou.gov.cn；窗口内无住房领域制度性新动态。</li>
+    <li><b>烟台市住建局官网/公众号：</b>官网通知公告停留在 08-11，公众号未检索到 9 月明确新推文；市级近 2 日无新政策动态（基准详见第三节）。</li>
+    <li><b>检索渠道说明：</b>今日头条/山西晚报/潮新闻等非 gov.cn 内容仅用于线索发现与内容核实，全部收录条目均回溯至 gov.cn 官网原文，未采用任何非 gov.cn 链接。</li>
+  </ul>
+</div>
+
+<div class="note">说明：本期共 6 组并行子代理采集（住建部+国家级 / 重点省组 1 / 重点省组 2 / 重点城市组 / 其余省份组 / 烟台基准），全部来源域名以 gov.cn 结尾。7 条收录链接已于生成时逐一请求校验（HTTP 200 且标题与内容一致）；山东住建厅站点含 WAF，正文经官网直连与检索快照交叉核实。所有内容以官网实际发布为准，信息不确定处已标注"待核实"。</div>
+
+<div class="footer">住建政策动态追踪 · 第 10 期｜2026-09-03 生成｜来源：各级住房和城乡建设部门官网（gov.cn）｜本简报供政务研究参考，请以官网原文为准</div>
+
+</div>
+</body>
+</html>
