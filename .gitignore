@@ -1,0 +1,5 @@
+# 子代理中间报告与临时文件（不入库）
+history/agent_*.md
+history/topic_list_*.txt
+history/*_D_*.py
+history/out_list*.txt
