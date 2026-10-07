@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住建政策每日简报 · 2026年10月7日</title>
+<style>
+:root{
+  --navy:#12325c; --navy-2:#1b4478; --navy-3:#2a5a97; --ink:#1f2937; --ink-2:#41506b;
+  --warm:#fbfaf7; --warm-2:#f5f2ec; --line:#dfd9cd; --line-2:#e8e3d9;
+  --first:#0f766e; --first-bg:#e6f4f1; --multi:#9a3412; --multi-bg:#fdeee4;
+  --cont:#3f4d63; --cont-bg:#eef1f6; --accent:#b8860b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--warm-2);color:var(--ink);
+  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+  font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;background:var(--warm);border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+header.top{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 58%,var(--navy-3) 100%);color:#fff;padding:34px 40px 26px;position:relative;overflow:hidden}
+header.top::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.045)}
+header.top .kicker{font-size:11px;letter-spacing:2.6px;text-transform:uppercase;opacity:.72;font-weight:600}
+header.top h1{margin:10px 0 6px;font-size:31px;letter-spacing:2.5px;font-weight:700}
+header.top .sub{font-size:13.5px;opacity:.88;letter-spacing:.4px}
+header.top .statline{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+.stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:3px;padding:6px 14px;font-size:13px;letter-spacing:.5px}
+.stat b{font-size:16px;color:#ffe9b0;margin:0 3px}
+.stat.f b{color:#9fe8dd}.stat.m b{color:#ffcda4}.stat.c b{color:#cdd8ea}
+main{padding:0 40px 40px}
+.note{background:var(--warm-2);border-left:4px solid var(--accent);padding:16px 20px;margin:26px 0 8px;font-size:14px;color:var(--ink-2);line-height:1.9}
+.note b{color:var(--navy)}
+h2{margin:38px 0 16px;padding:0 0 10px;font-size:19.5px;color:var(--navy);border-bottom:2px solid var(--navy);letter-spacing:1px;display:flex;align-items:baseline;gap:12px}
+h2 .en{font-size:11.5px;color:#8a94a6;font-weight:400;letter-spacing:.6px}
+.item{background:#fff;border:1px solid var(--line-2);border-radius:4px;margin:0 0 16px;padding:20px 22px 16px;box-shadow:0 1px 3px rgba(18,50,92,.05)}
+.ihead{display:flex;gap:15px;align-items:flex-start}
+.num{flex:0 0 40px;height:40px;border-radius:3px;background:linear-gradient(140deg,var(--navy),var(--navy-3));color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.5px;margin-top:3px}
+.ibody{flex:1;min-width:0}
+.ititle{font-size:16.5px;font-weight:700;line-height:1.6;color:var(--navy)}
+.ititle a{color:var(--navy);text-decoration:none;border-bottom:1px dashed #b9c4d4}
+.ititle a:hover{color:var(--navy-3);border-bottom-color:var(--navy-3)}
+.meta{font-size:12.5px;color:var(--ink-2);margin:8px 0 9px;line-height:1.75}
+.meta .src{color:var(--navy-2);font-weight:600}
+.meta .dt{color:#5a6577}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.tag{font-size:11.5px;padding:3px 10px;border-radius:2px;font-weight:700;letter-spacing:.4px}
+.tag-first{background:var(--first-bg);color:var(--first);border:1px solid #b7e0d9}
+.tag-multi{background:var(--multi-bg);color:var(--multi);border:1px solid #f0bda3}
+.tag-cont{background:var(--cont-bg);color:var(--cont);border:1px solid #ccd6e4}
+.tag .why{font-weight:400;font-size:11px;opacity:.9;margin-left:4px}
+.sec{margin:0 0 11px;font-size:14.2px;line-height:1.9}
+.sec .lbl{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy-2);padding:2px 9px;border-radius:2px;letter-spacing:.6px;margin-bottom:6px}
+.sec.cmp .lbl{background:#6b5b3e}
+.sec.abs .lbl{background:var(--navy-2)}
+.sec p{margin:0;color:var(--ink);text-align:justify}
+.sec strong{color:var(--navy);font-weight:700}
+.field{font-size:12.8px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:9px;margin-top:11px}
+.field b{color:var(--navy-2)}
+table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:13.2px;background:#fff;border:1px solid var(--line)}
+th{background:var(--navy);color:#fff;font-weight:600;padding:11px 12px;text-align:left;font-size:12.8px;letter-spacing:.5px}
+td{border-top:1px solid var(--line-2);padding:11px 12px;vertical-align:top;line-height:1.8;color:var(--ink-2)}
+td.reg{color:var(--navy);font-weight:700}
+td.nw{color:var(--first);font-weight:600}
+td.df{color:#5a6577}
+tbody tr:nth-child(even) td{background:#faf9f6}
+.arow{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line-2);border-radius:3px;padding:12px 16px;margin-bottom:8px}
+.ano{flex:0 0 26px;height:26px;border-radius:50%;background:var(--warm-2);color:var(--navy);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);margin-top:2px}
+.lvl{flex:0 0 76px;font-size:11.5px;font-weight:700;padding:3px 0;border-radius:2px;text-align:center;margin-top:3px;letter-spacing:.4px}
+.lvl-h{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.lvl-m{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.lvl-l{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+.arow .txt{font-size:13.5px;color:var(--ink-2);line-height:1.85}
+.arow .txt b{color:var(--navy)}
+ul.miss{margin:6px 0 0;padding-left:0;list-style:none}
+ul.miss li{background:#fff;border:1px solid var(--line-2);border-left:3px solid #b23c3c;border-radius:2px;padding:12px 16px;margin-bottom:9px;font-size:13.3px;line-height:1.85;color:var(--ink-2)}
+ul.miss li b{color:var(--navy)}
+ul.miss a{color:var(--navy-3);text-decoration:none;word-break:break-all;font-size:12.4px}
+ul.miss a:hover{text-decoration:underline}
+code{background:var(--warm-2);border:1px solid var(--line-2);border-radius:2px;padding:1px 5px;font-size:12.3px;color:#8a4b1f;font-family:Consolas,Monaco,monospace}
+footer{background:var(--navy);color:#c7d2e0;padding:24px 40px 30px;font-size:12.4px;line-height:2}
+footer b{color:#fff}
+footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255,255,255,.16);font-size:11.8px;opacity:.8}
+@media print{body{background:#fff}.wrap{border:none;max-width:100%}.item{box-shadow:none;break-inside:avoid}header.top{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:760px){main{padding:0 16px 24px}header.top{padding:24px 20px 20px}header.top h1{font-size:23px}footer{padding:20px}.ihead{gap:10px}.num{flex:0 0 32px;height:32px;font-size:13px}.arow{flex-wrap:wrap}.lvl{flex:0 0 60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">China Housing &amp; Urban-Rural Development Policy Daily</div>
+  <h1>住建政策每日简报</h1>
+  <div class="sub">2026-10-07（周三）· 第 44 期　|　采集窗口：2026-10-05 07:30 — 2026-10-07 07:30</div>
+  <div class="statline">
+    <span class="stat">今日收录 <b>4</b> 条</span>
+    <span class="stat f">首次出现 <b>4</b> 条</span>
+    <span class="stat m">多次出现 <b>0</b> 条</span>
+    <span class="stat c">延续跟进 <b>0</b> 条</span>
+  </div>
+</header>
+<main>
+  <div class="note">
+    <b>本期提要：</b>本期为<b>国庆假期第 7 日（假期最后一日）</b>，全国住建系统「节前发完、假期停更」格局延续至<b>连续第 3 期</b>——<b>8 组并行子代理实测确认，主窗口（10-05 07:30—10-07 07:30）内全国住建系统零新增</b>：住建部政策文件类五类全部零新增（文件库最新成文 09-24、规章库仍为部令第 61 号、行政规范性文件库仍为 建房规〔2026〕3号、标准公告最新 09-23、政策解读最新 08-31；<b>首页 MakeTime 仍为 2026-10-03 23:58</b>，即自 10-03 例行重建后连续第 4 日未再重建）；<b>6 个重点省份、9 个重点省份组2、8 个重点城市、武汉固定信源、15 个其余省份、范围外城市通道主窗口内均零新增</b>。本期 <b>4 条全部来自扩窗期（09-25 起）</b>，且<b>4 条全部为范围外城市补获</b>——范围外城市通道继第 43 期后<b>连续第 2 期成为唯一新增通道</b>。按单个文件口径统计：<b>首次出现 4 条、多次出现 0 条、延续跟进 0 条</b>。
+<br><br><b>本期与烟台最直接相关的三条：</b>① <b>《景德镇市完善商品住房销售制度实施细则（征求意见稿）》（09-30 挂网，挂网前成文 09-24）</b>——本系列所见 <b>建房规〔2026〕3号 的落地城市增至 5 个</b>（上海／广州／武汉／景德镇），景德镇件是<b>首个普通地级市完整落地体例</b>，其「新老划断统一锚定 08-28」「已出让未取得工规证项目纳入新规」「个人住房贷款竣工备案后发放」三条正好回答烟台起草落地意见时最易卡住的适用性问题，可作为地级市体例的现成样板；② <b>《宁德市加快推动无障碍设施品质提升行动方案》（宁建技〔2026〕4号，8 部门联合，2026—2030 四年期）</b>——把无障碍从「项目配建要求」升格为「市域行动方案」，首创<b>「无障碍设施专项体检」</b>环节并设三类量化指标；其「无障碍设施纳入城市更新专项规划」的做法，可作为烟台<b>城市更新制度空窗重建</b>时的可选嵌入模块；③ <b>《东莞市工程建设项目招标代理机构及从业人员管理办法》（东发改规〔2026〕4号，7 部门联发，五章 28 条）</b>——首次把监管对象锁定「招标代理机构与从业人员」中介层，明确<b>「一人不得同时受聘两家代理机构」</b>与代理机构与监管部门<b>「不得存在隶属关系或利益关系」</b>；与烟台 <b>AI 辅助招投标（2026-10-01 起常态化）</b>形成互补——AI 评审质量高度依赖代理机构编制的招标文件质量，建议在现有平台增补代理机构履职评价模块。
+<br><br><b>本期通道复核（与上期相比的形态变化）：</b>① <b>河北</b>——首页 200，但<b>列表页与详情页均由上期「列表可读」收紧为 412</b>（枚举条件进一步恶化）；② <b>云南</b>——三域名（<code>zjt.yn.gov.cn</code> 两协议＋<code>zfcxjst.yn.gov.cn</code>）<b>本期均 000</b>，上期「备用域 200 可达」的结论本期未能复现，<b>属间歇性可达</b>；③ <b>山东</b>——<code>https</code> 000／<code>http</code> 200，但<b>通知公告栏 JS 壳、站内检索索引仍止于 2019 年</b>，「页面可达但内容不可枚举」形态<b>连续第 3 期成立</b>；④ <b>甘肃</b>——两协议均 <b>412</b> 持续（判定与上期一致）；⑤ <b>广州</b>——<b>gkmlpt 子系统后端宕机</b>（<code>/gkmlpt/api/all/{1089,1090,1091,1104}</code> 返回 504/554，多次重试含 cookie 预热与完整浏览器头均失败），门户主页 200 正常，<b>属本期唯一核心城市枚举盲区</b>，已如实列明；⑥ <b>宁波</b>——首页 <code>MakeTime</code> <b>未渲染</b>（NOT FOUND），零新增判定改由逐栏目 JPAAS 接口承担；⑦ <b>江苏</b>——实域 <code>jsszfhcxjst.jiangsu.gov.cn</code> 200 可枚举继续成立；⑧ <b>湖北／湖南／江西／辽宁</b>——本期新破解官方 JSON／queryList 接口，枚举盲区消除（湖北 <code>zcwj.json</code>：规范性文件 169 条／其他主动公开 1564 条；湖南省级搜索 API total=4674；江西 <code>POST /queryList</code>：文件通知 1212／公示公告 1354 条）。
+<br><br><b>台账提示（烟台本级）：</b>本期 Q3 目录经独立复核<b>无变化</b>（住建局部门 18 件、市级 28 件），三件未列目录状态<b>维持</b>（配售型保障房 烟建住房〔2026〕10号；建筑垃圾处置核准 烟建节科〔2026〕1号；绿色建筑标识认定办法 烟建节科〔2023〕2号），<b>窗口内无新增规范性文件、无新征求意见稿</b>。年末集中到期压力依旧：<b>保障性租赁住房 烟建住房〔2023〕28号 → 2026-11-14（约 5.5 周，最紧迫）</b>、绿色建筑标识办法 → 12-09、预制构件 烟建质安〔2023〕24号 → 12-12、公租房运营 烟建住房〔2021〕30号 → 12-20、公共资源交易目录 烟政字〔2021〕66号 → 12-31、以旧换新方案 → 12-31。<b>物业信用 烟建住房〔2022〕13号 空窗持续（有效期至 2025-06-30 已届满，Q2/Q3 目录均无替代）。</b><b>本期 Agent F 新增两项重要发现：</b>① <b>保租房 烟建住房〔2023〕28号 首次出现接续信号</b>——住建局 2026-09-30 公租房征意结果公告明确载明「后续我市将启动保租房相关政策的修订工作」，为年末最紧迫到期项提供缓冲预期；② <b>公租房办法 烟建住房〔2026〕9号 因国发〔2026〕11号 上位政策变化而「重新修订」</b>，征意期经实测为 <b>08-03 至 09-05</b>（此前记录为 08-11，予以更正），意见结果已于 09-30 公布、修订稿尚未发布。另：<b>烟台城市更新领域制度空窗</b>（烟更指发〔2021〕2号、3号 均已届满失效无接续）持续，但出现新接续征意稿《深化低效用地再开发推进城市更新的实施意见》（2026-04 征意结束、尚未印发），建议跟踪其印发进展。
+  </div>
+<section>
+    <h2>一、今日重点政策与动态<span class="en">按对烟台住建工作的重要程度排序</span></h2>
+<div class="item">
+  <div class="ihead">
+    <div class="num">01</div>
+    <div class="ibody">
+      <div class="ititle"><a href="https://zjj.jdz.gov.cn/zmhd/dczj/t1106168.shtml" target="_blank" rel="noopener">景德镇市住房和城乡建设局关于公开征求《景德镇市完善商品住房销售制度实施细则（征求意见稿）》意见的通知</a></div>
+      <div class="meta"><span class="src">景德镇市住房和城乡建设局</span>　|　发布时间：<span class="dt">2026-09-30 17:00 挂网（正文落款 2026-09-24；意见反馈截止 2026-10-24）</span></div>
+      <div class="tags"><span class="tag tag-first">首次出现<span class="why">该市级实施细则为本系列首次收录；上位 建房规〔2026〕3号 为全国性通知，落地城市此前已见上海、广州、武汉（第 38／40／41 期），但景德镇件属市级细则体例且为首次进入追踪视野，按单个文件口径计首次出现。</span></span><span class="tag tag-multi"><span>多地同类：建房规〔2026〕3号 落地城市增至 5 个</span></span></div>
+      <div class="sec abs"><span class="lbl">内容摘要</span><p>为贯彻落实《住房城乡建设部 自然资源部 金融监管总局关于完善商品住房销售制度的通知》（建房规〔2026〕3号）与《中国人民银行 国家金融监督管理总局关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》（银发〔2026〕171号），由市住建局牵头起草本实施细则并公开征求意见。细则设「新老划断」规则：<b>2026-08-28（含）前</b>已取得（含部分取得）建设工程规划许可证的商品住房项目，实行预售的其整个项目预售条件、资金监管等仍按原有政策执行；<b>2026-08-28 之后</b>新出让土地及已出让但尚未取得工规证的项目适用本细则。实行<b>预售与现房销售双轨并行</b>：新出让土地项目、已出让未取得工规证项目<b>优先选择现房销售</b>，确需预售的严格执行<b>单体建筑主体结构封顶</b>准入条件；个人住房贷款在 08-28 之后实行预售的，<b>应在项目竣工备案后发放</b>。共分总则、预售许可、现房销售备案、预售资金监管、项目开发融资、不动产登记等章，并全面落实<b>项目公司制、主办银行制</b>。</p></div>
+      <div class="sec cmp"><span class="lbl">变化对比</span><p>与上海（沪建房管联〔2026〕451号）、广州（09-30）、武汉（武住更规〔2026〕6号 系列）三地相比，景德镇件的差异有三：<b>① 时间分界点统一锚定 2026-08-28</b>（即 建房规〔2026〕3号 发文日），比广州「按 09-30 前后分段」更为明确；<b>② 明确「已出让土地尚未取得工规证的项目」纳入新规</b>，堵住「抢跑」通道——这是三地中口径最严的一档，直接覆盖存量已出让未报建土地；<b>③ 个人住房贷款发放节点与现房销售衔接</b>（新项目预售须竣工备案后放贷），把金融端工具纳入销售制度改革，与银发〔2026〕171号 形成配套。本系列此前记录的落地城市多为副省级及以上，景德镇属<b>普通地级市首批落地</b>，示范意义在于证明该制度可在中小城市完整复制。</p></div>
+      <div class="sec cmp"><span class="lbl">与烟台现行政策对比</span><p><b>① 烟台是否已有同类政策：</b>有制度底座但缺落地细则。烟台已实行商品房预售资金监管办法（有效期至 2029-01-01）与形象进度要求（2026-06-30 节点），但<b>尚未出台对接 建房规〔2026〕3号 的市级实施意见</b>——本系列第 41 期（武汉 10-01 实施意见）已明确指出这一缺口。<b>② 异同：</b>适用范围上，景德镇把「已出让未取得工规证项目」纳入新规，比烟台纯粹的「预售资金监管」覆盖面更宽（延伸至准入方式即预售／现房二选一）；标准上，景德镇以「主体结构封顶」为预售准入，烟台现行形象进度要求口径相近但未与现房销售双轨制绑定；门槛上，景德镇设 08-28 统一时点，烟台尚无对应时点；监管力度上，景德镇将个人住房贷款发放节点（竣工备案后）写入细则，烟台在预售资金监管中未覆盖贷款发放端。推进方式上，景德镇采取「1 部细则＋6 章」集中立规，烟台为分散在若干文件。<b>③ 启示：</b>烟台制度底座齐备、唯独缺「一部整合性落地意见」，景德镇件可作为<b>地级市体例的现成样板</b>直接参照——尤其是「已出让未取得工规证项目如何处理」与「08-28 统一时间分界」两条，恰好回答烟台在起草落地意见时最易卡住的适用性问题。建议烟台在起草时同步明确双轨制下现房销售备案流程（景德镇已单列一章）。</p></div>
+      <div class="field">所属领域：<b>房地产调控（商品住房销售制度·市级落地实施细则）</b></div>
+    </div>
+  </div>
+</div><div class="item">
+  <div class="ihead">
+    <div class="num">02</div>
+    <div class="ibody">
+      <div class="ititle"><a href="https://zjj.ningde.gov.cn/xxgkzl/zc/qtzdgkwj/202609/t20260930_2487343.htm" target="_blank" rel="noopener">宁德市住房和城乡建设局等 8 部门关于印发《宁德市加快推动无障碍设施品质提升行动方案》的通知（宁建技〔2026〕4号）</a></div>
+      <div class="meta"><span class="src">宁德市住房和城乡建设局等 8 部门</span>　|　发布时间：<span class="dt">2026-09-30 09:24 挂网（正文落款 2026-09-17；文号 宁建技〔2026〕4号；有效性：有效）</span></div>
+      <div class="tags"><span class="tag tag-first">首次出现<span class="why">「无障碍设施品质提升行动方案」主题在本系列此前无独立条目（历史仅见无障碍环境建设零散提及），按单个文件口径计首次出现。</span></span><span class="tag tag-multi"><span>上位联动：闽建科〔2026〕9号（福建省 7 部门）</span></span></div>
+      <div class="sec abs"><span class="lbl">内容摘要</span><p>由市住建局、残联、城市管理局、民政局、交通运输局、文化和旅游局、卫生健康委员会、通信发展管理办公室<b>8 部门联合印发</b>，落实《福建省住房和城乡建设厅等 7 部门关于印发〈福建省加快推动无障碍设施品质提升行动方案〉的通知》（闽建科〔2026〕9号）。<b>量化目标：</b>2026—2028 年全市建成<b>无障碍设施提升片区每年不少于 1 个</b>；<b>2027 年底前</b>各县（市、区）全面开展<b>无障碍设施专项体检</b>；<b>到 2030 年</b>各县（市、区）完成城市道路人行系统无障碍改造<b>不少于 12 公里</b>、居住社区无障碍改造<b>不少于 1 个</b>，公园、福道、公共服务窗口、公共厕所等场所完成全面改造。<b>任务与责任分工：</b>强化规划刚性约束——将无障碍设施纳入<b>国土空间规划与城市更新专项规划</b>，构建社区、街区、城市<b>三级无障碍设施体系</b>；所有向公众开放的新建项目应设置无障碍设施，且与主体工程<b>「同步规划、同步建设、同步移交」</b>，与周边设施有效衔接。立足「好房子、好小区、好社区、好城区」四好建设统筹推进。</p></div>
+      <div class="sec cmp"><span class="lbl">变化对比</span><p>本系列此前无障碍类内容散见于城市更新、完整社区、历史文化名城保护条目中，<b>无独立成体系的专项行动方案</b>。宁德件的变化在于：<b>① 载体升级</b>——从「项目配建要求」升格为「市域 4 年期（2026—2030）行动方案」；<b>② 引入量化指标</b>（片区数／改造里程／社区数三类可考核指标），此前本系列无障碍类条目均无可量化目标；<b>③ 首创「无障碍设施专项体检」</b>作为独立工作环节（2027 年底前完成），把城市体检机制下沉到无障碍细分领域；<b>④ 8 部门横跨住建、残联、城管、民政、交通、文旅、卫健、通信</b>，是本系列所见无障碍类文件中部门覆盖最全的一次——通信管理部门的加入对应信息无障碍（数字鸿沟）维度，超出传统「物理无障碍」范畴。上位文件为省级 7 部门件，宁德件属<b>省级方案的市级落地首批</b>。</p></div>
+      <div class="sec cmp"><span class="lbl">与烟台现行政策对比</span><p><b>① 烟台是否已有同类政策：</b>烟台有无障碍环境建设相关要求，但<b>未见独立的市域行动方案与量化指标体系</b>（按山东省统一要求执行），属本系列此前记录中的空白领域。<b>② 异同：</b>适用范围上，宁德把无障碍纳入国土空间规划与城市更新专项规划，烟台则将无障碍要求分散在施工图审查与竣工验收环节（项目级），缺少规划级刚性约束；指标上，宁德设「每年 1 个提升片区＋2030 年人行系统改造不少于 12 公里＋居住社区改造不少于 1 个」三类量化目标，烟台无同类可考核指标；推进方式上，宁德首创「无障碍设施专项体检」（2027 年底前全面开展），烟台城市体检尚未单列无障碍专题；部门协同上，宁德 8 部门含通信管理部门（覆盖信息无障碍），烟台通常仅涉及住建、残联、城管；监管力度上，宁德以「三同步」（同步规划、建设、移交）作为新建项目强制要求，烟台多以验收环节把关为主（末端），前置约束较弱。<b>③ 启示：</b>烟台城市更新领域目前处于<b>制度空窗</b>（《中心城区城市更新实施办法（试行）》烟更指发〔2021〕2号 与《专项资金管理办法（试行）》烟更指发〔2021〕3号 均已届满失效且无接续），宁德把「无障碍设施纳入城市更新专项规划」的做法，可作为烟台重建城市更新顶层设计时的<b>可选嵌入模块</b>；同时「无障碍设施专项体检」成本低、可考核，建议在烟台城市体检工作中增设该专题。</p></div>
+      <div class="field">所属领域：<b>其他相关（无障碍环境建设·市域专项行动方案）</b></div>
+    </div>
+  </div>
+</div><div class="item">
+  <div class="ihead">
+    <div class="num">03</div>
+    <div class="ibody">
+      <div class="ititle"><a href="https://www.dg.gov.cn/zwgk/zfgb/zxzc/content/post_4591646.html" target="_blank" rel="noopener">关于印发《东莞市工程建设项目招标代理机构及从业人员管理办法》的通知（东发改规〔2026〕4号）</a></div>
+      <div class="meta"><span class="src">东莞市发展和改革局等 7 部门（含东莞市住房和城乡建设局）</span>　|　发布时间：<span class="dt">2026-09-30 17:38 挂网（正文落款 2026-09-15；文号 东发改规〔2026〕4号）</span></div>
+      <div class="tags"><span class="tag tag-first">首次出现<span class="why">「招标代理机构及从业人员管理办法」主题在本系列此前无独立条目（历史仅见苏州招标代理动态核查、招标文件示范文本等不同分支），按单个文件口径计首次出现。</span></span><span class="tag tag-multi"><span>多部门联发：发改＋住建＋交通＋水务＋城管＋农业农村＋政数局（7 部门）</span></span></div>
+      <div class="sec abs"><span class="lbl">内容摘要</span><p>由东莞市发展和改革局牵头，会同东莞市住房和城乡建设局、交通运输局、水务局、城市管理和综合执法局、农业农村局、政务服务和数据管理局<b>共 7 部门联合印发</b>，全文<b>五章 28 条</b>，经市政府同意。核心制度：<b>① 代理机构统一登记</b>——市住房城乡建设局负责代理机构<b>统一登记和信息公示指导</b>，市发展改革局牵头制定综合性管理政策，市公共资源交易机构提供交易见证与行为记录；<b>② 从业人员管理</b>——从业人员须统一登记、每个项目<b>确定一名项目负责人</b>、<b>严禁同时在两家及以上代理机构执业</b>；实行从业人员<b>履职行为评价</b>，并经市建设工程管理云平台在部门间共享；<b>③ 负面清单</b>——列明代理机构及从业人员<b>严禁从事的 8 种活动</b>及举报投诉路径；<b>④ 独立性要求</b>——代理机构与行政监督管理部门及其他国家机关、公共资源交易机构<b>不得存在隶属关系或者其他利益关系</b>。前身《东莞市公共资源交易代理机构及从业人员管理暂行办法》已于 2025-12-29 到期失效，本件为接续升级版。</p></div>
+      <div class="sec cmp"><span class="lbl">变化对比</span><p>本系列此前建筑业市场监管类制度集中在<b>招标人端与评标端</b>——如温州／金华的招标文件示范文本标准化（第 42／43 期）、南通的招标文件示范文本（勘察设计段）、烟台的<b>AI 辅助招投标常态化</b>（2026-10-01 起施行）。东莞件的变化在于<b>把监管对象明确锁定「招标代理机构与从业人员」这一中介层</b>：<b>① 首次把「一人不得同时受聘两家代理机构」写入制度</b>（本系列此前无此条款）；<b>② 首创「代理机构统一登记＋从业人员履职评价＋建设工程管理云平台跨部门共享」三位一体</b>，把分散在各部门的代理行为数据汇聚；<b>③ 由发改部门牵头、住建等 7 部门联发</b>（此前本系列同类件多由住建部门单独印发），体现招标代理监管的跨领域属性；<b>④ 明确代理机构与监管部门「不得存在隶属关系或其他利益关系」</b>，直接切中中介机构「既当裁判又当运动员」的历史问题。此外，本件是从已失效的「公共资源交易代理机构」暂行办法升级而来，<b>适用范围从公共资源交易环节扩展到全部工程建设项目</b>。</p></div>
+      <div class="sec cmp"><span class="lbl">与烟台现行政策对比</span><p><b>① 烟台是否已有同类政策：</b>烟台已实行<b>AI 辅助招投标</b>（2026-10-01 起施行，施工 ≤1500 万元、勘察设计与监理 ≤150 万元）与建设工程企业资质管理，但<b>未见专门针对招标代理机构及从业人员的市级管理办法</b>，代理机构管理主要依托《招标投标法》实施条例与省级通用规定，缺本地化的从业行为规范。<b>② 异同：</b>监管对象上，烟台 AI 辅助招投标监管的是「招投标过程」，东莞件监管的是「代理机构与从业人员」这一主体层，两者互补而非替代；登记制度上，东莞实行代理机构与从业人员双统一登记、市住建局负责登记与公示指导，烟台无对应本地登记台账；执业限制上，东莞明确「一人不得同时受聘两家代理机构」「每项目一名项目负责人」，烟台无同类量化约束；数据共享上，东莞依托「市建设工程管理云平台」实现跨部门履职行为共享，烟台 AI 辅助招投标平台可作为承接载体但尚未打通代理机构行为数据；牵头机制上，东莞为发改牵头、7 部门联发，烟台为住建主导。<b>③ 启示：</b>烟台 AI 辅助招投标已进入常态化施行期，但其评审准确性高度依赖<b>代理机构编制的招标文件质量</b>——这正是东莞件治理的对象。建议烟台在 AI 辅助招投标数据底座上，<b>增补招标代理机构与从业人员的登记与履职评价模块</b>，形成「代理行为留痕→履职评价→AI 评审质量反馈」的闭环，成本低且与现有平台同源。注意本件成文 09-15 早于本次扩窗期起点，按挂网日期 09-30 计入。</p></div>
+      <div class="field">所属领域：<b>建筑业管理（工程招标代理·市场主体监管）</b></div>
+    </div>
+  </div>
+</div><div class="item">
+  <div class="ihead">
+    <div class="num">04</div>
+    <div class="ibody">
+      <div class="ititle"><a href="https://www.gaoyao.gov.cn/hdjlpt/yjzj/answer/53181" target="_blank" rel="noopener">肇庆市高要区住房和城乡建设局关于公开征求《高要区城市基础设施配套费和村镇基础设施配套费征收管理办法（征求意见稿）》意见的公告</a></div>
+      <div class="meta"><span class="src">肇庆市高要区住房和城乡建设局</span>　|　发布时间：<span class="dt">2026-09-29（意见期 2026-09-29 至 2026-10-28）</span></div>
+      <div class="tags"><span class="tag tag-first">首次出现<span class="why">「城市基础设施配套费与村镇基础设施配套费征收管理」主题在本系列此前无独立条目（第 39 期巴彦淖尔配套费实施细则因类目边界未收录，为线索），本件为首次正式收录。</span></span><span class="tag tag-multi"><span>区级文件·收费类制度</span></span></div>
+      <div class="sec abs"><span class="lbl">内容摘要</span><p>为规范区级<b>城市基础设施配套费</b>与<b>村镇基础设施配套费</b>的征收工作，由高要区住建局起草《高要区城市基础设施配套费和村镇基础设施配套费征收管理办法（征求意见稿）》并公开征求意见，意见期 2026-09-29 至 2026-10-28，附起草说明。办法明确<b>征收范围、计费口径与办理程序</b>三大要素，把「城市」与「村镇」两类配套费纳入<b>同一部办法统一规范</b>。背景是村镇建设领域长期缺乏与城市对等的配套费征收依据，多依赖上级文件或一事一议，本件试图在区级层面统一口径。</p></div>
+      <div class="sec cmp"><span class="lbl">变化对比</span><p>本系列此前配套费类制度仅见巴彦淖尔（第 39 期，城市基础设施配套费实施细则征意，因类目边界未收录）与烟台自身台账中的《城市基础设施配套费》烟政办发〔2025〕11号（长期有效）。高要件的变化在于<b>把「村镇基础设施配套费」与「城市基础设施配套费」并列纳入同一办法</b>——本系列此前所见的配套费制度几乎全部只覆盖城市（中心城区）范围，村镇部分往往缺位。这一「城乡并举」体例对烟台村镇建设领域（农村危房改造、美丽村居建设、农房质量安全）具有潜在参考意义：烟台现行《城市基础设施配套费》（烟政办发〔2025〕11号）同样以城市范围为主，村镇建设资金来源的稳定性问题在本系列烟台台账中未被正面回应。需说明的是，本件为<b>区级（高要区）文件</b>，层级较低，且属行政事业性收费类制度，与烟台市级配套费制度的可比性有限。</p></div>
+      <div class="sec cmp"><span class="lbl">与烟台现行政策对比</span><p><b>① 烟台是否已有同类政策：</b>有。《城市基础设施配套费》已列入烟台市级现行有效规范性文件目录（<b>烟政办发〔2025〕11号，长期有效</b>，见第 42 期烟台台账），但以城市（中心城区）范围为主。<b>② 异同：</b>适用范围上，高要把「城市＋村镇」两类配套费并入同一办法，烟台的配套费制度未把村镇部分并列规范（村镇建设资金来源多依托上级专项与区市统筹）；征收口径上，高要强调「计费口径与办理程序」的统一化，烟台现行办法已运行多年、口径相对成熟；层级的差异决定了本件约束力弱于烟台市级文件。推进方式上，高要采取「一部办法＋起草说明」公开征意，程序规范，与烟台规范性文件制发程序一致。<b>③ 启示：</b>借鉴价值<b>有限但非为零</b>——若烟台未来研究村镇建设（美丽村居、农房改造）资金保障机制，「城乡配套费统一口径」是一个可研讨方向；但更现实的启发是其<b>制发程序的规范性</b>：征求意见稿同时公开「起草说明」，便于社会理解立法意图，烟台在下一轮规范性文件制发与修订中可沿用这一做法（本系列多期已观察到部分城市忽略起草说明环节）。注：本件为区级文件且属收费类制度，收录价值中等，列为本期参考项。</p></div>
+      <div class="field">所属领域：<b>其他相关（村镇建设·配套费征收管理制度）</b></div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section>
+    <h2>二、政策追踪表<span class="en">多地同类政策对比</span></h2>
+    <table>
+<thead><tr><th style="width:18%">政策主题</th><th style="width:23%">先行地区及时间</th><th style="width:22%">今日新增地区</th><th>主要差异</th></tr></thead>
+<tbody>
+<tr><td class="reg">商品住房销售制度改革（现房销售·预售资金监管·项目公司制）</td><td><b>全国性源头：</b>住建部等三部门 建房规〔2026〕3号《关于完善商品住房销售制度的通知》（<b>2026-08-28</b> 发文，第 38 期起跟踪）。<b>落地城市先后：</b>上海 沪建房管联〔2026〕451号（09-29，定金 3%）、广州（09-30，定金 5%）、武汉 三部门 18 条七部分（<b>10-01 发布</b>，三档分类＋双时间节点缓冲 2027／2028 年底＋保函置换 ≤30%／留存 ≥70%）。烟台为制度底座齐备但缺落地意见</td><td class="nw"><b>景德镇</b>——《景德镇市完善商品住房销售制度实施细则（征求意见稿）》（09-30 挂网，成文 09-24，意见期至 10-24）</td><td class="df">景德镇是本系列所见<b>首个普通地级市完整落地体例</b>（此前 4 城均为副省级及以上）。三条差异关键：<b>① 时间分界统一锚定 2026-08-28</b>（即上位文件发文日），比广州「按 09-30 前后分段」更明确；<b>② 明确把「已出让土地尚未取得工规证的项目」纳入新规</b>——三地中口径最严，堵住「抢跑」通道；<b>③ 把个人住房贷款发放节点写入细则</b>（08-28 后实行预售的须竣工备案后发放），与银发〔2026〕171号 金融端配套。另设「预售与现房销售双轨并行」专章（现房销售备案），并把项目公司制、主办银行制写入总则</td></tr>
+<tr><td class="reg">无障碍环境建设（市域专项行动方案＋量化指标）</td><td>本系列此前无独立的无障碍类条目，相关内容散见于城市更新、完整社区、历史文化名城保护条目。<b>省级源头：</b>福建省 闽建科〔2026〕9号（7 部门）</td><td class="nw"><b>宁德</b>——宁建技〔2026〕4号《宁德市加快推动无障碍设施品质提升行动方案》（<b>8 部门联合印发</b>，09-30 挂网、成文 09-17）</td><td class="df">宁德把无障碍从「项目配建要求」升格为<b>市域 4 年期（2026—2030）行动方案</b>：<b>① 首创「无障碍设施专项体检」</b>（2027 年底前各县市区全面开展），把城市体检机制下沉到无障碍细分领域；<b>② 三类量化指标</b>（提升片区每年不少于 1 个／2030 年人行系统改造不少于 12 公里／居住社区改造不少于 1 个），本系列此前无障碍类条目均无可考核目标；<b>③ 规划刚性约束</b>——纳入国土空间规划与城市更新专项规划，构建社区—街区—城市三级体系；<b>④ 新建项目「三同步」</b>（同步规划、建设、移交）；<b>⑤ 部门覆盖最全</b>（含通信管理部门，对应信息无障碍维度）</td></tr>
+<tr><td class="reg">招标代理机构及从业人员监管（中介层主体治理）</td><td>本系列此前建筑业市场监管集中在<b>工具端与评标端</b>：温州／金华 招标文件示范文本标准化（第 42／43 期）、南通 勘察设计招标文件示范文本、烟台 <b>AI 辅助招投标常态化</b>（2026-10-01 起，施工 ≤1500 万元、勘察设计与监理 ≤150 万元）。<b>代理机构主体层</b>此前无记录</td><td class="nw"><b>东莞</b>——东发改规〔2026〕4号《东莞市工程建设项目招标代理机构及从业人员管理办法》（<b>7 部门联合印发</b>，五章 28 条，09-30 挂网、成文 09-15）</td><td class="df">东莞把监管对象<b>明确锁定「招标代理机构与从业人员」这一中介层</b>：<b>① 首创「一人不得同时在两家及以上代理机构执业」</b>＋每项目确定一名项目负责人；<b>② 「代理机构统一登记＋从业人员履职评价＋建设工程管理云平台跨部门共享」三位一体</b>；<b>③ 明确代理机构与行政监督管理部门、公共资源交易机构「不得存在隶属关系或者其他利益关系」</b>，直切中介机构「既当裁判又当运动员」问题；<b>④ 列明严禁从事的 8 种活动</b>＋举报投诉路径；<b>⑤ 由发改部门牵头</b>（此前本系列同类件多由住建单独印发），体现招标代理的跨领域属性。本件系《公共资源交易代理机构及从业人员管理暂行办法》（2025-12-29 到期失效）的<b>接续升级版</b>，适用范围从公共资源交易环节扩展至全部工程建设项目</td></tr>
+<tr><td class="reg">基础设施配套费征收管理（城市＋村镇并轨）</td><td>本系列此前配套费类记录仅见<b>巴彦淖尔</b>《城市基础设施配套费实施细则》征意（第 39 期，因类目边界未收录，列为线索）；<b>烟台</b>《城市基础设施配套费》烟政办发〔2025〕11号（长期有效，仅覆盖城市范围）</td><td class="nw"><b>肇庆高要</b>——《高要区城市基础设施配套费和村镇基础设施配套费征收管理办法（征求意见稿）》（09-29，意见期至 10-28）</td><td class="df">高要件的差异在于<b>把「村镇基础设施配套费」与「城市基础设施配套费」并列纳入同一部办法</b>——本系列此前所见配套费制度几乎全部只覆盖城市（中心城区）范围，村镇部分普遍缺位，恰与村镇建设（农村危房改造、美丽村居、农房质量安全）资金保障问题对应。办法明确征收范围、计费口径与办理程序三要素，并同步公开起草说明。惟需说明：本件为<b>区级文件</b>、层级较低，且属行政事业性收费类制度，与烟台市级配套费制度（烟政办发〔2025〕11号）可比性有限，借鉴价值中等</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section>
+    <h2>三、附录：与烟台相关度评级<span class="en">对烟台住建工作的参考价值</span></h2>
+    <div class="note">评级口径：<b>高</b>＝与烟台现行制度直接对位、可立即借鉴或涉及烟台自身台账风险；<b>中</b>＝机制可复制、需改造后适用；<b>低</b>＝参考价值有限或与烟台关联较弱。</div>
+<div class="arow"><div class="ano">1</div><span class="lvl lvl-h">相关度高</span><div class="txt"><b>《景德镇市完善商品住房销售制度实施细则（征求意见稿）》</b>　烟台制度底座齐备（预售资金监管办法至 2029-01-01、形象进度要求 2026-06-30）而缺「一部整合性落地意见」，景德镇件是首个普通地级市体例的现成样板。三条可直接移植：「新老划断统一锚定 2026-08-28」「已出让未取得工规证项目纳入新规（堵抢跑）」「个人住房贷款竣工备案后发放（金融端衔接）」。</div></div>
+<div class="arow"><div class="ano">2</div><span class="lvl lvl-m">相关度中</span><div class="txt"><b>《宁德市加快推动无障碍设施品质提升行动方案》（宁建技〔2026〕4号）</b>　烟台无独立市域无障碍行动方案与量化指标（此前为空白领域）。可借「无障碍设施专项体检」（成本低、可考核）嵌入烟台城市体检工作；「无障碍纳入城市更新专项规划」可作为烟台城市更新顶层设计方案重建时的可选模块。</div></div>
+<div class="arow"><div class="ano">3</div><span class="lvl lvl-h">相关度高</span><div class="txt"><b>《东莞市工程建设项目招标代理机构及从业人员管理办法》（东发改规〔2026〕4号）</b>　与烟台 AI 辅助招投标（2026-10-01 起常态化）互补而非替代——AI 评审准确性高度依赖代理机构编制的招标文件质量。建议在烟台 AI 辅助招投标平台增补代理机构与从业人员登记、履职评价模块，形成「代理行为留痕→履职评价→AI 评审质量反馈」闭环，与现有平台同源、增量成本低。</div></div>
+<div class="arow"><div class="ano">4</div><span class="lvl lvl-l">相关度低</span><div class="txt"><b>《高要区城市基础设施配套费和村镇基础设施配套费征收管理办法（征求意见稿）》</b>　区级文件、收费类制度，与烟台市级配套费制度（烟政办发〔2025〕11号）可比性有限。可关注其「城乡配套费统一口径」思路（若烟台研究村镇建设资金保障机制）与「征求意见稿同步公开起草说明」的规范制发程序。</div></div>
+  </section>
+
+  <section>
+    <h2>四、未获取来源清单<span class="en">不可达 / 待补录</span></h2>
+    <ul class="miss">
+<li><b>山东省住房和城乡建设厅（通知公告／政策文件栏目）</b>　<a href="http://zjt.shandong.gov.cn/" target="_blank" rel="noopener">http://zjt.shandong.gov.cn/</a><br><b>本期实测：</b><code>https</code> 通道 <b>000（连接失败）</b>；<code>http</code> 明文通道 <b>200 可达</b>（首页水位 09-30），但<b>通知公告栏为政府信息公开模板 JS 壳</b>（仅有 2022 年国办文件）；站内检索接口 <code>jsearchfront/interfaces/cateSearch.do</code> 响应的<b>索引仍止于 2003—2019 年</b>（实测「通知／办法／住房」等关键词均无 2020 年后命中）。<b>「页面可达但内容不可枚举」形态连续第 3 期成立</b>，属结构性盲区，本期未编造条目。</li>
+<li><b>甘肃省住房和城乡建设厅</b>　<a href="https://zjt.gansu.gov.cn/" target="_blank" rel="noopener">https://zjt.gansu.gov.cn/</a><br><b>本期实测：</b><code>http</code> 与 <code>https</code> <b>均为 412</b>（返回约 6.3 KB 拦截页，JS 反爬挑战 <code>$_ts</code>），与上期判定一致，需 JS 渲染环境方能枚举。本期无法确认甘肃窗口期动态。</li>
+<li><b>河北省住房和城乡建设厅（列表页与详情页）</b>　<a href="https://zfcxjst.hebei.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.hebei.gov.cn/</a><br><b>本期形态收紧：</b>首页 <b>200</b>（水位 09-30），但<b>厅发规范性文件列表页与详情页均由上期「列表可读」收紧为 412</b>（列表返回 3.0 KB、详情返回 3.1 KB）。本期已改经 WebFetch 渲染取到标题＋文号＋日期，可读部分正文，枚举条件较上期进一步恶化。</li>
+<li><b>云南省住房和城乡建设厅</b>　主域 <a href="https://zjt.yn.gov.cn/" target="_blank" rel="noopener">https://zjt.yn.gov.cn/</a>　备用域 <a href="https://zfcxjst.yn.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.yn.gov.cn/</a><br><b>本期实测：三域名（主域 http／https ＋ 备用域 https）均 000 不可达</b>——上期「备用域 <code>zfcxjst.yn.gov.cn</code> 200 可达」的结论本期<b>未能复现</b>，判定为<b>间歇性可达</b>。本期无法确认云南窗口期动态。</li>
+<li><b>广州市住房和城乡建设局（gkmlpt 子系统）</b>　<a href="https://zfcj.gz.gov.cn/" target="_blank" rel="noopener">https://zfcj.gz.gov.cn/</a><br><b>本期实测：</b>门户主页 <b>200 正常</b>，但 <code>/gkmlpt/api/all/{1089,1090,1091,1104}</code>（规范性文件／其它文件／政策解读／工作动态四类）返回 <b>504／554</b>，<code>/gkmlpt/index</code>、<code>/gkmlpt/policy</code> 亦超时；多次重试（cookie 预热、完整浏览器头、HTTP/1.1、45—100 秒超时）均失败。<b>属本期唯一核心城市枚举盲区</b>（09-30—10-07 之间该子系统挂网条目未能枚举），非 gkmlpt 通道（意见征集、城市更新政策文件）实测无 09-25 后未收录条目。</li>
+<li><b>天津市住房和城乡建设委员会（政策文件栏目）</b>　<a href="https://zfcxjs.tj.gov.cn/" target="_blank" rel="noopener">https://zfcxjs.tj.gov.cn/</a><br>旧域 <code>zj.tj.gov.cn</code> <b>000 不可达</b>；实域可达且 <code>/xxgk_70/</code>（政务公开）与 <code>/hdjl_70/jcyjzj/</code>（决策意见征集）<b>均可枚举</b>（水位 09-30），但<b>政策文件栏仍为 JS 壳</b>，存在枚举盲区。</li>
+<li><b>广西壮族自治区住房和城乡建设厅</b>　<a href="http://zjt.gxzf.gov.cn/" target="_blank" rel="noopener">http://zjt.gxzf.gov.cn/</a>（须用 http）<br><code>https</code> 持续 <b>502／000</b>，<b><code>http</code> 明文通道 200 可达</b>（首页可读，可见 09-23／09-24／09-29／09-30 日期）；但本期<b>住建厅政策栏目具体路径仍未枚举成功</b>，窗口内未获新增。</li>
+<li><b>宁夏回族自治区住房和城乡建设厅</b>　原域 <a href="https://zjt.nx.gov.cn/" target="_blank" rel="noopener">https://zjt.nx.gov.cn/</a>（000）　<b>实域</b> <a href="https://jst.nx.gov.cn/" target="_blank" rel="noopener">https://jst.nx.gov.cn/</a>（200）<br>上期已确认「原域为错域、实域 <code>jst.nx.gov.cn</code> 200 可达」，本期复核结论<b>维持</b>。实域已可枚举，本期窗口内无实质新增。</li>
+<li><b>江苏（主域）</b>　<a href="https://jsj.jiangsu.gov.cn/" target="_blank" rel="noopener">https://jsj.jiangsu.gov.cn/</a><br>主域<b>超时（000）</b>；实域 <code>jsszfhcxjst.jiangsu.gov.cn</code> <b>200 可达</b>，厅发文件栏可枚举（最新 09-24／09-30），但<b>通知公告栏 col49384 为动态加载、未破解</b>，存在局部枚举盲区。</li>
+<li><b>厦门市住房和城乡建设局</b>　<a href="https://js.xm.gov.cn/" target="_blank" rel="noopener">https://js.xm.gov.cn/</a><br><b>DNS 解析失败</b>（http/https 直连与 WebFetch 均不可达），与上期一致，<b>完全不可枚举</b>。厦门窗口期动态本期未能获取。</li>
+<li><b>范围外城市未解析住建子域（如实说明）</b>　常州（<code>zjj/jsj.changzhou.gov.cn</code>）、绍兴（<code>jsj.sx.gov.cn</code>／<code>zjj.sx.gov.cn</code>）、洛阳（<code>lyzj.ly.gov.cn</code>／<code>zjj.ly.gov.cn</code>）、绵阳（<code>cjw/zjj.mianyang.gov.cn</code>）、宜昌、襄阳、芜湖、唐山、鞍山、长春、大庆、桂林、曲靖、乌鲁木齐、包头、呼和浩特、海口、三亚等住建部门官网<b>本期未能完成枚举</b>（多为域名不解析或连接失败，已对每市尝试 2—3 个候选域名与 http／https 双协议），未作超出实测的推断。</li>
+<li><b>轻度盲区（已绕行）</b>　<b>宁波</b>首页 <code>MakeTime</code> 未渲染（NOT FOUND），零新增判定改由逐栏目 JPAAS 接口（webId=3516）承担；<b>深圳</b>意见征集列表须枚举 <code>answer id</code>；<b>杭州／济南／青岛</b>等 JS 壳栏目已用 JPAAS <code>front/page/build/unit</code> 接口绕行完成枚举。</li>
+<li><b>待核实线索（非正式条目）</b>　① <b>烟台市住房「以旧换新」补贴申报优化</b>（10-04「烟台住建」微信公众号）——仅公众号与新闻平台可见，<b>未在 <code>zjj.yantai.gov.cn</code> 与市政府门户定位到 gov.cn 原文</b>；依来源约束不纳入正式收录，列为待核实线索（本期维持上期结论）。② <b>珠海《配售型保障性住房管理办法（试行）》十问十答</b>（09-30 更新）——属政策解读页面，办法原文未在历期检出，待补录。③ <b>嘉兴《关于进一步加强市区物业专项维修资金使用管理的通知（征求意见稿）》</b>（09-29）——仅得 JPAAS 民意征集表单壳页（HTML 仅 454 字符），未找到传统 HTML 正文页，待核实。④ <b>台州《台州市住宅质量提升技术导则（试行）（征求意见稿）》</b>（09-29）——同上为表单壳页，与第 41 期结论一致，维持不收录。⑤ <b>烟台《深化低效用地再开发推进城市更新的实施意见》</b>（2026-04 征意结束、尚未印发）——城市更新制度空窗的新接续征意稿，建议跟踪印发进展。</li>
+    </ul>
+  </section>
+
+</main>
+<footer>
+  <div><b>数据来源：</b>各住建部门官网（域名均为 gov.cn）原文，严禁采用新闻网站、门户网站、自媒体及聚合站转载内容。</div>
+  <div><b>筛选口径：</b>仅收录与烟台市住房和城乡建设局职责相关的实质性、制度性政策与动态；市政公用事业与地下管网类（供水／燃气／排水／供热／地下管网与综合管廊）一律不收录。</div>
+  <div><b>标签口径（自 2026-10-03 起执行）：</b>「首次出现／多次出现」以<b>单个文件</b>（文号＋标题为唯一标识）为标准——本系列第一次收录为「首次出现」，同一文件第二次及以后收录为「多次出现」；「延续跟进」为同一文件跨期的阶段性进展单列（含同一制度方向下的跨省标准供给）。同类政策的先行地区与多地推行情况见各条标签括注及政策追踪表。</div>
+  <div><b>对比基准：</b>烟台现行政策要点由独立基准子代理梳理，含 2026 年第三季度规范性文件台账（部门 18 件、市级 28 件）。</div>
+  <div class="footlinks"><b>本期采集：</b>8 组并行子代理（A 住建部／B 重点省份组1／C 重点省份组2／D 重点城市／D-武汉固定信源／E 其余省份／F 烟台基准／G 独立复查与范围外城市补获）　|　生成时间：2026-10-07 07:30</div>
+</footer>
+</div>
+</body>
+</html>
