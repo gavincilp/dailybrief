@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>住建动态简报（2026-10-10）第 46 期</title>
+<style>
+
+:root{
+  --navy:#12325c; --navy-2:#1b4478; --navy-3:#2a5a97; --ink:#1f2937; --ink-2:#41506b;
+  --warm:#fbfaf7; --warm-2:#f5f2ec; --line:#dfd9cd; --line-2:#e8e3d9;
+  --first:#0f766e; --first-bg:#e6f4f1; --multi:#9a3412; --multi-bg:#fdeee4;
+  --cont:#3f4d63; --cont-bg:#eef1f6; --accent:#b8860b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--warm-2);color:var(--ink);
+  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+  font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;background:var(--warm);border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+header.top{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 58%,var(--navy-3) 100%);color:#fff;padding:34px 40px 26px;position:relative;overflow:hidden}
+header.top::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.045)}
+header.top .kicker{font-size:11px;letter-spacing:2.6px;text-transform:uppercase;opacity:.72;font-weight:600}
+header.top h1{margin:10px 0 6px;font-size:31px;letter-spacing:2.5px;font-weight:700}
+header.top .sub{font-size:13.5px;opacity:.88;letter-spacing:.4px}
+header.top .statline{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+.stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:3px;padding:6px 14px;font-size:13px;letter-spacing:.5px}
+.stat b{font-size:16px;color:#ffe9b0;margin:0 3px}
+.stat.f b{color:#9fe8dd}.stat.m b{color:#ffcda4}.stat.c b{color:#cdd8ea}
+main{padding:0 40px 40px}
+.note{background:var(--warm-2);border-left:4px solid var(--accent);padding:16px 20px;margin:26px 0 8px;font-size:14px;color:var(--ink-2);line-height:1.9}
+.note b{color:var(--navy)}
+h2{margin:38px 0 16px;padding:0 0 10px;font-size:19.5px;color:var(--navy);border-bottom:2px solid var(--navy);letter-spacing:1px;display:flex;align-items:baseline;gap:12px}
+h2 .en{font-size:11.5px;color:#8a94a6;font-weight:400;letter-spacing:.6px}
+.item{background:#fff;border:1px solid var(--line-2);border-radius:4px;margin:0 0 16px;padding:20px 22px 16px;box-shadow:0 1px 3px rgba(18,50,92,.05)}
+.ihead{display:flex;gap:15px;align-items:flex-start}
+.num{flex:0 0 40px;height:40px;border-radius:3px;background:linear-gradient(140deg,var(--navy),var(--navy-3));color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.5px;margin-top:3px}
+.ibody{flex:1;min-width:0}
+.ititle{font-size:16.5px;font-weight:700;line-height:1.6;color:var(--navy)}
+.ititle a{color:var(--navy);text-decoration:none;border-bottom:1px dashed #b9c4d4}
+.ititle a:hover{color:var(--navy-3);border-bottom-color:var(--navy-3)}
+.meta{font-size:12.5px;color:var(--ink-2);margin:8px 0 9px;line-height:1.75}
+.meta .src{color:var(--navy-2);font-weight:600}
+.meta .dt{color:#5a6577}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.tag{font-size:11.5px;padding:3px 10px;border-radius:2px;font-weight:700;letter-spacing:.4px}
+.tag-first{background:var(--first-bg);color:var(--first);border:1px solid #b7e0d9}
+.tag-multi{background:var(--multi-bg);color:var(--multi);border:1px solid #f0bda3}
+.tag-cont{background:var(--cont-bg);color:var(--cont);border:1px solid #ccd6e4}
+.tag .why{font-weight:400;font-size:11px;opacity:.9;margin-left:4px}
+.sec{margin:0 0 11px;font-size:14.2px;line-height:1.9}
+.sec .lbl{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy-2);padding:2px 9px;border-radius:2px;letter-spacing:.6px;margin-bottom:6px}
+.sec.cmp .lbl{background:#6b5b3e}
+.sec.abs .lbl{background:var(--navy-2)}
+.sec p{margin:0;color:var(--ink);text-align:justify}
+.sec strong{color:var(--navy);font-weight:700}
+.field{font-size:12.8px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:9px;margin-top:11px}
+.field b{color:var(--navy-2)}
+table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:13.2px;background:#fff;border:1px solid var(--line)}
+th{background:var(--navy);color:#fff;font-weight:600;padding:11px 12px;text-align:left;font-size:12.8px;letter-spacing:.5px}
+td{border-top:1px solid var(--line-2);padding:11px 12px;vertical-align:top;line-height:1.8;color:var(--ink-2)}
+td.reg{color:var(--navy);font-weight:700}
+td.nw{color:var(--first);font-weight:600}
+td.df{color:#5a6577}
+tbody tr:nth-child(even) td{background:#faf9f6}
+.arow{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line-2);border-radius:3px;padding:12px 16px;margin-bottom:8px}
+.ano{flex:0 0 26px;height:26px;border-radius:50%;background:var(--warm-2);color:var(--navy);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);margin-top:2px}
+.lvl{flex:0 0 76px;font-size:11.5px;font-weight:700;padding:3px 0;border-radius:2px;text-align:center;margin-top:3px;letter-spacing:.4px}
+.lvl-h{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.lvl-m{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.lvl-l{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+.arow .txt{font-size:13.5px;color:var(--ink-2);line-height:1.85}
+.arow .txt b{color:var(--navy)}
+ul.miss{margin:6px 0 0;padding-left:0;list-style:none}
+ul.miss li{background:#fff;border:1px solid var(--line-2);border-left:3px solid #b23c3c;border-radius:2px;padding:12px 16px;margin-bottom:9px;font-size:13.3px;line-height:1.85;color:var(--ink-2)}
+ul.miss li b{color:var(--navy)}
+ul.miss a{color:var(--navy-3);text-decoration:none;word-break:break-all;font-size:12.4px}
+ul.miss a:hover{text-decoration:underline}
+code{background:var(--warm-2);border:1px solid var(--line-2);border-radius:2px;padding:1px 5px;font-size:12.3px;color:#8a4b1f;font-family:Consolas,Monaco,monospace}
+footer{background:var(--navy);color:#c7d2e0;padding:24px 40px 30px;font-size:12.4px;line-height:2}
+footer b{color:#fff}
+footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255,255,255,.16);font-size:11.8px;opacity:.8}
+@media print{body{background:#fff}.wrap{border:none;max-width:100%}.item{box-shadow:none;break-inside:avoid}header.top{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:760px){main{padding:0 16px 24px}header.top{padding:24px 20px 20px}header.top h1{font-size:23px}footer{padding:20px}.ihead{gap:10px}.num{flex:0 0 32px;height:32px;font-size:13px}.arow{flex-wrap:wrap}.lvl{flex:0 0 60px}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hd">
+  <div class="hd-top">
+    <div class="hd-badge">住建政策每日简报</div>
+    <div class="hd-issue">第 46 期</div>
+  </div>
+  <h1>住建动态简报</h1>
+  <div class="hd-date">2026-10-10（周六）&nbsp;·&nbsp;覆盖：住房和城乡建设部 · 31 个省级行政区 · 9 个重点城市</div>
+  <div class="hd-stats">
+    <span class="st st-all">今日收录 <b>18</b> 条</span>
+    <span class="st st-first">首次出现 <b>13</b> 条</span>
+    <span class="st st-multi">多次出现 <b>5</b> 条</span>
+    <span class="st st-cont">延续跟进 <b>0</b> 条</span>
+  </div>
+</div>
+
+<div class="lead">
+  <div class="lead-t">本期提要</div>
+  <div class="lead-b">节后第二日全国住建系统全面复工，<b>省级与地市两级同步放量</b>：主窗口（10-08 07:30—10-10 07:30）经 8 组并行子代理实测，<b>住建部本级仍零新增</b>（政策文件库最新 09-24、规章库仍部令第61号、行政规范性文件库仍 建房规〔2026〕3号、标准公告最新 09-23、政策解读最新 08-31；首页 MakeTime 已更新至 2026-10-09 18:30:36，但新增均为例行注册公示、市政管网类专访与地方新闻），<b>新增集中于 10-08 与 10-09 两日</b>（湖北、湖南、河南、安徽、江西、浙江、吉林、山西、江苏、青岛、苏州、杭州、佛山、新乡同日或隔日发布）。本期共收录 <b>18 条</b>（首次出现 15／多次出现 3／延续跟进 0），为节后单期收录量最高的一期，其中主窗口 12 条、扩窗期（09-25 起）6 条。</div>
+  <div class="lead-sub"><b>与烟台最直接相关三条：</b></div>
+  <ol class="top3">
+<li><div class="t3-t">湖南省《关于支持老旧住房自主更新的通知》（湘建保〔2026〕97号，住建＋自然资源＋财政三厅局联合）</div><div class="t3-k">三种更新模式（原拆原建／改扩翻／整治提升）＋装配式外墙面积不计容（不超过总建筑面积 3%）＋用地规划产权资金配套</div><div class="t3-r">烟台城市更新制度正处于空窗期，该文件是唯一可直接参照的省级「自主更新」完整制度文本。</div></li>
+<li><div class="t3-t">广州市《关于进一步做好工程质量潜在缺陷保险实施工作的通知》</div><div class="t3-k">新出让居住用地土地出让合同应列入 IDI 投保、新建保障性住房和安置房项目应投保、阶梯式费率、预付赔款机制</div><div class="t3-r">烟台质量安全领域目前以「先验房后收房」＋五方责任清单为主，IDI 这一市场化的长期质量保障机制尚属空白。</div></li>
+<li><div class="t3-t">广西 2026 年购买新建商品房补贴 ＋ 支持高校毕业生安居补贴（双补贴公告）</div><div class="t3-k">购房补贴 2026-09-25 至 12-31；高校毕业生租住保租房按实缴 3 个月租金的 50% 核补基础补贴、可叠加</div><div class="t3-r">烟台以旧换新补贴（2%、最高 5 万元、总额度 6000 万元）与之并列，广西「先租后补、实报实销」对保租房去化有直接借鉴。</div></li>
+  </ol>
+</div>
+
+<div class="sec-h">一、今日重点政策与动态（按对烟台住建工作的重要程度排序）</div>
+<div class="sec-note">标签口径：以<b>单个文件</b>（文号＋标题为唯一标识）为标准——第 1 次收录＝【首次出现】；第 2 次及以后＝【多次出现】；【延续跟进】＝同一文件跨期的阶段性进展，不计入「多次出现」。</div>
+
+<div class="item" id="it1">
+  <div class="ihd">
+    <div class="ino">1</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjt.hunan.gov.cn/zjt/c101183/c101185/202610/t20261008_34076736.html" target="_blank" rel="noopener">湖南省住房和城乡建设厅、湖南省自然资源厅、湖南省财政厅关于支持老旧住房自主更新的通知（湘建保〔2026〕97号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">湖南省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-08（成文 2026-08-14，发文 2026-09-04）</span>
+        <span class="m m-field">领域：城市更新／住房保障</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">三厅局联合发文，面向城市（含县城）建成区内的 C/D 级危险住房、非成套住宅等，明确<b>原拆原建、改扩翻、整治提升</b>三种更新模式，并配套用地保障、规划管控、技术标准适配、产权保障、资金支持等一揽子政策。允许在符合规划前提下适当增加建筑面积，<b>装配式外墙面积不计入容积率（不超过总建筑面积 3%）</b>；严禁拆真建假、严禁变相建设别墅。自印发之日起施行，有效期 5 年。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列此前城市更新条目多为「实施路径类」（广东城市体检与更新一体化、湖南城市更新三年行动），本条把更新对象<b>收窄到「老旧住房」这一产权最复杂、居民意愿最关键的单元</b>，并以「三种模式＋不计容激励＋三部门配套」形成可直接操作的闭环，较此前文件在<b>产权与容积率两个硬约束上给出明确解法</b>。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无同类政策，可研究引入。</b>烟台城市更新制度目前处于空窗——《中心城区城市更新实施办法（试行）》（烟更指发〔2021〕2号）与《专项资金管理办法（试行）》（烟更指发〔2021〕3号）均已届满失效且无接续，接续征意稿《深化低效用地再开发推进城市更新的实施意见》由市自然资源和规划局起草（征意 2026-04-17 至 05-17），<b>至今未印发</b>。本条可直接嵌入烟台「房票安置＋中心城区自主更新原拆原建试点」既有框架：①「三种模式菜单化」可与烟台房票安置衔接，形成「货币安置／原拆原建／改扩翻」三选一；②<b>「装配式外墙不计容」是低成本激励工具</b>，烟台既有烟政办字〔2019〕54号装配式政策已届满无接续，可借此一并重启；③三部门联发（住建＋自然资源＋财政）可破解烟台此前更新文件「住建单打」落地难的问题。建议由市住建局会同市自然资源和规划局、市财政局联合调研，先行在芝罘区选取 1—2 个非成套住宅片区试点。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">省级完整制度文本，且烟台城市更新处于空窗期，属最高优先级借鉴对象；涉及产权与容积率两个硬约束的解法可直接移植。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it2">
+  <div class="ihd">
+    <div class="ino">2</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zfcj.gz.gov.cn/gkmlpt/content/11/11028/post_11028538.html" target="_blank" rel="noopener">广州市住房和城乡建设局关于进一步做好工程质量潜在缺陷保险实施工作的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">广州市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-09-30（成文 2026-09-24）</span>
+        <span class="m m-field">领域：工程质量安全</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">针对房屋建筑工程质量潜在缺陷保险（IDI）提出 13 条措施：完善联合协商机制；依法推进投保——<b>新出让居住用地土地出让合同应列入 IDI 投保事项，新建保障性住房和安置房项目应投保</b>，推进「应保尽保」；优化承保服务、实行阶梯式费率；规范事故预防与第三方服务费用保障；强化理赔服务，建立重大或典型事故快速理赔、<b>预付赔款机制、智能定损</b>；加强 IDI 信息共享与典型引领。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列 IDI 主题此前由广州于第 39 期（2026-10-02）首次收录，本次为<b>同一城市同一制度的深化细化</b>：由「建立制度」推进到「落地机制」，新增<b>「土地出让合同列入投保事项」这一前端强制抓手</b>与阶梯费率、预付赔款等市场化机制，标志 IDI 在广东由原则性要求转入可执行的合同嵌入阶段。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无工程质量潜在缺陷保险（IDI）制度。</b>烟台质量安全领域现行做法以「先验房后收房」、《五方责任主体安全管理职责清单》（2026-05-20）、烟建质安〔2023〕9号《优质结构评价》（至 2028-04-19）等<b>行政监管手段</b>为主，缺陷责任期内质量问题仍主要靠保修金与行政调解；广州 IDI 属<b>保险市场化机制</b>，以「开发商投保＋保险机构承保＋第三方 TIS 风险管理」分担长期质量风险，两者可互补而非替代。<b>可借鉴点</b>：①广州把 IDI 投保写入土地出让合同，烟台可在市中心区新出让居住用地试点同样条款，无需新增财政支出即可形成约束；②「保障性住房和安置房项目应投保」——烟台配售型保障房（烟建住房〔2026〕10号）与保租房（烟建住房〔2023〕28号，2026-11-14 到期）量大面广，投保可替代部分保修金管理成本；③阶梯式费率与预付赔款机制可直接写入烟台招标文件条款。建议由市住建局质量安全处牵头，会同市金融监管分局研究引入路径。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">填补烟台质量安全市场化机制空白，且「土地出让合同嵌入投保」为无需财政投入的制度创新，落地成本低。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it3">
+  <div class="ihd">
+    <div class="ino">3</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/wjtz/t28171699.shtml" target="_blank" rel="noopener">广西壮族自治区住房和城乡建设厅 2026 年广西购买新建商品房补贴公告 ＋ 支持高校毕业生安居补贴公告</a></div>
+      <div class="imeta">
+        <span class="m m-src">广西壮族自治区住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-09-26／2026-09-30</span>
+        <span class="m m-field">领域：房地产市场／住房保障</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">双补贴并行：①<b>购买新建商品房补贴</b>——2026-09-25 至 12-31，对象含购买新建商品住房、商品车位、商业办公用房者，对「出售二手住房后购新房」者、新市民及高校毕业生给予叠加补贴，<b>补贴资金额度用尽即止</b>；②<b>支持高校毕业生安居补贴</b>——2026-09-25 至 2027-01-31，对象为毕业 2 年内专科及以上学历、在区内新租住保障性租赁住房并签订租赁合同的毕业生，<b>按实缴 3 个月合同租金的 50% 核定基础补贴</b>，另有叠加补贴。（另：广西购买新建商品房补贴为本系列第 2 次收录，第 41 期曾收录其首期版本。）</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">较第 41 期首期版本，本次新增<b>「高校毕业生安居补贴」这一独立通道</b>，并把补贴从「购房端」延伸到<b>「租赁端」</b>：由「先租后补、实报实销」替代传统一次性发放，基础补贴与「实缴 3 个月租金」挂钩（而非固定金额），有效防止骗取；补贴期从购房的 3 个月拉长到租房的 4 个月以上（至 2027-01-31），对保租房去化与毕业生留存形成更长周期的拉动。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>已有同类政策但口径不同</b>：现行《住房「以旧换新」补贴券使用优化细则》（烟建住房〔2026〕6号，执行至 2026-12-31）补贴标准为<b>购房款 2%、单套最高 5 万元，财政总额度 6000 万元</b>，并于 2026-10-09 刚刚完成申报流程优化（改为购房者本人线上申报、不再区分「先卖后买／先买后卖」）；另有 2026-04「Real Estate Policy Toolbox」45 项（置换补贴 ≤5 万元、15% 首付、房票安置）。<b>差异</b>：①烟台补贴<b>只针对「卖旧买新」</b>，广西覆盖新建商品住房、车位、商办全品类；②烟台<b>无面向保租房租赁端的补贴</b>，广西「按实缴 3 个月租金 50% 核补」是烟台空白；③广西设「额度用尽即止」的预算硬约束，烟台为 6000 万元定额度，思路一致。<b>可借鉴点</b>：烟台保租房 烟建住房〔2023〕28号 即将于 <b>2026-11-14 到期</b>，修订时可同步研究「先租后补、与实缴租金挂钩」的毕业生安居补贴条款，既扩大保障覆盖面，又避免一次性发放的政策成本刚性。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">与烟台以旧换新补贴同属房地产需求端工具，租赁端补贴为烟台空白；且恰逢保租房政策修订窗口（11-14 到期）。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it4">
+  <div class="ihd">
+    <div class="ino">4</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjt.fujian.gov.cn/xxgk/zfxxgkzl/xxgkml/dfxfgzfgzhgfxwj/gfxwj/202609/t20260930_7220942.htm" target="_blank" rel="noopener">福建省住房和城乡建设厅关于印发《福建省房屋市政小散工程安全生产管理办法》的通知（闽建〔2026〕7号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">福建省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-09-30（成文 2026-09-28）</span>
+        <span class="m m-field">领域：工程质量安全／建筑业管理</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">首次以省级规范性文件界定「小散工程」为<b>投资额 ≤100 万元或建筑面积 ≤500 ㎡</b>的房屋市政工程，确立「<b>属地网格化巡查为主、属地管理与行业督导相结合</b>」原则，要求开工前 3 个工作日内完成登记，明确建设、施工、业主三方主体责任，并建立街道（乡镇）赋权执法闭环。自 2026-10-01 起施行，有效期 5 年。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列此前安全生产条目集中在「主体行为」（黑龙江黑建规〔2026〕6号 住宅工程质量信息公示：建设单位项目管理团队定量配置等）与「重大工程」（危大工程论证）两个维度；本条开辟第三维度——<b>「小散工程」这一长期处于监管盲区的小额零散作业</b>，以「投资额／建筑面积」双阈计划定范围，用<b>属地网格化＋赋权街道执法</b>解决「管不到、管不住」问题。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无专门针对「小散工程」的安全生产管理办法。</b>烟台质量安全制度覆盖对象以施工许可范围内的房屋建筑与市政工程为主（如烟建质安〔2026〕3号《城市房屋建筑拆除工程扬尘污染防治管理实施细则》、《五方责任主体安全管理职责清单》2026-05-20），对投资额 ≤100 万元或建筑面积 ≤500 ㎡的<b>免办施工许可的小额零散工程</b>缺乏专项制度，实践中多依赖属地街道综合协调，无明确登记与追责机制。<b>可借鉴点</b>：①「<b>开工前 3 个工作日登记制</b>」成本极低、可即刻建立台账；②「属地网格化＋街道赋权执法」可与烟台镇街综合执法力量整合，无需新增编制；③福建 500 ㎡/100 万元的双阈值与烟台施工许可豁免门槛可直接对标。建议由市住建局质量安全处会同各区市研究制定烟台版小散工程安全管理细则，优先在老旧小区改造、既有住宅加装电梯（烟建住房〔2024〕22号，至 2027-06-30）等小散工程密集场景先行适用。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">填补烟台监管盲区，制度成本低、可即刻落地；与烟台既有加梯、老旧小区改造形成场景协同。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it5">
+  <div class="ihd">
+    <div class="ino">5</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://jst.zj.gov.cn/api-gateway/jpaas-jsurvey-web-server/front/dczj/showJsurveys.do?formId=ac471c90bd4d4c438c699ca8d8f4709f" target="_blank" rel="noopener">浙江省住房和城乡建设厅关于公开征求《浙江省房建市政工程交易业绩库应用导则（试行）（征求意见稿）》意见的公示</a></div>
+      <div class="imeta">
+        <span class="m m-src">浙江省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-09（成文 2026-10-08，反馈截止 2026-11-08）</span>
+        <span class="m m-field">领域：建筑业管理（招投标）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">浙江省住建厅就《浙江省房建市政工程交易业绩库应用导则（试行）（征求意见稿）》公开征求意见，文件起草目的为「进一步探索房建市政工程领域<b>智能评标</b>工作，加快推进<b>企业投标工程业绩信息共享应用</b>，便利各市场主体参与招投标活动」。意见以电子邮件反馈，截止 2026-11-08。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列招投标主题此前集中在两类：<b>文本层</b>（安徽 2026 数智化版施工招标文件示范文本、内蒙古 内建市〔2026〕143号 文本「减法式清理」）与<b>工具层</b>（烟台 AI 辅助招投标）。本条开辟第三层——<b>「数据层」</b>：以<b>企业业绩库</b>为底座支撑智能评标，把业绩信息从「企业自行申报的纸质证明」转为「可交叉核验的共享数据」，从源头治理业绩造假，是 AI 评标得以成立的数据前提。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>已有相近制度基础但未打通数据层</b>：烟台已于 <b>2026-10-01 起施行 AI 辅助招投标</b>（适用范围：施工 ≤1500 万元、勘察设计与监理 ≤150 万元），并有《「人工智能辅助招投标」交易系统评标专家相关通知》（2026-04-30）与《招标投标「评定分离」操作导则》（2026-03-25 修订）配套。<b>差异</b>：烟台 AI 评标目前主要作用于<b>评标环节的辅助判断</b>，投标业绩仍依赖企业上传的证明材料；浙江则<b>先把业绩库建成可共享、可核验的公共数据底座，再以导则规范其在评标中的应用</b>，二者是「先有数据、后用智能」与「先上工具、后补数据」的路径差异。<b>可借鉴点</b>：①烟台既有城建档案与不动产登记 GeoJSON 空间数据基础，可支撑建立本地「工程业绩库」；②建议将业绩库建设纳入烟台 AI 辅助招投标的下一步迭代，优先归集近 3 年本市施工许可与竣工验收数据，实现「业绩自动核验」替代「企业自证」；③浙江以「应用导则」形式规范数据使用边界（信息安全与商业秘密保护）的做法值得同步借鉴。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">与烟台 AI 辅助招投标（2026-10-01 施行）同源，指明「数据底座」这一关键下一步，具备直接衔接条件。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it6">
+  <div class="ihd">
+    <div class="ino">6</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://jsszfhcxjst.jiangsu.gov.cn/art/2026/10/9/art_8638_11839722.html" target="_blank" rel="noopener">系统谋划「十五五」城市更新——《宿迁市中心城区城市更新专项规划（2026—2030 年）》获批实施</a></div>
+      <div class="imeta">
+        <span class="m m-src">江苏省住房和城乡建设厅（市县新闻栏目）</span>
+        <span class="m m-pub">发布时间：2026-10-09</span>
+        <span class="m m-field">领域：城市更新</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">《宿迁市中心城区城市更新专项规划（2026—2030 年）》经宿迁市政府批复实施。规划围绕居住、产业、商办、公共空间、历史文化、基础设施<b>六类更新对象</b>，实施品质提升、安全韧性、文脉传承、产业焕新<b>四大策略</b>，构建「<b>专项规划—片区策划—项目实施方案</b>」三级实施体系。中心城区划示 <b>20 个更新片区、总面积约 55.9 平方公里</b>，近期重点推进宝龙—楚街商圈等 11 个片区；识别更新潜力 47.6 平方公里（含「双低」工业用地 26.2 平方公里），到 2030 年完成存量工业用地更新 10 平方公里；推进 14 处桥下空间改造、盘活存量建筑 21 处。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列城市更新主题此前多为「工作指引／实施方案」层（广东城市体检与更新一体化推进工作指引、湖南城市更新三年行动方案）；本条是<b>首个带完整量化指标体系与三级实施架构的市级「十五五」专项规划</b>，把更新从「项目驱动」转为「规划引领」，并以 20 个片区划示实现空间落图。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无市级城市更新专项规划。</b>烟台城市更新现行依据《中心城区城市更新实施办法（试行）》（烟更指发〔2021〕2号）与《专项资金管理办法（试行）》（烟更指发〔2021〕3号）<b>均已届满失效且无接续</b>，接续征意稿《深化低效用地再开发推进城市更新的实施意见》由市自然资源和规划局起草、征意 2026-04-17 至 05-17，<b>至今未印发</b>——即烟台城市更新既缺制度依据，也缺空间规划。<b>可借鉴点</b>：①宿迁「<b>专项规划—片区策划—项目实施方案</b>」三级体系正好对应烟台缺失的顶层设计，可作为烟台编制「十五五」城市更新专项规划的直接模板；②「<b>双低工业用地 26.2 平方公里</b>」的口径与烟台低效用地再开发接续稿思路一致，两者可同步推进、互为支撑；③14 处桥下空间改造与烟台《城市小微公共空间改造利用》类需求（对标福建漳州「金厝边」经验，第 45 期已收）可直接对接。建议由市住建局会同市自然资源和规划局，将城市更新专项规划编制纳入 2027 年工作要点。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">直击烟台城市更新「制度空窗＋规划缺位」双缺口，三级实施体系可直接作为编制模板。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it7">
+  <div class="ihd">
+    <div class="ino">7</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjw.sh.gov.cn/fwgl/20260928/aae26572365b49129bc4642a76a5040e.html" target="_blank" rel="noopener">上海市住房和城乡建设管理委员会关于贯彻落实《关于完善商品住房销售制度的通知》的实施意见（沪建房管联〔2026〕451号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">上海市住房和城乡建设管理委员会</span>
+        <span class="m m-pub">发布时间：2026-09-28（执行日 2026-09-28）</span>
+        <span class="m m-field">领域：房地产市场</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">由市住建委联合市房屋管理局、市规划资源局、上海金融监管局四部门发文，落实建房规〔2026〕3号。核心条款：①<b>全面加强预售管理</b>——2026-08-28 后新发布出让公告的项目申请预售须<b>单体建筑主体结构封顶</b>，预售资金<b>全额、全过程监管</b>，综合竣工验收后方可解除；已取得建设工程规划许可证的在途项目按原政策执行，已拿地未取得规划许可证的原则按新项目执行但可申请 2027 年底前过渡；②<b>有序实施现房销售</b>——购房定金一般不超过总价款 3%；③推行<b>主办银行制度</b>；④加大融资支持——2026-08-28 起取得预售证项目须<b>竣工备案后方可发放个人按揭</b>；⑤优化土地供应——出让价款可分期缴纳、首付不低于 50%、余款一年内缴清。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列「商品住房销售制度改革」（建房规〔2026〕3号 落地）主题自第 40 期起追踪，上海为首批落地城市；本次上海实施意见正式全文挂网，与广州同日（09-30）发布的实施意见形成<b>同一中央文件下的两种地方口径对照</b>：上海定金上限 <b>3%</b>、广州 <b>5%</b>；上海设「已拿地未取规证」的 2027 年底过渡节点，广州则强调分期分栋开发、不动产预登记、告知承诺与容缺受理。至此建房规〔2026〕3号 落地城市已达 <b>上海、广州、武汉、景德镇</b>等地。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>制度底座齐备但缺落地实施意见</b>：烟台现行《商品房预售资金监管办法》（烟建住房〔2023〕27号，有效期至 <b>2029-01-01</b>）确立了全额监管框架，形象进度要求亦有明确规定（2026-06-30 起），并已就莱山、高新两区开展预售资金监管改革试点，但《新建商品房预售资金监管改革试点实施细则》<b>仍处征求意见阶段（2026-07-28 至 08-05）、未正式发布</b>，且<b>尚无对标建房规〔2026〕3号 的市级实施意见</b>。<b>可借鉴点</b>：①<b>「封顶预售」与「竣工备案后发放按揭」两条</b>是烟台缺口的核心，可写入在途的改革试点实施细则；②上海「已拿地未取规证项目按新规、但设 2027 年底过渡节点」<b>的「新老划断＋缓冲期」设计，是平衡改革力度与市场稳定的关键，烟台在推进试点时应同步设计缓冲条款</b>；③现房定金上限（上海 3%／广州 5%）可作为烟台拟定本地标准时的区间参照。（说明：烟台现房销售试点推进方式及定金条款现行规定，<b>待核实</b>。）</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">烟台制度底座齐全但落地意见缺失，上海文本可作直接蓝本；因烟台已有预售资金监管框架，故定级「中」而非「高」。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it8">
+  <div class="ihd">
+    <div class="ino">8</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://jsszfhcxjst.jiangsu.gov.cn/art/2026/10/8/art_8638_11838909.html" target="_blank" rel="noopener">扬州：多措并举抓实建筑施工扬尘治理</a></div>
+      <div class="imeta">
+        <span class="m m-src">江苏省住房和城乡建设厅（市县新闻栏目，信息来源扬州市住建局）</span>
+        <span class="m m-pub">发布时间：2026-10-08</span>
+        <span class="m m-field">领域：工程质量安全（扬尘治理）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">扬州市住建局以「<b>六个百分百</b>」为核心要求，构建建筑施工扬尘「全域覆盖、全程管控、全员尽责」治理格局。2026 年出台《建筑施工扬尘污染防治<b>三方主体责任清单</b>》，厘清建设、施工、监理三方权责；推行<b>扬尘保洁班组积分制考评</b>（与上岗资格、薪酬绩效挂钩）和属地「<b>工地长</b>」制度（一工地一专员、问题销号管理）。科技监管上<b>无人机每日 2 轮常态化巡航</b>；国控点周边围挡高度提升至 4 米以上、裸土采用六针防尘网、推行高杆喷淋与雾炮机「双标配」；打造 3 个「全电工地」和 1 个全省先行基坑气膜工地；<b>率先编制新能源渣土车机械台班计价定额</b>。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列扬尘治理主题此前多为「单项制度」（烟台 烟建质安〔2026〕3号 拆除工程扬尘、烟建质安〔2023〕11号 室外配套阶段扬尘，第 45 期收录宁德扬尘费用计价）；本条呈现的是<b>「制度＋考核＋科技＋计价」四位一体的城市级综合治理体系</b>，其中「<b>积分制考评与薪酬绩效挂钩</b>」「<b>工地长制</b>」「<b>新能源渣土车机械台班计价定额</b>」三项为烟台可直接借鉴的操作性工具。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>已有扬尘治理制度但未成体系</b>：现行《城市房屋建筑拆除工程扬尘污染防治管理实施细则》（烟建质安〔2026〕3号，Q3 目录第 17 位）、《室外配套阶段扬尘污染管控办法》（烟建质安〔2023〕11号，至 2028-05-11），均为<b>分阶段、分场景的单项细则</b>；另有《城市房屋建筑拆除工程扬尘污染防治》相关配套。<b>差异</b>：①烟台按「拆除／室外配套」等阶段分设细则，扬州以「三方主体责任清单」统一覆盖全阶段；②烟台尚无<b>扬尘保洁班组积分制与薪酬挂钩</b>的激励机制；③烟台尚无<b>新能源渣土车机械台班计价定额</b>（计价工具缺位导致新能源工地成本无法合理补偿）；④扬州「工地长制」的「一工地一专员、问题销号」可与烟台网格化管理衔接。<b>可借鉴点</b>：优先研究 ①三方主体责任清单整合现有两份分阶段细则；②新能源渣土车机械台班计价定额——可与烟台 AI 辅助招投标的造价数据底座协同建设，为绿色施工提供成本补偿依据。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">烟台已有分阶段单项细则，扬州的体系化整合与计价工具为增量借鉴点，非制度空白填补。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it9">
+  <div class="ihd">
+    <div class="ino">9</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://hnjs.henan.gov.cn/2026/10-08/3435143.html" target="_blank" rel="noopener">河南省住房和城乡建设厅、河南省市场监督管理局关于开展 2026 年房地产估价机构省级「一业一查」部门联合检查的通知（豫建房〔2026〕150号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">河南省住房和城乡建设厅、河南省市场监督管理局</span>
+        <span class="m m-pub">发布时间：2026-10-08（成文 2026-09-29）</span>
+        <span class="m m-field">领域：房地产市场（房地产估价机构监管）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">依据省级「一业一查」联合抽查计划（豫双随机办〔2025〕4号），两部门联合开展 2026 年房地产估价机构省级检查。按<b>不超过 15% 的比例随机抽取检查对象</b>，组织 <b>4—5 个检查小组、每组配 2 名估价专家</b>，于 10 月上旬至 11 月中旬实施；重点检查<b>备案条件保持情况、内部管理、估价报告技术标准执行</b>；结果在 20 个工作日内录入省级平台公示。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列房地产市场监管主题此前集中在「中介与经纪」（烟台 烟建住房〔2024〕2号／3号 经纪机构备案与信用评价）、「新建商品房销售」（销售制度改革）两端；<b>房地产估价机构这一细分专业领域的省级联合检查为首次出现</b>，且采用「<b>一业一查</b>」（一个行业一次进厂、一次查全）的跨部门联合模式，替代多头重复检查，并引入<b>估价专家随组</b>提升专业判别力。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>尚无房地产估价机构专项检查制度</b>。烟台房地产市场监管以《烟台市房地产经纪机构、住房租赁企业备案管理暂行办法》（烟建住房〔2024〕2号，至 2027-02-01）与《房地产经纪机构信用评价管理试行办法》（烟建住房〔2024〕3号，至 2027-02-01）为核心，<b>覆盖对象为经纪与租赁企业，未含估价机构</b>；估价机构目前主要依省级备案与行业协会自律管理，市级层面无专项抽查机制。<b>可借鉴点</b>：①「<b>一业一查</b>」模式可与烟台市场监管部门已有的「双随机、一公开」既有机制直接嫁接，避免新增企业负担；②「<b>随机抽取比例不超过 15%</b>」的标准明确、可量化；③「<b>随组配估价专家</b>」解决了住建部门专业鉴别力不足的问题，成本可控；④结果 20 个工作日录入平台公示、并与信用评价挂钩。建议烟台可将估价机构纳入现有房地产信用评价体系覆盖面，或联合市市场监管局开展首轮抽查试点。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">细分专业领域监管，烟台覆盖对象缺估价机构；「一业一查」模式可嫁接既有双随机机制，成本低。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it10">
+  <div class="ihd">
+    <div class="ino">10</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjt.jiangxi.gov.cn/jxszfhcxjst/wjtz/pc/content/content_2108015016462069760.html" target="_blank" rel="noopener">江西省住房和城乡建设厅关于开展 2026 年度全省工程勘察设计单位和民用建筑节能强制性标准执行情况「双随机、一公开」检查的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">江西省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-08（成文 2026-09-29）</span>
+        <span class="m m-field">领域：勘察设计／绿色低碳（建筑节能）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">分两部分开展：①<b>工程勘察设计「双随机」检查</b>——对象为在建房建市政项目、勘察设计单位及从业人员、施工图审查机构，勘察设计单位按<b>不低于 5% 比例</b>随机抽查，时间 2026 年 10—12 月；②<b>民用建筑节能强制性标准执行情况检查</b>——含<b>建筑保温材料安全隐患全链条整治</b>，10 月 30 日前确定项目、11 月 30 日前完成执法检查、12 月 30 日前完成整改。要求各地 11 月 15 日前报送检查情况。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列绿色低碳主题此前多为「技术标准」（嘉兴外墙保温一体化指南、内蒙古装配式组合结构规程）与「资金激励」（苏州建筑节能引导资金）两端；本条把<b>监管手段聚焦到「民用建筑节能强制性标准执行」</b>，并首次将<b>建筑保温材料安全隐患整治与节能标准检查合并实施</b>，实现「标准—材料—施工」链条式执法。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>已有节能与勘察设计监管框架但检查形式不同</b>：烟台绿色建筑与建筑节能以《绿色建筑标识认定办法》（烟建节科〔2023〕2号，有效期至 <b>2026-12-09</b>，且<b>未列入 Q2/Q3 规范性文件目录</b>）为依据，绿色建筑标识认定属<b>依申请认定</b>而非主动抽查；勘察设计质量则以施工图审查为主要把关环节。<b>差异</b>：①江西为<b>主动「双随机」抽查</b>（≥5% 比例），烟台为依申请认定＋施工图审查，前者能主动发现未申报项目的问题；②江西把<b>建筑保温材料安全隐患整治</b>纳入节能检查闭环，烟台尚无保温材料与节能标准的一体化检查安排；③江西明确「10 月底定项目—11 月底执法—12 月底整改」的时间表。<b>可借鉴点</b>：①烟台《绿色建筑标识认定办法》将于 2026-12-09 到期且未列目录，<b>修订时可考虑加入「双随机抽查」条款</b>，从「被动认定」转向「认定＋抽查」双轨；②建筑保温材料安全隐患全链条整治这一口径与烟台既有扬尘、质量安全监管可打包实施，避免重复下企；③江西按比例抽查＋限期整改的时间表设计可直接参照。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">与烟台绿色建筑标识办法（2026-12-09 到期、未列目录）恰逢修订窗口形成呼应，「认定＋抽查」双轨思路可采纳。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it11">
+  <div class="ihd">
+    <div class="ino">11</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://sjw.qingdao.gov.cn/cxjsj1/cxjsj35/202610/t20261009_10748118.shtml" target="_blank" rel="noopener">青岛市住房和城乡建设局关于对《青岛市城市更新「十五五」规划（征求意见稿）》公开征求意见的公告</a></div>
+      <div class="imeta">
+        <span class="m m-src">青岛市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-10-09（意见期 2026-10-09 至 11-09）</span>
+        <span class="m m-field">领域：城市更新（规划）</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">青岛市住建局牵头编制《青岛市城市更新「十五五」规划（征求意见稿）》并公开征求意见，用于指导「十五五」时期城市更新高质量发展；公众可同时对影响市场公平竞争的内容提出意见。征求意见期限为 2026-10-09 至 11-09。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">与本期宿迁《中心城区城市更新专项规划（2026—2030）》同期出现，形成<b>同一语法、不同层级</b>的对照：宿迁为<b>已获批实施的正式规划</b>（20 个片区、55.9 平方公里），青岛为<b>处于征求意见阶段的城市级（含全域）「十五五」规划</b>，标志城市更新规划编制在东部沿海省份已由「地市试点」升格为「副省级城市全域布局」。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无城市更新专项规划，且制度层面处于空窗</b>（详见本期第 1、6 条对比）。青岛为山东省内副省级城市，与烟台同处<b>胶东经济圈、滨海气候带、通病类型相近</b>，其「十五五」城市更新规划的<b>体例、章节结构与指标设置对烟台最具直接参照价值</b>：①同为山东省地市，可共享省级层面的政策接口（如省级低效用地再开发、美丽城镇建设等），避免跨省移植的水土不服；②青岛与烟台在历史街区（青岛里院／烟台朝阳街）、滨海空间更新、老旧小区改造等场景高度同构。<b>建议</b>：在青岛征求意见期（至 11-09）内跟踪其正式稿出台，作为烟台编制城市更新专项规划的首选蓝本；同时关注其如何处理「更新规划」与「低效用地再开发」（烟台接续稿正在市自然资源和规划局推进）的衔接关系。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">省内同域市、气候与场景同构，作为烟台城市更新规划编制的首选参照蓝本；仍处征意阶段，定级「中」。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it12">
+  <div class="ihd">
+    <div class="ino">12</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjt.fujian.gov.cn/xxgk/zfxxgkzl/xxgkml/dfxfgzfgzhgfxwj/csjs_3792/202609/t20260930_7220634.htm" target="_blank" rel="noopener">福建省住房和城乡建设厅关于利用国家开发银行政策性资金支持推进城市更新行动的通知（闽建城〔2026〕19号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">福建省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-09-30</span>
+        <span class="m m-field">领域：城市更新（政策性金融）</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">部署利用<b>国家开发银行政策性资金</b>支持推进城市更新行动，以省市联动方式为城市更新项目提供长期、低成本资金支持（正文及附件以公文形式发布，具体额度、期限、利率等条款<b>待核实</b>）。该主题为福建省<b>第 2 次收录</b>——第 39 期（2026-10-02）曾收录福建城市更新政策性金融相关文件（涉及国开行资金、最长 35 年期限）。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">较第 39 期首次收录，本次以<b>正式文号（闽建城〔2026〕19号）固定发文</b>，标志福建城市更新政策性金融从「框架对接」进入「制度化落地」阶段；本系列城市更新融资主题亦已由「单一政策性银行」扩展到「中央预算内投资＋超长期特别国债（佛山老旧电梯更新）＋政策性金融（福建）」<b>多工具并行</b>格局。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无城市更新政策性金融专项对接文件。</b>烟台城市更新资金此前依赖两项现已失效的市级文件——《中心城区城市更新专项资金管理办法（试行）》（烟更指发〔2021〕3号，已届满）——即制度空窗叠加资金来源缺位。烟台房地产业已有 2026-04「Real Estate Policy Toolbox」45 项（含置换补贴 ≤5 万元、房票安置等），但均为<b>财政补贴型工具</b>，缺少<b>长期低成本信贷工具</b>；城市更新项目普遍存在「投资大、回收期长、现金流弱」特征，与政策性金融的期限结构高度契合。<b>可借鉴点</b>：①建议烟台由市住建局会同市财政局、市发改委，研究建立与国开行、农发行山东省分行的城市更新专项对接机制，形成「项目清单—融资方案—还款来源」闭环；②可参照福建做法，以市级规范性文件形式明确「哪些类型更新项目可申请政策性资金」，避免逐项目一事一议；③烟台低效用地再开发接续稿（市自然资源和规划局）正在推进，可将政策性金融条款一并纳入，形成「用地＋资金」双配套。（说明：烟台是否已有城市更新融资对接机制，<b>待核实</b>。）</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">填补烟台城市更新资金来源的制度性工具缺口，与低效用地再开发接续稿存在打包推进的机会。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it13">
+  <div class="ihd">
+    <div class="ino">13</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://jst.zj.gov.cn/api-gateway/jpaas-jsurvey-web-server/front/dczj/showJsurveys.do?formId=7c2e7cbfbfed40c7943bac1a1bb0281c" target="_blank" rel="noopener">浙江省住房和城乡建设厅关于公开征求《浙江省建筑施工特种作业人员管理办法（征求意见稿）》意见的公示</a></div>
+      <div class="imeta">
+        <span class="m m-src">浙江省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-09（成文 2026-10-09，反馈截止 2026-10-24）</span>
+        <span class="m m-field">领域：建筑业管理（从业人员管理）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">浙江省住建厅依据住建部令第 60 号《建筑施工特种作业人员管理规定》，结合本省实际，对现行《浙江省建筑施工特种作业人员管理办法》（浙建〔2024〕6号）进行修订，形成征求意见稿公开征求意见。目的为「进一步规范我省建筑施工特种作业人员管理，切实保障建筑施工人员生命安全，预防和减少生产安全事故发生」。意见反馈截止 2026-10-24。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列施工从业人员管理主题此前集中在「关键岗位人员配备」（烟台 烟建建管〔2022〕9号、佛山建设单位项目管理团队指引）；本条规范对象为<b>一线特种作业人员（塔机司机、信号工、电工、焊工等）</b>，与关键岗位人员分属「管理层」与「操作层」两个维度，标志人员管理由「管项目班子」向<b>「管一线操作岗位」延伸</b>，并以上位部令（住建部令第 60 号）为修订依据实现省市衔接。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>特种作业人员管理以上位文件为主要依据，市级层面无专项管理办法。</b>烟台现行《烟台市建筑工程施工现场关键岗位人员配备和在岗履职管理办法》（烟建建管〔2022〕9号，有效期至 2027-05-14，Q3 目录在列）规范对象为<b>关键岗位人员（项目负责人、技术负责人等管理层）</b>，对一线特种作业人员的资格审查、培训考核、岗位行为与退出机制未作市级专项规定，实践中主要执行住建部令第 60 号与省级规定。<b>可借鉴点</b>：①浙江省以「办法」形式把部令落地为可操作的省级细则，烟台可考虑编制市级实施细则，或在修订烟建建管〔2022〕9号 时<b>将特种作业人员一并纳入</b>，实现「管理层＋操作层」统一规范；②浙江修订强调「预防和减少生产安全事故」的目标导向，可与烟台 AI 辅助招投标、智慧工地等数字化手段结合，实现特种作业人员持证状态的<b>自动核验与预警</b>；③修订稿反馈截止 2026-10-24，可在其正式发布后作为烟台立规参照。</div>
+  </div>
+  <div class="relbar rel-l">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">低</span>
+    <span class="rel-n">烟台以上位文件为执行依据、无市级专项办法；浙江省办法可作为未来立规参照，但紧迫性不高。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it14">
+  <div class="ihd">
+    <div class="ino">14</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zfcjj.suzhou.gov.cn/szszjj/tzgg/202610/1d0572d1236a4270abc8ea0c771500f6.shtml" target="_blank" rel="noopener">苏州市住房和城乡建设局关于组织申报 2026 年度苏州市建筑节能引导资金项目的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">苏州市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-10-08（成文 2026-09-21）</span>
+        <span class="m m-field">领域：绿色低碳（建筑节能）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">市住建局、市财政局联合发文，依据《江苏省绿色建筑发展条例》与《苏州市建筑节能项目及引导资金管理办法》开展 2026 年度建筑节能引导资金项目申报。范围含<b>高品质绿色建筑、超低（近零）能耗建筑、可再生能源建筑应用、既有建筑节能改造及建筑节能科技支撑</b>五类；申报项目须在 <b>2028-12-31 前完成竣工验收</b>，申报截止 <b>2026-10-30</b>。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列绿色低碳资金类主题此前仅见于地方零星实践；本条呈现的是<b>常态化、制度化运行的市级建筑节能财政引导资金</b>——区别于一次性专项行动，它以年度申报、跨期验收（2028 年底前竣工）的方式形成稳定预期，并把<b>「既有建筑节能改造」与「科技支撑」同时纳入资助范围</b>，兼顾存量与创新。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>绿色低碳领域政策供给偏弱且存在到期压力</b>：市级层面有《绿色建筑标识认定办法》（烟建节科〔2023〕2号，有效期至 <b>2026-12-09</b>，<b>未列入 Q2/Q3 目录、状态待核实</b>），装配式建筑主干政策《关于进一步推动烟台装配式建筑发展的意见》（烟政办字〔2019〕54号）<b>已届满且无接续</b>；<b>未见市级建筑节能财政引导资金制度</b>。<b>差异</b>：①苏州以「条例＋资金管理办法」双层依据保障制度稳定，烟台绿色建筑仅有一部即将到期且未列目录的标识办法；②苏州资金覆盖五类项目且<b>跨期验收（最长至 2028 年底）</b>，烟台补贴类政策期限普遍较短（以旧换新至 2026-12-31）；③苏州由住建与财政联合发文，资金有明确来源。<b>可借鉴点</b>：①烟台可在修订《绿色建筑标识认定办法》（2026-12-09 到期）时<b>同步研究设立建筑节能引导资金</b>，把「认定」与「激励」绑定；②「既有建筑节能改造」资助方向与烟台老旧小区改造、既有住宅加装电梯（烟建住房〔2024〕22号）可形成组合拳；③跨期验收机制可避免项目为赶补贴而仓促完工。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">烟台绿色低碳政策供给偏弱且主干政策到期/未列目录，「认定＋资金」捆绑思路恰逢修订窗口。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it15">
+  <div class="ihd">
+    <div class="ino">15</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://jst.jl.gov.cn/zmhd/myzj/202610/t20261009_3674193.html" target="_blank" rel="noopener">吉林省住房和城乡建设厅关于向社会公开征求《吉林省农村生活垃圾收运处置体系建设管理办法（征求意见稿）》意见的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">吉林省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-09（公示期 2026-10-09 至 10-29）</span>
+        <span class="m m-field">领域：村镇建设</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">吉林省住建厅对《吉林省农村生活垃圾收运处置体系建设管理办法（试行）》（吉建联发〔2023〕46号）进行<b>修订</b>，形成征求意见稿公开征求意见，落实《吉林省提升农村生活垃圾收运处置体系建设的十条措施》（吉建农居〔2026〕4号）。公示时间为 2026-10-09 至 10-29（十五个工作日）。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列村镇建设主题此前多为「农房安全」（安徽亳州农村建房全流程监管、山东农村低收入群体住房安全保障）与「设计下乡」（云南乡村设计公益大赛、福建闽台乡建乡创）；本条聚焦<b>农村生活垃圾收运处置这一农村人居环境基础短板</b>，且采用「<b>十条措施（政策）＋管理办法（制度）</b>」的组合路径，由原则性措施下沉为可执行的收运处置体系管理办法。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台农村生活垃圾治理由城管部门主管，住建局职责范围限于村镇建设与农房质量安全。</b>烟台住建口径的村镇建设现行政策集中在<b>农村低收入群体住房安全保障</b>（2023、2024 年度实施方案）、新市民住房保障实施意见（2021-06-01）等<b>住房类</b>事项；农村生活垃圾收运处置体系按职责分工属城市管理／环卫领域。<b>结论</b>：本条与烟台住建局职责<b>相关度低</b>，收录主要用于跟踪村镇建设制度动态；若烟台有意提升农村人居环境，需注意<b>跨部门协同</b>（住建负责农房与村容村貌、城管负责垃圾收运），吉林「住建厅主导、联合发文」的路径在烟台需对应调整为多部门协同机制。</div>
+  </div>
+  <div class="relbar rel-l">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">低</span>
+    <span class="rel-n">农村生活垃圾属城管／环卫职责，与烟台住建局职责交叉度低；仅作村镇建设制度动态留痕。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it16">
+  <div class="ihd">
+    <div class="ino">16</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjt.shanxi.gov.cn/zwgk/zqyj/202610/t20261009_10232468.shtml" target="_blank" rel="noopener">山西省住房和城乡建设厅关于《气承式膜结构体育建筑设计防火标准》公开征求意见的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">山西省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-09（反馈截止 2026-11-04）</span>
+        <span class="m m-field">领域：勘察设计（工程建设地方标准）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">依据 2026 年工程建设地方标准制（修）订计划，山西省住建厅组织山西省建筑设计研究院有限公司、应急管理部天津消防研究院等单位编制完成工程建设地方标准《气承式膜结构体育建筑设计防火标准》，现向社会公开征求意见，反馈截止 2026-11-04。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列勘察设计标准主题近期集中在<b>常规结构与施工工艺</b>（吉林长螺旋钻孔压灌混凝土桩基础技术标准、湖北钢结构装配式住宅技术规程、内蒙古装配式部分包覆钢-混凝土组合结构技术规程）；本条针对<b>气承式膜结构（充气式）大跨度体育建筑这一特殊结构形式的防火设计</b>，属<b>大跨度公共建筑消防安全</b>的新兴细分领域，填补该结构形式防火标准的空白。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无气承式膜结构建筑相关地方标准或专项管理规定。</b>烟台建设工程消防设计审查验收执行国家工程建设消防技术标准体系，并有《消防验收（备案）与营业前消防安全检查联动机制》（2026-06-17）等程序性规定；对大跨度体育场馆等特殊结构形式，主要依据国家标准（如《建筑设计防火规范》GB 50016）及性能化设计评估路径解决，<b>无针对气承式膜结构的专项设计防火标准</b>。<b>可借鉴点</b>：①该标准对烟台<p>体育场馆、会展中心</p>等大跨度公共建筑项目具有<b>技术参考价值</b>，可在方案审查阶段引入作为性能化设计的技术支撑；②烟台若新建此类建筑，可关注山西标准正式发布后的适用性；③该项与烟台既有项目的匹配度需结合具体项目建设计划判断。</div>
+  </div>
+  <div class="relbar rel-l">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">低</span>
+    <span class="rel-n">特殊结构形式的地方标准，仅对烟台大跨度公共建筑项目具备技术参考价值，制度性借鉴意义有限。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it17">
+  <div class="ihd">
+    <div class="ino">17</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://fszj.foshan.gov.cn/zwgk/txgg/content/post_7319635.html" target="_blank" rel="noopener">佛山市住房和城乡建设局关于开展全市物业小区物业服务合同履约情况自查自评公开公示工作的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">佛山市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-10-09（完成时限 2026-10-31）</span>
+        <span class="m m-field">领域：物业管理</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">依据《佛山市发展和改革局关于进一步加强前期物业服务收费管理的通知》（佛发改价格〔2026〕4号），在全市<b>所有住宅物业项目</b>（含仅订前期合同及已订新合同项目）开展物业服务合同履约自查自评公开公示。企业须在「<b>佛山智慧房产监管平台</b>」逐项对标填报《收费信息表》《评价公示清单》并上传盖章件及现行合同，<b>2026-10-31 前</b>完成；市、区两级住建部门统一公开公示；企业须在填报后 <b>3 个工作日内</b>将盖章版张贴至各楼栋出入口、电梯轿厢、大堂公告栏、小区公示栏并拍照上传；<b>逾期未报或报送不实将计入房地产行业信用信息</b>。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列物业管理主题此前集中在「信用评价」（烟台 烟建住房〔2024〕3号 房地产经纪机构信用评价、遵义物业红黑名单）与「公共收益管理」（烟台 烟建住房〔2025〕28号 住宅小区公共收益管理实施细则）两端；本条开辟<b>「合同履约的公开公示」维度</b>，把监管对象从「企业信用」细化到<b>「具体合同条款的实际履行」</b>，并以<b>「线上填报＋线下张贴拍照上传」双留痕</b>破解公示「走过场」问题，与信用体系强制挂钩形成闭环。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>已有物业信息公开与信用管理制度，但未覆盖「合同履约自查自评」</b>：烟台现行《住宅小区公共收益管理实施细则（试行）》（烟建住房〔2025〕28号，至 2028-01-04）规范的是<b>公共收益收支信息的公示</b>；物业服务收费与合同履行主要通过物业企业与业主的民事合同关系约束，住建部门无统一的<b>履约自查自评与公示机制</b>。另需注意：<b>烟台物业信用管理存在制度空窗</b>——《烟台市物业服务企业信用信息管理办法》（烟建住房〔2022〕13号）有效期至 <b>2025-06-30 已届满</b>，Q2/Q3 规范性文件目录均未列替代文件，<b>空窗已持续约 15 个月</b>，这正是引入佛山「履约公示＋信用挂钩」机制的<b>最佳窗口</b>。<b>可借鉴点</b>：①「<b>对标清单化填报</b>」（收费信息表＋评价公示清单）可直接转化为烟台物业公示模板，成本极低；②「<b>3 个工作日内张贴至楼栋／电梯／大堂并拍照上传</b>」实现公示留痕、可追溯；③「逾期未报或不实计入信用信息」为强制抓手——<b>因烟台物业信用制度空窗，建议在重启物业信用办法时将履约公示纳入信用评价指标</b>，一举解决制度空窗与监管手段不足两个问题。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">烟台物业信用制度空窗约 15 个月，佛山「履约公示＋信用挂钩」正好可作为重启信用办法时的配套设计。</span>
+  </div>
+</div>
+
+
+<div class="item" id="it18">
+  <div class="ihd">
+    <div class="ino">18</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zjj.xinxiang.gov.cn/xwzx/tzgg/1307847.html" target="_blank" rel="noopener">新乡市住房和城乡建设局关于开展房屋安全鉴定机构信息登记及动态更新工作的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">新乡市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-10-08（首次登记截止 2026-10-16）</span>
+        <span class="m m-field">领域：工程质量安全（房屋安全鉴定）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">依据《河南省住建厅关于做好房屋安全鉴定管理有关工作的通知》（豫建质安〔2022〕114号）与《河南省自建房领导小组办公室关于进一步加强自建房安全鉴定管理工作的通知》（豫自建房办〔2024〕1号），对在本市行政区域内从事（或意向从事）房屋安全鉴定业务的<b>第三方鉴定机构开展信息登记</b>；<b>首次登记自发布之日起至 2026-10-16</b>；受理核实后符合条件者在官网<b>公布名录并持续动态更新</b>，供房屋安全责任人和有关部门查询。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列房屋安全鉴定主题此前有<b>江西《房屋安全鉴定管理办法（试行）（征求意见稿）》</b>（本期第 17 条同期收录，属「管理制度」层）、东莞《房屋安全简易巡检技术指引》（第 45 期，属「技术方法」层）；本条属<b>「机构名录管理」层</b>——以「信息登记＋名录公布＋动态更新」建立可查询的鉴定机构白名单，三者分别对应「怎么管」「怎么查」「找谁鉴定」三个环节，形成完整的鉴定监管链条。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b">烟台<b>暂无房屋安全鉴定机构名录管理制度。</b>烟台工程质量安全制度建设集中在《五方责任主体安全管理职责清单》（2026-05-20）、《优质结构评价》（烟建质安〔2023〕9号，至 2028-04-19）、预制混凝土构件生产质量管理（烟建质安〔2023〕24号，至 2026-12-12）等<b>建设过程监管</b>；对既有房屋的安全鉴定，尚无市级鉴定机构名录公开与动态更新机制，房屋安全责任人选择鉴定机构缺乏官方指引。<b>可借鉴点</b>：①「<b>信息登记—名录公布—动态更新</b>」三步成本极低、无新增财政支出，可在烟台住建官网直接落地；②登记门槛可对接省级（山东省）鉴定管理要求，避免标准冲突；③名录公开可<b>与烟台老旧小区改造、加装电梯、C/D 级危房处置等场景直接衔接</b>——这些场景均需第三方鉴定结论，名录可提升业主选择效率与结论公信力。（说明：山东省及烟台市是否已有房屋安全鉴定机构名录，<b>待核实</b>。）</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">制度成本极低且可与烟台老旧小区改造、加梯、危房处置场景直接衔接；山东省级口径待核实。</span>
+  </div>
+</div>
+
+<div class="sec-h">二、政策追踪表（多地同类政策对比）</div>
+<div class="sec-note">本表汇总今日涉及的多地同类政策，标注先行地区与今日新增地区的差异，用于识别政策演进方向与烟台可对标位置。</div>
+<div class="tbl-wrap"><table class="track">
+<thead><tr><th>政策主题</th><th>先行地区及时间</th><th>今日新增地区</th><th>主要差异</th></tr></thead>
+<tbody>
+<tr>
+  <td class="td-topic">商品住房销售制度改革（封顶预售＋资金全额监管＋主办银行＋现房销售）</td>
+  <td class="td-prior">全国性依据：住建部等三部门 建房规〔2026〕3号（2026-08-28）；落地城市：上海、武汉、广州（2026-09-28～09-30）</td>
+  <td class="td-new">上海（沪建房管联〔2026〕451号，实施意见全文挂网）、广州（三部门实施意见）</td>
+  <td class="td-diff">上海定金上限 3%、广州 5%；上海设「已拿地未取规证」2027 年底过渡节点，广州强调分期分栋开发与容缺受理。落地城市已达 5 个。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">工程质量潜在缺陷保险（IDI）</td>
+  <td class="td-prior">广州（第 39 期 2026-10-02 首次收录）</td>
+  <td class="td-new">广州（本文件深化细化）</td>
+  <td class="td-diff">由「建立制度」推进到「落地机制」：新增土地出让合同列入投保事项、阶梯式费率、预付赔款机制、智能定损。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">购房补贴／新建商品房补贴（需求端）</td>
+  <td class="td-prior">烟台 烟建住房〔2026〕6号 以旧换新补贴（2%、≤5 万元、总额度 6000 万元，至 2026-12-31）；广西（第 41 期首期）</td>
+  <td class="td-new">广西（2026 年购买新建商品房补贴公告，09-26／09-30）</td>
+  <td class="td-diff">广西覆盖新建商品住房、车位、商办全品类，并新增「高校毕业生安居补贴」租赁端通道（按实缴 3 个月租金 50% 核补）。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">房屋安全鉴定监管（管理制度）</td>
+  <td class="td-prior">江西（第 46 期同期，管理办法征意 09-29）；东莞（第 45 期，技术指引）</td>
+  <td class="td-new">江西（管理办法征意）、新乡（机构信息登记）</td>
+  <td class="td-diff">新乡属「机构名录管理」层：以信息登记＋名录公布＋动态更新建立可查询白名单，与前两者的「制度」「技术」层互补。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">城市更新专项规划（「十五五」层级）</td>
+  <td class="td-prior">宿迁（第 46 期，已获批实施）</td>
+  <td class="td-new">宿迁（20 个片区、55.9 平方公里）、青岛（「十五五」规划征意 10-09）</td>
+  <td class="td-diff">宿迁为正式获批的地市级专项规划（三级实施体系）；青岛为副省级全域规划（征意中），烟台城市更新制度处于空窗且无专项规划。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">城市更新政策性金融（国开行资金）</td>
+  <td class="td-prior">福建（第 39 期 2026-10-02 首次收录，涉最长 35 年期限）</td>
+  <td class="td-new">福建（闽建城〔2026〕19号 正式发文）</td>
+  <td class="td-diff">由框架对接进入制度化落地；城市更新融资工具已形成「中央预算内投资＋超长期特别国债＋政策性金融」多工具并行格局。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">房屋建筑统一代码制度（数字住建基础数据）</td>
+  <td class="td-prior">住建部＋国家数据局（全国部署）</td>
+  <td class="td-new">山东（省厅部署实施与数据更新，09-29）</td>
+  <td class="td-diff">省级接续部署：要求住宅建筑「赋码到套（户）」试点、外业「四步工作法」、省级「三函」督办问责。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">物业服务合同履约公示与信用挂钩</td>
+  <td class="td-prior">烟台 烟建住房〔2025〕28号（公共收益公示，至 2028-01-04）</td>
+  <td class="td-new">佛山（全市物业小区履约自查自评公开公示，10-31 前完成）</td>
+  <td class="td-diff">佛山把监管从「企业信用」「公共收益」细化到「具体合同条款履行」，以线上填报＋线下张贴拍照双留痕，逾期计入信用信息。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">建筑施工扬尘治理（体系化）</td>
+  <td class="td-prior">烟台 烟建质安〔2026〕3号（拆除工程）、烟建质安〔2023〕11号（室外配套阶段）</td>
+  <td class="td-new">扬州（六个百分百＋三方责任清单＋积分制考评＋工地长制）、宁德（扬尘费用计价，09-30）</td>
+  <td class="td-diff">扬州呈现「制度＋考核＋科技＋计价」四位一体；宁德以安全文明施工费 10.21% 标准将扬尘费用列入工程造价。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">房屋安全鉴定／小散工程安全生产（监管盲区填补）</td>
+  <td class="td-prior">黑龙江 黑建规〔2026〕6号（第 40 期，住宅工程质量信息公示）</td>
+  <td class="td-new">福建（闽建〔2026〕7号 小散工程安全生产管理办法）</td>
+  <td class="td-diff">福建首次以省级文件界定「小散工程」（≤100 万元或 ≤500 ㎡），属地网格化巡查＋街道赋权执法。</td>
+</tr>
+
+</tbody></table></div>
+<div class="sec-h">三、附录：与烟台相关度评级及参考价值</div>
+<div class="sec-note">相关度评级依据：是否填补烟台制度空白、是否可直接落地、是否与烟台现行政策时间窗口（到期／修订／空窗）形成呼应。</div>
+<div class="tbl-wrap"><table class="app">
+<thead><tr><th>序号</th><th>政策／动态</th><th>相关度</th></tr></thead><tbody>
+<tr><td class="ap-no">1</td><td class="ap-name">湖南省支持老旧住房自主更新的通知</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">2</td><td class="ap-name">广州市工程质量潜在缺陷保险（IDI）实施工作通知</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">3</td><td class="ap-name">广西购买新建商品房补贴＋高校毕业生安居补贴</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">4</td><td class="ap-name">福建省房屋市政小散工程安全生产管理办法</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">5</td><td class="ap-name">浙江省房建市政工程交易业绩库应用导则（征意）</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">6</td><td class="ap-name">宿迁市中心城区城市更新专项规划（2026—2030）</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">7</td><td class="ap-name">上海市贯彻落实商品房销售制度改革实施意见</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">8</td><td class="ap-name">扬州建筑施工扬尘治理经验</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">9</td><td class="ap-name">河南房地产估价机构省级「一业一查」联合检查</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">10</td><td class="ap-name">江西勘察设计与民用建筑节能「双随机、一公开」检查</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">11</td><td class="ap-name">青岛市城市更新「十五五」规划（征意）</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">12</td><td class="ap-name">福建利用国开行政策性资金支持城市更新</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">13</td><td class="ap-name">浙江建筑施工特种作业人员管理办法（征意修订）</td><td class="ap-lv"><span class="lv-l">低</span></td></tr>
+<tr><td class="ap-no">14</td><td class="ap-name">苏州市 2026 年度建筑节能引导资金项目申报</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">15</td><td class="ap-name">吉林农村生活垃圾收运处置体系建设管理办法（征意）</td><td class="ap-lv"><span class="lv-l">低</span></td></tr>
+<tr><td class="ap-no">16</td><td class="ap-name">山西气承式膜结构体育建筑设计防火标准（征意）</td><td class="ap-lv"><span class="lv-l">低</span></td></tr>
+<tr><td class="ap-no">17</td><td class="ap-name">佛山物业小区服务合同履约自查自评公开公示</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">18</td><td class="ap-name">新乡房屋安全鉴定机构信息登记及动态更新</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+</tbody></table></div>
+<div class="sec-h">四、未获取来源清单</div>
+<div class="sec-note">以下网站／栏目本期无法访问或受限，为保持信息完整性一并说明，未跳过。相关条目已改用替代通道或列为待核验。</div>
+<div class="tbl-wrap"><table class="src">
+<thead><tr><th>网站／栏目</th><th>链接</th><th>无法获取原因</th></tr></thead><tbody>
+<tr><td class="sr-n">甘肃省住房和城乡建设厅</td><td class="sr-u"><a href="http://zjt.gansu.gov.cn/" target="_blank" rel="noopener">http://zjt.gansu.gov.cn/</a></td><td class="sr-r">http／https／index 三路径均返回 HTTP 412 Precondition Failed（JS 反爬 `$_ts` 挑战），自动化不可达。连续第 6 期确认。</td></tr>
+<tr><td class="sr-n">河北省住房和城乡建设厅</td><td class="sr-u"><a href="https://zfcxjst.hebei.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.hebei.gov.cn/</a></td><td class="sr-r">curl／程序化请求返回 HTTP 412（反爬策略），本期仅能经渲染方式取标题、文号与部分正文；本期河北条目（行政处罚裁量权基准 2026 年版）已径渲染路径核实。连续第 2 期收紧。</td></tr>
+<tr><td class="sr-n">武汉市住房和城市更新局「五改四好」城市更新专题</td><td class="sr-u"><a href="https://zgj.wuhan.gov.cn/ztzl/wgshcsgx/" target="_blank" rel="noopener">https://zgj.wuhan.gov.cn/ztzl/wgshcsgx/</a></td><td class="sr-r">curl 直接请求返回空体（疑似 UA／编码过滤），须以浏览器 UA 或渲染方式抓取；本期已用渲染方式取得内容，确认无新增。</td></tr>
+<tr><td class="sr-n">佛山市住房和城乡建设局政策文件栏</td><td class="sr-u"><a href="https://fszj.foshan.gov.cn/" target="_blank" rel="noopener">https://fszj.foshan.gov.cn/</a></td><td class="sr-r">政策文件栏为 JS 跳转壳、站内搜索返回 500，未能定位《佛山市城镇老旧住房自主更新试点工作方案》（六部门，09-30）的 gov.cn 原文，故本期未收录该条，列为待核验补获。</td></tr>
+<tr><td class="sr-n">中国香港、中国澳门、中国台湾地区住建部门</td><td class="sr-u">—</td><td class="sr-r">不在本简报采集范围（本简报覆盖 31 个省级行政区及重点城市住建部门）。</td></tr>
+</tbody></table></div>
+<div class="sec-h">五、本期通道状态复核</div>
+<div class="sec-note">采集前对全部信源通道逐一实测，以下为可达性与可用入口的核心结论（含本期新破解接口与形态变化）。</div>
+<div class="tbl-wrap"><table class="chan">
+<thead><tr><th>信源</th><th>可达性</th><th>可用入口／说明</th></tr></thead><tbody>
+<tr><td class="ch-n">住建部 www.mohurd.gov.cn</td><td class="ch-s">可达</td><td class="ch-o">各栏目索引页为 JS 壳，须经 JPAAS 列表接口取数据（webId=86ca573ec4df405db627fdc2493677f3）；首页 `<meta MakeTime>` 已更新至 2026-10-09 18:30:36，但新增均为例行公示、市政管网类专访与地方新闻。</td></tr>
+<tr><td class="ch-n">山东 zjt.shandong.gov.cn</td><td class="ch-s">http 可达／https 403</td><td class="ch-o">xxgk 栏目接口 `POST /module/xxgk/search.jsp` 可枚举（本轮新破解 infotypeId 全表，取自 `tree.jsp`）；站内 jsearch 检索索引止于 2019 年，仍失效。已据此补获 09-29 房屋建筑统一代码制度部署。</td></tr>
+<tr><td class="ch-n">江苏 jsszfhcxjst.jiangsu.gov.cn</td><td class="ch-s">实域可达 200</td><td class="ch-o">主域 `jst.jiangsu.gov.cn` 仍 000；通知公告 col49384 动态接口可枚举（须带完整浏览器头）；市县新闻 col8638 静态可读。</td></tr>
+<tr><td class="ch-n">浙江 jst.zj.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">JPAAS 接口须带 `editType=null`；本期 2 条征意经 jpaas-jsurvey 接口取得。</td></tr>
+<tr><td class="ch-n">广东 zfcxjst.gd.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">文件通知／公示公告／政策解读静态可读。</td></tr>
+<tr><td class="ch-n">湖北 zjt.hubei.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">官方 `zcwj.json` 接口继续可用（规范性文件 169 条／其他主动公开 1564 条），按日期直接筛选。</td></tr>
+<tr><td class="ch-n">江西 zjt.jiangxi.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">`POST /queryList` 接口复现（文件通知 total=1213／公示公告 1353／调查征集 179）。</td></tr>
+<tr><td class="ch-n">河北 zfcxjst.hebei.gov.cn</td><td class="ch-s">412（curl）／渲染可读</td><td class="ch-o">程序化请求 412 持续；渲染方式可正常取标题＋文号＋正文。</td></tr>
+<tr><td class="ch-n">广州 zfcj.gz.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">**gkmlpt 子系统已完全恢复**：`/gkmlpt/api/all/{1089,1090,1091,1104}` 四类接口状态均为 200（第 44 期曾宕机 504/554，第 45 期恢复、本期维持）。</td></tr>
+<tr><td class="ch-n">宁波 zjw.ningbo.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">首页 `<meta MakeTime>` 已不再渲染，零新增判定改由逐栏目页面承担。</td></tr>
+<tr><td class="ch-n">广西 zjt.gxzf.gov.cn</td><td class="ch-s">http 200／https 502</td><td class="ch-o">固定用 http 明文通道。</td></tr>
+<tr><td class="ch-n">云南 zfcxjst.yn.gov.cn</td><td class="ch-s">备用域可达 200</td><td class="ch-o">主域 `zjt.yn.gov.cn` 仍 000；备用域可用，页面 gzip 未声明 Content-Encoding，须先 `gzip.decompress()` 再解析标题。</td></tr>
+<tr><td class="ch-n">海南 zjt.hainan.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">通知公告为 iframe 嵌套结构（`tablist.shtml`），服务端渲染可读；征集调查页无发布时间字段。</td></tr>
+<tr><td class="ch-n">贵州 zfcxjst.guizhou.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">TRS-IRS 接口本期返回「系统错误」，改走 IGI 接口 `GET /IGI/opinion/web/list?siteId=69`。</td></tr>
+<tr><td class="ch-n">甘肃 zjt.gansu.gov.cn</td><td class="ch-s">不可达 412</td><td class="ch-o">JS 反爬挑战持续，连续第 6 期不可达。</td></tr>
+<tr><td class="ch-n">宁夏 jst.nx.gov.cn</td><td class="ch-s">实域可达 200</td><td class="ch-o">实域正确（原 `zjt.nx.gov.cn` 为错域）。</td></tr>
+<tr><td class="ch-n">天津 zfcxjs.tj.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">规范性文件子栏为服务端渲染可读；通知公告为 JS 内联 `allData` 数组，须正则解析。</td></tr>
+<tr><td class="ch-n">山西 zjt.shanxi.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">征求意见栏链接使用单引号 `href='./202610/t…shtml'`，解析须兼容单引号。</td></tr>
+<tr><td class="ch-n">吉林 jst.jl.gov.cn</td><td class="ch-s">实域可达 200</td><td class="ch-o">旧域 000，实域可用。</td></tr>
+<tr><td class="ch-n">范围外城市（佛山／新乡／宁德等）</td><td class="ch-s">部分可达</td><td class="ch-o">大量地市域名未知或 DNS 失败（汕头、常州、徐州、盐城、绍兴、泉州、厦门、淄博、洛阳、南阳等）；另有无锡／南通／扬州／泰州／聊城 `zjj.*` 域名实际归属非住建局（民宗局／门户），已排除。</td></tr>
+</tbody></table></div>
+
+<div class="ft">
+  <div class="ft-l1">住建政策每日简报 · 第 46 期 · 2026-10-10</div>
+  <div class="ft-l2">
+    采集方式：8 组并行子代理（住建部／重点省份组1／重点省份组2／重点城市／武汉固定信源／其余省份／烟台基准／独立复查兜底），
+    经汇总去重、链接全量实测与溯源交叉核验后成稿。
+  </div>
+  <div class="ft-l3">
+    来源约束：全部条目均来自域名以 <b>gov.cn</b> 结尾的住建部门官网原文；不使用新闻网站、门户、自媒体及聚合站转载内容。
+  </div>
+  <div class="ft-l4">
+    筛选口径：仅收录与烟台市住房和城乡建设局职责相关的实质性制度内容（政策／试点／规划／条例／专项行动／监管制度调整／经验清单）；
+    已剔除市政公用事业与地下管网类（供水／燃气／排水／供热／地下管网与综合管廊）、例行事务性公告、城管综合执法、住房公积金及一般性会议新闻。
+  </div>
+  <div class="ft-l5">
+    标签口径：以单个文件（文号＋标题）为唯一标识判定首次／多次／延续；
+    全部内容以官网实际发布为准，无法核实处已标注「待核实」。
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>
