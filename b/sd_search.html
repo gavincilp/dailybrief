@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var reg = new RegExp("divid=[0-9a-zA-z-_]{0,}");
+		var divid = reg.exec(document.referrer).toString().split("=")[1];
+		document.getElementById('divid').value = divid;
+	}
+	);
+</script>

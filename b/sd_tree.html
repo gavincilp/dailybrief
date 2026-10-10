@@ -1,0 +1,118 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="100%" align="center">
+    <tr>
+        <td>
+            <form id="searchform" name="searchform" action="tree.jsp" method="post">
+                <input type="hidden" name="area" id="area" value="">
+                <input type="hidden" name="divid" id="divid" value="div160091">
+                <input type="hidden" name="showwebname" id="showwebname" value="1">
+                <input type="hidden" name="limit" id="limit" value="0">
+                <input type="hidden" name="isGB" id="isGB" value="1">
+                <input type="hidden" name="zupeisortfield" id="zupeisortfield" value="">
+                <input type="hidden" name="standardXxgk" id="standardXxgk" value="1">
+            </form>
+        </td>
+    </tr>
+</table>
+
+<link rel="StyleSheet" href="./dtree/dtreeGB.css" type="text/css"/>
+<script language="javascript" src="./dtree/dtreeGB.js"></script>
+
+<script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript">
+     var d = new dTree('d'); d.add(0,-1,0,'<a style="cursor:hand;" onclick="funclick(0,\'compaltedate:0,orderid:0\');">山东省住房和城乡建设厅</a>'); d.add(25485,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD01\',\'orderid:1,createdatetime:1\');">机构职能</a>'); d.add(25551,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD02\',\'createdatetime:0\');">法规文件</a>'); d.add(25486,25485,0,'<a style="cursor:hand;" onclick="funclick(\'SD0101\',\'createdatetime:0\');">机关简介</a>'); d.add(25489,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD03\',\'createdatetime:0\');">政府会议</a>'); d.add(25487,25485,0,'<a style="cursor:hand;" target="_blank" href="http://zjt.shandong.gov.cn/col/col184779/index.html">领导信息</a>'); d.add(25492,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD04\',\'createdatetime:0\');">规划计划</a>'); d.add(25552,25551,0,'<a style="cursor:hand;" onclick="funclick(\'SD0201\',\'createdatetime:0\');">法规规章</a>'); d.add(25488,25485,0,'<a style="cursor:hand;" onclick="funclick(\'SD0103\',\'createdatetime:0\');">机构设置</a>'); d.add(25498,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD06\',\'createdatetime:0\');">财政预决算</a>'); d.add(25554,25551,0,'<a style="cursor:hand;" onclick="funclick(\'SD0202\',\'createdatetime:0\');">政策文件</a>'); d.add(33433,25552,0,'<a style="cursor:hand;" onclick="funclick(\'SD020101\',\'createdatetime:0\');">地方性法规</a>'); d.add(25553,25552,0,'<a style="cursor:hand;" onclick="funclick(\'SD020102\',\'createdatetime:0\');">政府规章</a>'); d.add(25504,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD08\',\'createdatetime:0\');">重点领域</a>'); d.add(25532,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD09\',\'createdatetime:0\');">建议提案</a>'); d.add(25536,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD11\',\'createdatetime:0\');">人事信息</a>'); d.add(25555,25554,0,'<a style="cursor:hand;" target="_blank" href="http://zjt.shandong.gov.cn/col/col293162/index.html?vc_xxgkarea=113700000045030270">规范性文件</a>'); d.add(25540,0,0,'<a style="cursor:hand;" onclick="funclick(\'SD10\',\'createdatetime:0\');">业务动态</a>'); d.add(25556,25554,0,'<a style="cursor:hand;" onclick="funclick(\'SD020205\',\'createdatetime:0\');">规范性文件清理结果</a>'); d.add(25557,25554,0,'<a style="cursor:hand;" onclick="funclick(\'SD020207\',\'createdatetime:0\');">政策解读</a>'); d.add(25493,25492,0,'<a style="cursor:hand;" onclick="funclick(\'SD0403\',\'createdatetime:0\');">专项规划</a>'); d.add(25494,25492,0,'<a style="cursor:hand;" onclick="funclick(\'SD0406\',\'createdatetime:0\');">年度计划</a>'); d.add(25499,25498,0,'<a style="cursor:hand;" onclick="funclick(\'SD0602\',\'createdatetime:0\');">省直部门预决算</a>'); d.add(25500,25499,0,'<a style="cursor:hand;" onclick="funclick(\'SD060201\',\'createdatetime:0\');">部门预算</a>'); d.add(25501,25499,0,'<a style="cursor:hand;" onclick="funclick(\'SD060202\',\'createdatetime:0\');">部门决算</a>'); d.add(76571,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0801\',\'createdatetime:0\');">重点任务信息公开</a>'); d.add(25505,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0802\',\'createdatetime:0\');">审计公开</a>'); d.add(25508,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0803\',\'createdatetime:0\');">行政执法公示</a>'); d.add(25509,25508,0,'<a style="cursor:hand;" onclick="funclick(\'SD080301\',\'createdatetime:0\');">事前公开</a>'); d.add(25511,25508,0,'<a style="cursor:hand;" onclick="funclick(\'SD080303\',\'createdatetime:0\');">事后公开</a>'); d.add(25512,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0804\',\'createdatetime:0\');">信用信息</a>'); d.add(25513,25512,0,'<a style="cursor:hand;" onclick="funclick(\'SD080401\',\'createdatetime:0\');">行政许可-行政处罚“双公示”</a>'); d.add(25515,25512,0,'<a style="cursor:hand;" target="_blank" href="http://credit.shandong.gov.cn/">信用中国（山东）</a>'); d.add(25516,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0805\',\'createdatetime:0\');">“双随机一公开”监管</a>'); d.add(25517,25516,0,'<a style="cursor:hand;" onclick="funclick(\'SD080501\',\'createdatetime:0\');">随机抽查事项清单</a>'); d.add(25518,25516,0,'<a style="cursor:hand;" onclick="funclick(\'SD080502\',\'createdatetime:0\');">抽查计划</a>'); d.add(25519,25516,0,'<a style="cursor:hand;" onclick="funclick(\'SD080503\',\'createdatetime:0\');">抽查结果</a>'); d.add(25520,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0806\',\'createdatetime:0\');">重大建设项目</a>'); d.add(25521,25520,0,'<a style="cursor:hand;" onclick="funclick(\'SD080607\',\'createdatetime:0\');">质量安全监督</a>'); d.add(25522,25520,0,'<a style="cursor:hand;" onclick="funclick(\'SD080608\',\'createdatetime:0\');">竣工有关信息</a>'); d.add(25524,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0807\',\'createdatetime:0\');">公共资源配置</a>'); d.add(25525,25524,0,'<a style="cursor:hand;" onclick="funclick(\'SD080702\',\'createdatetime:0\');">住房公积金管理</a>'); d.add(25526,25524,0,'<a style="cursor:hand;" onclick="funclick(\'SD080705\',\'createdatetime:0\');">政府采购</a>'); d.add(25530,25504,0,'<a style="cursor:hand;" onclick="funclick(\'SD0890\',\'createdatetime:0\');">市场监管</a>'); d.add(25531,25530,0,'<a style="cursor:hand;" onclick="funclick(\'SD089006\',\'createdatetime:0\');">房地产市场监管</a>'); d.add(25533,25532,0,'<a style="cursor:hand;" onclick="funclick(\'SD0901\',\'createdatetime:0\');">人大代表建议办理</a>'); d.add(25534,25532,0,'<a style="cursor:hand;" onclick="funclick(\'SD0902\',\'createdatetime:0\');">政协委员提案办理</a>'); d.add(25541,25540,0,'<a style="cursor:hand;" onclick="funclick(\'SD1002\',\'compaltedate:0,orderid:0\');">通知公告</a>'); d.add(25542,25540,0,'<a style="cursor:hand;" onclick="funclick(\'SD1003\',\'compaltedate:0,orderid:0\');">工作动态</a>'); d.add(25490,25489,0,'<a style="cursor:hand;" onclick="funclick(\'SD0304\',\'createdatetime:0\');">部门办公会议</a>'); d.add(25538,25536,0,'<a style="cursor:hand;" onclick="funclick(\'SD1102\',\'createdatetime:0\');">公务员考录</a>'); d.add(25539,25536,0,'<a style="cursor:hand;" onclick="funclick(\'SD1103\',\'createdatetime:0\');">事业单位招考</a>'); d.add(25558,25554,0,'<a style="cursor:hand;" onclick="funclick(\'SD020208\',\'createdatetime:0\');">部门文件</a>'); d.add(25529,25524,0,'<a style="cursor:hand;" onclick="funclick(\'SD080710\',\'createdatetime:0\');">住房保障</a>'); d.add(25507,25505,0,'<a style="cursor:hand;" onclick="funclick(\'SD080205\',\'createdatetime:0\');">预算执行和其他财政收支审计发现问题整改情况的报告</a>'); d.add(25523,25520,0,'<a style="cursor:hand;" onclick="funclick(\'SD080609\',\'createdatetime:0\');">房屋建筑和市政工程建筑工程施工许可证信息</a>'); d.add(86131,25536,0,'<a style="cursor:hand;" onclick="funclick(\'SD1104\',\'createdatetime:0\');">其他信息</a>'); d.add(32951,25557,0,'<a style="cursor:hand;" onclick="funclick(\'SD02020701\',\'createdatetime:0\');">文字解读</a>'); d.add(32931,25557,0,'<a style="cursor:hand;" onclick="funclick(\'SD02020702\',\'createdatetime:0\');">新闻发布</a>'); d.add(33094,25530,0,'<a style="cursor:hand;" onclick="funclick(\'SD089007\',\'createdatetime:0\');">建筑市场监管</a>'); d.add(33096,25502,0,'<a style="cursor:hand;" target="_blank" href="http://www.shandong.gov.cn/api-gateway/jpaas-jiq-web-sdywtb/front/item/qzqd_index?divisionCode=SD370000ZJ">部门权责清单</a>'); d.add(69673,25499,0,'<a style="cursor:hand;" onclick="funclick(\'SD060203\',\'createdatetime:0\');">资金管理</a>');
+    document.write(d);
+    var b_zpjdshow = 0;
+    if (b_zpjdshow == 1) {
+        var reg = new RegExp("vc_xxgkarea=[0-9a-zA-z-_]{0,}");
+        if(reg.exec(document.referrer) != null ){
+            var area = reg.exec(document.referrer).toString().split("=")[1];
+            document.getElementById("area").value = area;
+            searchform.submit();
+        }
+    }
+
+    function funclick(i_id, order) {
+        var divid = "div160091";
+        var webid = "14";
+        var area = "";
+        var b_standardXxgk = "1";
+        var page = "";
+        if (order != "") {
+            order = "&sortfield=" + order;
+        }
+        var obj = eval("parent.document.getElementById('" + divid + "')");
+        obj.innerHTML = "正在加载内容，请稍候...";
+        $.ajax({
+            type: "POST",
+            url: "./search.jsp?divid=" + divid + "&infotypeId=" + i_id + "&jdid=" + webid + "&area=" + area + order + "&standardXxgk=" + b_standardXxgk,
+            cache: false,
+            success: function (msg) {
+                loadDefult(obj, msg);
+            },
+            error: function () {
+                loadError(obj);
+            }
+        });
+    }
+
+    function loadDefult(obj, strValue) {
+        if (strValue != "undefined" && strValue != "") {
+            obj.innerHTML = trim(strValue);
+        } else {
+            obj.innerHTML = "";
+        }
+    }
+
+    function loadError(obj) {
+        obj.innerHTML = "数据请求失败或连接超时...";
+    }
+
+    function ltrim(s) {
+        return s.replace(/^\s*/, "")
+    }    //过滤左空格
+    function rtrim(s) {
+        return s.replace(/\s*$/, "");
+    }   //过滤右空格
+    function trim(s) {
+        return rtrim(ltrim(s));
+    }            //过滤左右空格
+</script>
