@@ -83,6 +83,75 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
 @media(max-width:760px){main{padding:0 16px 24px}header.top{padding:24px 20px 20px}header.top h1{font-size:23px}footer{padding:20px}.ihead{gap:10px}.num{flex:0 0 32px;height:32px;font-size:13px}.arow{flex-wrap:wrap}.lvl{flex:0 0 60px}}
 
 </style>
+<style>
+/* ===== 补充样式：与本期正文类名对应（第 46 期版式补全） ===== */
+.wrap{max-width:1080px;margin:0 auto;background:var(--warm);border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+.hd{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 58%,var(--navy-3) 100%);color:#fff;padding:34px 40px 26px;position:relative;overflow:hidden}
+.hd::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.045)}
+.hd-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hd-badge{font-size:11px;letter-spacing:2.6px;text-transform:uppercase;opacity:.75;font-weight:600;border:1px solid rgba(255,255,255,.35);padding:4px 10px;border-radius:2px}
+.hd-issue{font-size:12.5px;letter-spacing:1px;opacity:.85;border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:2px;white-space:nowrap}
+.hd h1{margin:14px 0 6px;font-size:31px;letter-spacing:2.5px;font-weight:700;color:#fff}
+.hd-date{font-size:13.5px;opacity:.88;letter-spacing:.4px}
+.hd-stats{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+.st{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:3px;padding:6px 14px;font-size:13px;letter-spacing:.5px}
+.st b{font-size:16px;color:#ffe9b0;margin:0 3px}
+.st-first b{color:#9fe8dd}.st-multi b{color:#ffcda4}.st-cont b{color:#cdd8ea}
+.lead{background:var(--warm-2);border-left:4px solid var(--accent);padding:16px 20px;margin:26px 0 8px;font-size:14px;color:var(--ink-2);line-height:1.95}
+.lead-t{font-weight:700;color:var(--navy);margin-bottom:8px;font-size:14.5px}
+.lead-b{text-align:justify}
+.lead b,.lead-b b,.lead-b strong{color:var(--navy)}
+.lead-sub{font-weight:700;color:var(--navy);margin:12px 0 8px}
+.top3{margin:0;padding-left:0;list-style:none}
+.top3>li{background:#fff;border:1px solid var(--line-2);border-left:3px solid var(--navy-2);border-radius:3px;padding:12px 16px;margin-bottom:9px;font-size:13.5px;line-height:1.85}
+.t3-t{font-weight:700;color:var(--navy)}
+.t3-k{color:var(--ink-2);margin:4px 0}
+.t3-r{color:#6b5b3e;font-size:12.8px}
+.sec-h{margin:38px 0 16px;padding:0 0 10px;font-size:19.5px;color:var(--navy);border-bottom:2px solid var(--navy);letter-spacing:1px;font-weight:700}
+.sec-note{font-size:13px;color:var(--ink-2);background:var(--warm-2);border-left:3px solid var(--line);padding:10px 16px;margin:0 0 14px;line-height:1.85}
+.ihd{display:flex;gap:15px;align-items:flex-start}
+.ino{flex:0 0 40px;height:40px;border-radius:3px;background:linear-gradient(140deg,var(--navy),var(--navy-3));color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.imain{flex:1;min-width:0}
+.imeta{font-size:12.5px;color:var(--ink-2);margin:8px 0 12px;line-height:1.9;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.m-src{color:var(--navy-2);font-weight:600}
+.m-pub{color:#5a6577}
+.m-field{color:var(--ink-2)}
+.t-first{background:var(--first-bg);color:var(--first);border:1px solid #b7e0d9}
+.t-multi{background:var(--multi-bg);color:var(--multi);border:1px solid #f0bda3}
+.t-cont{background:var(--cont-bg);color:var(--cont);border:1px solid #ccd6e4}
+.tag.t-first,.tag.t-multi,.tag.t-cont{display:inline-block}
+.block{margin:0 0 11px;font-size:14.2px;line-height:1.9}
+.block-t{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy-2);padding:2px 9px;border-radius:2px;letter-spacing:.6px;margin-bottom:6px}
+.blk-change .block-t{background:#6b5b3e}
+.block-b{color:var(--ink);text-align:justify}
+.block-b b,.block-b strong{color:var(--navy);font-weight:700}
+.relbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:10px;margin-top:11px;font-size:12.8px}
+.rel-t{font-weight:700;color:var(--navy-2)}
+.rel-v{font-weight:700;padding:2px 12px;border-radius:2px;font-size:12px}
+.rel-h .rel-v{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.rel-m .rel-v{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.rel-l .rel-v{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+.rel-n{color:var(--ink-2)}
+.tbl-wrap{overflow-x:auto;margin:6px 0 4px}
+table.track td.td-topic{color:var(--navy);font-weight:700}
+table.track td.td-new{color:var(--first);font-weight:600}
+table.app td.ap-no{color:var(--navy);font-weight:700;text-align:center;width:52px}
+table.app td.ap-lv{text-align:center;width:72px}
+.lv-h,.lv-m,.lv-l{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 12px;border-radius:2px}
+.lv-h{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.lv-m{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.lv-l{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+table.src td.sr-n{color:var(--navy);font-weight:600}
+table.src td.sr-u a{color:var(--navy-3);text-decoration:none;word-break:break-all;font-size:12.4px}
+table.src td.sr-u a:hover{text-decoration:underline}
+table.chan td.ch-n{color:var(--navy);font-weight:600;white-space:nowrap}
+table.chan td.ch-s{color:var(--first);font-weight:600;white-space:nowrap}
+.ft{background:var(--navy);color:#c7d2e0;padding:24px 40px 30px;font-size:12.4px;line-height:2}
+.ft-l1{color:#fff;font-weight:700;font-size:13.5px;letter-spacing:.5px}
+.ft-l2,.ft-l3,.ft-l4,.ft-l5{margin-top:6px}
+.ft b{color:#fff}
+@media(max-width:760px){.hd{padding:24px 20px 20px}.hd h1{font-size:23px}.lead,.sec-h,.sec-note,.item{margin-left:16px;margin-right:16px}.item{padding:16px}.ino{flex:0 0 32px;height:32px;font-size:13px}.ft{padding:20px}}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -95,16 +164,16 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
   <h1>住建动态简报</h1>
   <div class="hd-date">2026-10-10（周六）&nbsp;·&nbsp;覆盖：住房和城乡建设部 · 31 个省级行政区 · 9 个重点城市</div>
   <div class="hd-stats">
-    <span class="st st-all">今日收录 <b>18</b> 条</span>
-    <span class="st st-first">首次出现 <b>13</b> 条</span>
-    <span class="st st-multi">多次出现 <b>5</b> 条</span>
-    <span class="st st-cont">延续跟进 <b>0</b> 条</span>
+    <span class="st st-all">今日收录 <b>21</b> 条</span>
+    <span class="st st-first">首次出现 <b>14</b> 条</span>
+    <span class="st st-multi">多次出现 <b>6</b> 条</span>
+    <span class="st st-cont">延续跟进 <b>1</b> 条</span>
   </div>
 </div>
 
 <div class="lead">
   <div class="lead-t">本期提要</div>
-  <div class="lead-b">节后第二日全国住建系统全面复工，<b>省级与地市两级同步放量</b>：主窗口（10-08 07:30—10-10 07:30）经 8 组并行子代理实测，<b>住建部本级仍零新增</b>（政策文件库最新 09-24、规章库仍部令第61号、行政规范性文件库仍 建房规〔2026〕3号、标准公告最新 09-23、政策解读最新 08-31；首页 MakeTime 已更新至 2026-10-09 18:30:36，但新增均为例行注册公示、市政管网类专访与地方新闻），<b>新增集中于 10-08 与 10-09 两日</b>（湖北、湖南、河南、安徽、江西、浙江、吉林、山西、江苏、青岛、苏州、杭州、佛山、新乡同日或隔日发布）。本期共收录 <b>18 条</b>（首次出现 15／多次出现 3／延续跟进 0），为节后单期收录量最高的一期，其中主窗口 12 条、扩窗期（09-25 起）6 条。</div>
+  <div class="lead-b">节后第二日全国住建系统全面复工，<b>省级与地市两级同步放量</b>：主窗口（10-08 07:30—10-10 07:30）经 8 组并行子代理实测，<b>住建部本级仍零新增</b>（政策文件库最新 09-24、规章库仍部令第61号、行政规范性文件库仍 建房规〔2026〕3号、标准公告最新 09-23、政策解读最新 08-31；首页 MakeTime 已更新至 2026-10-09 18:30:36，但新增均为例行注册公示、市政管网类专访与地方新闻），<b>新增集中于 10-08 与 10-09 两日</b>（湖北、湖南、河南、安徽、江西、浙江、吉林、山西、江苏、青岛、苏州、杭州、佛山、新乡同日或隔日发布）。本期共收录 <b>21 条</b>（首次出现 14／多次出现 6／延续跟进 1）；另经 <b>10-10 午间二次复核</b>，补录此前漏收的窗口内条目 <b>3 条</b>（天津智慧工地典型场景、广州建筑行业自律、广西 BIM 试点经验第三期），并对本期版式做补全修正，为节后单期收录量最高的一期，其中主窗口 12 条、扩窗期（09-25 起）6 条。</div>
   <div class="lead-sub"><b>与烟台最直接相关三条：</b></div>
   <ol class="top3">
 <li><div class="t3-t">湖南省《关于支持老旧住房自主更新的通知》（湘建保〔2026〕97号，住建＋自然资源＋财政三厅局联合）</div><div class="t3-k">三种更新模式（原拆原建／改扩翻／整治提升）＋装配式外墙面积不计容（不超过总建筑面积 3%）＋用地规划产权资金配套</div><div class="t3-r">烟台城市更新制度正处于空窗期，该文件是唯一可直接参照的省级「自主更新」完整制度文本。</div></li>
@@ -709,6 +778,99 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
   </div>
 </div>
 
+<div class="item" id="it19">
+  <div class="ihd">
+    <div class="ino">19</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zfcxjs.tj.gov.cn/xxgk_70/tzgg/202610/t20261010_7409892.html" target="_blank" rel="noopener">天津市住房和城乡建设委员会关于发布第一批智慧工地技术应用典型应用场景的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">天津市住房和城乡建设委员会</span>
+        <span class="m m-pub">发布时间：2026-10-09</span>
+        <span class="m m-field">领域：建筑业管理／工程质量安全（智慧工地）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">天津市住建委落实住房和城乡建设部关于推进智慧工地建设的部署，2026 年 3 月组织征集智慧工地技术应用场景，共征集 <b>9 个场景</b>，经资料审查与专家评审，遴选确定 <b>3 个项目为第一批智慧工地技术应用典型应用场景</b>予以发布，供全市学习借鉴，推动智慧工地由「技术供给」走向「场景落地」。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列智慧工地／智能建造类条目此前多为「技术标准规程」（深圳智能建造工种机器人应用技术规程、塔式起重机远程控制系统）或「平台建设」；天津本件把落点放在<b>「典型应用场景名录式发布」</b>，以「征集—评审—名录」方式沉淀可复制场景，该体例在本简报追踪系列中<b>为首次记录</b>（智慧工地建设本身系住建部长期部署事项，多地已推行）。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>① 烟台是否已有同类政策：</b>烟台已在 <b>2026-10-01 起常态化应用「人工智能辅助」招标投标</b>，并建有智慧工地相关平台，但<b>未见市级「智慧工地技术应用典型应用场景」征集与名录发布机制</b>（烟台是否已开展同类场景征集，<b>待核实</b>）。<b>② 异同：</b>烟台侧重「平台＋AI 评审」的过程监管，天津侧重「场景遴选＋名录示范」的经验推广；两者互补，天津路径<b>无新增财政支出</b>。<b>③ 启示：</b>建议烟台由市住建局组织一次智慧工地场景征集，与既有 AI 辅助招投标、智慧工地平台数据贯通，形成本地「可复制场景清单」，成本极低、见效快。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">「场景征集—评审—名录」低成本推广工具，可与烟台 AI 辅助招投标、智慧工地平台衔接。</span>
+  </div>
+</div>
+<div class="item" id="it20">
+  <div class="ihd">
+    <div class="ino">20</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zfcj.gz.gov.cn/gkmlpt/content/11/11031/post_11031293.html" target="_blank" rel="noopener">广州市住房和城乡建设局关于转发《关于推进建筑行业自律建设规范我市房屋建筑工程领域经营秩序的通知》的通知（穗建质〔2026〕590号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">广州市住房和城乡建设局</span>
+        <span class="m m-pub">发布时间：2026-10-08（成文 2026-09-27）</span>
+        <span class="m m-field">领域：建筑业管理（行业自律／市场秩序）</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">广州市住建局转发上级《关于推进建筑行业自律建设规范我市房屋建筑工程领域经营秩序的通知》，要求推进建筑行业自律建设、规范房屋建筑工程领域经营秩序（文号：<b>穗建质〔2026〕590 号</b>）。<span style="color:#8a6d1f">（注：正文页经渲染方式核验标题、日期与文号一致；直连请求因站点 WAF 返回 420。）</span></div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">本系列「行业自律」主题此前见于<b>甘肃（建设工程监理行业自律管理办法，09-24）</b>与<b>佛山（施工图审查收费行业自律，10-06）</b>，均聚焦单一环节；广州本件把自律从「监理／图审收费」扩展到<b>房屋建筑工程领域经营秩序</b>整体，覆盖面更广，为该主题第 3 个地区。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>① 烟台是否已有同类政策：</b>烟台建筑业治理以<b>制度性工具</b>为主——农民工工资支付承诺制、招投标「评定分离」、AI 辅助招投标（2026-10-01 起）、《建筑工程施工现场关键岗位人员配备和在岗履职管理办法》（烟建建管〔2022〕9号），<b>未见以「行业自律＋经营秩序规范」为抓手的专件</b>（烟台行业协会自律建设情况<b>待核实</b>）。<b>② 异同：</b>烟台偏「政府监管＋承诺制」，广州偏「行业自律＋经营秩序」，前者刚性、后者柔性；广州可补烟台在招标代理、专业分包等<b>中介层行为规范</b>上的空白。<b>③ 启示：</b>建议烟台在深化评定分离、AI 评审的同时，研究以<b>行业协会自律公约＋经营秩序负面清单</b>方式约束中介层行为，成本低、可先行试点。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">「行业自律」主题第 3 个地区，可补烟台中介层行为规范空白；正文页受 WAF 限制经渲染核验。</span>
+  </div>
+</div>
+<div class="item" id="it21">
+  <div class="ihd">
+    <div class="ino">21</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/wjtz/t28198240.shtml" target="_blank" rel="noopener">广西壮族自治区住房和城乡建设厅关于印发建筑信息模型（BIM）技术应用试点项目经验做法（第三期）的通知</a></div>
+      <div class="imeta">
+        <span class="m m-src">广西壮族自治区住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：2026-10-09（落款 2026-10-08）</span>
+        <span class="m m-field">领域：建筑业管理／数字化（BIM）</span>
+        <span class="tag t-cont">延续跟进</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">广西住建厅为深化<b>安全可靠 BIM 技术在工程建设领域全生命周期应用</b>，将试点项目（南宁供电局青秀供电分局应急联动中心，绿色建筑二星级、近零能耗示范）的 BIM 应用经验做法整理印发为<b>第三期</b>，要求各地学习借鉴。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">BIM 主题本系列已有<b>宁夏（竣工 BIM 交付技术导则）、深圳（既有建筑 BIM 建模技术标准）</b>等「标准立规型」条目；广西本件属<b>「试点项目经验做法」批次化推广</b>的阶段性延续（第三期），非新制度立规，故计为「延续跟进」而非「多次出现」。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>① 烟台是否已有同类政策：</b>烟台绿色低碳与智能建造制度集中在绿色建筑标识认定（烟建节科〔2023〕2号，至 2026-12-09）、装配式（烟政办字〔2019〕54号，已届满未见接续）等，<b>未见市级 BIM 技术应用专项文件或试点经验推广机制</b>（<b>待核实</b>）。<b>② 异同：</b>广西以「试点—经验—推广」路径推动 BIM 落地，烟台在绿色建筑、装配式方面有基础但 BIM 应用缺专项抓手。<b>③ 启示：</b>建议烟台将 BIM 应用纳入绿色建筑、装配式与 AI 辅助招投标的衔接环节，先在政府投资项目开展 BIM 试点并沉淀经验做法，成本可控。</div>
+  </div>
+  <div class="relbar rel-l">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">低</span>
+    <span class="rel-n">经验推广型延续条目，烟台可参考「试点—经验—推广」路径，非紧迫。</span>
+  </div>
+</div>
 <div class="sec-h">二、政策追踪表（多地同类政策对比）</div>
 <div class="sec-note">本表汇总今日涉及的多地同类政策，标注先行地区与今日新增地区的差异，用于识别政策演进方向与烟台可对标位置。</div>
 <div class="tbl-wrap"><table class="track">
@@ -784,6 +946,26 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
   <td class="td-diff">福建首次以省级文件界定「小散工程」（≤100 万元或 ≤500 ㎡），属地网格化巡查＋街道赋权执法。</td>
 </tr>
 
+<tr>
+  <td class="td-topic">智慧工地技术应用（典型应用场景名录式推广）</td>
+  <td class="td-prior">住建部长期部署，多地推行智慧工地；本系列曾记录塔机远程控制、智能建造工种机器人等技术规程</td>
+  <td class="td-new">天津（第一批智慧工地技术应用典型应用场景，9 个征集场景中遴选 3 个，10-09）</td>
+  <td class="td-diff">由「技术规程供给」转向「场景落地示范」，以「征集—评审—名录发布」低成本推广，可类比用于烟台 AI 辅助招投标与智慧工地平台衔接。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">建筑行业自律与经营秩序规范</td>
+  <td class="td-prior">甘肃（监理行业自律管理办法，09-24）、佛山（施工图审查收费行业自律，10-06）</td>
+  <td class="td-new">广州（转发规范房屋建筑工程领域经营秩序通知，穗建质〔2026〕590号，10-08）</td>
+  <td class="td-diff">由「单一环节自律」（监理／图审收费）扩展到「房屋建筑工程领域经营秩序」整体，覆盖面更广、为第 3 个地区。</td>
+</tr>
+
+<tr>
+  <td class="td-topic">BIM 技术应用试点经验推广</td>
+  <td class="td-prior">宁夏（竣工 BIM 交付标准）、深圳（既有建筑 BIM 建模标准）</td>
+  <td class="td-new">广西（BIM 技术应用试点项目经验做法第三期，10-08）</td>
+  <td class="td-diff">以「试点项目经验做法」批次化印发推动 BIM 全生命周期应用，属经验推广型，非新制度立规。</td>
+</tr>
 </tbody></table></div>
 <div class="sec-h">三、附录：与烟台相关度评级及参考价值</div>
 <div class="sec-note">相关度评级依据：是否填补烟台制度空白、是否可直接落地、是否与烟台现行政策时间窗口（到期／修订／空窗）形成呼应。</div>
@@ -807,6 +989,9 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
 <tr><td class="ap-no">16</td><td class="ap-name">山西气承式膜结构体育建筑设计防火标准（征意）</td><td class="ap-lv"><span class="lv-l">低</span></td></tr>
 <tr><td class="ap-no">17</td><td class="ap-name">佛山物业小区服务合同履约自查自评公开公示</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
 <tr><td class="ap-no">18</td><td class="ap-name">新乡房屋安全鉴定机构信息登记及动态更新</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">19</td><td class="ap-name">天津市第一批智慧工地技术应用典型应用场景</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">20</td><td class="ap-name">广州建筑行业自律规范房屋建筑工程领域经营秩序通知</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">21</td><td class="ap-name">广西 BIM 技术应用试点项目经验做法（第三期）</td><td class="ap-lv"><span class="lv-l">低</span></td></tr>
 </tbody></table></div>
 <div class="sec-h">四、未获取来源清单</div>
 <div class="sec-note">以下网站／栏目本期无法访问或受限，为保持信息完整性一并说明，未跳过。相关条目已改用替代通道或列为待核验。</div>
@@ -848,7 +1033,7 @@ footer .footlinks{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255
   <div class="ft-l1">住建政策每日简报 · 第 46 期 · 2026-10-10</div>
   <div class="ft-l2">
     采集方式：8 组并行子代理（住建部／重点省份组1／重点省份组2／重点城市／武汉固定信源／其余省份／烟台基准／独立复查兜底），
-    经汇总去重、链接全量实测与溯源交叉核验后成稿。
+    经汇总去重、链接全量实测与溯源交叉核验后成稿；并于 2026-10-10 午间完成同日二次复核与补录（新增 3 条），同步修正本期版式。
   </div>
   <div class="ft-l3">
     来源约束：全部条目均来自域名以 <b>gov.cn</b> 结尾的住建部门官网原文；不使用新闻网站、门户、自媒体及聚合站转载内容。
