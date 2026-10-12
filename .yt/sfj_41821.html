@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/cms_files/default/script/jslib/jquery.js"></script>
+ <script src="/cms_files/default/script/jslib/jquery.cookie.js"></script>
+ <script src="/cms_files/default/script/layui/layui.all.js"></script>
+ <script src="/cms_files/default/script/layui/layer/layer.js"></script>
+ <script src="/script/webglobal.js"></script>
+ <script src="/script/webgray.js"></script>
+ <script src="/script/webgray_41821.js"></script>
+ <script src="/plugins/libs/require.js"></script>
+ <script src="/plugins/libs/load.js"></script>
+ <link rel="stylesheet" href="/cms_files/default/css/iconfont.css" />
+<link rel="stylesheet" href="/cms_files/default/script/layui/css/layui.css" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="stylesheet" href="/cms_files/webyantaishisifaju/pubtplobject/defaultSet/11121/images/sfj202109_style.css">
+<title>意见征集</title>
+<meta name="ColId" content="41821">
+<meta name="SiteName" content="烟台市司法局">
+<meta name="SiteDomain" content="sfj.yantai.gov.cn">
+<meta name="SiteIDCode" content="3706000040">
+<meta name="ColumnName" content="意见征集">
+<meta name="ColumnType" content="意见征集">
+<meta name="ColumnDescription" content="意见征集">
+<meta name="ColumnKeywords" content="意见征集"><meta name="server" content="sfj.yantai.gov.cn/col/col41821/index.html">
+<meta name="MakeTime" content="2026-08-18 09:54:37">
+<meta name="SiteID" content="170">
+
+<meta id="pagetype" content="2">
+</head>
+
+<body><div id='barrierfree_container'>
+  <div class="main-body">
+    <!-- banner start -->
+    <script src="/cms_files/jcms1/web170/site/script/0/2110261647166189.js"></script>
+
+    <!-- banner end -->
+    <script src="/cms_files/jcms1/web170/site/script/0/2110261659447143.js"></script>
+
+    <!-- 面包屑 start -->
+    <div class="crumbs-container">
+      <div class="crumbs">
+<table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><a href="/index.html" class="bt_link">首页</a></td><td>
+ > 
+<a href="/col/col41819/index.html" class="bt_link">
+规范性文件
+
+</a>
+
+ > 
+<a href="/col/col41821/index.html" class="bt_link">
+意见征集
+
+</a>
+
+</td></tr></tbody></table>
+
+      </div>
+    </div>
+    <!-- 面包屑 end -->
+    <div class="container clearfix">
+      <!-- 左侧导航 start -->
+      <div class="left-nav-container">
+        <h1 class="left-nav-head">
+<span>规范性文件</span>
+
+        </h1>
+        <ul class="left-nav-list">
+<li class="item" data-column="市级规范性文件"><a href="/col/col40486/index.html">市级规范性文件</a></li>
+<li class="item" data-column="意见征集"><a href="/col/col41821/index.html">意见征集</a></li>
+<li class="item" data-column="文件管理"><a href="/col/col41822/index.html">文件管理</a></li>
+
+        </ul>
+      </div>
+      <!-- 左侧导航 end -->
+      <!-- 右侧主内容区 start -->
+      <div class="right-nav-container">
+        <div class="main-lists-container">
+<div class="current-column">意见征集</div>
+
+<script>
+var authorizedReadUnitId = "974b4bd38dc14d5b8129cb45521704a2";
+</script><script id="974b4bd38dc14d5b8129cb45521704a2" src="/cms_files/default/script/AuthorizedRead/unitbuild.js?v=6.4.3.1" webId="170" parseType="bulidstatic" url="/api-gateway/jpaas-publish-server/front/page/build/unit" queryData="{'parseType':'bulidstatic','webId':'170','tplSetId':'4pc682WV5KEPrO2U2vVAk','pageType':'column','tagId':'文字列表','editType':'null','pageId':'41821'}"></script>
+        </div>
+      </div>
+      <!-- 右侧主内容区 end -->
+    </div>
+    <!-- bottom-container start -->
+    <div class="bottom-container">
+      <!-- 友情链接 start -->
+      <script src="/cms_files/jcms1/web170/site/script/0/2109261641194852.js"></script>
+
+      <!-- 友情链接 end -->
+      <!-- footer start -->
+      <script src="/cms_files/jcms1/web170/site/script/0/2109261711069059.js"></script>
+
+      <!-- footer end -->
+    </div>
+    <!-- bottom-container end -->
+  </div>
+  <script type="text/javascript" src="/cms_files/webyantaishisifaju/pubtplobject/defaultSet/11121/images/sfj202109_jquery.cookie.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      // 判断是否老年模式
+      if ($.cookie("older-model") == "true") {
+        // console.log($.cookie("older-model"));
+        $(".main-body").addClass("older-model");
+        $("#olderModel").html("退出老年模式");
+      } else {
+        // console.log($.cookie("older-model"));
+        $(".main-body").removeClass("older-model");
+        $("#olderModel").html("进入老年模式");
+      }
+      //
+      var currentColumn = $(".current-column").html();
+      $(".left-nav-list li.item").removeClass("active");
+      $(".left-nav-list li.item").each(function(){
+        if ($(this).attr("data-column") == currentColumn){
+          $(this).addClass("active");
+        } else {
+          $(this).removeClass("active");
+        }
+      });
+      //尺寸变更
+      function debounce(fn, delay) {
+        var timer = null;
+        return function () {
+          var context = this;
+          var args = arguments;
+
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            fn.apply(context, args);
+          }, delay)
+        }
+      }
+
+      function foo() {
+        // debugger;
+        var windows_W = $(window).width();
+        var container_w = $(".container").width();
+        var windows_H = $(window).height();
+
+        if (windows_W <= 768) {
+          $(".main-body").removeClass("older-model");
+          $("#olderModel").hide();
+        } else {
+          $("#olderModel").show();
+          if ($.cookie("older-model") == "true") {
+            $(".main-body").addClass("older-model");
+          } else {
+            $(".main-body").removeClass("older-model");
+          }
+        }
+
+        var footer_h = $(".bottom-container").outerHeight();
+        $(".main-body").css("padding-bottom", footer_h + "px");
+      }
+      foo();
+      window.addEventListener("resize", debounce(foo, 1000));
+
+      //
+      $("#olderModel").click(function () {
+        if ($.cookie("older-model") == "true") {
+          $.cookie("older-model", false);
+          $(".main-body").removeClass("older-model");
+          $("#olderModel").html("进入老年模式");
+          foo();
+        } else {
+          $.cookie("older-model", true);
+          $(".main-body").addClass("older-model");
+          $("#olderModel").html("退出老年模式");
+          foo();
+        }
+        window.location.reload();
+      });
+    })
+  </script>
+<script src="/cms_files/filemanager/48842/script/juba/jubascript.js?v=6.4.3.1"></script>
+ </div></body>
+
+</html>
