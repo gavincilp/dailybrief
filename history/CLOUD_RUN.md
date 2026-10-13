@@ -120,3 +120,24 @@ GitHub Pages 自动部署，约 1–2 分钟后线上更新。
 4. 平台 GitHub 连接器未授权时，其取 token 接口返回 **HTTP 404**（非 401/403），可据此快速判定「未授权」。
 
 **一键补推脚本**：仓库外 `/workspace/push_dailybrief.sh`（私钥或 Token 就位后执行，自动补建 `.git`、提交并推送 main）。
+
+### 补记：SSH 通道已验证成功（2026-10-13 18:46）
+
+用户提供 **私钥**（OpenSSH 格式、4096 位 RSA、无密码）后，SSH 推送链路一次性打通：
+
+```
+cp id_rsa ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+ssh -T git@github.com          # → Hi gavincilp/dailybrief! You've successfully authenticated
+git init && git remote add origin git@github.com:gavincilp/dailybrief.git
+git fetch --depth 1 origin main
+git symbolic-ref HEAD refs/heads/main && git reset --mixed origin/main   # 关键：不覆盖工作树
+git add -A && git commit -m "每日简报 2026-10-13" && git push -u origin main
+```
+
+**关键手法**：codeload 快照解压得到的工作树**没有 `.git`**，不要直接 `git clone` 覆盖（会丢失当日产物）。正确做法是 `git init` + `fetch` + **`git reset --mixed origin/main`**（只重置 HEAD 与 index，工作树保持不变），随后 `git status` 显示的差异即为本次改动，核对无误后再提交。
+
+**指纹校验**：私钥指纹须与已登记公钥一致 —— `SHA256:xt14/vL4WkMX4+trCtAEE5qUknbwv2ZngxrW9fDKA8g`（可用 `ssh-keygen -l -f ~/.ssh/id_rsa` 与 `ssh-keygen -y -f ~/.ssh/id_rsa | ssh-keygen -l -f -` 双向比对）。
+
+**实测结果**：`main 5cee66c..ad49cc1` 推送成功；GitHub Pages 约 30 秒内生效，在线简报页 HTTP 200、条目 15 条与本地一致。
+
+> 结论更新：本沙箱 **HTTPS git 不可用、SSH git 可用**。云端任务应默认走 SSH；`git clone` 失败时用 codeload 兜底取历史库，再用上述 `init+fetch+reset --mixed` 手法补建 `.git` 完成推送。
