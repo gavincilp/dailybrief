@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>住建动态简报（2026-10-13）第 49 期</title>
+<style>
+
+:root{
+  --navy:#12325c; --navy-2:#1b4478; --navy-3:#2a5a97; --ink:#1f2937; --ink-2:#41506b;
+  --warm:#fbfaf7; --warm-2:#f5f2ec; --line:#dfd9cd; --line-2:#e8e3d9;
+  --first:#0f766e; --first-bg:#e6f4f1; --multi:#9a3412; --multi-bg:#fdeee4;
+  --cont:#3f4d63; --cont-bg:#eef1f6; --accent:#b8860b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--warm-2);color:var(--ink);
+  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+  font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;background:var(--warm);border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+.hd{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 58%,var(--navy-3) 100%);color:#fff;padding:34px 40px 26px;position:relative;overflow:hidden}
+.hd::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.045)}
+.hd-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hd-badge{font-size:11px;letter-spacing:2.6px;text-transform:uppercase;opacity:.75;font-weight:600;border:1px solid rgba(255,255,255,.35);padding:4px 10px;border-radius:2px}
+.hd-issue{font-size:12.5px;letter-spacing:1px;opacity:.85;border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:2px;white-space:nowrap}
+.hd h1{margin:14px 0 6px;font-size:31px;letter-spacing:2.5px;font-weight:700;color:#fff}
+.hd-date{font-size:13.5px;opacity:.88;letter-spacing:.4px}
+.hd-stats{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+.st{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:3px;padding:6px 14px;font-size:13px;letter-spacing:.5px}
+.st b{font-size:16px;color:#ffe9b0;margin:0 3px}
+.st-first b{color:#9fe8dd}.st-multi b{color:#ffcda4}.st-cont b{color:#cdd8ea}
+.lead{background:var(--warm-2);border-left:4px solid var(--accent);padding:16px 20px;margin:26px 0 8px;font-size:14px;color:var(--ink-2);line-height:1.95}
+.lead-t{font-weight:700;color:var(--navy);margin-bottom:8px;font-size:14.5px}
+.lead-b{text-align:justify}
+.lead b,.lead-b b,.lead-b strong{color:var(--navy)}
+.lead-sub{font-weight:700;color:var(--navy);margin:12px 0 8px}
+.top3{margin:0;padding-left:0;list-style:none}
+.top3>li{background:#fff;border:1px solid var(--line-2);border-left:3px solid var(--navy-2);border-radius:3px;padding:12px 16px;margin-bottom:9px;font-size:13.5px;line-height:1.85}
+.t3-t{font-weight:700;color:var(--navy)}
+.t3-k{color:var(--ink-2);margin:4px 0}
+.t3-r{color:#6b5b3e;font-size:12.8px}
+.sec-h{margin:38px 0 16px;padding:0 0 10px;font-size:19.5px;color:var(--navy);border-bottom:2px solid var(--navy);letter-spacing:1px;font-weight:700}
+.sec-note{font-size:13px;color:var(--ink-2);background:var(--warm-2);border-left:3px solid var(--line);padding:10px 16px;margin:0 0 14px;line-height:1.85}
+.item{background:#fff;border:1px solid var(--line-2);border-radius:4px;margin:0 0 16px;padding:20px 22px 16px;box-shadow:0 1px 3px rgba(18,50,92,.05)}
+.ihd{display:flex;gap:15px;align-items:flex-start}
+.ino{flex:0 0 40px;height:40px;border-radius:3px;background:linear-gradient(140deg,var(--navy),var(--navy-3));color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.imain{flex:1;min-width:0}
+.ititle{font-size:16.5px;font-weight:700;line-height:1.6;color:var(--navy)}
+.ititle a{color:var(--navy);text-decoration:none;border-bottom:1px dashed #b9c4d4}
+.ititle a:hover{color:var(--navy-3);border-bottom-color:var(--navy-3)}
+.imeta{font-size:12.5px;color:var(--ink-2);margin:8px 0 12px;line-height:1.9;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.m-src{color:var(--navy-2);font-weight:600}
+.m-pub{color:#5a6577}
+.m-field{color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.tag{font-size:11.5px;padding:3px 10px;border-radius:2px;font-weight:700;letter-spacing:.4px;display:inline-block}
+.t-first{background:var(--first-bg);color:var(--first);border:1px solid #b7e0d9}
+.t-multi{background:var(--multi-bg);color:var(--multi);border:1px solid #f0bda3}
+.t-cont{background:var(--cont-bg);color:var(--cont);border:1px solid #ccd6e4}
+.block{margin:0 0 11px;font-size:14.2px;line-height:1.9}
+.block-t{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy-2);padding:2px 9px;border-radius:2px;letter-spacing:.6px;margin-bottom:6px}
+.blk-change .block-t{background:#6b5b3e}
+.block-b{color:var(--ink);text-align:justify}
+.block-b b,.block-b strong{color:var(--navy);font-weight:700}
+.relbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:10px;margin-top:11px;font-size:12.8px}
+.rel-t{font-weight:700;color:var(--navy-2)}
+.rel-v{font-weight:700;padding:2px 12px;border-radius:2px;font-size:12px}
+.rel-h .rel-v{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.rel-m .rel-v{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.rel-l .rel-v{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+.rel-n{color:var(--ink-2)}
+.tbl-wrap{overflow-x:auto;margin:6px 0 4px}
+table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:13.2px;background:#fff;border:1px solid var(--line)}
+th{background:var(--navy);color:#fff;font-weight:600;padding:11px 12px;text-align:left;font-size:12.8px;letter-spacing:.5px}
+td{border-top:1px solid var(--line-2);padding:11px 12px;vertical-align:top;line-height:1.8;color:var(--ink-2)}
+tbody tr:nth-child(even) td{background:#faf9f6}
+table.track td.td-topic{color:var(--navy);font-weight:700}
+table.track td.td-new{color:var(--first);font-weight:600}
+table.app td.ap-no{color:var(--navy);font-weight:700;text-align:center;width:52px}
+table.app td.ap-lv{text-align:center;width:72px}
+.lv-h,.lv-m,.lv-l{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 12px;border-radius:2px}
+.lv-h{background:#e6f4f1;color:var(--first);border:1px solid #b7e0d9}
+.lv-m{background:#fdf6e3;color:#8a6d1f;border:1px solid #ecdcae}
+.lv-l{background:#f1f2f4;color:#6b7280;border:1px solid #dcdde0}
+table.src td.sr-n{color:var(--navy);font-weight:600}
+table.src td.sr-u a{color:var(--navy-3);text-decoration:none;word-break:break-all;font-size:12.4px}
+table.src td.sr-u a:hover{text-decoration:underline}
+table.chan td.ch-n{color:var(--navy);font-weight:600;white-space:nowrap}
+table.chan td.ch-s{color:var(--first);font-weight:600;white-space:nowrap}
+.ft{background:var(--navy);color:#c7d2e0;padding:24px 40px 30px;font-size:12.4px;line-height:2}
+.ft-l1{color:#fff;font-weight:700;font-size:13.5px;letter-spacing:.5px}
+.ft-l2,.ft-l3,.ft-l4,.ft-l5{margin-top:6px}
+.ft b{color:#fff}
+@media print{body{background:#fff}.wrap{border:none;max-width:100%}.item{box-shadow:none;break-inside:avoid}.hd{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:760px){.hd{padding:24px 20px 20px}.hd h1{font-size:23px}.lead,.sec-h,.sec-note,.item{margin-left:16px;margin-right:16px}.item{padding:16px}.ino{flex:0 0 32px;height:32px;font-size:13px}.ft{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hd">
+  <div class="hd-top">
+    <div class="hd-badge">住建政策每日简报</div>
+    <div class="hd-issue">第 49 期</div>
+  </div>
+  <h1>住建动态简报</h1>
+  <div class="hd-date">2026-10-13（周二）&nbsp;·&nbsp;覆盖：住房和城乡建设部 · 31 个省级行政区 · 9 个重点城市（含武汉固定信源）</div>
+  <div class="hd-stats">
+    <span class="st st-all">今日收录 <b>4</b> 条</span>
+    <span class="st st-first">首次出现 <b>1</b> 条</span>
+    <span class="st st-multi">多次出现 <b>1</b> 条</span>
+    <span class="st st-cont">延续跟进 <b>2</b> 条</span>
+  </div>
+</div>
+
+<div class="lead">
+  <div class="lead-t">本期提要</div>
+  <div class="lead-b">本期为<b>常规更新日（非低更新期）</b>。采集窗口（2026-10-12 07:00—2026-10-13 07:00）经 7 组并行子代理实测：<b>住建部本级与国家级零实质新增</b>（政策发布最新 09-23、行政规范性文件库最新 08-28、部门规章库最新 04-20、标准公告最新 09-23；首页 MakeTime 已更新至 2026-10-12 19:01，窗口内刷新仅为地方信息栏目新闻稿）；<b>31 个省级住建部门中仅广东、江苏、江西 3 省窗口内有实质新增</b>（其余多为例行资质/注册公示、考核报名、评比等，均属排除口径）；<b>9 个重点城市（含武汉固定信源 7 栏目）窗口内零实质新增</b>（杭州命中 1 条为勘察设计行业行政检查通知，属例行事务性，剔除；上海、广州站点不可达）。本期共收录 <b>4 条</b>（首次出现 1／多次出现 1／延续跟进 2）：<b>广东</b>《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》（粤建公告〔2026〕79号，挂网 10-12，完整社区主题配套支持措施）、<b>天津</b>《关于贯彻落实〈关于完善商品住房销售制度的通知〉的实施意见》（津住建房市〔2026〕8号，成文 10-10，低更新期补录）、<b>江苏</b>一图读懂《关于支持青年社区建设的若干措施》（10-12，政策解读）、<b>江西</b>《江西省"数智住建"建设三年行动计划（2027－2029年）》（赣建网信〔2026〕1号，10-12，本系列首个"数智住建"省级三年行动计划）。</div>
+  <div class="lead-sub"><b>与烟台最直接相关三条：</b></div>
+  <ol class="top3">
+<li><div class="t3-t">广东省住房和城乡建设厅《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》（粤建公告〔2026〕79号，2026-10-12）</div><div class="t3-k">继 10-10 印发《广东省完整社区建设扩面提质增效工作方案》（20 部门联合）后，广东在同一主题上再出配套"支持措施"：以"政府、银行、企业、社区协同发力"推进<b>未来社区（完整社区）</b>建设，引入"未来社区"概念并把金融支持纳入社区建设政策包；征求意见期 10-12 至 10-22。</div><div class="t3-r">烟台城市更新顶层制度仍处<b>空窗</b>（烟更指发〔2021〕2号/3号 均已失效，接续件未印发），完整社区无专门文件。广东由"工作方案（干什么）"延伸到"支持措施（怎么支持）"的双件结构＋"四方协同"机制，是烟台重建城市更新制度、打包既有社区类制度的现成模板。</div></li>
+<li><div class="t3-t">天津市住房和城乡建设委员会等 3 部门《关于贯彻落实〈关于完善商品住房销售制度的通知〉的实施意见》（津住建房市〔2026〕8号，2026-10-10）</div><div class="t3-k">国家三部门 建房规〔2026〕3号 的又一份地方落地文件：预售项目单体建筑须<b>主体结构封顶</b>、预售资金<b>全额全过程监管</b>；2026-08-28 起新出让公告项目优先<b>现房销售</b>并实行现房销售备案，定金<b>≤总房价款 5%</b> 直存监管账户；在途/历史遗留项目分档过渡；推行<b>主办银行制</b>、加大开发贷支持。</div><div class="t3-r">烟台在销售制度改革上<b>制度空白明显</b>：现行仅 烟建住房〔2023〕27号（预售资金监管单点制度），<b>无封顶预售、无现房销售备案、无定金上限、无主办银行制</b>；改革试点实施细则征求意见后是否印发待核实。天津件可直接作为烟台出台整合性落地文件的体例参照。</div></li>
+<li><div class="t3-t">江苏省住房和城乡建设厅：一图读懂《关于支持青年社区建设的若干措施》（省政府门户图片解读，2026-10-12）</div><div class="t3-k">官方图解解读全国首个省级<b>青年社区</b>政策（苏政办发〔2026〕46号，21 条）：把居住、创新创业、公共服务、城市更新<b>四维一体打包</b>，以"社区"为政策落地单元，推动青年住房从"单项补贴"升格为"综合生态"。</div><div class="t3-r">烟台有住房保障制度基础（公租房 烟建住房〔2026〕9号、配售型保障房〔2026〕10号、以旧换新〔2026〕6号），但<b>尚无"青年社区/青年安居"专门政策</b>；江苏"四维一体＋社区单元"思路对烟台住房保障由"补贴型"走向"生态型"有直接借鉴价值。</div></li>
+  </ol>
+</div>
+
+<div class="sec-h">一、今日重点政策与动态（按对烟台住建工作的重要程度排序）</div>
+<div class="sec-note">标签口径：按<b>政策主题（同类政策／制度体例）</b>判定——该主题在本追踪系列第一次出现，或在全国／某区域属创新性首次推行＝【首次出现】；已有 2 个及以上地区推行同类政策＝【多次出现】（并注明先行地区及时间）；【延续跟进】＝同一主题跨期的阶段性进展（如征求意见→正式印发、政策解读、批次推广）。本期收录 4 条。</div>
+
+<div class="item" id="it1">
+  <div class="ihd">
+    <div class="ino">1</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://zfcxjst.gd.gov.cn/xxgk/gsgg/content/post_4965402.html" target="_blank" rel="noopener">广东省住房和城乡建设厅关于公开征求《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》意见的公告（粤建公告〔2026〕79号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">广东省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：成文 2026-10-09／挂网 2026-10-12 15:09（征求意见期 10-12 至 10-22）</span>
+        <span class="m m-field">领域：城市更新（完整社区／未来社区建设）</span>
+        <span class="tag t-cont">延续跟进</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">广东省住建厅就《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》公开征求意见（<b>粤建公告〔2026〕79号</b>，成文 10-09、挂网 10-12，意见反馈截止 <b>2026-10-22</b>，随文附起草说明）。该措施以"<b>政府、银行、企业、社区协同发力</b>"为主线，依据《中共中央 国务院关于推动城市高质量发展的意见》及省委"1310"具体部署，推进<b>未来社区（完整社区）</b>建设。这是继 10-10 印发《广东省完整社区建设扩面提质增效工作方案》（20 部门联合、本系列首个省级完整社区专项方案）后，广东在同一主题上推出的<b>配套支持性文件</b>。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">"完整社区建设"主题本系列于<b>第 48 期（10-12）</b>由广东《完整社区建设扩面提质增效工作方案》建档（首个省级完整社区专项方案，定位为"以社区为落地单元、跨 20 部门、可分解到市、'十五五'≥481 个"）。本条为其配套"支持措施"（征求意见稿），新意在于：①体例上由"<b>工作方案</b>（干什么：任务分解＋量化目标）"延伸到"<b>若干措施</b>（怎么支持：政策包）"，形成"任务＋支持"双件结构；②概念上引入"<b>未来社区（完整社区）</b>"提法，呼应浙江"未来社区"的成熟范式，把"完整社区"从建设口径向"社区运营＋数字化＋可持续"延展；③明确"<b>政府、银行、企业、社区</b>"四方协同，突出金融要素介入社区建设。属同一省份、同一主题的跨期推进（延续跟进），非新设主题。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台暂无"完整社区／未来社区"专项方案。</b>烟台相关现行制度为《既有住宅加装电梯管理办法》（<b>烟建住房〔2024〕22号</b>，至 2027-06-30）、《住宅小区公共收益管理实施细则（试行）》（<b>烟建住房〔2025〕28号</b>，至 2028-01-04）、《关于贯彻落实〈烟台市海绵城市建设管理条例〉的实施方案》（2026-07-23）等；而城市更新顶层制度（<b>烟更指发〔2021〕2号 实施办法、烟更指发〔2021〕3号 专项资金办法</b>）<b>均已届满失效、处于制度空窗</b>，接续件《烟台市深化低效用地再开发推进城市更新的实施意见（征求意见稿）》自 2026-05-17 征求意见结束至今（约 5 个月）<b>仍未印发</b>。<b>差异</b>：①广东已形成"工作方案＋支持措施"两级文件并引入"未来社区"概念与四方协同机制，烟台尚无完整社区专门文件、城市更新顶层仍空窗；②广东把"银行"（金融）纳入社区建设支持体系，烟台社区类制度以财政奖补（加装电梯每部 20 万元）、公共收益为主，金融支持机制待完善。<b>可借鉴点</b>：①借烟台城市更新制度空窗重建之机，参照广东"工作方案＋支持措施"双件结构，研究"烟台市完整社区／未来社区建设"专项文件；②引入"政府、银行、企业、社区"协同与金融支持思路，把加装电梯、公共收益、维修资金、海绵城市等既有制度打包进完整社区框架；③跟踪广东 10-22 征求意见后的定稿，"若干措施"条目可作为烟台支持政策的直接参照。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">完整社区主题配套支持措施，为烟台填补城市更新制度空窗、整合既有社区类制度提供"任务＋支持"双件模板，且引入金融支持维度。</span>
+  </div>
+</div>
+
+<div class="item" id="it2">
+  <div class="ihd">
+    <div class="ino">2</div>
+    <div class="imain">
+      <div class="ititle"><a href="https://zfcxjs.tj.gov.cn/xxgk_70/zcwj/wfwj/202610/t20261010_7436073.html" target="_blank" rel="noopener">天津市住房和城乡建设委员会 天津市规划和自然资源局 国家金融监督管理总局天津监管局关于贯彻落实《关于完善商品住房销售制度的通知》的实施意见（津住建房市〔2026〕8号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">天津市住房和城乡建设委员会等 3 部门</span>
+        <span class="m m-pub">发布时间：成文／发布 2026-10-10（低更新期补录：第 46—48 期窗口漏收）</span>
+        <span class="m m-field">领域：房地产调控（商品住房销售制度）</span>
+        <span class="tag t-multi">多次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">天津市住建委、市规划资源局、天津金融监管局 3 部门联合印发《关于贯彻落实〈关于完善商品住房销售制度的通知〉的实施意见》（<b>津住建房市〔2026〕8号</b>，成文 2026-10-10）。要点：①<b>预售</b>——2026-08-28 后新发布出让公告的商品住房项目实行预售的，单体建筑应完成<b>主体结构封顶</b>；预售资金<b>全额、全过程监管</b>，竣工验收、水电气热配套具备交付条件并取得验收合格意见后方可解除；②<b>现房销售</b>——2026-08-28 起新出让公告项目<b>优先现房销售</b>，实行<b>现房销售备案管理</b>（须完成不动产首次登记后编制销售方案报备案）；购房<b>定金不超过总房价款 5%</b>、全额直存监管账户，取得住宅商品房准许交付使用证后解除监管；③<b>在途项目</b>（08-28 前已取得规划许可）按原政策执行，<b>历史遗留项目</b>经各区风险评估后可按在途项目办理；④推行<b>主办银行制度</b>；⑤加大对现房销售项目和"好房子"项目<b>开发贷款支持</b>；优化土地供应管理。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">"商品住房销售制度（预售资金全额监管＋现房销售）"主题本系列自 <b>2026-08-28</b> 国家三部门 建房规〔2026〕3号 建档（全国层面首次系统性定型），已落地城市有 <b>北京</b>（09-24，定金≤1%）、<b>上海</b>（09-28，定金≤3%）、<b>广州</b>（09-30，定金≤5%）、<b>武汉</b>（10-01，定金≤5%）、<b>景德镇</b>（09-30，市级实施细则）。本条（天津）为其<b>第 6 个落地城市</b>（直辖市第 3 个），补齐此前"落地城市清单"中天津的空位。差异化：①天津定金上限＝总房价款 <b>5%</b>（与广州、武汉同档，高于北京 1%、上海 3%）；②天津明确"<b>现房销售备案管理</b>"（取得首次登记后编制方案报备案）与"<b>历史遗留项目经风险评估后按在途项目执行</b>"的分类过渡口径，后者较北京、上海的过渡安排更宽。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台在商品住房销售制度改革上制度空白明显。</b>现行仅有《新建商品房预售资金监管实施办法（试行）》（<b>烟建住房〔2023〕27号</b>，单点制度），<b>尚无封顶预售、无现房销售备案制、无定金上限、无主办银行制</b>；改革探索方面，《新建商品房预售资金监管改革试点实施细则》于 2026-07-10—08-05 公开征求意见、配套实施方案为 <b>烟建住房〔2026〕11号</b>（莱山／高新两区先行试点），但<b>是否正式印发待核实</b>。<b>差异</b>：①天津已按国家 3 号文完成整合性落地（封顶预售＋资金全额监管＋现房销售备案＋定金 5%＋主办银行），烟台仍停在单点制度与两地试点征求意见阶段；②天津明确了"现房备案—定金监管—交付解除"的全流程与在途/历史遗留项目分类过渡，烟台无对应安排。<b>可借鉴点</b>：①烟台可参照天津"实施意见"体例，抓紧出台本市贯彻落实国家 3 号文的整合性落地文件，把封顶预售、资金全额监管、现房销售备案、定金上限、主办银行制一并明确；②天津"经风险评估后历史遗留项目按在途项目办理"的分档过渡口径，对烟台在途项目衔接有直接借鉴价值；③可优先在已试点的莱山／高新两区先行落地，形成可复制经验后再全市推开。</div>
+  </div>
+  <div class="relbar rel-h">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">高</span>
+    <span class="rel-n">为国家 3 号文的又一城市落地样本，直接对应烟台预售资金监管改革试点后的整合性制度空白，体例与过渡口径可现成对照。</span>
+  </div>
+</div>
+
+<div class="item" id="it3">
+  <div class="ihd">
+    <div class="ino">3</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://www.jiangsu.gov.cn/art/2026/10/12/art_76462_11840762.html" target="_blank" rel="noopener">江苏省住房和城乡建设厅：一图读懂《关于支持青年社区建设的若干措施》（省政府门户图片解读）</a></div>
+      <div class="imeta">
+        <span class="m m-src">江苏省住房和城乡建设厅（发布于江苏省人民政府网）</span>
+        <span class="m m-pub">发布时间：2026-10-12 10:26</span>
+        <span class="m m-field">领域：住房保障（青年社区／青年安居）</span>
+        <span class="tag t-cont">延续跟进</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">江苏省政府门户发布"一图读懂《关于支持青年社区建设的若干措施》"图片解读，以图解形式系统解读江苏《关于支持青年社区建设的若干措施》（<b>苏政办发〔2026〕46号</b>，2026-10-10 公开发布）。该措施为<b>全国首个省级层面青年社区政策（21 条）</b>，把居住、创新创业、公共服务、城市更新<b>四维一体打包</b>，以"社区"为政策落地单元，推动青年住房从"单项补贴"升格为"综合生态"。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">"青年安居／青年社区"主题本系列由<b>浙江</b> 2026-08-25《关于加快推进青年安居工作的指导意见（征求意见稿）》建档（首个省级体系化"青年安居"品牌）；<b>苏州</b> 2026-09-17《苏州市青年社区建设指引（试行）》把体例从"安居（住房保障）"拓展到"青年社区（空间载体＋综合服务）"；<b>江苏</b> 2026-10-10（第 47 期）以《关于支持青年社区建设的若干措施》进一步把青年住房从"单项补贴"升格为"综合生态"。本件（江苏"一图读懂"）为该政策的<b>官方解读</b>（延续跟进），属跨期推进的政策解读环节，非新设制度。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台有住房保障制度基础，但尚无"青年社区／青年安居"专门政策。</b>烟台现行做法：《烟台市公共租赁住房管理办法》（<b>烟建住房〔2026〕9号</b>，14 部门联发，2026-07-01 施行、有效期至 2031-07-01，含"申请公租房一件事"）、《烟台市配售型保障性住房建设管理办法》（<b>烟建住房〔2026〕10号</b>）、住房"以旧换新"购房补贴（<b>烟建住房〔2026〕6号</b>，新房总价 2%／单套最高 5 万元，执行至 2026-12-31）等，对青年群体以公租房、保障房、购房补贴等普惠性制度覆盖，<b>未形成"居住＋创业＋服务＋融入"的综合载体</b>。<b>差异</b>：①江苏以"社区"为单元、四维一体打包 21 条，烟台为单领域（住房保障／购房补贴）分散政策；②江苏明确"青年社区"空间载体与综合服务生态，烟台无对应概念。<b>可借鉴点</b>：烟台可研究出台"青年社区／青年安居"专项措施，把保障性租赁住房、人才住房、购房补贴与创新创业、公共服务打包，以"社区"为落地单元；并可参照苏州"青年社区建设指引"探索青年公寓、青年发展型街区等场景化建设。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">属政策解读（延续跟进），非新设制度；但"四维一体＋社区单元"思路对烟台住房保障由"补贴型"走向"生态型"有方向性借鉴。</span>
+  </div>
+</div>
+
+<div class="item" id="it4">
+  <div class="ihd">
+    <div class="ino">4</div>
+    <div class="imain">
+      <div class="ititle"><a href="http://zjt.jiangxi.gov.cn/jxszfhcxjst/flfgg/pc/content/content_2109466292671545344.html" target="_blank" rel="noopener">关于印发《江西省"数智住建"建设三年行动计划（2027－2029年）》的通知（赣建网信〔2026〕1号）</a></div>
+      <div class="imeta">
+        <span class="m m-src">江西省住房和城乡建设厅</span>
+        <span class="m m-pub">发布时间：成文 2026-10-09／发布 2026-10-12 10:07</span>
+        <span class="m m-field">领域：建筑业管理（住建领域数字化／监管平台）</span>
+        <span class="tag t-first">首次出现</span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-t">内容摘要</div>
+    <div class="block-b">江西省住建厅印发《江西省"数智住建"建设三年行动计划（2027－2029年）》（<b>赣建网信〔2026〕1号</b>）。依据《"数字住建"建设整体布局规划》《中共江西省委 江西省人民政府关于推动城市高质量发展的实施意见》，按"<b>1115</b>"总体框架推进，遵循"一部门一系统""省级主建、市县主用"，构建省市县三级贯通、数据共享的数智住建体系，赋能<b>工程建设、住房保障、城市建设与管理、村镇建设、政务服务</b>全领域数字化。分三年推进：<b>2027 年</b>完成"数智底座"（住建大数据中心、能力中台、AI 中台、安全中台）与统一门户、数字驾驶舱，整合存量系统；<b>2028 年</b>完成"数智工程""数智住房""数智城市""数智政务"首批核心场景，推动城市更新、施工图审、消防审验、工程质量安全监督、建筑市场监管、工程建设项目审批升级、住房保障管理、公积金贯标等业务系统<b>全量上线</b>并与部级系统贯通；<b>2029 年</b>收官。</div>
+  </div>
+  <div class="block blk-change">
+    <div class="block-t">变化对比</div>
+    <div class="block-b">住建领域数字化本系列此前仅见<b>单点专项监管系统</b>（如"隔震减震建筑工程质量查验系统"省级数字化专项监管、"数字化绿色化协同转型（'双化协同'）国家专项行动"），<b>未见以"三年行动计划"统揽全领域（工程／住房／城市／村镇／政务）的省级顶层规划</b>。本条为本系列<b>首个"数智住建"省级三年行动计划</b>（首次出现），把数字化从"单系统"升格为"平台底座（数据/AI/能力/安全四中台）＋统一门户＋全领域场景"的整体架构。</div>
+  </div>
+  <div class="block blk-yt">
+    <div class="block-t">与烟台现行政策对比</div>
+    <div class="block-b"><b>烟台在住建数字化领域已有单点动作，但尚无统揽全领域的"数智住建"总体规划。</b>烟台现行做法：《关于常态化应用"人工智能辅助"招标投标工作的通知》（<b>自 2026-10-01 起常态化实施</b>，全市房建市政工程造价 1500 万元以下施工项目、合同额 150 万元以下勘察设计及监理项目）、AI 辅助招投标交易系统覆盖 6 大环节 17 个场景、《招标投标"评定分离"操作导则》（<b>烟建建管〔2026〕3号</b>）等，数字化集中在招投标等单点应用。<b>差异</b>：①江西以省级三年行动计划统筹"数智底座＋中台＋AI＋统一门户＋全领域场景"，烟台为招投标等单点系统；②江西明确"省级主建、市县主用""一部门一系统"整体布局与部省市三级贯通，烟台无同类总体架构。<b>可借鉴点</b>：①烟台可参照"1115"框架与三年分阶段推进思路，编制市级"数智住建"建设规划／行动方案，统筹现有 AI 辅助招投标等分散系统；②重点借鉴"数智底座（数据中台／AI 中台）＋统一门户＋业务系统全量上线"路径，避免单点重复建设；③关注其工程质量安全监督、建筑市场监管、住房保障管理等与烟台职责直接对应的场景设计。</div>
+  </div>
+  <div class="relbar rel-m">
+    <span class="rel-t">与烟台相关度</span>
+    <span class="rel-v">中</span>
+    <span class="rel-n">首个省级"数智住建"三年行动计划，对烟台整合现有 AI 辅助招投标等单点系统、谋划住建数字化总体架构有方向性借鉴；属省级顶层规划，不可直接移植。</span>
+  </div>
+</div>
+
+<div class="sec-h">二、政策追踪表（多地同类政策对比）</div>
+<div class="sec-note">本表汇总今日涉及的多地同类政策，标注先行地区与今日新增地区的差异，用于识别政策演进方向与烟台可对标位置。</div>
+<div class="tbl-wrap"><table class="track">
+<thead><tr><th>政策主题</th><th>先行地区及时间</th><th>今日新增地区</th><th>主要差异</th></tr></thead>
+<tbody>
+<tr>
+  <td class="td-topic">商品住房销售制度（预售资金全额监管＋现房销售）</td>
+  <td class="td-prior">全国（住建部等三部门 2026-08-28 建房规〔2026〕3号）；北京 09-24（定金≤1%）、上海 09-28（≤3%）、广州 09-30（≤5%）、武汉 10-01（≤5%）、景德镇 09-30（市级实施细则）</td>
+  <td class="td-new">天津（津住建房市〔2026〕8号，成文 2026-10-10，定金≤5%）</td>
+  <td class="td-diff">天津为第 6 个落地城市、第 3 个直辖市；定金档位与广州／武汉同为 ≤5%（高于北京 1%、上海 3%）；新增"现房销售备案管理"与"历史遗留项目经风险评估后按在途项目执行"分类过渡口径（过渡安排较北京／上海更宽）。</td>
+</tr>
+<tr>
+  <td class="td-topic">完整社区／未来社区建设</td>
+  <td class="td-prior">广东（2026-10-10《完整社区建设扩面提质增效工作方案》，20 部门联合，本系列首个省级完整社区专项方案）</td>
+  <td class="td-new">广东（《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》，2026-10-12，粤建公告〔2026〕79号）</td>
+  <td class="td-diff">同省份同主题跨期推进：由"工作方案（任务分解＋量化目标）"延伸到"支持措施（政策包）"，引入"未来社区"概念与"政府、银行、企业、社区"四方协同及金融支持维度。</td>
+</tr>
+<tr>
+  <td class="td-topic">青年社区／青年安居</td>
+  <td class="td-prior">浙江（2026-08-25 青年安居指导意见征求意见）；苏州（2026-09-17 青年社区建设指引（试行））；江苏（2026-10-10 青年社区建设若干措施，苏政办发〔2026〕46号）</td>
+  <td class="td-new">江苏（《关于支持青年社区建设的若干措施》一图读懂，2026-10-12）</td>
+  <td class="td-diff">官方图片解读（延续跟进）：全国首个省级青年社区政策（21 条），居住／创新创业／公共服务／城市更新四维一体、以社区为落地单元；非新设制度。</td>
+</tr>
+<tr>
+  <td class="td-topic">住建领域数字化／"数智住建"</td>
+  <td class="td-prior">本系列此前仅单点专项监管系统（隔震减震工程质量查验系统、"双化协同"国家专项行动），无省级全领域顶层规划</td>
+  <td class="td-new">江西（《"数智住建"建设三年行动计划（2027－2029年）》，赣建网信〔2026〕1号，2026-10-12）</td>
+  <td class="td-diff">首个以"三年行动计划"统揽全领域的省级顶层规划："1115"框架＋数智底座（数据／AI／能力／安全四中台）＋全领域场景（工程／住房／城市／村镇／政务），明确"省级主建、市县主用"与部省市三级贯通。</td>
+</tr>
+</tbody></table></div>
+
+<div class="sec-h">三、附录：与烟台相关度评级及参考价值</div>
+<div class="sec-note">相关度评级依据：是否填补烟台制度空白、是否可直接落地、是否与烟台现行政策时间窗口（到期／修订／空窗）形成呼应。</div>
+<div class="tbl-wrap"><table class="app">
+<thead><tr><th>序号</th><th>政策／动态</th><th>相关度</th></tr></thead><tbody>
+<tr><td class="ap-no">1</td><td class="ap-name">广东《关于支持未来社区（完整社区）建设工作的若干措施（征求意见稿）》（完整社区主题配套支持措施）</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">2</td><td class="ap-name">天津《关于贯彻落实〈关于完善商品住房销售制度的通知〉的实施意见》（津住建房市〔2026〕8号，销售制度改革城市落地样本）</td><td class="ap-lv"><span class="lv-h">高</span></td></tr>
+<tr><td class="ap-no">3</td><td class="ap-name">江苏一图读懂《关于支持青年社区建设的若干措施》（青年社区政策解读）</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+<tr><td class="ap-no">4</td><td class="ap-name">江西《"数智住建"建设三年行动计划（2027－2029年）》（省级住建数字化顶层规划）</td><td class="ap-lv"><span class="lv-m">中</span></td></tr>
+</tbody></table></div>
+
+<div class="sec-h">四、未获取来源清单</div>
+<div class="sec-note">以下网站／栏目本期无法访问或受限，为保持信息完整性一并说明，未跳过。</div>
+<div class="tbl-wrap"><table class="src">
+<thead><tr><th>网站／栏目</th><th>链接</th><th>无法获取原因</th></tr></thead><tbody>
+<tr><td class="sr-n">上海市住房和城乡建设管理委员会</td><td class="sr-u"><a href="https://zjw.sh.gov.cn/" target="_blank" rel="noopener">https://zjw.sh.gov.cn/</a></td><td class="sr-r">https TLS 握手失败（连接重置）、http 502。本期全站未能采集，<b>连续第 4 期不可达</b>。</td></tr>
+<tr><td class="sr-n">广州市住房和城乡建设局</td><td class="sr-u"><a href="https://zfcj.gz.gov.cn/" target="_blank" rel="noopener">https://zfcj.gz.gov.cn/</a></td><td class="sr-r">被 WAF 拦截（HTTP 420「黑名单页面」），官网及 gkmlpt 子系统、www.gz.gov.cn 同返回 420。本期未能枚举。</td></tr>
+<tr><td class="sr-n">河南省住房和城乡建设厅</td><td class="sr-u"><a href="https://zfcxjst.henan.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.henan.gov.cn/</a></td><td class="sr-r">DNS 解析失败，代理 HTTP 502／HTTPS 000，备选域名均 000。本期未能枚举，属采集受限。</td></tr>
+<tr><td class="sr-n">安徽省住房和城乡建设厅</td><td class="sr-u"><a href="https://zjt.ah.gov.cn/" target="_blank" rel="noopener">https://zjt.ah.gov.cn/</a></td><td class="sr-r">DNS 解析失败，HTTP／HTTPS 均返回 000，备选域名均 000。本期未能枚举，属采集受限。</td></tr>
+<tr><td class="sr-n">河北省住房和城乡建设厅</td><td class="sr-u"><a href="https://zfcxjst.hebei.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.hebei.gov.cn/</a></td><td class="sr-r">栏目页／文章页均返回瑞数 JS 反爬壳并伴随 HTTP 412，首页可读但正文无法核实，本期程序化不可达。</td></tr>
+<tr><td class="sr-n">黑龙江省住房和城乡建设厅</td><td class="sr-u"><a href="https://zfcxjst.hlj.gov.cn/" target="_blank" rel="noopener">https://zfcxjst.hlj.gov.cn/</a></td><td class="sr-r">HTTP 420 黑名单页（含省府网），程序化访问被拦截。</td></tr>
+<tr><td class="sr-n">甘肃省住房和城乡建设厅</td><td class="sr-u"><a href="http://zjt.gansu.gov.cn/" target="_blank" rel="noopener">http://zjt.gansu.gov.cn/</a></td><td class="sr-r">HTTP 412（JS 反爬挑战），自动化不可达（延续多期）。</td></tr>
+<tr><td class="sr-n">青海省住房和城乡建设厅</td><td class="sr-u"><a href="https://zjt.qinghai.gov.cn/" target="_blank" rel="noopener">https://zjt.qinghai.gov.cn/</a></td><td class="sr-r">HTTP 412（瑞数反爬挑战），省府网可达但住建厅子站被拦，本期不可达。</td></tr>
+<tr><td class="sr-n">微信公众号「烟台住建」（政务新媒体）</td><td class="sr-u">mp.weixin.qq.com（非 gov.cn）</td><td class="sr-r">按来源约束（仅采用 gov.cn 官网原文）不采用、无法稳定抓取；烟台本级实质性政策以官网为准。</td></tr>
+</tbody></table></div>
+
+<div class="sec-h">五、本期通道状态复核</div>
+<div class="sec-note">采集前对全部信源通道逐一实测，以下为可达性与可用入口的核心结论。</div>
+<div class="tbl-wrap"><table class="chan">
+<thead><tr><th>信源</th><th>可达性</th><th>可用入口／说明</th></tr></thead><tbody>
+<tr><td class="ch-n">住建部 www.mohurd.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">各栏目索引页为 JS 壳，经 JPAAS 接口取数（BuildStatic，tagId 须为「内容1」或「栏目-list」，返回 JSON 内 data.html 含全量列表，须 gzip 解压）；首页 MakeTime=2026-10-12 19:01，窗口内刷新仅为地方信息栏目新闻稿（转发的天津现房销售即来自该栏），属排除口径。</td></tr>
+<tr><td class="ch-n">国家级 gov.cn / ndrc / mof / nfra</td><td class="ch-s">可达 200</td><td class="ch-o">gov.cn 最新政策数据源最新 10-08/10-09（无住建）、发改委最新 09-21、财政部 09-29（购房贴息，已覆盖）窗口内均无住建相关实质新增；金融监管总局 nfra.gov.cn 首页可达但列表接口 301→403（WAF），<b>窗口内列表待核实</b>。</td></tr>
+<tr><td class="ch-n">广东 zfcxjst.gd.gov.cn</td><td class="ch-s">http 200</td><td class="ch-o">https 主域 000，<b>须用 http</b>；栏目列表 JS 渲染（标题/日期可从 title、h6 正则提取）。本期补获完整社区支持措施征求意见。</td></tr>
+<tr><td class="ch-n">江苏 jsszfhcxjst.jiangsu.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">通知公告 col49384 可经 <code>POST /module/xxgk/search.jsp</code> 枚举（需 number 参数）；本条江苏青年社区解读经省府门户 www.jiangsu.gov.cn 发布（列表为图片解读）。</td></tr>
+<tr><td class="ch-n">浙江 jst.zj.gov.cn</td><td class="ch-s">可达（需 UA）</td><td class="ch-o">https 默认 403，加浏览器 UA+Referer 后 200；JPAAS 接口须用 <b>GET</b>、<code>editType=null</code> 必需。「其他文件」最新 10-08（建筑垃圾综合利用产品目录，环卫边缘未收录）。</td></tr>
+<tr><td class="ch-n">江西 zjt.jiangxi.gov.cn</td><td class="ch-s">可达（需兼容）</td><td class="ch-o">https 直连对 curl 报 000，须 http 或 Python 设 <code>OP_LEGACY_SERVER_CONNECT</code>；本期补获"数智住建"三年行动计划。</td></tr>
+<tr><td class="ch-n">天津 zfcxjs.tj.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o"><b>域名更正：</b>天津住建部门官网为 zfcxjs.tj.gov.cn（原列举 zfcxjst 为 502）；规范性文件（wfwj）与通知公告列表为 JS 变量取数（title/fileNum/url/doctime）。本期补获商品住房销售制度实施意见。</td></tr>
+<tr><td class="ch-n">宁夏 jst.nx.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o"><b>域名更正：</b>宁夏住建厅官网为 jst.nx.gov.cn（原列举 zjt.nx 为 502）。</td></tr>
+<tr><td class="ch-n">山东 zjt.shandong.gov.cn</td><td class="ch-s">可达（须 http）</td><td class="ch-o">https TLS 失败，须用 http；通知公告经 <code>POST /module/xxgk/search.jsp</code>（infotypeId=SD1002）可枚举。窗口内仅 1 条资质公示（剔除）。</td></tr>
+<tr><td class="ch-n">湖北 zjt.hubei.gov.cn</td><td class="ch-s">可达（需降 TLS）</td><td class="ch-o">须 <code>--ciphers DEFAULT@SECLEVEL=0</code>；官方 zcwj.json 接口可用。窗口内无实质新增。</td></tr>
+<tr><td class="ch-n">湖南 zjt.hunan.gov.cn / 四川 jst.sc.gov.cn</td><td class="ch-s">可达（需参数）</td><td class="ch-o">湖南须 <code>--curves secp256r1</code>（列表为 JS 壳）；四川须 <code>--http1.1 -k</code>。窗口内无实质新增。</td></tr>
+<tr><td class="ch-n">辽宁 zjt.ln.gov.cn / 贵州 / 云南</td><td class="ch-s">可达 200</td><td class="ch-o">辽宁省级住建部门官网为 zjt.ln.gov.cn；贵州、云南主域 000，备用域 <b>zfcxjst.guizhou.gov.cn</b>、<b>zfcxjst.yn.gov.cn</b> 可达 200。窗口内均无实质新增。</td></tr>
+<tr><td class="ch-n">青岛 sjw.qingdao.gov.cn / 杭州 cxjw.hangzhou.gov.cn / 宁波 zjw.ningbo.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o"><b>域名更正：</b>杭州住建部门官网为 cxjw.hangzhou.gov.cn、宁波为 zjw.ningbo.gov.cn（原列举 zjj.* 已失效）；青岛现行域名为 sjw.qingdao.gov.cn。窗口内无实质新增。</td></tr>
+<tr><td class="ch-n">武汉 zgj.wuhan.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">列表页须 <code>--compressed</code>；"五改四好"专题为 JS 跳转壳须跟进子栏；市政府门户专题须 <code>-L</code> 跟随 301。7 个固定栏目窗口内<b>全部零新增</b>（各栏最新分别 10-01／10-08／09-24／09-24／06-29／07-20／10-08）。</td></tr>
+<tr><td class="ch-n">烟台 zjj.yantai.gov.cn / www.yantai.gov.cn</td><td class="ch-s">可达 200</td><td class="ch-o">住建局各栏目与 JPAAS 接口可用（GET 生效）；市政府门户政府文件数据库可用。窗口内<b>无实质新政</b>（仅考试报名通知、资质/许可公示、领导新闻/会议类，均剔除）。</td></tr>
+<tr><td class="ch-n">上海／广州／河南／河北／安徽／黑龙江／甘肃／青海</td><td class="ch-s">不可达</td><td class="ch-o">状态各异（TLS/502/420/412/DNS 失败），详见第四节。</td></tr>
+</tbody></table></div>
+
+<div class="ft">
+  <div class="ft-l1">住建政策每日简报 · 第 49 期 · 2026-10-13</div>
+  <div class="ft-l2">
+    采集方式：7 组并行子代理（住建部／重点省份组1／重点省份组2／重点城市／武汉固定信源／其余省份／烟台基准），
+    经汇总去重（逐条比对 tracking.json 历史主题）、链接全量实测（4 条均 HTTP 200、标题与内容相符）后成稿。
+  </div>
+  <div class="ft-l3">
+    来源约束：全部条目均来自域名以 <b>gov.cn</b> 结尾的住建部门官网原文；不使用新闻网站、门户、自媒体及聚合站转载内容。
+  </div>
+  <div class="ft-l4">
+    筛选口径：仅收录与烟台市住房和城乡建设局职责相关的实质性制度内容（政策／试点／规划／条例／专项行动／监管制度调整／经验清单）；
+    已剔除市政公用事业与地下管网类（供水／燃气／排水／供热／地下管网与综合管廊）、例行事务性公告、城管综合执法、住房公积金及一般性会议新闻。
+  </div>
+  <div class="ft-l5">
+    标签口径：按政策主题（同类政策／制度体例）判定首次／多次／延续，并注明先行地区与时间；全部内容以官网实际发布为准，无法核实处已标注「待核实」。
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>
