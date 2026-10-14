@@ -2,7 +2,7 @@
 
 > 本文件放在仓库 `history/` 下，供**云端任务与本地任务**的子代理共同读取。
 > 云端沙箱读不到本机的工作区笔记，凡涉及「官网真实入口 / 不可达站点 / 已破解接口 / 内容校验陷阱」的知识，一律以本文件为准，并**每期复核、按实修正**（本文件随仓库同步）。
-> 最后核对日期：2026-10-13
+> 最后核对日期：2026-10-15
 
 ---
 
@@ -29,19 +29,33 @@
 | 云南 | `zfcxjst.yn.gov.cn`（备用） | 备用域间歇可达 |
 | 吉林 | `jst.jl.gov.cn` | 旧域 000 |
 | 辽宁 | `zjt.ln.gov.cn` | |
-| 烟台 | `zjj.yantai.gov.cn` ＋ 门户 `www.yantai.gov.cn` | |
+| 青岛 | `sjw.qingdao.gov.cn` | 独立 TRS 站：通知公告 `/cxjsj1/cxjsj35`、工作动态 `/cxjsj1/cxjsj36`（列表项内联渲染，日期格式 `[YYYY-MM-DD]`）；门户 `gkml` 仅作镜像（285B JS 壳页） |
+| 烟台 | `zjj.yantai.gov.cn` ＋ 门户 `www.yantai.gov.cn` | 门户规范目录主栏为 **col43171**（tagId=「当前栏目列表」）；`col99947`/`col11807` 返回「模版内容不能为空」 |
 
-## 二、长期不可达 / 半盲区（截至 2026-10-13；每期复核）
+## 二、长期不可达 / 半盲区（截至 2026-10-15；每期复核）
 
-- **甘肃** 412（JS 反爬 `$_ts`）；**河北** 412（列表与详情，仅能经渲染取标题＋文号）；
-- **青海** 412；**上海** TLS 握手失败（间歇）；**广州** WAF 420（改走备用域）；
-- **河南 / 安徽** DNS 偶发失败；**厦门** `js.xm.gov.cn` DNS 失败。
+- **甘肃** 412（JS 反爬 `$_ts`）；**河北** 412（列表与详情，仅能经渲染取标题＋文号；首页 200）；
+- **青海** 412（间歇）；**上海** TLS 握手失败（间歇）；**广州** WAF 420（IP 级黑名单，`gkmlpt` 子系统亦 420）；
+- **黑龙江** 420（根域偶发 200、子路径稳定 420）；**成都** `cdzj.chengdu.gov.cn` 412；
+- **河南 / 安徽** DNS 偶发失败；**厦门** `js.xm.gov.cn` DNS 失败；
+- **新疆** `zjt.xinjiang.gov.cn` 列表页标题由前端 JS 异步填充（`<a>` 无 title 文本，须逐条打开详情页读 `meta ArticleTitle`）；**内蒙古** `/zwgk/zcwj/` 政策文件目录为 JS 渲染壳页（仅通知公告栏可读）；
+- **上海**「主动公开文件」`/zdgk/index.html` 为 JS 分页壳页（仅取回首页 10 条，未逐页翻取）；
+- **东莞** `zjj.dg.gov.cn/gkmlpt/` 为 Vue 前端渲染（api 参数未知返回空）→ 改用门户镜像 `www.dg.gov.cn` 替代核验。
 - → 上述站点可作为「低更新期」佐证，但**必须在简报末尾「未获取来源」清单列明**（网站名＋链接＋原因），不得跳过。
+
+### 协议降级通道（2026-10-15 复证实证）
+
+- **山东** `https://zjt.shandong.gov.cn`（解析 IPv6）返回 **000** → 改 **http://** 明文端口 200 正常；xxgk 接口 `POST /module/xxgk/search.jsp` 经 http 可用。
+- **湖南** `zjt.hunan.gov.cn`、**江西** `zjt.jiangxi.gov.cn`：**HTTPS(443) 不可建连**（湖南 TLS 握手停滞；江西 `unsafe legacy renegotiation disabled`）→ **HTTP(80) 正常**。
+- **云南** `zfcxjst.yn.gov.cn` 正文页 gzip 未声明 Content-Encoding，须先 `gzip.decompress()` 再解析。
 
 ## 三、已破解接口（省时关键）
 
 - **住建部**：索引页为 JS 壳 → JPAAS 接口
-  `.../front/page/build/unit?...&webId=86ca573ec4df405db627fdc2493677f3&tplSetId=fc259c381af3496d85e61997ea7771cb&pageType=column&tagId=<栏目-list|内容1>&editType=null&pageId=…`，curl 加 `--compressed`；首页 `<meta MakeTime>` 可直接读。
+  **正确路径（2026-10-15 实测）** `.../api-gateway/jpaas-publish-server/front/page/build/unit?...&webId=86ca573ec4df405db627fdc2493677f3&tplSetId=fc259c381af3496d85e61997ea7771cb&pageType=column&tagId=<栏目-list|内容1>&editType=null&pageId=…`，curl 加 `--compressed`。
+  ⚠️ 旧路径 `/front/page/build/unit`（无 `api-gateway/jpaas-publish-server` 前缀）**已失效，返回 404/400**。栏目标题须强制 UTF-8 解码 `response.content`（壳页声明 ISO-8859-1，直接解码会把 tagId 乱码化导致接口返回空）。首页 `<meta MakeTime>` 可直接读。
+  栏目实测口径：`/gongkai/zc/wjk/` 政策文件库、`zqyj` 标准征求意见、`bzgg` 标准公告。
+  ⚠️ 住建部本级**不设独立司局子栏目**，`/jigou/...`、`/sitemap.xml` 等路径 404，勿按规律拼装。
 - **JPAAS 通用**：浙江 webId=3162、tplSetId=ruXYFpsVFzDi3ZOOn2U3E，**必须带 `editType=null`**；tagId 因栏目而异（建设动态/市县新闻/其他文件用「栏目列表list」，政策文件/标准公告/公告公示/民意征集用「当前栏目列表1a」）。宁波为 jQuery 序列化 GET（webId=3516、tplSetId=dzPj91zLBJ8Wn1v1VPH5n，非 queryData 包裹）。
 - **山东**：xxgk 接口 `POST /module/xxgk/search.jsp`（infotypeId：通知公告 SD1002／工作动态 SD1003／政策文件 SD0202／政策解读 SD020207…；jdid=407、divid=div160091、currentnum=1）；规范性文件独立栏 `GET /col/col293162/index.html?vc_xxgkarea=113700000045030270`。
 - **江苏**：`POST /module/xxgk/search.jsp`（jdid=34、divid=div52043、currentnum=1，**须带完整浏览器头**）。
