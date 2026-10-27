@@ -4,3 +4,4 @@ history/topic_list_*.txt
 history/*_D_*.py
 history/out_list*.txt
 tracking.json.bak_1003
+__pycache__/
