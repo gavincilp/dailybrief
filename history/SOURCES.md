@@ -2,7 +2,7 @@
 
 > 本文件放在仓库 `history/` 下，供**云端任务与本地任务**的子代理共同读取。
 > 云端沙箱读不到本机的工作区笔记，凡涉及「官网真实入口 / 不可达站点 / 已破解接口 / 内容校验陷阱」的知识，一律以本文件为准，并**每期复核、按实修正**（本文件随仓库同步）。
-> 最后核对日期：2026-10-16
+> 最后核对日期：2026-11-08
 
 ---
 
@@ -10,7 +10,8 @@
 
 | 地区 | 实域 | 备注 |
 | --- | --- | --- |
-| 山东 | `zjt.shandong.gov.cn` | 检索通道 jsearch 索引止于 2019 已失效 |
+| 山东 | `zjt.shandong.gov.cn` | 检索通道 jsearch 索引止于 2019 已失效；**xxgk `search.jsp` 本期返回「共0条记录」、`/module/xxgk/tree.jsp` 与 `dynamic.js` 均 404** → 省级政策文件改走首页「政策文件」静态栏＋RSS |
+| 上海 | `zjw.sh.gov.cn` | **任务常用的 `zjw.sh.cn` 系误域**；政策文件栏标题/日期须核正文文号＋落款 |
 | 浙江 | `jst.zj.gov.cn` | `zjt.*` 不可达 |
 | 四川 | `jst.sc.gov.cn` | |
 | 河南 | `hnjs.henan.gov.cn` | 列表可达，DNS 偶发失败 |
@@ -24,7 +25,7 @@
 | 杭州 | `cxjw.hangzhou.gov.cn` ＋ `fgj.hangzhou.gov.cn` | 双站 |
 | 广州 | `zfcj.gz.gov.cn` | 主域曾 DNS 失败 |
 | 深圳 | `zjj.sz.gov.cn` | 列表页 HTML 已内联渲染，可直接解析 |
-| 武汉 | `zgj.wuhan.gov.cn` | 固定信源，直连 200 无需代理；「五改四好」专题 `/ztzl/wgshcsgx/` 实为 JS 跳转壳页（74B）→ 真实政策目录取 `/ztzl/wgshcsgx/zcwj_csgx/` |
+| 武汉 | `zgj.wuhan.gov.cn` | 固定信源，直连 200 无需代理；「五改四好」专题 `/ztzl/wgshcsgx/` 实为 JS 跳转壳页（74B）→ 真实政策目录取 `/ztzl/wgshcsgx/zcwj_csgx/`；**长期漏采盲区：市府规范性文件（武政〔2026〕X号）藏在 `/xxgk/zcfgyjd_1/qtzdgkwj/` 的动态 JSON 列表（约 110 条）里，任何静态栏目都不列**，须直读该 JSON |
 | 安徽 | `dohurd.ah.gov.cn` | **`zjt.ah.gov.cn` 为错域（000）**；列表接口 `/site/label/8888?labelName=publicInfoList&siteId=6804621&organId=6991&catId=<栏目ID>`（须带 Referer＋X-Requested-With） |
 | 贵州 | `zfcxjst.guizhou.gov.cn` | **`zjt.guizhou.gov.cn` DNS 不解析（000）**；政策文件 `/zwgk/zcwj/` 经 meta Refresh 跳 `/zwgk/zcwj/zxwj/`；公告公示栏 JS 壳页 |
 | 临沂 | `lyjs.linyi.gov.cn` | 列表页静态含日期，但**列表日期≠详情发布日期**（实例：列表 10-15、详情 `<发布日期>` 10-12），须逐条打开详情 |
@@ -43,7 +44,7 @@
 - **甘肃** 412（JS 反爬 `$_ts`）；**河北** 412（列表与详情，仅能经渲染取标题＋文号；首页 200）；
 - **广东省住建厅 `zfcxjst.gd.gov.cn`**：HTTPS(443) TLS 握手停滞、HTTP(80) 返回 Empty reply（curl exit 52），三个 A 记录均失败 → **本沙箱出口不可达，判定为间歇性/出口 IP 相关故障**（10-14/10-15 期曾可用），须每期复查；
 - **青海** 412（间歇）；**上海** TLS 握手失败（间歇）；**广州** WAF 420（IP 级黑名单，`gkmlpt` 子系统亦 420）；
-- **黑龙江** 420（根域偶发 200、子路径稳定 420）；**成都** `cdzj.chengdu.gov.cn` 412；
+- **黑龙江** 420（根域偶发 200、子路径稳定 420）；**2026-11-08 复测：子路径转为 TLS 直接断开 / ReadTimeout，非 420** → 两期连续不可达，改经省级政府门户 `www.hlj.gov.cn` 政策库反查；**成都** `cdzj.chengdu.gov.cn` 412；
 - **河南 / 安徽** DNS 偶发失败；**厦门** `js.xm.gov.cn` DNS 失败；
 - **常州** `zjj.changzhou.gov.cn` 000（连接超时）；**绍兴／泉州／洛阳／襄阳／宜昌／绵阳／大连／唐山／株洲** 住建局域本沙箱 DNS 无法解析；**芜湖** 420；
 
@@ -84,6 +85,7 @@
 - **烟台 zjj**：JCMS GET（webId=179、tplSetId=GC2egDexn2qAbtVty6wAZ），tagId 须为「当前栏目list」；翻页把 `pageNo` 嵌入 `paramJson={"pageNo":2,"pageSize":10}`；**接口 `pageId` 必须为纯数字**（如 22907，带 `col` 前缀返回 `success:false`）；政策文件栏 col22907。
   **2026-10-16 实测修正**：路径须带前缀 **`/api-gateway/jpaas-publish-server/front/page/build/unit`**（只写 `/front/page/build/unit` 会回落到首页模板 11212B 壳页），且须带 `parseType=bulidstatic`。栏目页 HTML 本身为 JS 壳页（无内联条目），日期/标题须经该接口取回。
   **踩坑**：烟台 烟建住房〔2026〕16号（2026-10-15 预售资金监管细则）正文为 **24 页扫描版 PDF（无文字层）**，条款无法核读，只能核实标题/文号/发布日期。
+  **2026-11-08 口诀（tagId 大小写敏感）**：局站 `zjj.yantai.gov.cn` 用 **「当前栏目list」**（小写 l）；市政府门户 `www.yantai.gov.cn` 用 **「当前栏目列表」**（中文「列表」）。两者均须 `pageType=column` ＋ `editType=null`，且 `paramJson` 必须是**无空格紧凑 JSON**，否则返回 `success:false`。
 - **烟台市政府门户**：webId=1、tplSetId=uo2n7cvvGR8iPKdzxdBuu；正确列 ID：市政府文件 col99959、市府办文件 col99961（勿用 99954/99955）。门户列页面会间歇重定向首页 → 改用 API 或文章页加 `?t=时间戳`。文件正文实体多为 PDF，其 `<meta PubDate>` 为 CMS 迁移时间，**不可作发布时间**。
 
 ## 四、内容校验陷阱
@@ -91,7 +93,9 @@
 - **上海**：政策文件栏发布日期是**挂网日期**，须核对正文文号＋落款；文件页 `<title>` 仅栏目名，不能据以判标题一致性。
 - **广东地市**（佛山 `fszj.foshan.gov.cn`、中山 `jsj.zs.gov.cn`）：正文页 `<title>` 仅「XX市住房和城乡建设局」，标题一致性须以**正文主体**核对。
 - **同一文件双门户重复挂网**（东莞 `zjj.dg.gov.cn` 与 `www.dg.gov.cn`）→ 按文号/文件名比对，**不看 URL**。
-- **范围外城市域名陷阱**：无锡／南通／扬州／泰州／聊城的 `zjj.*` 域名**实际归属非住建局**，勿误采。
+- **范围外城市域名陷阱**：无锡（`zjj.wuxi.gov.cn` 实为**民族宗教事务局**）／泰州（`zjj.taizhou.gov.cn` 实为**市政府**）／扬州／聊城的 `zjj.*` 域名**实际归属非住建局**，勿误采；
+  **反例（勿误判）**：南通住建局真域为 `zj.nantong.gov.cn`（**不是** `zjj.*`），可用；**台州与泰州同为 `zjj.` 前缀、易混**，采前必核站点标题是否含「住房和城乡建设」；
+  **威海**：`zjj.weihai.gov.cn` 出现 **302 循环镜像**（形如武汉旧态），跟随时须限深 3 跳并保留原始 Referer。
 - **广西** https 502 → **须用 http**（根域 gxcic.cn 非 gov.cn，不可用）；**贵州** TRS-IRS 会返回「系统错误」→ 改 IGI 接口；**海南** 通知公告为 iframe 嵌套；**山西** 征意栏链接用单引号 `href='./202610/t…shtml'`；**云南** 页面 gzip 未声明 Content-Encoding，须先 `gzip.decompress()` 再解析，否则标题乱码致校验误判。
 - 政务门户「调查征集」页多为**表单壳页**（200 无正文）→ 检索同域 `/IGI/upload/file/` 下 docx/pdf 附件。
 
