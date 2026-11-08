@@ -2,7 +2,7 @@
 
 > 本文件放在仓库 `history/` 下，供**云端任务与本地任务**的子代理共同读取。
 > 云端沙箱读不到本机的工作区笔记，凡涉及「官网真实入口 / 不可达站点 / 已破解接口 / 内容校验陷阱」的知识，一律以本文件为准，并**每期复核、按实修正**（本文件随仓库同步）。
-> 最后核对日期：2026-11-08
+> 最后核对日期：2026-11-09
 
 ---
 
@@ -106,3 +106,17 @@
 3. 生成后**双重核验**：① 全量链接实测（状态码＋标题一致性）；② 把 HTML 内每条 `<div class="ititle">` 链接与子代理报告交叉比对（这一步是充分条件）。
 4. 判断「是否已收录」一律按**文号／标题**比对，不依赖 URL。
 5. **列表页只能由 `history/build_brief_list_cloud.py` 数据驱动生成，严禁手改 HTML**；改完必须同步 `history/issues_index.json` 并 `cp 住建简报列表.html index.html`。
+
+### 2026-11-09 期新增／修正（第 73 期实测）
+
+- **海南**：质量安全栏真实入口 `/szjt/0407/list2.shtml`（静态列表，日期内联，详情 `<meta PubDate>` 精确到秒）。**陷阱：通知类正文落款可早于挂网日 5—9 天**（实例：11-08 21:38 挂网、落款 10-30），时间须双记。
+- **陕西**：公告公示真实路径 **`/sy/zcwj/gsgg/`**（`/sy/zcwj/gggs/` 为 404，勿凭语序拼装）。附件常为 **Word 97-2003 二进制 .doc**（沙箱无 antiword，可用 `olefile` 读 `WordDocument` 流后按 utf-16-le 解码取正文）。
+- **山东**：本期 https 与 http **均为 502**（11-05 前 http 可读）；首页可读时 `Maketime` 可作「最后静态化时间」佐证，但 `col102884/102885` 壳页自身 Maketime 滞后，不可单独据此判零新增；`/rss/` 404，删除「RSS 通道」表述。
+- **广东**：本期 https／http 均 200，应从「长期不可达」降级为「间歇性，每期首探」；文件通知栏 `/xxgk/wjtz/index.html` 静态内联约 15 条**无列表日期**，日期须读详情 `<meta PubDate>`；`/xxgk/gsgg/` 为壳页。
+- **湖北**：`/zfxxgk/zc/qtzdgkwj/zcwj.json` 达 **1 576 条／1.2 MB**，可直接取前 N 条判窗口（字段 `PUBDATE`）；规范性文件 `gfxwj/zcwj.json` 仅 169 条。
+- **江西**：`/queryList` 恒返 0，改读各栏 `-articleList.json`（`pubDate` 精确到分钟，`metadata.xxgk_filenumber` 为文号）。
+- **武汉**：`/xxgk/zcfgyjd_1/qtzdgkwj/zcfg.json` 110 条可直接枚举，字段 `DOCRELTIME／FILENUM／FILENAME／URL`；**注意其时间字段为文件成文日，URL 年月才是挂网月份**。
+- **深圳**：https 全线 **502**（含首页与 `/xxgk/tzgg/`），本期未能核验。
+- **黑龙江**：`zjt.hlj.gov.cn` 连续第三期不可达（TLS 后读超时）；可用域 **`zfcxjst.hlj.gov.cn`**，栏目码 公示公告 `c114764`／文件通知 `c114765`／住建厅要闻 `c114759`／政策解读 `c114792`。
+- **天津**：通知公告页正文为 `var item_<id> = {title, fileNum, url, doctime};` 内联全量数组（1 711 条），可正则直解，无需翻页。
+- **住建部**：先读首页 `<meta name="MakeTime">`，与上期同值即可快速判定「部本级无更新」，再决定是否调 JPAAS，可省 5—8 次请求。
