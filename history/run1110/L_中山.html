@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="SiteName" content="中山市住房和城乡建设局政务网站">
+<meta name="SiteDomain" content="jsj.zs.gov.cn">
+<meta name="SiteIDCode" content="4420000027">
+<meta name="ColumnName" content="中山市住房和城乡建设局政务网站首页">
+<meta name="ColumnDescription" content="中山市住房和城乡建设局政务网站综合首页">
+<meta name="ColumnKeywords" content="网站首页">
+<meta name="ColumnType" content="信息公开">
+<meta name="Keywords" content="中山市住房和城乡建设局" />
+<meta name="description" content="中山市住房和城乡建设局政务网" />
+<script>window.NFCMS_SITE_ID=760017;window.NFCMS_PUB_TYPE="page";window.NFCMS_PAGE_ID="35";</script><script src="//statistics.gd.gov.cn/scripts/s.js?t=1794216853" async></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>中山市住房和城乡建设局政务网站</title>
+<link type="text/css" rel="stylesheet" href="/ztcss/css.css" />
+<link type="text/css" rel="stylesheet" href="/ztcss/gl.css" />
+<link type="text/css" rel="stylesheet" href="/ztcss/share.css" />
+<script type="text/javascript" src="/ztjs/jquery.js"></script>
+<script type="text/javascript" src="/ztjs/base.js"></script>
+
+	<script type="text/javascript" src="/ztjs/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="/ztjs/index.js"></script>
+	<script type="text/javascript" src="/ztjs/jsonp.js"></script>
+	<!-- <style>
+		html {
+			background: url("/ztimg/th_71.jpg") top center no-repeat;
+			padding-top:95px;
+		}
+		body {
+			width:1200px;
+		}
+	</style>--> 
+	<style>
+		.hm_sys .bn{
+			width: 128px;
+		}
+		#bn4:hover .ico img{
+			top: -51px;
+		}
+		.gygg_banner{
+			width: 1200px;
+			height: 137px;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.gygg_banner .pics li{
+			width: 1200px;
+			height: 137px;
+		}
+		.gygg_banner .pics img{
+			display: block;
+			width: 1200px;
+			height: 137px;
+		}
+		.gygg_banner .btns{
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			z-index: 60;
+			height: 10px;
+			font-size:1px;
+		}
+		.gygg_banner .btns span{
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius:100%;
+			background:#fff;
+			margin-right:15px;
+		}
+		.gygg_banner .btns .hover{
+			background:#ff0000;
+		}
+		.ba_tabs .btn{width:130px;}
+	</style>
+	<script>
+
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+			if (r != null) return unescape(r[2]); return null; //返回参数值
+		}
+
+		function urlredirect() {
+			var forceDesktop = getUrlParam("ref")?true:false;
+			// console.log(forceDesktop);
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			if(sUserAgent.match(/(ipod|iphone os|midp|ucweb|android|windows ce|windows mobile)/i) && !forceDesktop) {
+				// PC跳转移动端
+				var thisUrl = window.location.href;
+				top.location.href = '/mobile/';
+			}
+		}
+		urlredirect();
+
+		$(document).ready(function () {
+
+			$('#nav1').addClass('hover');
+
+			//政声传递
+			$.ajax({
+				url:'https://app.gd.gov.cn/xxts/pushinfo_json.php',
+				dataType : "jsonp",
+				jsonp : "pushInfoJsonpCallBack",
+				jsonpCallback:"pushInfoJsonpCallBack",
+				success: function(data){
+					$.each(data,function(i,json){
+						if ( i > 8){
+							return;
+						}
+						var title = json.title;
+						var str1= json.pubDate.substring(5);
+						$("#zscd").append("<li><a href='"+json.link+"' title='"+title+"' target=\"_blank\">"+title+"</a><span>"+str1+"</span>");
+					})
+				} ,
+			});
+
+			new FadeAdver({
+				btns : $(".gygg_banner .btns span"),
+				divs : $(".gygg_banner .pics li"),
+				speed : 5000
+			});
+
+		});
+
+	$(function () {
+		if (getCookie("mainbg") == 0) {
+			$("body, html").css("background", "none");
+			$("#close_btn").hide();
+		} else {
+			$("body").css("background", "url(images/body_bg. jpg))no-repeat 50% 0");
+			$("html").css("background", "url(images/html_bg. jpg)repeat-x 0 0");
+			$("#close_btn").show().css("background", "url(images/close_btn. jpg) no-repeat");
+		}
+		//点击关闭
+		$("#close_btn").click(function () {
+			$("body, html").css("background", "none");
+			$("#close_btn").hide();
+			setCookie("mainbg", "0");
+		});
+	})
+	//设置 cookie
+	function setCookie(name, value) {
+		var exp = new Date();
+		exp.setTime(exp.getTime() + 1 * 60 * 60 * 1000);//有效期1小时
+		document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+	}
+	//取 cookies 函数
+	function getCookie(name) {
+		var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*) (;|$)"));
+		if (arr != null) return unescape(arr[2]);
+		return null;
+	}
+
+	window.$bindArrow = function (obj) {
+    var $tabs = $(obj.tabs)
+    var $tabsPanel = $(obj.tabsPanel)
+    var $index = obj.initPos || 0
+    $tabs.bind(
+    {
+        keydown: function(ev){
+            var LEFT_ARROW = 37;
+            var UP_ARROW = 38;
+            var RIGHT_ARROW = 39;
+            var DOWN_ARROW = 40;
+
+            var k = ev.which || ev.keyCode;
+
+            if (k >= LEFT_ARROW && k <= DOWN_ARROW){
+                if (k == LEFT_ARROW || k == UP_ARROW){
+                    if ($index > 0) {
+                        $index--;
+                    }
+                    else {
+                        $index = $tabs.length - 1;
+                    }
+                }
+                else if (k == RIGHT_ARROW || k == DOWN_ARROW){
+                    if ($index < ($tabs.length - 1)){
+                        $index++;
+                    }
+                    else {
+                        $index = 0;
+                    }
+                }
+                // $($tabs.get($index)).click();
+                setFocus($index)
+                ev.preventDefault();
+            }
+        },
+        // click: function(ev){
+        // 	$index = $.inArray(this, $tabs.get())
+        // 	setFocus($index)
+        // }
+    })
+
+    $tabsPanel.bind({
+        keydown: function(ev) {
+            var ESC = 27
+            var k = ev.which || ev.keyCode;
+            if (k === ESC) {
+                $(obj.tabs + '[tabindex=0]').focus()
+                ev.preventDefault();
+            }
+        }
+    })
+
+    //初始化
+    init()
+
+    function setChildNode($index) {
+        $tabs.find(obj.childNode).attr(
+        {
+            tabindex: '-1',
+            'aria-selected': 'false'
+        })
+
+        $($tabs.get($index)).find(obj.childNode).attr(
+        {
+            tabindex: '0',
+            'aria-selected': 'true'
+        })
+    }
+
+    function init() {
+        var initCount =  0;
+        if (obj.childNode) {
+            setChildNode(initCount)
+        }
+        $tabs.attr(
+        {
+            tabindex: '-1',
+            'aria-selected': 'false'
+        }).removeClass(obj.active)
+
+        $($tabs.get($index)).attr(
+        {
+            tabindex: '0',
+            'aria-selected': 'true'
+        }).addClass(obj.active)
+    }
+
+    function initTree(p, cb) {
+        
+        for (var i = 0; i < p.children.length; i++) {
+            // 遍历第一级子元素
+            var child = p.children[i];
+            if(cb){
+                cb(child);
+            }
+            // 递归
+            initTree(child);
+        }
+    }
+    
+    function setFocus($index) {
+        $tabs.attr(
+        {
+            tabindex: '-1',
+            'aria-selected': 'false'
+        }).removeClass(obj.active)
+
+        $($tabs.get($index)).attr(
+        {
+            tabindex: '0',
+            'aria-selected': 'true'
+        }).addClass(obj.active).focus()
+        // 控制区块显隐方式
+        if(obj.type === 'display'){
+            $tabsPanel.hide()
+
+            $($tabsPanel.get($index)).show()
+        }else if(obj.type === 'animate'){
+            // do something
+
+            // $tabsPanel.each(function(){
+            // 	initTree(this, function(ele){
+            // 		$(ele).attr({
+            // 			tabindex: '-1',
+            // 		});
+            // 	})
+            // });
+
+            // initTree($($tabsPanel.get($index)), function(ele){
+            // 	$(ele).attr({
+            // 		tabindex: '0',
+            // 	});
+            // })
+            $tabsPanel.attr(
+            {
+                tabindex: '-1',
+            });
+            $($tabsPanel.get($index)).attr(
+            {
+                tabindex: '0',
+            });
+        }
+        if (obj.childNode) {
+            setChildNode($index)
+        }
+    }
+}
+
+</script>		
+<script type="text/javascript" src="/ztjs/ttxws.js"></script>
+
+</head>
+
+<body>	
+  <!--	  <div id="ad" style="position:absolute;z-index:3000;">
+    <a id="movead" href="/zwgk/gggs/content/post_2607052.html" target="_blank">
+        <img id="moveadimg" src='/ztimg/jsj_xczg.jpg' border=0>
+    </a>
+    <DIV class="adclose" style="FONT-SIZE: 10pt; cursor:pointer;" align=right>◎ 关闭 ◎</DIV>
+</div>
+
+<script>
+    function Ad(link, img) {
+        this.link = link;
+        this.img = img;
+    }
+
+    var x = 60;
+    var y = 50;
+    var xin = true;
+    var yin = true;
+    var step = 1;
+    var delay = 60;
+    var obj = document.getElementById("ad");
+    var switchSign = 0;
+    var adArr = new Array();
+    var adCur = 0;
+    var closesign = 0;
+    adArr.push(new Ad("/zwgk/gggs/content/post_2607052.html", "/ztimg/jsj_xczg.jpg"));
+    adArr.push(new Ad("/zwgk/gggs/content/post_2607077.html", "/ztimg/xmdl_xczg.jpg"));   
+    $("#movead").attr("href", adArr[0].link);
+    $("#moveadimg").attr("src", adArr[0].img);
+    var objWidth = $("#ad").width();
+    var objHeight = $("#ad").height();
+    var adLen = adArr.length;
+
+    function floatAD() {
+        if (closesign == 1) {
+            return;
+        }
+        var L = document.documentElement.scrollLeft;
+        var T = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var R = L - objWidth;
+        var B = T - objHeight;
+        R = R + window.innerWidth - 16;
+        B = B + window.innerHeight;
+        $("#ad").css("left", x);
+        $("#ad").css("top", y);
+        x = x + step * (xin ? 1 : -1);
+        if (x <= L) {
+            xin = true;
+            x = L;
+        }
+        if (x >= R) {
+            xin = false;
+            x = R;
+        }
+        y = y + step * (yin ? 1 : -1);
+        if (y <= T) {
+            yin = true;
+            y = T;
+        }
+        if (y >= B) {
+            yin = false;
+            y = B;
+        }
+        if (switchSign * delay >= 5000) {
+            if (adLen > 1) {
+                adCur = adCur + 1;
+                if (adCur > adLen - 1) {
+                    adCur = 0;
+                }
+                $("#ad").fadeOut("slow", function () {
+                    if (adArr[adCur].link != "#") {
+                        $("#movead").attr("target", "_blank");
+                    } else {
+                        $("#movead").attr("target", "_self");
+                    }
+                    $("#movead").attr("href", adArr[adCur].link);
+                    $("#moveadimg").attr("src", adArr[adCur].img);
+                    $("#ad").fadeIn("slow");
+                });
+            }
+            switchSign = 0;
+        } else {
+            switchSign = switchSign + 1;
+        }
+    }
+
+    var itl = setInterval("floatAD()", delay)
+    obj.onmouseover = function () {
+        clearInterval(itl)
+    }
+    obj.onmouseout = function () {
+        itl = setInterval("floatAD()", delay)
+    }
+
+    $(function () {
+        $(".adclose").click(function () {
+            $(this).parent().css("display", "none");
+            closesign = 1;
+        });
+    })
+
+</script>
+  -->
+	
+	<div style="position:absolute;left:43%;z-index:999;padding-top:5px">
+<a onmouseover="this.href='javascript:void(0)'" id="cniil_wza" style="color:white;font-size:16px;font-weight:bold;margin-right:5px;">无障碍版</a>
+<a id="slh" style="color:white;font-size:16px;font-weight:bold;margin-right:5px;">长者助手</a>
+<a style="color:white;font-size:16px;font-weight:bold;margin-right:5px;" href="https://tyrz.gd.gov.cn/tif/sso/static/?client_id=gdbsYSS&redirect_uri=http%3A%2F%2Fwww.gdzwfw.gov.cn%2F_goin_%2F%3Fr%3D%252F_in_%252F%253Fr%253D%25252F%25253Fregion%25253D442000%2526p%253Dportal&response_type=code&scope=all&service=initService" target="_blank">登录</a>
+</div>
+<script src="//service.gd.gov.cn/wza/wza.js?app=jsj-zs"></script>
+<script src="//slhsrv.southcn.com/wza/slh.js?app=jsj.zs.gov.cn" referrerpolicy="origin"></script>
+<script>
+    // IE8 兼容配置
+    window.onload = function() {
+        cnillWzaInstance.startInit("https://www.zs.gov.cn/ztimg/cnill_polyfill.swf");
+    }
+    document.getElementById("cniil_wza").onclick = function() {
+        // 执行实例的init方法
+        cnillWzaInstance.init(); // cnillWzaInstance为全局变量
+    }
+	$("#slh").on("click", function() { // 执行实例的 init 方法 
+	slhInstance.init(); // slhInstance 为全局变量 
+	})
+</script> 
+	<div class="header">
+		<div class="wrapin">
+			
+			<a href="/" class="logo">
+				<img src="/ztimg/logo.png" alt="" title="前往中山市住房和城乡建设局政务网站首页">
+			</a>
+
+			<div class="head_search" aria-label="您已进入全站搜索交互区，本区域包含1个文本输入框和1个提交按钮。请输入关键词，按回车键进行网站内容搜索。"
+altdes="交互区"
+wzades="输入关键词可对网站内容进行搜索">
+                <form method="get" action="https://search.gd.gov.cn/search/all/760017/" target="_blank">
+                    <input type="text" name="keywords" class="text" placeholder="请输入关键字查询">
+                    <input type="submit" value="" class="sub" title="点击搜索">
+                </form>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="nav" aria-label="您已进入首页及一级栏目导航区。"
+altdes="导航区"
+wzades="提供网站首页、政务公开、政务服务、交流互动、专题专辑、住房保障、对外服务系统栏目入口。">
+		<div class="wrapin">
+			<a id="nav1" href="/" >网站首页</a>
+			<a id="nav2" href="/zwgk/jgsz/" >政务公开</a>
+			<a href="https://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007332710" target="_blank">政务服务</a>
+			<a id="nav4" href="/jlhd/" >交流互动</a>
+			<a id="nav7" href="/ztzj/" >专题专栏</a>
+			<a id="nav8" href="/dwfwxt/index.html" >对外服务系统</a>  
+		</div>
+	</div>
+
+<!--
+	<div style="margin:20px auto 0;height:160px;width:1200px;padding:0px;" tabindex="0"><img style="width:1200px;height:160px;" src="https://www.zs.gov.cn/global/banner1000.jpg" /></div>
+-->
+	<div class="line20"></div>
+
+	<div class="notice" style="margin-bottom:0px;" aria-label="您已进入通知栏目，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。"
+altdes="通知区"
+wzades="展示通知。">
+		<div class="notice_tit"><a href="https://www.zs.gov.cn/zwgk/gzdt/ttxw/index.html" target="_blank" tabindex="0"></a></div>
+		<div class="notice_out">
+			<div class="notice_wrap">
+				<ul id="ttxw"></ul>
+			</div>
+		</div>
+		<a class="more" href="https://www.zs.gov.cn/zwgk/gzdt/ttxw/index.html"  target="_blank" tabindex="0">更多&gt;&gt;</a>
+	</div>
+
+	<div class="wrapin" style="margin-top:0px;">	
+
+		<div class="banner" aria-label="您已进入图片新闻视窗区。"
+altdes="视窗区"
+wzades="展示图片新闻。">
+			<ul class="pics">
+				<ul>
+																																	<li>
+						<a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2661478.html" title="严把监督关，管住全链条！市住房城乡建设局开展老旧小区改造监管专题培训" target="_blank" tabindex="0">
+							<div class="name">
+								<span class="nm">严把监督关，管住全链条！市住房城乡建设局开展老旧小区改造监管专题培训</span>
+							</div>
+							<img src="http://jsj.zs.gov.cn/img/0/482/482591/2661478.png" alt="" title="严把监督关，管住全链条！市住房城乡建设局开展老旧小区改造监管专题培训">
+						</a>
+						</li>
+																													<li>
+						<a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2661086.html" title="粤享暖冬·安居广东 | 省住房城乡建设厅调研组点赞中山“阵地驻点”模式" target="_blank" tabindex="0">
+							<div class="name">
+								<span class="nm">粤享暖冬·安居广东 | 省住房城乡建设厅调研组点赞中山“阵地驻点”模式</span>
+							</div>
+							<img src="http://jsj.zs.gov.cn/img/0/482/482376/2661086.png" alt="" title="粤享暖冬·安居广东 | 省住房城乡建设厅调研组点赞中山“阵地驻点”模式">
+						</a>
+						</li>
+																																								<li>
+						<a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2660364.html" title="中山市物业行业服务质量提升百日行动动员会顺利召开" target="_blank" tabindex="0">
+							<div class="name">
+								<span class="nm">中山市物业行业服务质量提升百日行动动员会顺利召开</span>
+							</div>
+							<img src="http://jsj.zs.gov.cn/img/0/481/481983/2660364.png" alt="" title="中山市物业行业服务质量提升百日行动动员会顺利召开">
+						</a>
+						</li>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										</ul>
+			</ul>
+			<div class="btns">
+				<span class="hover"></span>				<span></span>				<span></span>			</div>
+		</div>
+
+		<div class="ba_tabs" aria-label="您已进入工作动态、政声传递视窗区，本区域包含政务动态、公告公示、政声传递三个栏目，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。"
+altdes="视窗区"
+wzades="展示工作动态、政声传递信息。">
+			
+			<div class="handle t-set">
+				<a href="https://www.gd.gov.cn/xxts/" target="_blank" class="btn hover title" tabindex="0">政声传递<i></i></a>
+                <a href="/zwgk/zwdt/" class="btn title" target="_blank" tabindex="0">政务动态</a>
+                <a href="/zwgk/gggs/" class="btn title" target="_blank" tabindex="0">公告公示</a>
+			</div>
+
+			<div class="con tab-panel-1 show">
+				<ul id="zscd">
+				</ul>
+			</div>
+			<div class="con tab-panel-1">
+				<ul>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2662147.html" target="_blank" title="政务服务再升级！施工许可与验收备案信息查询功能上线粤省事小程序" tabindex="0">政务服务再升级！施工许可与验收备案信息查询功能上线粤省事小程序</a><span>11-05</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2661478.html" target="_blank" title="严把监督关，管住全链条！市住房城乡建设局开展老旧小区改造监管专题培训" tabindex="0">严把监督关，管住全链条！市住房城乡建设局开展老旧小区改造监管专题培训</a><span>11-03</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2661086.html" target="_blank" title="粤享暖冬·安居广东 | 省住房城乡建设厅调研组点赞中山“阵地驻点”模式" tabindex="0">粤享暖冬·安居广东 | 省住房城乡建设厅调研组点赞中山“阵地驻点”模式</a><span>11-02</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2660366.html" target="_blank" title="党建领航小区善治！中山市以物业服务领域专项整治促进小区治理提质增效" tabindex="0">党建领航小区善治！中山市以物业服务领域专项整治促进小区治理提质增效</a><span>10-29</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2660364.html" target="_blank" title="中山市物业行业服务质量提升百日行动动员会顺利召开" tabindex="0">中山市物业行业服务质量提升百日行动动员会顺利召开</a><span>10-28</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2660362.html" target="_blank" title="市住房城乡建设局合唱队晋级2026年中山市职工歌咏比赛决赛！" tabindex="0">市住房城乡建设局合唱队晋级2026年中山市职工歌咏比赛决赛！</a><span>10-28</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2660305.html" target="_blank" title="市领导带队开展安全生产检查" tabindex="0">市领导带队开展安全生产检查</a><span>10-28</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2658291.html" target="_blank" title="小改造  大幸福！中山市住宅小区“一周一改造，服务大提升”专项行动走深走实见实效" tabindex="0">小改造  大幸福！中山市住宅小区“一周一改造，服务大提升”专项行动走深走实见实效</a><span>10-20</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/zwdt/content/post_2658279.html" target="_blank" title="中山首个老旧住房自主更新原拆原建试点正式启动" tabindex="0">中山首个老旧住房自主更新原拆原建试点正式启动</a><span>10-20</span></li>
+						
+				</ul>
+			</div>
+			<div class="con tab-panel-1">
+				<ul>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2583975.html" target="_blank" title="政府网站工作年度报表（2025年度）" tabindex="0"> 政府网站工作年度报表（2025年度）</a><span>01-20</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2662490.html" target="_blank" title="关于开展2026年第四季度全市建设工程质量监督执法检查的通知" tabindex="0"> 关于开展2026年第四季度全市建设工程质量监督执法检查的通知</a><span>11-06</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2662488.html" target="_blank" title="关于2026年第三季度各部门查处的违法违规房地产开发企业和中介机构名单的通报" tabindex="0"> 关于2026年第三季度各部门查处的违法违规房地产开发企业和中介机构名单的...</a><span>11-06</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2662149.html" target="_blank" title="关于开展2026年第二次勘察设计质量检查（含消防、绿色建筑、建筑节能专项）的通知" tabindex="0"> 关于开展2026年第二次勘察设计质量检查（含消防、绿色建筑、建筑节能专项...</a><span>11-05</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2662138.html" target="_blank" title="2026年中山市“百千万工程”典型镇培育资金（第一批）分配方案公告" tabindex="0"> 2026年中山市“百千万工程”典型镇培育资金（第一批）分配方案公告</a><span>11-05</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2661131.html" target="_blank" title="中山市西区新建高中项目绩效评价报告" tabindex="0"> 中山市西区新建高中项目绩效评价报告</a><span>11-02</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2660565.html" target="_blank" title="关于公开征求《中山市既有住宅加装电梯指导意见》延期意见的通知" tabindex="0"> 关于公开征求《中山市既有住宅加装电梯指导意见》延期意见的通知</a><span>10-29</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2660501.html" target="_blank" title="关于开展全市房屋建筑赋码工作的通知" tabindex="0"> 关于开展全市房屋建筑赋码工作的通知</a><span>10-29</span></li>
+										<li><a href="http://jsj.zs.gov.cn/zwgk/gggs/content/post_2660242.html" target="_blank" title="中山市住宅专项维修资金定期存款存放银行竞争性选择公告" tabindex="0"> 中山市住宅专项维修资金定期存款存放银行竞争性选择公告</a><span>10-28</span></li>
+						
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="line20"></div>
+        <div style="margin:0 auto 5px;height:113px;width:1200px;padding:0px;" tabindex="0"><a href="http://www.gd.gov.cn/hdjl/wjcjf/index.html" target="_blank"><img class="headimg" src="/ztimg/zzxxzy.jpg" title="整治形式主义为基层减负"/></a></div>
+				<div class="line20"></div>
+
+		<div class="hm_slider" aria-label="您已进入专题图片视窗区，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。"
+altdes="视窗区"
+wzades="提供政务专题入口。">
+			<div class="cbtn pre"></div>
+			<div class="cbtn next"></div>
+			<div class="s_out">
+				<ul>
+					<li tabindex="0"><img src="/ztimg/hs1.jpg" alt="" title="中山市纪委 中山市监委 驻市住房和城乡建设局纪检监察组举报地址"></li>
+                    <li tabindex="0"><a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank"><img src="/ztimg/zdzcjd.jpg" alt="" width="381px" height="100px" title=""></a></li>	
+                    <li tabindex="0"><a href="https://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007332710" target="_blank"><img src="/ztimg/jsj_zww.jpg" alt="" width="381px" height="100px" title="广东省政务服务网"></a></li>		
+                    <li tabindex="0"><a href="http://wenmingzs.zsnews.cn/Article/index/id/566.html" target="_blank"><img src="/ztimg/gy_jzgd.jpg" alt="" width="381px" height="100px" title=""></a></li>												
+					<li tabindex="0"><img src="/ztimg/hs4n.jpg" alt="" title="中山市房屋市政工程建设领域（工程招投标专项）线索举报"></li>
+					<li tabindex="0"><img src="/gimg/gg210915.jpg" alt="" title="中山市住房和城乡建设局扫黑除恶举报方式"></li>
+                    <li tabindex="0"><a href="http://www.gdjubao.cn/jb/?Harm_type=18" target="_blank"><img src="/ztimg/swcnjb.jpg" alt="" width="381px" height="100px" title="涉未成年人网络有害信息举报"></a></li>
+					<li tabindex="0"><img src="/ztimg/hs3.jpg" alt="" title="联系电话"></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="line20"></div>
+		
+		<div class="hm_news lt" aria-label="您已进入政策文件视窗区。"
+altdes="视窗区"
+wzades="展示政策文件信息。">
+
+			<div class="head"><a href="http://jsj.zs.gov.cn/zwgk/zcwj/index.html" target="_blank" tabindex="0">政策文件</a></div>
+			
+			<ul>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2657320.html" target="_blank" title="关于印发《中山市住房和城乡建设领域新技术推广应用管理办法》的通知" tabindex="0"> 关于印发《中山市住房和城乡建设领域新技术推广应用管理办法》的通知</a><span>10-15</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2640925.html" target="_blank" title="关于印发《中山市配售型保障性住房管理办法》的通知" tabindex="0"> 关于印发《中山市配售型保障性住房管理办法》的通知</a><span>08-07</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/zcjd/content/post_2657317.html" target="_blank" title="音频解读：《中山市住房和城乡建设领域新技术推广应用管理办法》" tabindex="0"> 音频解读：《中山市住房和城乡建设领域新技术推广应用管理办法》</a><span>10-15</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2621527.html" target="_blank" title="关于印发《中山市持续推动房地产市场平稳健康发展的若干措施》的通知" tabindex="0"> 关于印发《中山市持续推动房地产市场平稳健康发展的若干措施》的通知</a><span>05-01</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/zcjd/content/post_2657316.html" target="_blank" title="文字解读：《中山市住房和城乡建设领域新技术推广应用管理办法》" tabindex="0"> 文字解读：《中山市住房和城乡建设领域新技术推广应用管理办法》</a><span>10-15</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2586709.html" target="_blank" title="关于印发《中山市住房和城乡建设局建设工程企业诚信管理办法》的通知" tabindex="0"> 关于印发《中山市住房和城乡建设局建设工程企业诚信管理办法》的通知</a><span>01-29</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2580116.html" target="_blank" title="关于延长《中山市住房和城乡建设局房屋市政工程施工过程结算管理办法（试行）》有效期的通知" tabindex="0"> 关于延长《中山市住房和城乡建设局房屋市政工程施工过程结算管理办法（...</a><span>01-05</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zwgk/zcwj/gfxwj/content/post_2577823.html" target="_blank" title="关于延长《中山市保障性租赁住房管理暂行办法》有效期的通知" tabindex="0"> 关于延长《中山市保障性租赁住房管理暂行办法》有效期的通知</a><span>12-26</span></li>
+					
+			</ul>
+
+		</div>
+
+		<div class="hm_news rt" aria-label="您已进入住房保障视窗区。"
+altdes="视窗区"
+wzades="展示住房保障信息。">
+
+			<div class="head"><a href="http://jsj.zs.gov.cn/zfbz/zbzc/index.html" target="_blank" tabindex="0">住房保障</a></div>
+			
+			<ul>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzshjggs/content/post_2661492.html" target="_blank" title="中山市配售型保障性住房拟纳入轮候库家庭资格公示（20261103）" tabindex="0"> 中山市配售型保障性住房拟纳入轮候库家庭资格公示（20261103）</a><span>11-03</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/gzfsqjtmdgs/content/post_2660238.html" target="_blank" title="中山市住房保障申请续租家庭情况公示（20261028）" tabindex="0"> 中山市住房保障申请续租家庭情况公示（20261028）</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzshjggs/content/post_2660237.html" target="_blank" title="中山市住房保障申请续租家庭情况公示（20261028）" tabindex="0"> 中山市住房保障申请续租家庭情况公示（20261028）</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/gzfsqjtmdgs/content/post_2660236.html" target="_blank" title="中山市住房保障新申请家庭情况公示（20261028）" tabindex="0"> 中山市住房保障新申请家庭情况公示（20261028）</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzshjggs/content/post_2660235.html" target="_blank" title="中山市住房保障新申请家庭情况公示（20261028）" tabindex="0"> 中山市住房保障新申请家庭情况公示（20261028）</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzjgxx/ggjrzfbtxx/content/post_2660234.html" target="_blank" title="2026年10月住房租赁补贴发放明细公示" tabindex="0"> 2026年10月住房租赁补贴发放明细公示</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzjgxx/ggjrzfbtxx/content/post_2660233.html" target="_blank" title="2026年10月住房租赁补贴新申请受理和审批结果公示" tabindex="0"> 2026年10月住房租赁补贴新申请受理和审批结果公示</a><span>10-28</span></li>
+								<li><a href="http://jsj.zs.gov.cn/zfbz/zfbzshjggs/content/post_2659541.html" target="_blank" title="关于送达《关于收回公租房的通知》的公告（冯志强、陈玉燕、冯少杰、冯俊杰）" tabindex="0"> 关于送达《关于收回公租房的通知》的公告（冯志强、陈玉燕、冯少杰、冯...</a><span>10-26</span></li>
+					
+			</ul>
+
+		</div>
+
+		<div class="line20"></div>
+
+		<div class="hm_pub lt">
+            <div aria-label="您已进入政务公开区，本区域包含信息公开指南、信息公开目录、信息公开年报、网站年度工作报表、依申请公开、机构设置6个栏目，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。"
+            altdes="导航区"
+            wzades="提供信息公开指南、信息公开目录、信息公开年报、网站年度工作报表、依申请公开、机构设置栏目入口。">
+			<div class="head"><a href="/zwgk/zwdt/" target="_blank">政务公开</a></div>
+			
+			<div class="links">
+				<div class="s_list">
+					<a href="/gkmlpt/guide" target="_blank"><img src="/ztimg/lk1.png" alt="" class="ico" title="信息公开指南" tabindex="0">信息公开指南</a>
+					<a href="/gkmlpt/index" target="_blank"><img src="/ztimg/lk2.png" alt="" class="ico" title="信息公开目录" tabindex="0">信息公开目录</a>
+					<a href="/gkmlpt/annualreport" target="_blank"><img src="/ztimg/lk3.png" alt="" class="ico" title="信息公开年报" tabindex="0">信息公开年报</a>
+					<a href="/gkmlpt/index#3219" target="_blank"><img src="/ztimg/lk4.png" alt="" class="ico" title="网站年度工作报表" tabindex="0">网站年度工作报表</a>
+					<a href="https://ysqgk.gd.gov.cn/760017/choice" target="_blank"><img src="/ztimg/lk5.png" alt="" title="依申请公开" class="ico" tabindex="0">依申请公开</a>
+					<a href="/zwgk/jgsz/" target="_blank"><img src="/ztimg/lk6.png" alt="机构设置" title="机构设置" class="ico" tabindex="0">机构设置</a>
+					<div class="clear"></div>
+				</div>
+			</div>
+            </div>
+			<div class="lks2">
+				<a href="/zwgk/sgs/index.html" class="lt" target="_blank" aria-label="您已进入您已进入信用信息双公示、广东政务服务网视窗区。"
+            altdes="视窗区"
+            wzades="展示信用信息双公示。" tabindex="0"> 
+					<img src="/ztimg/pub1.jpg" alt="" title="信用信息双公示">
+				</a>
+				<a href="https://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007332710" class="rt" target="_blank" aria-label="您已进入您已进入信用信息双公示、广东政务服务网视窗区。"
+            altdes="视窗区"
+            wzades="展示广东政务服务网中山市链接入口。" tabindex="0">
+					<img src="/ztimg/pub2.jpg" alt="" title="广东政务服务网中山市链接入口">
+				</a>
+			</div>
+
+		</div>
+
+		<div class="hm_pub rt" aria-label="您已进入交流互动视窗区，本区域包咨询投诉、在线访谈、中山住建、调查征集4个栏目，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。"
+altdes="视窗区"
+wzades="提供咨询投诉、在线访谈、中山住建、调查征集栏目入口。">
+
+			<div class="head"><a href="/jlhd/" target="_blank" tabindex="0">交流互动</a></div>
+			
+			<div class="lks3">
+				<div class="s_list">
+					<a href="https://12345.zs.gov.cn/" target="_blank"><img src="/ztimg/ls1.png" alt="" class="ico" title="咨询投诉" tabindex="0">咨询投诉</a>
+					<a href="/jlhd/zxft/" target="_blank"><img src="/ztimg/ls2.png" alt="" class="ico" title="在线访谈" tabindex="0">在线访谈</a>
+					<a tabindex="0"><img src="/ztimg/ls3.png" alt="" class="ico" title="中山住建">中山住建<img src="/ztimg/lscode.png" alt="" class="code" title="中山住建二维码"></a>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="head2">
+				<i></i><a href="http://jsj.zs.gov.cn/jlhd/wsdc/index.html" target="_blank" tabindex="0">调查征集</a>			</div>
+
+			<ul>
+								<li><a href="http://jsj.zs.gov.cn/hdjlpt/yjzj/answer/53917" target="_blank" title="关于公开征求《中山市人才房管理办法（征求意见稿）》意见的通知" tabindex="0"> 关于公开征求《中山市人才房管理办法（征求意见稿）》意见的通知</a><span>11-05</span></li>
+								<li><a href="http://jsj.zs.gov.cn/hdjlpt/yjzj/answer/53275" target="_blank" title="关于公开征求《中山市房屋建筑和市政基础设施工程施工现场人员实名制管理办法（征求意见稿）》意见的通知" tabindex="0"> 关于公开征求《中山市房屋建筑和市政基础设施工程施工现场人员实名制...</a><span>10-08</span></li>
+								<li><a href="http://jsj.zs.gov.cn/hdjlpt/yjzj/answer/52813" target="_blank" title="关于公开征求《中山市租赁住房单间租住人数上限和人均最低租住面积标准（征求意见稿）》意见的公告" tabindex="0"> 关于公开征求《中山市租赁住房单间租住人数上限和人均最低租住面积标...</a><span>09-14</span></li>
+					
+			</ul>
+
+		</div>
+
+		<div class="line20"></div>
+		
+				<div class="gygg_banner" aria-label="您已进入社会主义核心价值观图片视窗区。"
+            altdes="视窗区"
+            wzades="提供中山文明网链接入口。">
+			<ul class="pics">
+								<li><a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank" tabindex="0"><img src="http://jsj.zs.gov.cn/img/0/328/328036/2370995.png" alt="" title="国务院“互联网+督查”平台“影响营商环境建设问题线索”专题征集"></a></li>
+												<li><a href="https://tousu.www.gov.cn/dc/2023zhdc/index.htm" target="_blank" tabindex="0"><img src="http://jsj.zs.gov.cn/img/0/305/305474/2334509.png" alt="" title="2023年度国务院推动高质量发展综合督查征集问题线索"></a></li>
+									
+			</ul>
+			<div class="btns">
+				<span class="hover"></span>				<span></span>															</div>
+		</div>
+
+		<div class="line20"></div>
+		
+		<div class="clear"></div>
+	</div>
+	
+		<!-- 引入漂浮 -->
+	<div class="fr_bar" style="right:0px;">
+		<div class="title">新媒体</div>
+		<div class="fr_slide">
+			<a href="javascript:;" class="btn">
+				<img src="/ztimg/fr_btn2.png" class="ico" alt="">
+				<span>微信</span>
+			</a>
+			<img src="/images/wechat.jpg" class="code" alt="">
+		</div>
+		<div class="fr_slide">
+			<a href="javascript:;" class="btn">
+				<img src="/ztimg/fr_btn3.png" class="ico" alt="">
+				<span>手机版</span>
+			</a>
+			<img src="/images/mobile_pic.png" class="code" alt="">
+		</div>
+	</div>
+
+
+	<div class="footer">
+	    <div class="gov1">
+            <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/20/305/0000/60467934/CA203050000604679340001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+	   </div>
+	<!--	<a aria-label="您已进入党政机关网站标识视窗区。"
+        altdes="视窗区"
+        wzades="展示党政机关网站标识。" href="https://bszs.conac.cn/sitename?method=show&id=0B008C86868F2A14E053022819ACF0F4" class="gov1" target="_blank">
+			<img src="/ztimg/ft_gov1.png" alt="" title="党政机关">
+		</a> -->
+        <img src="https://www.zs.gov.cn/global/foot_wza.png" alt="适老化无障碍服务" title="适老化无障碍服务" style="position: absolute;left:50%;top:68px;margin-left:-480px;">
+        <div aria-label="您已进入网站标识视窗区。"
+            altdes="视窗区"
+            wzades="展示网站标识信息。">
+		<div class="ft_nav">
+			<a href="/wzxx/content/post_1826312.html" target="_blank">网站介绍</a>    ｜    <a href="/wzxx/content/post_1826317.html" target="_blank">联系方式</a>    ｜    <a href="/wzxx/content/post_1826322.html" target="_blank">版权声明</a>    ｜    <a href="/wzxx/content/post_1826324.html" target="_blank">网站导航</a>
+		</div>
+		<p><span>版权所有：中山市住房和城乡建设局</span> <span>地址 : 中山市中山四路一号</span></p>
+		<p><a style="color:#fff;" href="https://beian.miit.gov.cn/" target="_blank">备案信息：粤ICP备12090249号-5</a>　<span>网站标识码：4420000027</span></p>
+		<p><a style="color:#fff;" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44200002442839" target="_blank"><img style="vertical-align: -4px;margin-right:2px;" src="/ztimg/gongan.png"/>粤公网安备 44200002442868号</a></p>
+        </div>
+		<a aria-label="您已进入我为政府网站找错平台视窗区。"
+            altdes="视窗区"
+            wzades="提供我为政府网站找错平台入口。" class="gov2">
+			<script id="_jiucuo_" sitecode="4420000027" type="text/javascript">
+            //在页面增加一个放置图标的区块
+            if(!document.getElementById('_span_jiucuo'))
+                document.write("<span id='_span_jiucuo'></span>");
+
+            //获取放置图标的区块
+            var span_msg = document.getElementById("_span_jiucuo");
+
+            //获取站点标识码
+            var sitecode = document.getElementById("_jiucuo_").attributes["sitecode"].value;
+            //生成纠错图标及点击链接
+            span_msg.innerHTML = "<img onclick=\"Link('" + sitecode + "')\" title='政府网站找错' style='margin:0;border:0;cursor: pointer;' src='https://zfwzgl.www.gov.cn/exposure/images/jiucuo.png?v="+sitecode+"'/>";
+
+            //点击图标
+            function Link(site_code) {
+                //获取该站点需要纠错页面的url地址
+                var url = getCurrUrl();
+                //跳转至纠错系统填写页面 
+                window.open("https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=" + site_code + "&url=" + encodeURIComponent(url));
+            }
+            //获取该站点需要纠错页面的url地址
+            function getCurrUrl() {
+                var url = "";
+                if (parent !== window) {
+                    try {
+                        url = window.top.location.href;
+                    } catch (e) {
+                        url = window.top.document.referrer;
+                    }
+                }
+                if (url.length == 0)
+                    url = document.location.href;
+
+                return url;
+            }</script>
+		</a>
+	</div>
+
+
+	<div class="fr_bar" style="right:0px;top:100%;width:100px;">
+		<div class="fr_slide">
+			<a href="javascript:;" class="btn" style="width:100px;height:85px;padding-top:0px;" tabindex="0"> 
+				<img src="/ztimg/online.png" class="ico" alt="" style="width:100px;height:85px;">
+			</a>
+			<img src="/ztimg/onlineQR.png" class="code" alt="" style="right:100px;">
+		</div>
+	</div><!---->
+
+<script>
+	// 切换增强
+                        window.$bindArrow({
+                            type: 'display',
+                            // 切换页头
+                            tabs: '.t-set .title',
+                            // 切换内容
+                            tabsPanel: '.tab-panel-1',
+                            // 子节点如果存在a、button，需写上
+                            // childNode: 'a',
+                            // 切换高亮
+                            active: 'hover'
+                        })
+					
+</script>	
+
+</body>
+</html>

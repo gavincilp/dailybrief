@@ -1,0 +1,860 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>市住建局</title>
+    <link href="/zzcms/DFS/template/1392/images/2015zz_jtt_global.css" rel="stylesheet" type="text/css" />
+    <link href="/zzcms/DFS/template/1392/images/2015zz_jtt_index.css" rel="stylesheet" type="text/css" />
+    <script src="/zzcms/DFS/template/1392/images/jquery1.42.min.js"></script>
+    <script src="/zzcms/DFS/template/1392/images/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="/zzcms/DFS/template/1392/images/2015zz_jtt_tab.js"></script>
+   <!--调查征集调用js-->
+<script  type="text/javascript"  src='/zzcms/DFS//template/1580/js/survey.js'></script>
+    <style>
+        .xxcx h2{ background:url(2015zz_jtt_title_bg3.png) no-repeat right center;}
+        .xxcx ul li{ width: 289px;}
+    </style>
+      <script>
+        function get12345XJ(pagesize,titlelen) {
+          if(!!!pagesize) pagesize=6;
+          var page=1;
+          var search="";
+          $.ajax({
+            async: true,
+            url: "//www.zhuzhou.gov.cn/hdpt-web/other/getXJList?rch9=023&pagesize="+pagesize+"&pageindex="+page+"&isif="+encodeURIComponent("已办结")+"&czap="+search,
+            method: "get",
+            data: {},
+                 dataType: "json",
+                 success: function(data) {
+            if(data.state!="00"){
+              alert("获取异常！")
+              return;
+            }
+            var html = '';
+            //var pagehtml = generalPager(data.pagecount,data.pageindex,pagesize,search);
+            for(var i=0;i<data.evif.length;i++){
+              var id=data.evif[i].RCH5;
+
+              html += '<li>';
+              html += '<a href="http://zjj.zhuzhou.gov.cn//c13820/index.html#/maildetail/'+id+'" target="_blank" title="'+data.evif[i].CZAP+'">'+substr(data.evif[i].CZAP,titlelen)+'</a>';
+              html += '</li>';
+              // html+= ('<li>');
+              // var detail = getInfoData12345(id);
+              // html+= ('<a href="//12345.zhuzhou.gov.cn:8066/12345/front/alarm.do?method=load&id='+id+'" target="_blank"><h3>'+detail.infotitle+'</h3>');
+              // html+= ('<p class="describe"><span>回复：</span>'+detail.inforeply+'</p>');
+              // html+= ('<p class="date"><span class="fl">回复时间：'+detail.infortime+'</span><span class="fr">回复单位：'+detail.infordept+'</span></p></a>');
+              // html+= ('</li>');
+
+            }
+            $("#maillist").html(html);
+          }
+        });
+        }
+        function substr(str, len) {
+          if(str.length > len + 3) {
+            return str.substring(0, len) + '...';
+          } else {
+            return str;
+          }
+        }
+      </script>
+</head>
+
+<body>
+   <script type="text/javascript" src="/zzcms/DFS//template/2028/images/ztbanner.js"></script>
+  <!--div id="imgDiv" style="z-index: 10000; position: absolute; top: 60px; left: 50px;">
+        <div id="a" style="position: absolute; text-align: center; width: 20px; background: salmon; height: 20px; left: 432px">×</div>
+          <div style="width: 452px; height: 111px"><a href="javascript:void(0);" target="_blank"><img alt="" width="452" height="111" src="/zzcms/DFS/template/1392/images/zhengzhi2020.png" /></a></div>
+      </div-->
+
+      	<!--script>
+        //漂浮开始
+        var xin = true,
+              yin = true;
+        var step = 1;
+        var delay = 10;
+        var $obj;
+        $(function() {
+            $obj = $("#imgDiv");
+            var time = window.setInterval("move()", delay);
+            $obj.mouseover(function() {
+                clearInterval(time)
+            });
+            $obj.mouseout(function() {
+                time = window.setInterval("move()", delay)
+            });
+        });
+
+        function move() {
+            var left = $obj.offset().left;
+            var top = $obj.offset().top;
+            var L = T = 0; //左边界和顶部边界
+            var R = $(window).width() - $obj.width(); // 右边界
+            var B = $(window).height() - $obj.height(); //下边界
+            if (left < L) {
+                xin = true; // 水平向右移动
+            }
+            if (left > R) {
+                xin = false;
+            }
+            if (top < T) {
+                yin = true;
+            }
+            if (top > B) {
+                yin = false;
+            }
+            left = left + step * (xin == true ? 1 : -1);
+            top = top + step * (yin == true ? 1 : -1);
+            // 给div 元素重新定位
+            $obj.offset({
+                top: top,
+                left: left
+            })
+        }
+        $(function() {
+            $("#a").click(function() {
+                var b = $("#a").parent();
+                $(b).remove();
+            })
+        })
+        $("#imgDiv").draggable();
+                //漂浮结束
+        </script-->
+<!--漂浮-->   
+  
+  
+    <div class="wrapper">
+        <div class="container">
+            <script src="/zzcms/DFS/template/1392/images/header.js"></script>
+
+            <div class="main">
+                 		<style>
+			.toutiao {
+				width: 100% !important;
+				background: #f0f0f0;
+				padding: 0px 0px;
+				margin: 0px;
+				height: 85px;
+				position: relative;
+			}
+
+			.toutiao_tit {
+				float: left;
+				width: 154px;
+				height: 85px;
+				background: url(/zzcms/DFS/template/1580/images/toutiao_bg.png) left top no-repeat;
+				margin: 0px;
+				padding: 0px;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			.toutiao_tit h3 {
+				height: 20px;
+				text-align: left;
+				font-size: 24px;
+				color: #233f59;
+				font-weight: normal;
+				line-height: 20px;
+				margin: 20px 0px 0px 20px;
+				padding: 0px;
+			}
+
+			.toutiao_tit a {
+				text-decoration: none;
+				outline: none;
+				color: #333;
+			}
+
+			.toutiao_tit a:hover {
+				text-decoration: none;
+			}
+
+			.toutiao_tit p {
+				height: 40px;
+				line-height: 40px;
+				font-size: 12px;
+				color: #e7660f;
+				text-align: left;
+				margin: 0px 40px;
+				padding: 0px;
+				
+			}
+
+			.toutiao_info {
+				margin: 0 auto;
+				overflow: hidden;
+				padding:0px 0px;
+			}
+
+			.toutiao_info h2 {
+				margin: 10px 0px 0px 0px;
+				padding: 0px 0px;
+				text-align: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				line-height: 30px;
+			}
+
+			.toutiao_info h2 a {
+				color: #233f59;
+				font-size: 26px;
+				text-decoration: none;
+				line-height: 30px;
+			}
+
+			.toutiao_info h2 a:hover {
+				color: #3C8BD4;
+				text-decoration: none;
+			}
+
+			.toutiao_info p {
+				line-height: 20px;
+				height: 20px;
+				font-size: 16px;
+				text-align: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin: 6px 0px 0px 0px;
+				padding: 0px;
+			}
+
+			.toutiao_info p a {
+				text-decoration: none;
+				color: #333;
+				line-height: 20px;
+				font-size: 16px;
+			}
+			@media screen and (max-width:768px) {
+				.toutiao_tit {
+					display: none;				}
+				.toutiao_info h2 a {
+					font-size: 22px;
+				}
+			}
+			@media screen and (max-width:600px) {
+				.toutiao_info h2 a {
+					font-size: 20px;
+				}
+			}
+
+			@media screen and (max-width:480px) {
+				.toutiao_tit {
+					display: none;
+				}
+			}
+		</style>
+<div class="toutiao" id="toutiao">
+	
+	<div class="toutiao_tit">
+				<h3><a href="http://zjj.zhuzhou.gov.cn//c23967/index.html">头条新闻</a></h3>
+	              <p><a href="http://zjj.zhuzhou.gov.cn//c23967/index.html">HEADLINE</a></p>
+				</div>
+		<div class="toutiao_info">
+			<h2><a href="//www.hunan.gov.cn/hnszf/hnyw/sy/tt1/202611/t20261108_34097442.html" target="_blank"
+					title="中共中央发出通知 部署党的二十一大代表选举工作">中共中央发出通知 部署党的二十一大代表选举工作</a></h2>
+			<p><a href="//www.hunan.gov.cn/hnszf/hnyw/sy/tt1/202611/t20261107_34097337.html" target="_blank"
+					title="习近平参加北京市区人大代表换届选举投票">习近平参加北京市区人大代表换届选举投票</a></p>
+		</div>
+
+</div>
+                <div class="news_box">
+                    <!-- 图片轮播 begin -->
+                    <div id="slideBox" class="slideBox">
+                        <div class="hd">
+                            <ul></ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                        <li>
+                                            <a href="http://www.zhuzhou.gov.cn/c27371/index.html?grp01=101" title="市住建局信息主动公开事项目录" target="_blank ">
+                                                <img src="/zzcms/DFS//file/2026/06/10/20260610152843713vcgaad.png" />
+                                                <p>市住建局信息主动公开事项目录</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.hunan.gov.cn/topic/2026slh/index.html" title="湖南省政府门户网站2026年湖南省两会专题" target="_blank ">
+                                                <img src="/zzcms/DFS//file/2026/02/03/20260203135659722tev6mf.jpg" />
+                                                <p>湖南省政府门户网站2026年湖南省两会专题</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://hunan.gov.cn/topic/jdz2026/2026wyjdz.html" title="我有“金点子”——2026年湖南省政府工作报告意见建议征集" target="_blank ">
+                                                <img src="/zzcms/DFS//file/2025/12/11/20251211084459640kv93gi.jpg" />
+                                                <p>我有“金点子”——2026年湖南省政府工作报告意见...</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20250911/i2424331.html" title="“安居建宁・畅购好房”金九银十惠民置业活动启动仪式举行" target="_blank ">
+                                                <img src="/zzcms/DFS//file/2025/09/11/20250911173751307uhs2b3.jpg" />
+                                                <p>“安居建宁・畅购好房”金九银十惠民置业活动启动仪式...</p>
+                                            </a>
+                                        </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        jQuery(".slideBox").slide({
+                            titCell: ".hd ul",
+                            mainCell: ".bd ul",
+                            autoPlay: true,
+                            autoPage: true,
+                            effect: "fold"
+                        });
+                    </script>
+                    <!-- 图片轮播 end -->
+
+                    <!-- 新闻 begin -->
+                    <div class="news">
+                        <div class="news_head">
+                            <h3>工作动态</h3>
+                                    <a href="http://zjj.zhuzhou.gov.cn//c13824/index.html" target="_blank ">更多</a>
+                            <div class="clear "></div>
+                        </div>
+                        <div class="news_body">
+                                    <h2><a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538190.html" target="_blank ">以学铸监淬本领 以规砺剑筑防线——202...</a></h2>
+                                    <p>为深入学习贯彻习近平总书记关于安全生产的重要指示批示精神，坚决扛牢安全生产责任，持续提升监...
+                                        [2026-10-23]
+                                    </p>
+                            <ul>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538186.html "
+                                                target="_blank ">以时时放心不下的责任感筑牢安全防线——株洲质安监督...</a><span>2026-10-21</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538185.html "
+                                                target="_blank ">房地产中介行业“双随机、一公开”检查结果通报暨行业...</a><span>2026-10-16</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538176.html "
+                                                target="_blank ">给二手房交易上把安全锁 株洲市房屋交易服务平台投入...</a><span>2026-10-15</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538174.html "
+                                                target="_blank ">王建球调研“三个一”人才住房工程工作</a><span>2026-10-15</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://zjj.zhuzhou.gov.cn//c13824/20261028/i2538167.html "
+                                                target="_blank ">【“321”机制大抓落实年】谭成华专题调度民生领域...</a><span>2026-10-14</span>
+                                        </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 新闻 end -->
+                </div>
+
+                <div class="clear15"></div>
+
+                <div class="main_right">
+                    <div class="zfxxgk xxcx">
+                        <h2>信息查询</h2>
+                        <ul>
+                        <li class="exc"><a href="/c13947" target="_blank">商品房签约查询</a></li>
+                            <li><a href="/c13948" target="_blank">预售许可信息查询</a></li>
+                            <li class="exc"><a href="/c13949" target="_blank">企业情况和资质查询</a></li>
+                            <li><a href="/c13950" target="_blank">维修资金查询</a></li>
+                          <li class="exc"><a href="/c27184" target="_blank">预售资金信息查询</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="tab_news tab04">
+                        <div class="title">
+                           <h2><a>要闻转载</a></h2>
+								<h2><a>央网推荐</a></h2>
+								<h2><a>省网推荐</a></h2>
+										<a class="more"  href="http://zjj.zhuzhou.gov.cn//c23883/index.html" target="_blank">更多</a>									
+								<a class="more" href="//www.gov.cn/pushinfo/v150203/index.htm" target="_blank">更多</a>
+								<a class="more" href="//www.hunan.gov.cn/szf/zfhyjtj/" target="_blank">更多</a>
+                            <div class="clear"></div>
+                        </div>
+                       <ul class="list" style="display:block ">
+                                    <li>
+                                        <a href="//www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261109_34098445.html "
+                                            target="_blank ">李强签署国务院令 公布《中医药传统知识保护条例》</a><span>2026-11-09</span>
+                                    </li>
+                                    <li>
+                                        <a href="//www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261109_34098113.html "
+                                            target="_blank ">李强主持召开国务院常务会议 学习贯彻习近平总书记关于前三季度...</a><span>2026-11-07</span>
+                                    </li>
+                                    <li>
+                                        <a href="//www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261106_34096596.html "
+                                            target="_blank ">李强在2026年世界互联网大会乌镇峰会开幕式上的主旨演讲（全...</a><span>2026-11-04</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202610/t20261030_34091483.html "
+                                            target="_blank ">党的二十届五中全会公报一图速览</a><span>2026-10-30</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202610/t20261027_34089036.html "
+                                            target="_blank ">李强签署国务院令 公布《事业单位登记管理条例》</a><span>2026-10-27</span>
+                                    </li>
+                        </ul>
+                        <ul id="ul_ywtj" class="list">
+
+                        </ul>
+
+                        <ul id="ul_swtj" class="list" style="display:none">
+
+                        </ul>
+                    </div>
+                    <div class="tab_news tab01">
+                        <div class="title">
+                                    <h2><a href="javascript:;">通知公告</a></h2>
+                                    <h2><a href="javascript:;">机构信息</a></h2>
+                                    <h2><a href="javascript:;">人事信息</a></h2>
+                                    <h2><a href="javascript:;">双公示</a></h2>
+                                    <h2><a href="javascript:;">诚信建设</a></h2>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13825/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13826/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13830/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13833/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13834/index.html" target="_blank ">更多</a>
+                            <div class="clear"></div>
+                        </div>
+                        <ul class="list" style="display:block ">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13825/20261109/i2541367.html "
+                                            target="_blank ">株洲市住房和城乡建设局关于湖南省建筑市场监管公共服务平台工程...</a><span>2026-11-06</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13825/20261109/i2541123.html "
+                                            target="_blank ">关于2026年第二十批房地产开发企业资质审查情况的公示</a><span>2026-11-06</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13825/20261106/i2540427.html "
+                                            target="_blank ">早禾路南段（江渌路-鑫盛路）新建工程11项前期服务采购比选结...</a><span>2026-11-06</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13825/20261106/i2540795.html "
+                                            target="_blank ">关于2026年第十二批建筑施工企业安全生产许可证初审合格名单...</a><span>2026-11-05</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13825/20261109/i2541120.html "
+                                            target="_blank ">关于2026年第十九批房地产开发企业资质核准结果的公告​</a><span>2026-11-05</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13841/20260616/i2506338.html "
+                                            target="_blank ">株建党〔2025〕66号关于调整领导分工的通知</a><span>2026-06-16</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13842/20230129/i1995644.html "
+                                            target="_blank ">谭成华</a><span>2024-08-09</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13842/20230922/i2097468.html "
+                                            target="_blank ">陈显军</a><span>2023-09-22</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13841/20240126/i2157859.html "
+                                            target="_blank ">株建党〔2023〕40号关于调整领导分工的通知</a><span>2023-09-13</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13842/20230129/i1995610.html "
+                                            target="_blank ">​左  皓</a><span>2023-01-29</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13851/20260421/i2492250.html "
+                                            target="_blank ">2026年株洲市住房和城乡建设局所属事业单位公开招聘高层次人...</a><span>2026-04-21</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13851/20250815/i2410814.html "
+                                            target="_blank ">株洲市住房和城乡建设局所属事业单位2025年公开招聘拟聘用人...</a><span>2025-08-15</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13851/20250718/i2397856.html "
+                                            target="_blank ">株洲市住房和城乡建设局关于组织第三批全市建筑施工企业安管人员...</a><span>2025-07-15</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13851/20250718/i2397855.html "
+                                            target="_blank ">株洲市住房和城乡建设局关于组织株洲市建筑机械特种作业人员考核...</a><span>2025-07-14</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13851/20240924/i2246235.html "
+                                            target="_blank ">株洲市住房和城乡建设局所属事业单位2024年公开招聘拟聘用人...</a><span>2024-09-24</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13860/20260108/i2468370.html "
+                                            target="_blank ">株洲市城镇污水排入排水管网许可行政决定信息公示</a><span>2026-01-06</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13860/20260617/i2506726.html "
+                                            target="_blank ">株洲市城镇污水排入排水管网许可行政决定信息公示</a><span>2026-06-11</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13860/20250711/i2394779.html "
+                                            target="_blank ">2025年(1月16日-7月2日)预售许可台账</a><span>2025-07-11</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13860/20250523/i2368175.html "
+                                            target="_blank ">具有重要地理方位意义的住宅区、楼宇地名许可决定书-株建名字{...</a><span>2025-05-23</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13860/20250523/i2368173.html "
+                                            target="_blank ">具有重要地理方位意义的住宅区、楼宇地名许可决定书-株建名字{...</a><span>2025-05-23</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13834/20260527/i2501117.html "
+                                            target="_blank ">2026年株洲市建筑施工安全生产重大事故隐患曝光（第一批）</a><span>2026-05-27</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13834/20250710/i2394229.html "
+                                            target="_blank ">株洲市住房和城乡建设局2024年度株洲市城区房地产中介机构信...</a><span>2025-06-10</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13834/20240919/i2244587.html "
+                                            target="_blank ">关于株洲市2023年度物业服务企业信用评价结果的通报</a><span>2024-09-19</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13834/20240718/i2223675.html "
+                                            target="_blank ">株洲市住房和城乡建设局关于株洲市2023年度房地产开发企业信...</a><span>2024-07-16</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13834/20240702/i2218176.html "
+                                            target="_blank ">关于2023年度房地产中介行业信用信息等级评价复审结果公示</a><span>2024-04-29</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                        </ul>
+                    </div>
+
+                    <div class="tab_news tab02">
+                        <div class="title">
+                                    <h2><a href="javascript:;">法规文件及解读</a></h2>
+                                    <h2><a href="javascript:;">规划计划</a></h2>
+                                    <h2><a href="javascript:;">统计信息</a></h2>
+                                    <h2><a href="javascript:;">财政资金信息</a></h2>
+                                    <h2><a href="javascript:;">建议提案办理</a></h2>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13827/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13829/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13828/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13832/index.html" target="_blank ">更多</a>
+                                    <a class="more" href="http://zjj.zhuzhou.gov.cn//c13840/index.html" target="_blank ">更多</a>
+                            <div class="clear "></div>
+                        </div>
+                        <ul class="list" style="display:block ">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13827/20261028/i2538173.html "
+                                            target="_blank ">【信访工作法治化问答】《信访工作条例》对落实诉讼与信访分离制...</a><span>2026-10-14</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13827/20261028/i2538169.html "
+                                            target="_blank ">株洲“三个一”人才住房工程申请指南</a><span>2026-10-14</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13827/20260909/i2526385.html "
+                                            target="_blank ">城市地下管网，将如何建设改造？一图读懂</a><span>2026-09-09</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13827/20260730/i2517801.html "
+                                            target="_blank ">建设工程声像档案十大常见误区答疑</a><span>2026-07-30</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13827/20260909/i2526399.html "
+                                            target="_blank ">《城市建设档案管理规定（2026 版）》解读</a><span>2026-05-18</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13850/20250528/i2371209.html "
+                                            target="_blank ">株洲市2025年住房发展计划</a><span>2025-05-28</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13850/20250513/i2362957.html "
+                                            target="_blank ">关于印发《株洲市装配式建筑发展提升三年行动实施方案（2024...</a><span>2025-05-09</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13850/20240716/i2222897.html "
+                                            target="_blank ">株洲市2024年住房发展计划</a><span>2024-07-16</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13850/20231107/i2122486.html "
+                                            target="_blank ">株洲市住房和城乡建设局关于印发《株洲市2024年度城镇老旧小...</a><span>2024-02-14</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13850/20230309/i2015374.html "
+                                            target="_blank ">株洲市人民政府办公室关于印发《2023年株洲市市政基础设施建...</a><span>2023-03-09</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13849/20250305/i2326116.html "
+                                            target="_blank ">2024年株洲市房地产市场运行情况</a><span>2025-03-05</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13849/20241217/i2293120.html "
+                                            target="_blank ">2024年前三季度月株洲市房地产形势分析</a><span>2024-10-17</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13849/20240126/i2158020.html "
+                                            target="_blank ">2023年度株洲市房地产形势分析</a><span>2024-01-26</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13849/20230915/i2094654.html "
+                                            target="_blank ">2023年1-6月株洲市房地产形势分析</a><span>2023-09-15</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13849/20230222/i2008134.html "
+                                            target="_blank ">增信心 防风险 促转型促进房地产市场良性循环和平稳健康发展</a><span>2023-02-06</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13857/20261027/i2537840.html "
+                                            target="_blank ">株洲市房屋维修资金管理中心2025年度部门决算公开</a><span>2026-09-03</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13857/20260911/i2527230.html "
+                                            target="_blank ">株洲市建设工程质量安全监督站2025年度部门决算公开</a><span>2026-09-03</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13857/20260903/i2525287.html "
+                                            target="_blank ">株洲市房地产开发服务中心2025年度部门决算公开</a><span>2026-09-03</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13857/20261027/i2537839.html "
+                                            target="_blank ">株洲市保障性住房服务中心2025年度部门决算公开</a><span>2026-09-03</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13857/20260914/i2527635.html "
+                                            target="_blank ">株洲市城建档案馆2025年度部门决算公开</a><span>2026-09-03</span>
+                                    </li>
+                        </ul>
+                        <ul class="list">
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13840/20260901/i2524260.html "
+                                            target="_blank ">株洲市住房和城乡建设局对市十六届人大五次会议第1052号建议...</a><span>2026-09-01</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13840/20260901/i2524257.html "
+                                            target="_blank ">株洲市住房和城乡建设局对市十六届人大五次会议第1162号建议...</a><span>2026-09-01</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13840/20250903/i2420163.html "
+                                            target="_blank ">（株建字〔2025〕12号）对市十六届人大四次会议第1043...</a><span>2025-07-02</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13840/20250903/i2420161.html "
+                                            target="_blank ">（株建字〔2025〕5号）对市十六届人大四次会议第1104号...</a><span>2025-06-01</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13840/20241017/i2254143.html "
+                                            target="_blank ">株洲市住房和城乡建设局对市政协十届三次会议第2103219号...</a><span>2024-09-30</span>
+                                    </li>
+                        </ul>
+                    </div>
+                  
+                </div>
+
+                <div class="main_left">
+                    <!-- 政府信息公开 begin -->
+                    <div class="zfxxgk">
+                        <h2>政府信息公开</h2>
+                        <ul>
+                            <li class="exc">
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13835/index.html" target="_blank">信息公开规定</a>
+                            </li>
+                            <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c18338/index.html" target="_blank">信息公开指南</a>
+                            </li>
+                            <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13836/index.html" target="_blank">信息公开年报</a>
+                            </li>
+                            <li class="exc">
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13906/index.html" target="_blank">依申请公开</a>
+                            </li>
+                            <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c13818/index.html" target="_blank">信息公开目录</a>
+                            </li>
+                            <li>
+                                        <a href="http://zjj.zhuzhou.gov.cn//c24848/index.html" target="_blank">政府网站年报</a>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- 政府信息公开 end -->
+
+                    <div class="hdjl_m" style="display:none;">
+                        <div class="hdjl_m_m">
+                            <h3>“雁过拔毛”式腐败问题和“治陋习、树新风”专项整治活动<br>清理国家公职人员违规参与涉矿等经营性活动专项整治活动<br>禁止领导干部利用职权或者职务上的影响在金融活动中谋取私利专项整治
+                            </h3>
+                            <p>来信地址：株洲市住房和城乡建设局1004室</p>
+                            <p>举报电话：0731-28686046</p>
+                            <p>网络举报邮箱：zjjgjw@163.com</p>
+                            <p>市专项整治举报电话：12388</p>
+                            <p>来信地址：株洲市纪委信访室</p>
+                            <p>来访地址：中共株洲市纪委、株洲市监察局信访举报接待中心（市委大门右侧）</p>
+                            <p>网上举报：<a href="//www.12388.gov.cn" target="_blank">www.12388.gov.cn</a></p>
+                          <h3>株洲市住房城乡建设系统民生领域突出问题专项整治工作 </h3>
+                         <p> 举报电话：0731-28686057</p>
+                           <p> 电子邮箱：26297922@qq.com</p>
+                           <p> 通信地址：株洲市天元区海诚路21号 市住房和城乡建设局机关党委</p>
+                          <h3>房地产经纪机构乱象违规举报投诉电话 </h3>
+                         <p> 株洲市房产管理监察大队  0731-28665404</p>
+                        </div>
+                    </div>
+							  <!-- 问卷调查 begin -->
+                    <div class="tab_news">
+                        <div class="title">
+                                    <h2><a class="active" href="//zjj.zhuzhou.gov.cn/c13820/index.html#/surveylist/" target="_blank">问卷调查</a></h2>
+                                    <a class="more" href="//zjj.zhuzhou.gov.cn/c13820/index.html#/surveylist/" target="_blank" style="display:block;">更多</a>
+                        </div>
+                       <ul id="xzxxdata"  class="list" style="display:block;">
+<script>
+var surveyPrefixUrl = "/c13820/index.html";
+var siteId = 61;
+getSurveyList(1,5,"index");
+</script>
+</ul>
+                    </div>
+                    <!-- 问卷调查 end -->
+                    <!-- 互动交流 begin -->
+                    <div class="tab_news">
+                        <div class="title">
+                            <h2><a class="active" href="//zjj.zhuzhou.gov.cn/c13820/"
+                                    target="_blank">互动交流</a></h2>
+                            <ul class="more">
+                                <li class="search">
+                                    <a href="//zjj.zhuzhou.gov.cn/c13820/"
+                                        target="_blank">查询</a>
+                                </li>
+                                <li class="write">
+                                    <a href="//www.zhuzhou.gov.cn/hdpt-web/client/toXjgs?logoutUrl=http%3A%2F%2Fzjj.zhuzhou.gov.cn&defDetpId=023"
+                                        target="_blank">写信</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="list" id="maillist" style="display:block;">
+								<script>
+                            get12345XJ(5,18);
+                       </script>
+							</ul>
+                    </div>
+                    <!-- 互动交流 end -->
+                 <a target="_blank" href="/c19558/">
+                        <img border="0" alt="" width="100%" height="76"
+                            src="/zzcms/DFS/template/1392/images/20230927151109.png" />
+                    </a>
+                 <a target="_blank" href="/c26467/">
+                        <img border="0" alt="" width="100%" height="76"
+                            src="/zzcms/DFS/template/1392/images/20230927151109a.png" />
+                    </a>
+                   <img border="0" alt="" width="100%" height="76"
+                            src="/zzcms/DFS/template/1392/images/20230927151109b.png" />
+                
+                  
+                </div>
+
+                <div class="clear"></div>
+
+                <!-- 友情链接 begin -->
+                <div class="friend_link">
+                    <span>友情链接：</span>
+                    <ul class="yqlj">
+                                <li><a href="http://www.zhuzhou.gov.cn/ " target="_blank ">株洲市人民政府</a></li>
+                                <li><a href="/c13938/ " target="_blank ">网站地图</a></li>
+                    </ul>
+                    <script>
+                        function DropSelect(targ, selObj, restore) {
+                            eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+                            if (restore) selObj.selectedIndex = 0;
+                        }
+                    </script>
+                </div>
+                <!-- 友情链接 end -->
+            </div>
+        </div>
+
+        <!-- footer begin -->
+        <script src="/zzcms/DFS/template/1392/images/footer.js"></script>
+        <!-- footer end -->
+    </div>
+   <!--统一代码 begin-->
+                  <script src="//www.zhuzhou.gov.cn/c17355/index.html"></script>
+  <!--统一代码 end--> 
+</body>
+<script type="text/javascript">
+    function getFW_newMethod() {
+        //通过jsonp形式获取央网数据。如果延时2秒没有取到信息则自动使用iframe嵌入文件的形式处理。						   
+        $.ajax({
+            url: '//www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+            dataType: "jsonp",
+            jsonp: "pushInfoJsonpCallBack",
+            jsonpCallback: "pushInfoJsonpCallBack",
+            timeout: 2000,
+            success: function (data) {
+                var count = 1;
+                var dataStr = "";
+                $.each(data, function (i, json) {
+                    if (count++ <= 6) {
+                        dataStr += "<li><a href='" + json.link + "' target='_blank'>" + json.title +
+                            "</a><span class='date'>" + json.pubDate + "</span></li>";
+
+                    }
+                    if (count == 6) {
+                        $("#ul_ywtj").html(dataStr);
+
+                    }
+                })
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //alert('textStatus:'+textStatus);
+                $("#ul_ywtj").html(
+                    "<iframe src='//www.gov.cn/pushinfo/v150203/base_14px_pubdate.htm' width='100%' height='160' scrolling='no' frameborder='none'>"
+                )
+            }
+
+        });
+
+    }
+
+    //调用其他接口获取信息
+    function getSW_newMethod() {
+        $.ajax({
+            url: '//www.hunan.gov.cn/hnszf/szf/zfhyjtj/zfhyjtj_json.html',
+            dataType: "jsonp",
+            scriptCharset: "UTF-8",
+            jsonp: "pushInfoJsonpCallBack",
+            jsonpCallback: "pushInfoJsonpCallBack",
+            timeout: 2000,
+            success: function (data) {
+                $.each(data, function (i, item) {
+                    if (i < 5) {
+                        var title = item.title; //标题
+                        if (title.length > 40) {
+                            title = title.substring(0, 40) + "...";
+                        }
+                        var hrefName = item.link; //链接
+                        var date = item.pubDate; //时间
+                        data = date.split('-')[1] + '-' + date.split('-')[2];
+                        //添加数据
+                        $('#ul_swtj').append('<li>' +
+                            '<a href="' + hrefName + '" target="_blank">' + title + '</a>' +
+                            '<span class="date">' + date + '</span></li> '); //
+
+                    }
+                })
+            }
+        });
+    }
+
+    jQuery(document).ready(function () {
+        getFW_newMethod();
+        setTimeout("getSW_newMethod()", 1000);
+    });
+</script>
+</html>
