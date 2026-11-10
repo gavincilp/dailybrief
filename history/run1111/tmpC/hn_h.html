@@ -1,0 +1,2041 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+<meta name="SiteName" content="湖南省住房和城乡建设厅"/>
+<meta name="SiteDomain" content="zjt.hunan.gov.cn"/>
+<meta name="SiteIDCode" content="4300000046"/>
+
+<meta name="others" content="页面生成时间 2026-11-10 17:05:37" />
+<title>
+        湖南省住房和城乡建设厅
+    </title>
+    <!--jquery，必须框架-->
+    <script src="/zjt/xhtml/js/jquery.min.js"></script>
+    <script src="/zjt/xhtml/js/jquery.SuperSlide.2.1.1.js"></script>
+    <!--swiper，滑动必须框架-->
+    <script src="/zjt/xhtml/js/swiper.min.js"></script>
+    <!--swiper css-->
+    <link href="/zjt/xhtml/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <!--统一样式，建议引入-->
+    <link rel="stylesheet" href="/zjt/xhtml/css/zjt_common.css">
+    <link rel="stylesheet" href="/zjt/xhtml/css/zjt_index.css">  
+
+    <!--漂浮广告样式引入-->
+    <link rel="stylesheet" href="/zjt/xhtml/css/floatadv.css">
+</head>
+<body>
+  <!--首页飘窗-->
+  <script type="text/javascript">
+function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+ if(obj.addEventListener){
+     obj.addEventListener(evtType,func,cap);
+  return true;
+ }else if(obj.attachEvent){
+        if(cap){
+         obj.setCapture();
+         return true;
+     }else{
+      return obj.attachEvent("on" + evtType,func);
+  }
+ }else{
+  return false;
+    }
+}
+function getPageScroll(){
+    var xScroll,yScroll;
+ if (self.pageXOffset) {
+  xScroll = self.pageXOffset;
+ } else if (document.documentElement && document.documentElement.scrollLeft){
+  xScroll = document.documentElement.scrollLeft;
+ } else if (document.body) {
+  xScroll = document.body.scrollLeft;
+ }
+ if (self.pageYOffset) {
+  yScroll = self.pageYOffset;
+ } else if (document.documentElement && document.documentElement.scrollTop){
+  yScroll = document.documentElement.scrollTop;
+ } else if (document.body) {
+  yScroll = document.body.scrollTop;
+ }
+ arrayPageScroll = new Array(xScroll,yScroll);
+ return arrayPageScroll;
+}
+function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) { 
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else {
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    } 
+    if(yScroll < windowHeight){
+        pageHeight = windowHeight;
+    } else { 
+        pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){ 
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+    return arrayPageSize;
+}
+
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+    var winsize=GetPageSize();
+    AdMoveConfig.MoveWidth=winsize[2];
+    AdMoveConfig.MoveHeight=winsize[3];
+    AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+    var winscroll=getPageScroll();
+    AdMoveConfig.ScrollX=winscroll[0];
+    AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+    if(!AdMoveConfig.IsInitialized){
+        AdMoveConfig.Resize();
+        AdMoveConfig.IsInitialized=true;
+    }
+    var obj=document.getElementById(id);
+    obj.style.position="absolute";
+    var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    var x = W*Math.random(),y = H*Math.random();
+    var rad=(Math.random()+1)*Math.PI/6;
+    var kx=Math.sin(rad),ky=Math.cos(rad);
+    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+    var step = 1;
+    var interval;
+    this.SetLocation=function(vx,vy){x=vx;y=vy;}
+    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+    obj.CustomMethod=function(){
+        obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+        obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+        rad=(Math.random()+1)*Math.PI/6;
+        W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+        H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+        x = x + step*kx*dirx;
+        if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+        y = y + step*ky*diry;
+        if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+    }
+    this.Run=function(){
+        var delay = 10;
+        interval=setInterval(obj.CustomMethod,delay);
+        obj.onmouseover=function(){clearInterval(interval);}
+        obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+    }
+}
+
+ </script>
+    <div id="jhjgg2" style="z-index:1000;">
+      <div style="float:left">
+          <a href="/zjt/sypf/202503/t20250325_33622097.html" target="_blank"><img src="/zjt/sypf/202503/33622097/images/b6dd709dc55042f4a9a307be05fa36a1.jpg
+" style="width: 450px; height: 200px;" /></a>
+          
+      </div>
+      <div style="width:30px; height:100px; float:right;">
+          <span style=" cursor:pointer;color:red;font-weight:bold" onclick="document.getElementById('jhjgg2').style.display='none'">关闭</span>
+      </div>
+    </div>
+    <script type="text/javascript">
+    
+        var ad2=new AdMove("jhjgg2");
+        ad2.Run();
+ 
+    </script>
+
+  
+<div class="bg">    
+    <!--头部-->
+    <div class="zjt-head clear-fix">
+    <div class="zjt-head-container">
+        <div class="zjt-head-left">
+            <span><a href="http://www.gov.cn/" target="_blank">中国政府网</a></span>
+            <span><a href="http://www.mohurd.gov.cn/" target="_blank">住房和城乡建设部</a></span>
+            <span id="zjt-header-smh"><a href="http://www.hunan.gov.cn/" target="_blank">湖南省政府门户网站</a></span>
+        </div>
+        <div class="zjt-head-right">
+            <span id="zjt-header-person-center"><a id="zjt-header-person-center-a"></a>欢迎您！</span>
+            <span id="zjt-header-login"><a>登录</a></span>
+            <span id="zjt-header-reg"><a>注册</a></span>
+            <span id="zjt-header-lang"><a href="javascript:void(0);" id="StranLink">繁体中文</a></span>
+           <span id="zjt-header-yx"><a href="https://mail.hunan.gov.cn/" target="_blank">政务邮箱</a></span>
+         <!--  <span id="zjt-header-yx"><a href="https://home.hunan.gov.cn/upgrade.html" target="_blank">政务邮箱</a></span>-->
+            <span id="zjt-header-wza"><a href="javascript:void(0);" id="toolbarSwitch">无障碍浏览</a></span>
+            <span id="zjt-header-js">
+                    <a href="https://searching.hunan.gov.cn/hunan/116000000/news?q=" target="_blank">检索</a>
+            </span>
+            <span id="zjt-header-lx">
+                    <a href="/zjt/hdjl/yewuzixun/202401/t20240115_32625666.html" target="_blank">联系我们</a>
+            </span>
+            <span id="zjt-header-sz-btn">
+                    <div class="sz-btn">省直窗口 <i class="arrow-down"></i></div>
+            </span>
+        </div>
+    </div>
+    <div style="display:none">
+        <iframe id="myIframe1" src="https://home.hunan.gov.cn/login_new/loginV2.html?deptId=abe6b0b756094458b5d89efe7e2fdb6f" width="220" height="28"
+                scrolling="no"
+                frameborder="0"></iframe>
+    </div>
+    <div class="zjt-head-sz-list-bg list">
+        <ul id="zjt-header-sz-list"></ul>
+    </div>
+    <div class="zjt-logo">
+        <a href="/zjt/index.html" title="返回首页" target="_top">
+            <img src="/zjt/xhtml/images/zjt_logo.png"/>
+        </a>
+    </div>
+    <div class="zjt-search">
+        <div class="zjt-search-select-bg">
+            <div class="select-value" id="select-value">
+                <span select-value="news">站内搜索</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="select-list">
+                <li title="站内搜索" select-value="news">站内搜索</li>
+                <li title="站群搜索" select-value="all">站群搜索</li>
+            </ul>
+        </div>
+        <form method="get" target="_blank" id="zjt-searchform" name="zjt-searchform">
+            <input class="zjt-search_text  search_value"  name="q" id="inputid" type="text" placeholder="请输入关键词进行检索"/>
+        </form>
+        <div class="zjt-search_btn  jktong_click_button" jktong_name="search"  jktong_binding="search_value"    id="zjt-search_btn">
+            <img class="zjt-search_btn_img" src="/zjt/xhtml/images/zjt_search_icon.png">
+        </div>
+    </div>
+    <div class="nav-list-bg">
+        <div class="nav-list-item">
+            <a href="/zjt/ddjs/index.html"
+               id="a_ddjs" target="_blank">党的建设</a>
+        </div>
+        <div class="nav-list-item">
+            <a href="/zjt/gzdt/index.html"
+               id="a_gzdt" target="_blank">动态要闻</a>
+        </div>
+        <div class="nav-list-item">
+            <a href="/zjt/xxgk/index.html"
+               id="a_xxgk"
+               target="_blank">信息公开</a>
+        </div>
+        <div class="nav-list-item">
+            <a href="https://zwfw-new.hunan.gov.cn/hnzwfw/1/186/267/index.htm"
+               id="a_bsfw"
+               target="_blank">办事服务</a>
+        </div>
+        <div class="nav-list-item">
+            <a href="/zjt/hdjl/index.html"
+               id="a_hdjl"
+               target="_blank">互动交流</a>
+        </div>
+  
+        <div class="nav-list-item" id="fzjs-item-bg">
+            <a href="/zjt/c101183/index.html"
+               id="a_c101183"
+               target="_blank">法治建设</a>
+        </div>
+        <div id="dflz-container" class="one-child-box">
+            <div class="child-box-c">
+                <ul>
+                        <li>
+                            <a href="/zjt/ddjs/ddjsgzdt/zjt_list.html"
+                               id="a_ddjsgzdt">
+                                工作动态
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/ddjs/ddjsdflz/zjt_list.html"
+                               id="a_ddjsdflz">
+                                党风廉政
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div id="dtyw-container" class="one-child-box">
+            <div class="child-box-c">
+                <ul>
+                        <li>
+                            <a href="/zjt/gzdt/szyw/index.html"
+                               id="a_szyw">
+                                时政要闻
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/gzdt/xwzx/index.html"
+                               id="a_xwzx">
+                                建设要闻
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/gzdt/dfdt/index.html"
+                               id="a_dfdt">
+                                湘建风采
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/toutiao/zjt_list.html"
+                               id="a_toutiao">
+                                头条
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div id="xxgk-container" class="one-child-box">
+            <div class="child-box-xxgk">
+                <ul>
+                        <li>
+                            <a href="/zjt/xxgk/gkzn/index.html"
+                               id="a_gkzn">
+                                政府信息公开指南
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/xxgk/gkzd/index.html"
+                               id="a_gkzd">
+                                政府信息公开制度
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/xxgk/xinxigongkaimulu/index.html"
+                               id="a_xinxigongkaimulu">
+                                信息公开目录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/xxgk/gknb/index.html"
+                               id="a_gknb">
+                                政府信息公开年报
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/xxgk/sqgk/index.html"
+                               id="a_sqgk">
+                                依申请公开
+                            </a>
+                        </li>
+                </ul>
+                <ul class="child-box-cc">
+                   <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/jgzn/ldjj/index.html"  target="_blank">领导简介</a>
+                    </span>
+                  <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/jgzn/nsjg/index.html"  target="_blank">内设机构</a>
+                    </span>
+               
+                  <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/zcjd/index.html"  target="_blank">政策解读</a>
+                    </span>
+                    <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/tzgg/index.html"  target="_blank">通知公告</a>
+                    </span>
+                    <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/index.html"  target="_blank">行政执法</a>
+                    </span>
+                    <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/rsxx/index.html"  target="_blank">人事信息</a>
+                    </span>
+                    <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/tjxx/index.html"  target="_blank">统计信息</a>
+                    </span>
+                    <span>
+                        <a href="/zjt/xxgk/xinxigongkaimulu/czxx/index.html"  target="_blank">财政信息</a>
+                    </span>
+                </ul>
+            </div>
+        </div>
+        <div id="bsfw-container" class="one-child-box">
+            <div class="child-box-c">
+                <ul>
+                        <li>
+                            <a href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&main=1&areacode=439900000000&orgId=3ee2566dda4144a49b53ab509094d67d"
+                               id="a_gerenbanshi">
+                                个人办事
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtfr&main=1&areacode=439900000000&orgId=3ee2566dda4144a49b53ab509094d67d"
+                               id="a_qiyebanshi">
+                                企业办事
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/bsfw/ggfw/index.html"
+                               id="a_ggfw">
+                                公共服务
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div id="hdjl-container" class="one-child-box">
+            <div class="child-box-c">
+                <ul>
+                        <li>
+                            <a href="/zjt/hdjl/zxts/index.html"
+                               id="a_zxts">
+                                咨询投诉
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/xinfangzhinan/202108/t20210823_21030621.html"
+                               id="a_xinfangzhinan">
+                                信访指南
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/yewuzixun/202401/t20240115_32625666.html"
+                               id="a_yewuzixun">
+                                业务咨询
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/jytabl/index.html"
+                               id="a_jytabl">
+                                建议提案办理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/dczj/index.html"
+                               id="a_dczj">
+                                调查征集
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="fzjs-container" class="one-child-box">
+            <div class="child-box-c">
+                <ul>
+                        <li>
+                            <a href="/zjt/c101183/c101184/list_tzlm_extend.html"
+                               id="a_c101184">
+                                法律法规
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/c101183/c101185/list_tzlm_extend.html"
+                               id="a_c101185">
+                                规范性文件
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/c101183/c101186/list_tzlm_extend.html"
+                               id="a_c101186">
+                                普法宣传（以案释法）
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<link href="/zjt/xhtml/css/zjt_header.css" rel="stylesheet" type="text/css">
+<script src="/zjt/xhtml/js/zjt_header.js"></script>
+
+<style>
+ .Hj-EasyRead-Container {
+        display: none!important;
+    }
+  .zjt-head .nav-list-item {
+    width: 16.6%!important;
+  }
+</style>
+    <div class="w1200 bg-color clear-fix content">
+        <div class="sy_tout pt20 clear-fix">
+            <!--头条新闻-->
+            <div class="sy_img">
+                <!--            <img src="/zjt/xhtml/images/index_banner.png" alt="">-->
+                 
+                    <a href="/zjt/ztzl/zhongyaozhishi/gyxxczhdls/zjt_list.html" target="_blank">
+                        <img style="padding:0px;"
+                             src="/zjt/ztzl/202111/21030586/images/077bd408d13a4bdca6b948111dd2e481.png
+"/>
+                    </a>
+
+            </div>
+            <div class="sy_img_m">
+                <!--            <img src="/zjt/xhtml/images/index_banner_m.png" alt="">-->
+                 
+
+                    <p><a href="http://zjt.hunan.gov.cn/zjt/ztzl/zhongyaozhishi/gyxxczhdls/zjt_list.html"><img src="/zjt/ztzl/2021-11/12/21030586/images/7ce0b08152a549bba330cd3f239dae48.png" border="0"></a><br>
+<br>
+</p>
+
+            </div>
+            <!--<div class="sytt_box clear">
+                 
+
+                <div class="sytt_news"><a href="/zjt/gzdt/xwzx/202611/t20261105_34096156.html" target="_blank"  >全省“治理物业服务突出问题”决战两个月视频推进会召开</a></div>
+                <div class="syxw_xq">
+                    全省“治理物业服务突出问题”决战两个月视频推进会召开
+                </div>
+
+            </div>-->
+
+            <div class="ttxw-box pt20">
+              <span><a href="/zjt/toutiao/zjt_list.html">头条</a> |</span>
+                 
+
+                    <h1>
+                        <a href="https://www.hunan.gov.cn/hnszf/hnyw/sy/tt1/202611/t20261108_34097442.html" target="_blank"  >中共中央发出通知 部署党的二十一大代表选举工作</a>
+                    </h1>
+                    <p>
+                        　　新华社北京11月7日电&ensp;党的二十届五中全会决定，党的二十一大于2027年下半年在北京召开。最近，中共中央印发了《关于党的二十一大代表选举工作的通知》，对二十一大代表选举工作作出全面部署。中央组织部近日召开会议，对这项工作作出具体安排。　　党...
+                    </p>
+                    <div class="time">
+                        2026/11/08
+                    </div>
+                    <div class="more"><a href="https://www.hunan.gov.cn/hnszf/hnyw/sy/tt1/202611/t20261108_34097442.html">查看详情</a></div>
+
+            </div>
+
+            <!-- 轮播图-->
+            <div class="m-slide pt20">
+                <div class="swiper-container" id="banner1">
+                    <div class="swiper-wrapper">
+                         
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://zjt.hunan.gov.cn/zjt/ztzl/zjlyaqqjgbgj/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202303/29261061/images/ef640a0078fb4a6e8b9aed2db7143675.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/zjlyaqqjgbgj/index.html" target="_blank"  >筑牢安全生产防线 护航住房城乡建设事业高质量发展</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103151/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202604/33947056/images/9592ce4b20734538ab671a705781a206.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103151/index.html" target="_blank"  >他山之石</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="http://www.hunan.gov.cn/topic/kjbh/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202603/33945572/images/f6a416d8b6544cd2bba9d39c56c58208.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="http://www.hunan.gov.cn/topic/kjbh/index.html" target="_blank"  >大力实施“开局八好”行动</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDEyMDY0MQ==&action=getalbum&album_id=4430185420232097798#wechat_redirect" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202603/33935675/images/1f5e6ec1e47a4fccacb02c2e888c77e6.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDEyMDY0MQ==&action=getalbum&album_id=4430185420232097798#wechat_redirect" target="_blank"  >树立和践行正确政绩观学习教育专栏</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://zjt.hunan.gov.cn//zjt/ztzl/c103144/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202603/33934902/images/e0865dc0a3a542afb8d24a898b516126.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://zjt.hunan.gov.cn//zjt/ztzl/c103144/index.html" target="_blank"  >湘筑全球</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://hunan.gov.cn/topic/2026qglh/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202603/33926600/images/aebaaa97712642e5ad838b0989068ea4.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://hunan.gov.cn/topic/2026qglh/index.html" target="_blank"  >2026年全国两会专题</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://www.hunan.gov.cn/topic/2026slh/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202602/33913350/images/d7654ffa6a9b4197866bee7918f74274.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://www.hunan.gov.cn/topic/2026slh/index.html" target="_blank"  >2026年湖南省两会专题</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://www.hunan.gov.cn/topic/swwgh/index.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202506/33722384/images/af5928491d0e436c88fad3577bc66155.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://www.hunan.gov.cn/topic/swwgh/index.html" target="_blank"  >专题丨我为湖南“十五五”规划献一策</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103046/gzjd_zt2025.html" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202502/33597792/images/d7c1fdeef2ef437da2d123c853931976.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103046/gzjd_zt2025.html" target="_blank"  >2025年住房城乡建设工作报告扫码解读</a>
+                                </p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-t1">
+                                <a href="https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=hun" target="_blank">
+                                    <img style="padding:0px;"
+                                         src="/zjt/ztzl/202312/32506108/images/6b873df95903435fb16935a12621e776.jpg
+"/>
+                                </a>
+                                <p>
+                                    <a href="https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=hun" target="_blank"  >“@国务院 我为政府工作报告提建议”网民建言征集活动</a>
+                                </p>
+                            </div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-t1"></div>
+                </div>
+                <div id="slideBox" class="slideBox">
+                    <div class="hd">
+                        <ul>
+                            <!--<li class="on"></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>-->
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                             
+                                <li>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/zjlyaqqjgbgj/index.html" target="_blank"
+                                       title="筑牢安全生产防线 护航住房城乡建设事业高质量发展">
+                                        <img alt="筑牢安全生产防线 护航住房城乡建设事业高质量发展"
+                                             src="/zjt/ztzl/202303/29261061/images/ef640a0078fb4a6e8b9aed2db7143675.jpg
+"/>
+                                        <p>
+                                            筑牢安全生产防线 护航住房城乡建设事业高质量发展
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103151/index.html" target="_blank"
+                                       title="他山之石">
+                                        <img alt="他山之石"
+                                             src="/zjt/ztzl/202604/33947056/images/9592ce4b20734538ab671a705781a206.jpg
+"/>
+                                        <p>
+                                            他山之石
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.hunan.gov.cn/topic/kjbh/index.html" target="_blank"
+                                       title="大力实施“开局八好”行动">
+                                        <img alt="大力实施“开局八好”行动"
+                                             src="/zjt/ztzl/202603/33945572/images/f6a416d8b6544cd2bba9d39c56c58208.jpg
+"/>
+                                        <p>
+                                            大力实施“开局八好”行动
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDEyMDY0MQ==&action=getalbum&album_id=4430185420232097798#wechat_redirect" target="_blank"
+                                       title="树立和践行正确政绩观学习教育专栏">
+                                        <img alt="树立和践行正确政绩观学习教育专栏"
+                                             src="/zjt/ztzl/202603/33935675/images/1f5e6ec1e47a4fccacb02c2e888c77e6.jpg
+"/>
+                                        <p>
+                                            树立和践行正确政绩观学习教育专栏
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://zjt.hunan.gov.cn//zjt/ztzl/c103144/index.html" target="_blank"
+                                       title="湘筑全球">
+                                        <img alt="湘筑全球"
+                                             src="/zjt/ztzl/202603/33934902/images/e0865dc0a3a542afb8d24a898b516126.jpg
+"/>
+                                        <p>
+                                            湘筑全球
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://hunan.gov.cn/topic/2026qglh/index.html" target="_blank"
+                                       title="2026年全国两会专题">
+                                        <img alt="2026年全国两会专题"
+                                             src="/zjt/ztzl/202603/33926600/images/aebaaa97712642e5ad838b0989068ea4.jpg
+"/>
+                                        <p>
+                                            2026年全国两会专题
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.hunan.gov.cn/topic/2026slh/index.html" target="_blank"
+                                       title="2026年湖南省两会专题">
+                                        <img alt="2026年湖南省两会专题"
+                                             src="/zjt/ztzl/202602/33913350/images/d7654ffa6a9b4197866bee7918f74274.jpg
+"/>
+                                        <p>
+                                            2026年湖南省两会专题
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.hunan.gov.cn/topic/swwgh/index.html" target="_blank"
+                                       title="专题丨我为湖南“十五五”规划献一策">
+                                        <img alt="专题丨我为湖南“十五五”规划献一策"
+                                             src="/zjt/ztzl/202506/33722384/images/af5928491d0e436c88fad3577bc66155.jpg
+"/>
+                                        <p>
+                                            专题丨我为湖南“十五五”规划献一策
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103046/gzjd_zt2025.html" target="_blank"
+                                       title="2025年住房城乡建设工作报告扫码解读">
+                                        <img alt="2025年住房城乡建设工作报告扫码解读"
+                                             src="/zjt/ztzl/202502/33597792/images/d7c1fdeef2ef437da2d123c853931976.jpg
+"/>
+                                        <p>
+                                            2025年住房城乡建设工作报告扫码解读
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=hun" target="_blank"
+                                       title="“@国务院 我为政府工作报告提建议”网民建言征集活动">
+                                        <img alt="“@国务院 我为政府工作报告提建议”网民建言征集活动"
+                                             src="/zjt/ztzl/202312/32506108/images/6b873df95903435fb16935a12621e776.jpg
+"/>
+                                        <p>
+                                            “@国务院 我为政府工作报告提建议”网民建言征集活动
+                                        </p>
+                                    </a>
+                                </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sy_tout pt20 clear-fix">
+            <!--时政要闻-->
+            <div class="szxw-box">
+                <div class="szyw">
+                    <div class="title">
+                        <h2><a title="建设要闻" href="/zjt/gzdt/xwzx/index.html">建设要闻</a>
+                        </h2>
+                        <h2><a title="时政要闻" href="/zjt/gzdt/szyw/index.html">时政要闻</a>
+                        </h2>
+                        <a class="more" href="/zjt/gzdt/xwzx/index.html">更多</a>
+                        <a class="more"
+                           href="/zjt/gzdt/szyw/index.html">更多</a>
+                    </div>
+                    <div class="list" style="display:block;">
+                        <ul>
+                             
+
+                                <li>
+                                    <span class="date">11-05</span>
+                                    <a href="/zjt/gzdt/xwzx/202611/t20261105_34096156.html" target="_blank" title="全省“治理物业服务突出问题”决战两个月视频推进会召开">
+                                        全省“治理物业服务突出问题”决战两个月视频推进会召开
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">11-04</span>
+                                    <a href="/zjt/gzdt/xwzx/202611/t20261104_34095027.html" target="_blank" title="2026年湖南省城市管理执法监督培训班在岳阳举办">
+                                        2026年湖南省城市管理执法监督培训班在岳阳举办
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">10-28</span>
+                                    <a href="/zjt/gzdt/xwzx/202610/t20261028_34090156.html" target="_blank" title="以赛促训强本领 精管善治提效能——全省住建行业（城市管理网格员）职业技能竞赛成功举办">
+                                        以赛促训强本领 精管善治提效能——全省住建行业（城市管理网格员）职业技能竞赛成功举办
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">10-26</span>
+                                    <a href="/zjt/gzdt/xwzx/202610/t20261026_34088363.html" target="_blank" title="湖南省住房和城乡建设厅  湖南省总工会致全省环卫工人的慰问信">
+                                        湖南省住房和城乡建设厅  湖南省总工会致全省环卫工人的慰问信
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">10-23</span>
+                                    <a href="/zjt/gzdt/xwzx/202610/t20261023_34087444.html" target="_blank" title="智建装备引领 筑梦三湘大地——湖南省智能建造装备操作员大赛举办">
+                                        智建装备引领 筑梦三湘大地——湖南省智能建造装备操作员大赛举办
+                                    </a>
+                                </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="list">
+                        <ul>
+                             
+
+                                <li>
+                                    <span class="date">11-09</span>
+                                    <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261109_34098445.html" target="_blank"
+                                       title="李强签署国务院令 公布《中医药传统知识保护条例》">
+                                        李强签署国务院令 公布《中医药传统知识保护条例》
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">11-07</span>
+                                    <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261109_34098113.html" target="_blank"
+                                       title="李强主持召开国务院常务会议 学习贯彻习近平总书记关于前三季度经济形势和后几个月重点工作的重要讲话精神 听取社会救助工作情况汇报">
+                                        李强主持召开国务院常务会议 学习贯彻习近平总书记关于...
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">11-04</span>
+                                    <a href="https://www.hunan.gov.cn/hnszf/hnyw/ywtj/202611/t20261106_34096596.html" target="_blank"
+                                       title="李强在2026年世界互联网大会乌镇峰会开幕式上的主旨演讲（全文）">
+                                        李强在2026年世界互联网大会乌镇峰会开幕式上的主旨演...
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">10-30</span>
+                                    <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202610/t20261030_34091483.html" target="_blank"
+                                       title="党的二十届五中全会公报一图速览">
+                                        党的二十届五中全会公报一图速览
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <span class="date">10-27</span>
+                                    <a href="http://www.hunan.gov.cn/hnszf/hnyw/ywtj/202610/t20261027_34089036.html" target="_blank"
+                                       title="李强签署国务院令 公布《事业单位登记管理条例》">
+                                        李强签署国务院令 公布《事业单位登记管理条例》
+                                    </a>
+                                </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchbg">
+                <h1><span>我要搜索更多</span></h1>
+                <div class="search-cont-r">
+
+
+                    <!-- 搜索框上方导航 s -->
+                    <div class="search-top-nav">
+                        <ul>
+                            <li><a>站群</a></li>
+                            <li><a class="cur">站内</a></li>
+                            <li><a>图片</a></li>
+                            <li><a>视频</a></li>
+                            <li><a>文件</a></li>
+                            <li><a>服务</a></li>
+                            <li><a>互动</a></li>
+                        </ul>
+                    </div>
+                    <!-- 搜索框上方导航 e -->
+
+                    <form id="zjt-searchform2">
+                        <div class="searchbox">
+
+                            <input type="text" class="search_text" value="" name="q" placeholder="请输入搜索词" maxlength="60"
+                                   autocomplete="off">
+                            <input type="submit" class="search-btn" value="搜索">
+                            <a href="http://zjt.hunan.gov.cn/zjt/c101183/index.html?code=tzgg" b class="search-btn" style="display:inline-block;text-align:center;background:none;color:#333;margin: 0px 0 0 60px;width:auto" target="_blank">处室筛选</a>
+                            <!-- 搜索提示词 -->
+                            <div id="sug-box" class="tips_box" style="display: none">
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--    轮播图2-->
+    <!--<div class="pic-box mt30 clear">
+        <div class="w1200 slideBox-box">
+            <div class="swiper-container" id="banner2">
+                <div class="swiper-wrapper">
+                     
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="/zjt/ztzl/zhongyaozhishi/gyxxczhdls/zjt_list.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202111/21030586/images/077bd408d13a4bdca6b948111dd2e481.png
+" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="https://zjt.hunan.gov.cn/zjt/ztzl/zjlyaqqjgbgj/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202303/29261061/images/ef640a0078fb4a6e8b9aed2db7143675.jpg
+" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103151/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202604/33947056/images/9592ce4b20734538ab671a705781a206.jpg
+" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="http://www.hunan.gov.cn/topic/kjbh/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33945572/images/f6a416d8b6544cd2bba9d39c56c58208.jpg
+" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDEyMDY0MQ==&action=getalbum&album_id=4430185420232097798#wechat_redirect" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33935675/images/1f5e6ec1e47a4fccacb02c2e888c77e6.jpg
+" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-t2">
+                        <a href="https://zjt.hunan.gov.cn//zjt/ztzl/c103144/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33934902/images/e0865dc0a3a542afb8d24a898b516126.jpg
+" />
+                        </a>
+                    </div>
+
+                    &lt;!&ndash;<div class="swiper-slide swiper-slide-t2">Slide 2</div>
+                    <div class="swiper-slide swiper-slide-t2">Slide 3</div>&ndash;&gt;
+                </div>
+                &lt;!&ndash; Add Arrows &ndash;&gt;
+                &lt;!&ndash;            <div class="swiper-button-next swiper-button-next2"></div>&ndash;&gt;
+                &lt;!&ndash;            <div class="swiper-button-prev swiper-button-prev2"></div>&ndash;&gt;
+                &lt;!&ndash; Add Pagination &ndash;&gt;
+                <div class="swiper-pagination swiper-pagination-t1"></div>
+            </div>
+            <div id="slideBox-2" class="slideBox-2">
+                <div class="hd">
+                    <ul></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                         
+                        <li>
+                            <a href="/zjt/ztzl/zhongyaozhishi/gyxxczhdls/zjt_list.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202111/21030586/images/077bd408d13a4bdca6b948111dd2e481.png
+" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://zjt.hunan.gov.cn/zjt/ztzl/zjlyaqqjgbgj/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202303/29261061/images/ef640a0078fb4a6e8b9aed2db7143675.jpg
+" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://zjt.hunan.gov.cn/zjt/ztzl/c103151/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202604/33947056/images/9592ce4b20734538ab671a705781a206.jpg
+" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.hunan.gov.cn/topic/kjbh/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33945572/images/f6a416d8b6544cd2bba9d39c56c58208.jpg
+" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDEyMDY0MQ==&action=getalbum&album_id=4430185420232097798#wechat_redirect" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33935675/images/1f5e6ec1e47a4fccacb02c2e888c77e6.jpg
+" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://zjt.hunan.gov.cn//zjt/ztzl/c103144/index.html" target="_blank">
+                            <img style="padding:0px;" src="/zjt/ztzl/202603/33934902/images/e0865dc0a3a542afb8d24a898b516126.jpg
+" />
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                &lt;!&ndash; 下面是前/后按钮代码，如果不需要删除即可 &ndash;&gt;
+                <div class="prev2"></div>
+                <div class="next2"></div>
+            </div>
+        </div>
+    </div>-->
+
+
+    <!--    信息公开-->
+    <div class="zjt-hdjl">
+        <div class="w1200 xxgk-box clear">
+            <!--<div class="xxgk-title">
+                <h1>信息公开</h1>
+            </div>-->
+            <div class="xxgk-tab">
+                <div class="xxgk-itme1 zfxxgk_box">
+                    <ul>
+                        <li>
+                            <a title="政府信息公开指南" href="/zjt/xxgk/gkzn/index.html">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon1.png" alt="">
+                                <span>政府信息公开指南</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="政府信息公开目录"
+                               href="/zjt/xxgk/xinxigongkaimulu/index.html">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon4.png" alt="">
+                                <span>政府信息公开目录</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="政府信息公开年报" href="/zjt/xxgk/gknb/index.html">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon3.png" alt="">
+                                <span>政府信息公开年报</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="依申请公开" href="/zjt/xxgk/sqgk/index.html">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon2.png" alt="">
+                                <span>依申请公开</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://zwfw-new.hunan.gov.cn/hnvirtualhall/hndirectory/responsibilitylist.jsp?jgname=%25u4F4F%25u623F&areaCode=439900000000&flag=&ygzw=null">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon5.png" alt="">
+                                <span>权责清单</span>
+                            </a>
+                        </li>
+                      	<li>
+                            <a href="/zjt/xxgk/gknb/wzgzndbb/index.html">
+                                <img src="/zjt/xhtml/images/index_xxgk_icon6.png" alt="" style="width:26px;height:23px">
+                                <span>网站工作年度报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="xxgk-itme">
+                    <div class="zcfb">
+                        <div class="title">
+                            <h2><a title="政策发布"
+                                   href="/zjt/c101183/c101185/list_tzlm_extend.html">规范性文件</a>
+                            </h2>
+                            <h2><a title="政策解读"
+                                   href="/zjt/xxgk/xinxigongkaimulu/zcjd/index.html">政策解读</a>
+                            </h2>
+                            <a class="more" href="/zjt/c101183/c101185/list_tzlm_extend.html">更多</a>
+                            <a class="more" href="/zjt/xxgk/xinxigongkaimulu/zcjd/index.html">更多</a>
+                        </div>
+                        <div class="list" style="display:block;">
+                            <ul>
+                                 
+
+                                    <li><span class="date">09-04</span><a
+                                            href="/zjt/c101183/c101185/202610/t20261008_34076736.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅 湖南省自然资源厅 湖南省财政厅关于支持老旧住房自主更新的通知">
+                                        湖南省住房和城乡建设厅 湖南省自然资源厅 湖南省财政...
+                                    </a></li>
+
+                                    <li><span class="date">08-19</span><a
+                                            href="/zjt/c101183/c101185/202608/t20260827_34051920.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于进一步加强全省房屋市政工程安全防护、文明施工措施费用使用管理的通知">
+                                        湖南省住房和城乡建设厅关于进一步加强全省房屋市政工...
+                                    </a></li>
+
+                                    <li><span class="date">08-19</span><a
+                                            href="/zjt/c101183/c101185/202608/t20260819_34047134.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于进一步加强建筑施工企业安全生产许可证审批管理有关事项的通知">
+                                        湖南省住房和城乡建设厅关于进一步加强建筑施工企业安...
+                                    </a></li>
+
+                                    <li><span class="date">08-19</span><a
+                                            href="/zjt/c101183/c101185/202608/t20260819_34047125.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅等5部门关于进一步加强存量房交易管理的通知">
+                                        湖南省住房和城乡建设厅等5部门关于进一步加强存量房交...
+                                    </a></li>
+
+                                    <li><span class="date">08-01</span><a
+                                            href="/zjt/c101183/c101185/202609/t20260904_34057079.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于印发《湖南省房屋建筑和市政基础设施拆除工程安全管理规定》的通知">
+                                        湖南省住房和城乡建设厅关于印发《湖南省房屋建筑和市...
+                                    </a></li>
+
+                                    <li><span class="date">06-05</span><a
+                                            href="/zjt/c101183/c101185/202606/t20260612_34000146.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅 湖南省财政厅 湖南省自然资源厅 中国人民银行湖南省分行关于做好房票安置有关工作的通知">
+                                        湖南省住房和城乡建设厅 湖南省财政厅 湖南省自然资源...
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                 
+
+                                    <li><span class="date">09-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202610/t20261008_34076729.html" target="_blank"
+                                            title="《湖南省住房和城乡建设厅湖南省自然资源厅湖南省财政厅关于支持老旧住房自主更新的通知》政策解读">
+                                        《湖南省住房和城乡建设厅湖南省自然资源厅湖南省财政...
+                                    </a></li>
+
+                                    <li><span class="date">08-25</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202609/t20260930_34075381.html" target="_blank"
+                                            title="关于《湖南省住房和城乡建设厅关于进一步加强建筑施工企业安全生产许可证审批管理有关事项的通知》的政策解读">
+                                        关于《湖南省住房和城乡建设厅关于进一步加强建筑施工...
+                                    </a></li>
+
+                                    <li><span class="date">06-12</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202606/t20260612_34000140.html" target="_blank"
+                                            title="关于《关于做好房票安置有关工作的通知》的政策解读">
+                                        关于《关于做好房票安置有关工作的通知》的政策解读
+                                    </a></li>
+
+                                    <li><span class="date">06-05</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202606/t20260605_33994262.html" target="_blank"
+                                            title="一图读懂《中华人民共和国生态环境法典》建筑垃圾污染防治专篇">
+                                        一图读懂《中华人民共和国生态环境法典》建筑垃圾污染...
+                                    </a></li>
+
+                                    <li><span class="date">05-26</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202605/t20260526_33986772.html" target="_blank"
+                                            title="一图读懂“新湘十条”，湖南出台进一步促进房地产市场平稳健康发展若干措施">
+                                        一图读懂“新湘十条”，湖南出台进一步促进房地产市场...
+                                    </a></li>
+
+                                    <li><span class="date">04-02</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/zcjd/202605/t20260525_33985359.html" target="_blank"
+                                            title="关于《湖南省业主大会和业主委员会指导细则》的解读">
+                                        关于《湖南省业主大会和业主委员会指导细则》的解读
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="xxgk-itme">
+                    <div class="tzgg">
+                        <div class="title">
+                            <h2><a title="通知公告"
+                                   href="/zjt/xxgk/xinxigongkaimulu/tzgg/index.html">通知公告</a>
+                            </h2>
+                            <h2><a title="行政执法"
+                                   href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/index.html">行政执法</a>
+                            </h2> 
+                          <h2><a title="曝光台"
+                                   href="/zjt/c103134/index.html">曝光台</a>
+                            </h2>
+                          
+                            <a class="more" href="/zjt/xxgk/xinxigongkaimulu/tzgg/index.html">更多</a>
+                            <a class="more"
+                               href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/index.html">更多</a>
+                          
+                            <a class="more"
+                               href="/zjt/c103134/index.html">更多</a>
+                        </div>
+                        <div class="list" style="display:block;">
+                            <ul>
+                               
+
+                                    <li><span class="date">11-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202611/t20261109_34098331.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅所属事业单位2026年公开招聘拟聘用人员公示">
+                                        湖南省住房和城乡建设厅所属事业单位2026年公开招聘拟...
+                                    </a></li>
+
+                                    <li><span class="date">11-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202611/t20261109_34098018.html" target="_blank"
+                                            title="关于发布工程建设地方标准《可调式钢拉杆型钢悬挂钢管外脚手架技术规程》的公告">
+                                        关于发布工程建设地方标准《可调式钢拉杆型钢悬挂钢管...
+                                    </a></li>
+
+                                    <li><span class="date">11-03</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202611/t20261103_34093707.html" target="_blank"
+                                            title="关于转发《关于协助推荐2026年度“华夏建设科学技术奖”项目的通知》的通知">
+                                        关于转发《关于协助推荐2026年度“华夏建设科学技术奖...
+                                    </a></li>
+
+
+
+                                 
+
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                 
+
+                                    <li><span class="date">11-10</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261110_34099025.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于工程监理企业资质延续初审意见的公示(2026年第5批)">
+                                        湖南省住房和城乡建设厅关于工程监理企业资质延续初审...
+                                    </a></li>
+
+                                    <li><span class="date">11-10</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261110_34099019.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于建设工程勘察、设计企业资质延续初审意见的公示(2026年第7批）">
+                                        湖南省住房和城乡建设厅关于建设工程勘察、设计企业资...
+                                    </a></li>
+
+                                    <li><span class="date">11-10</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261110_34098911.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于准予曹志等1856名二级建造师注册的公告(2026年第30批)">
+                                        湖南省住房和城乡建设厅关于准予曹志等1856名二级建造...
+                                    </a></li>
+
+                                    <li><span class="date">11-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261109_34098230.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于核准湖南容大信息咨询有限公司等企业9项工程监理企业资质的公告(2026年第7批)">
+                                        湖南省住房和城乡建设厅关于核准湖南容大信息咨询有限...
+                                    </a></li>
+
+                                    <li><span class="date">11-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261109_34098225.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于核准湖南省一建园林建设有限公司等企业6项工程勘察、设计企业资质的公告(2026年第6批)">
+                                        湖南省住房和城乡建设厅关于核准湖南省一建园林建设有...
+                                    </a></li>
+
+                                    <li><span class="date">11-09</span><a
+                                            href="/zjt/xxgk/xinxigongkaimulu/xzzfzl/shgs/xzyk/202611/t20261109_34098190.html" target="_blank"
+                                            title="湖南省住房和城乡建设厅关于准予谢琴等39名二级造价师注册的公告(2026年第29批)">
+                                        湖南省住房和城乡建设厅关于准予谢琴等39名二级造价师...
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                            <div class="list" >
+                            <ul>
+                                 
+
+                                    <li><span class="date">10-22</span><a
+                                            href="/zjt/c103134/202610/t20261022_34086523.html" target="_blank"
+                                            title="曝光！永州市冷水滩区发生“10·18”物体打击事故">
+                                        曝光！永州市冷水滩区发生“10·18”物体打击事故
+                                    </a></li>
+
+                                    <li><span class="date">10-12</span><a
+                                            href="/zjt/c103134/202610/t20261012_34079826.html" target="_blank"
+                                            title="曝光！娄底市双峰县发生“10·2”高处坠落事故">
+                                        曝光！娄底市双峰县发生“10·2”高处坠落事故
+                                    </a></li>
+
+                                    <li><span class="date">10-09</span><a
+                                            href="/zjt/c103134/202610/t20261009_34077498.html" target="_blank"
+                                            title="曝光！湖南省“治理物业服务突出问题”重大民生实事典型案例（第三批）">
+                                        曝光！湖南省“治理物业服务突出问题”重大民生实事典...
+                                    </a></li>
+
+                                    <li><span class="date">09-30</span><a
+                                            href="/zjt/c103134/202609/t20260930_34075541.html" target="_blank"
+                                            title="曝光！2026年第三批重大事故隐患突出的房屋市政工程项目及相关责任主体">
+                                        曝光！2026年第三批重大事故隐患突出的房屋市政工程项...
+                                    </a></li>
+
+                                    <li><span class="date">09-17</span><a
+                                            href="/zjt/c103134/202609/t20260917_34066530.html" target="_blank"
+                                            title="曝光！新化县查处一起非法运输瓶装液化气案件">
+                                        曝光！新化县查处一起非法运输瓶装液化气案件
+                                    </a></li>
+
+                                    <li><span class="date">09-11</span><a
+                                            href="/zjt/c103134/202609/t20260911_34062184.html" target="_blank"
+                                            title="曝光！2026年第二批招标投标违法违规典型案例">
+                                        曝光！2026年第二批招标投标违法违规典型案例
+                                    </a></li>
+
+                                    <li><span class="date">07-21</span><a
+                                            href="/zjt/c103134/202607/t20260720_34030224.html" target="_blank"
+                                            title="曝光！湖南省“治理物业服务突出问题”重大民生实事典型案例（第二批）">
+                                        曝光！湖南省“治理物业服务突出问题”重大民生实事典...
+                                    </a></li>
+
+                                    <li><span class="date">07-20</span><a
+                                            href="/zjt/c103134/202607/t20260720_34030219.html" target="_blank"
+                                            title="曝光！湖南省“治理物业服务突出问题”重大民生实事典型案例（第一批）">
+                                        曝光！湖南省“治理物业服务突出问题”重大民生实事典...
+                                    </a></li>
+
+                                    <li><span class="date">07-02</span><a
+                                            href="/zjt/c103134/202607/t20260702_34018350.html" target="_blank"
+                                            title="曝光！耒阳市淇元气体有限公司存在重大安全隐患">
+                                        曝光！耒阳市淇元气体有限公司存在重大安全隐患
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    办事服务-->
+    <div class="bsfw-box w1200">
+        <!--<div class="xxgk-title">
+            <h1>办事服务</h1>
+        </div>-->
+        <div class="bsfw-tab">
+            <div class="bsfw-itme bsfw-grbs">
+                <h1>个人办事</h1>
+                <!--            <p><img src="/zjt/xhtml/images/index_bsfw_qybs.png" alt=""></p>-->
+                <ul>
+                    <li><a target="_blank"
+                           href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&typeid=030&typename=%25u5C31%25u4E1A%25u521B%25u4E1A&areacode=439900000000&main=1&ygzw=n&orgId=3ee2566dda4144a49b53ab509094d67d">就业创业&nbsp;
+                        | &nbsp;</a></li>
+                    <!--<li><a target="_blank"
+                           href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&typeid=035&typename=%25u8BBE%25u7ACB%25u53D8%25u66F4&areacode=439900000000&main=1&ygzw=n&orgId=3ee2566dda4144a49b53ab509094d67d">设立变更
+                        &nbsp;|&nbsp; </a></li>-->
+                    <li><a target="_blank"
+                           href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&typeid=075&typename=%25u4F4F%25u623F%25u4FDD%25u969C&areacode=439900000000&main=1&ygzw=n&orgId=3ee2566dda4144a49b53ab509094d67d">住房保障
+                        &nbsp;| &nbsp;</a></li>
+                    <li><a target="_blank"
+                           href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&typeid=125&typename=%25u77E5%25u8BC6%25u4EA7%25u6743&areacode=439900000000&main=1&ygzw=n&orgId=3ee2566dda4144a49b53ab509094d67d">知识产权</a>
+                    </li>
+                    <li><a target="_blank" href="https://gcxm.hunanjs.gov.cn/">注册人员职业资格认定 &nbsp;|
+                        &nbsp;</a></li>
+                    <li><a target="_blank" href="https://udsp.hunanjs.gov.cn/login?appId=AA0FAA8E5367409C89BA98C28B06FA52">安管人员资格审批&nbsp;</a>
+                    </li>
+                    <li><a target="_blank" href="http://czjksbm.hnjsrcw.com/zcks.html">土建工程专业职称考试 &nbsp;|
+                        &nbsp;</a></li><li><a target="_blank" href="http://zjt.hunan.gov.cn/zjt/hdjl/yewuzixun/202401/t20240115_32625666.html">联系我们 &nbsp;|
+                        &nbsp;</a>
+                    </li>
+                    <li><a target="_blank"
+                           href="http://zwfw-new.hunan.gov.cn/onething/service/index.jsp?type=xndtgr&typeid=999&typename=%25u5176%25u4ED6&areacode=439900000000&main=1&ygzw=n&orgId=3ee2566dda4144a49b53ab509094d67d">其他</a>
+                    </li>
+                </ul>
+                <!--<div class="bt-img">
+                    <img src="/zjt/xhtml/images/index_grfw_bg.png" alt="">
+                </div>-->
+                <h1>公共服务</h1>
+                <!--            <p><img src="/zjt/xhtml/images/index_bsfw_ggfw.png" alt=""></p>-->
+                <ul class="server-list">
+                    <li>
+                        <a href="/zjt/bsfw/ggfw/ywxt/zjt_list.html">
+                            <i><img src="/zjt/xhtml/images/ggfw_icon_01.png" alt=""></i>
+                            <p>业务系统</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/zjt/bsfw/ggfw/xxcx/index.html">
+                            <i><img src="/zjt/xhtml/images/ggfw_icon_02.png" alt=""></i>
+                            <p>信息查询</p>
+                        </a>
+                    </li>
+              
+                </ul>
+            </div>
+            <div class="bsfw-itme bsfw-qybs">
+                <h1>企业办事</h1>
+                <!--            <p><img src="/zjt/xhtml/images/index_bsfw_grbs.png" alt=""></p>-->
+                <ul>
+                    <li><a href="https://hunanjs.gov.cn/" target="_blank">建筑业企业资质&nbsp; |
+                        &nbsp;</a></li>
+                    <li><a href="https://hunanjs.gov.cn/" target="_blank">监理企业资质</a></li>
+                    <li><a href="https://hunanjs.gov.cn/" target="_blank">工程质量检测机构资质 &nbsp;|
+                        &nbsp;</a></li>
+                    <li><a href="https://hunanjs.gov.cn/" target="_blank">勘察设计单位资质</a></li>
+                    <!--<li><a href="http://www.hunanjs.gov.cn/cloud/erji?btn=zwfwy#fwsx" target="_blank">工程造价咨询单位资质 &nbsp;|
+                        &nbsp;</a></li>-->
+                    <li><a href="https://hunanjs.gov.cn/" target="_blank">安全生产许可证</a></li>
+                </ul>
+                <div class="bt-img">
+                    <img src="/zjt/xhtml/images/index_qyfw_bg.png" alt="">
+                </div>
+            </div>
+            <div class="bsfw-itme bsfw-bsrd">
+                <h1>办事热点</h1>
+                <!--            <p><img src="/zjt/xhtml/images/index_bsfw_bsrd.png" alt=""></p>-->
+                <ul>
+                    <li>
+                        <a href="https://www.hunanjs.gov.cn" target="_blank"><span><img
+                                src="/zjt/xhtml/images/index_bsrd_icon5.png" alt=""></span>湖南省智慧住建云</a>
+                    </li>
+                    <li>
+                        <a href="http://zjt.hunan.gov.cn/zjt/hnweb/index.html"
+                           target="_blank"><span><img src="/zjt/xhtml/images/index_bsrd_icon2.png" alt=""></span>湖南省建设工程造价管理总站</a>
+                    </li>
+                     <li>
+                        <a href="http://zjt.hunan.gov.cn/zjt/hngczl/index.html"
+                           target="_blank"><span><img src="/zjt/xhtml/images/index_bsrd_icon1.png" alt=""></span>湖南省建设工程质量安全监督管理总站</a>
+                    </li>
+                     <li>
+                        <a href="http://zwfw-new.hunan.gov.cn/onething/service/serviceguideck.jsp?approve_id=C917A014679000015BDD5C901ACFA9B0&type=xndtfr&dghy=&cscjwt=&ygzw=&areacode=439900000000"
+                           target="_blank"><span><img src="/zjt/xhtml/images/index_bsrd_icon4.png" alt=""></span>超限高层建筑工程抗震设防审批</a>
+                    </li>
+                    <!--<li>
+                        <a href="http://zwfw-new.hunan.gov.cn/onething/service/serviceguidecklist.jsp?approve_id=8DDE8991272DA897E053671515ACCEAA&rights_code=&type=xndtbm"
+                           target="_blank"><span><img src="/zjt/xhtml/images/index_bsrd_icon3.png" alt=""></span>建筑业企业、勘察企业、设计企业、工程监理企业资质核准</a>
+                    </li>-->
+                    <li>
+                        <a href="http://zwfw-new.hunan.gov.cn/onething/service/serviceguideck.jsp?approve_id=C9179F9C0D0000019C581DE46800F000&type=xndtbm&dghy=&cscjwt="
+                           target="_blank"><span><img src="/zjt/xhtml/images/index_bsrd_icon2.png" alt=""></span>政府投资项目初步设计审批</a>
+                    </li>
+                    <li><a href="http://www.hnjsrcw.com/QueryCert.html" target="_blank"><span><img
+                            src="/zjt/xhtml/images/index_bsrd_icon1.png" alt=""></span>证书查询</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--    互动交流-->
+    <div class="zjt-hdjl pt20">
+        <div class="w1200 hdjl-box" style='min-height:350px'>
+            <!--<div class="xxgk-title">
+                <h1>互动交流</h1>
+            </div>-->
+            <div class="xxgk-tab">
+
+                <div class="xxgk-itme1 zfhdjl_box">
+                    <div class="list-box">
+                        <div class="title">
+                            <h2><a class="col"
+                                   href="/zjt/hdjl/index.html">互动交流</a>
+                            </h2>
+                            <a class="more block"
+                               href="/zjt/hdjl/index.html">更多</a>
+                        </div>
+
+                    </div>
+                    <ul class="mt30">
+                        <li>
+                            <a href="https://home.hunan.gov.cn:8096/account-center/a/login?deptId=abe6b0b756094458b5d89efe7e2fdb6f" target="_blank">
+                                <img src="/zjt/xhtml/images/index_hdjl_icon1.png" alt="" style="
+    padding-left: 26px;
+    padding-right: 20px;
+">
+                                <span>领导信箱</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/zxts/83274/index.html"
+                               target="_blank">
+                                <img src="/zjt/xhtml/images/index_hdjl_icon2.png" alt="">
+                                <span>信件公开</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/yewuzixun/202401/t20240115_32625666.html">
+                                <img src="/zjt/xhtml/images/index_hdjl_icon3.png" alt="">
+                                <span>业务咨询</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/zjt/hdjl/xinfangzhinan/202108/t20210823_21030621.html">
+                                <img src="/zjt/xhtml/images/index_hdjl_icon4.png" alt="">
+                                <span>信访指南</span>
+                            </a>
+                        </li>
+                   
+               
+                    </ul>
+                </div>
+
+                <div class="xxgk-itme">
+                    <div class="jytabl">
+                        <div class="title">
+                            <h2><a title="建议提案"
+                                   href="/zjt/hdjl/jytabl/index.html">建议提案</a></h2>
+                            <h2><a title="调查征集"
+                                   href="/zjt/hdjl/dczj/zjzt/index.html">调查征集</a></h2>
+                            <a class="more" href="/zjt/hdjl/jytabl/index.html">更多</a>
+                            <a class="more" href="/zjt/hdjl/dczj/zjzt/index.html">更多</a>
+                        </div>
+                        <div class="list" style="display:block;">
+                            <ul>
+                                 
+
+                                    <li><span class="date">09-14</span><a
+                                            href="/zjt/hdjl/jytabl/jydfnr/202609/t20260914_34063743.html" target="_blank"
+                                            title="关于出台湖南省〈城市地下管线管理办法〉的建议">
+                                        关于出台湖南省〈城市地下管线管理办法〉的建议
+                                    </a></li>
+
+                                    <li><span class="date">09-01</span><a
+                                            href="/zjt/hdjl/jytabl/jydfnr/202609/t20260901_34054785.html" target="_blank"
+                                            title="建议将无障碍环境专项纳入城市体检与城市更新">
+                                        建议将无障碍环境专项纳入城市体检与城市更新
+                                    </a></li>
+
+                                    <li><span class="date">07-03</span><a
+                                            href="/zjt/hdjl/jytabl/tadfnr/202607/t20260703_34019197.html" target="_blank"
+                                            title="关于加快推进全省老旧小区充电桩专线接入改造破解新能源汽车消费最后一公里难题">
+                                        关于加快推进全省老旧小区充电桩专线接入改造破解新能...
+                                    </a></li>
+
+                                    <li><span class="date">07-03</span><a
+                                            href="/zjt/hdjl/jytabl/tadfnr/202607/t20260703_34019188.html" target="_blank"
+                                            title="关于系统化提升我省城市停车管理能力促进城市高质量发展的建议">
+                                        关于系统化提升我省城市停车管理能力促进城市高质量发...
+                                    </a></li>
+
+                                    <li><span class="date">07-03</span><a
+                                            href="/zjt/hdjl/jytabl/tadfnr/202607/t20260703_34019164.html" target="_blank"
+                                            title="关于抢抓国家地下管网改造机遇推动城市高质量发展">
+                                        关于抢抓国家地下管网改造机遇推动城市高质量发展
+                                    </a></li>
+
+                                    <li><span class="date">07-03</span><a
+                                            href="/zjt/hdjl/jytabl/tadfnr/202607/t20260703_34019139.html" target="_blank"
+                                            title="关于创新治理模式，高质量推进排水管网建设">
+                                        关于创新治理模式，高质量推进排水管网建设
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                 
+
+                                    <li><span class="date">08-05</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202608/t20260805_34039991.html" target="_blank"
+                                            title="关于征求《智慧工地建设技术标准》等4部工程建设地方标准意见的公告">
+                                        关于征求《智慧工地建设技术标准》等4部工程建设地方标...
+                                    </a></li>
+
+                                    <li><span class="date">07-23</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202607/t20260723_34032689.html" target="_blank"
+                                            title="关于公开征求《湖南省城乡历史文化保护传承体系规划（2025—2035年）（征求意见稿）》意见的函">
+                                        关于公开征求《湖南省城乡历史文化保护传承体系规划（...
+                                    </a></li>
+
+                                    <li><span class="date">06-21</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202606/t20260630_34016435.html" target="_blank"
+                                            title="关于征求《房屋建筑结构安全风险筛查技术标准》等5部工程建设地方标准意见的公告">
+                                        关于征求《房屋建筑结构安全风险筛查技术标准》等5部工...
+                                    </a></li>
+
+                                    <li><span class="date">02-11</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202602/t20260211_33915627.html" target="_blank"
+                                            title="关于征求《湖南省建筑光伏一体化设计标准》等7部工程建设地方标准意见的公告">
+                                        关于征求《湖南省建筑光伏一体化设计标准》等7部工程建...
+                                    </a></li>
+
+                                    <li><span class="date">01-23</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202601/t20260123_33900608.html" target="_blank"
+                                            title="关于公开征求《湖南省物业专项维修资金管理办法（征求意见稿）》意见的函">
+                                        关于公开征求《湖南省物业专项维修资金管理办法（征求...
+                                    </a></li>
+
+                                    <li><span class="date">01-15</span><a
+                                            href="/zjt/hdjl/dczj/zjzt/202604/t20260407_33949206.html" target="_blank"
+                                            title="关于征求《湖南省工程建设项目招标代理机构登记管理暂行办法(征求意见稿)》意见的通知">
+                                        关于征求《湖南省工程建设项目招标代理机构登记管理暂...
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xxgk-itme">
+                    <div class="dfdt">
+                        <div class="title">
+                            <h2><a title="湘建风采"
+                                   href="/zjt/gzdt/dfdt/index.html">湘建风采</a>
+                            </h2>
+                          
+                            <a class="more"
+                               href="/zjt/gzdt/dfdt/index.html">更多</a>
+                           
+                        </div>
+                        <div class="list" style="display:block;">
+                            <ul>
+                                 
+
+                                    <li><span class="date">10-28</span><a
+                                            href="/zjt/gzdt/dfdt/cgfc1/202610/t20261028_34089984.html" target="_blank"
+                                            title="唤醒“沉睡边角” 遇见“方寸之美”">
+                                        唤醒“沉睡边角” 遇见“方寸之美”
+                                    </a></li>
+
+                                    <li><span class="date">10-08</span><a
+                                            href="/zjt/gzdt/dfdt/gjjfc1/202610/t20261008_34076414.html" target="_blank"
+                                            title="怀化公积金管理中心：宣贯新《条例》 办好民生“关键事”">
+                                        怀化公积金管理中心：宣贯新《条例》 办好民生“关键事...
+                                    </a></li>
+
+                                    <li><span class="date">10-08</span><a
+                                            href="/zjt/gzdt/dfdt/gjjfc1/202610/t20261008_34076411.html" target="_blank"
+                                            title="常德公积金让“一池活水”流进千家万户">
+                                        常德公积金让“一池活水”流进千家万户
+                                    </a></li>
+
+                                    <li><span class="date">09-28</span><a
+                                            href="/zjt/gzdt/dfdt/zjfc1/202609/t20260928_34073483.html" target="_blank"
+                                            title="守护城市生命线 湖南经验何以“出圈”">
+                                        守护城市生命线 湖南经验何以“出圈”
+                                    </a></li>
+
+                                    <li><span class="date">09-22</span><a
+                                            href="/zjt/gzdt/dfdt/zjfc1/202609/t20260922_34070544.html" target="_blank"
+                                            title="永州冷水滩区以“五个物业”建设推动物业信访量同比下降28.57%">
+                                        永州冷水滩区以“五个物业”建设推动物业信访量同比下...
+                                    </a></li>
+
+                                    <li><span class="date">09-21</span><a
+                                            href="/zjt/gzdt/dfdt/gjjfc1/202609/t20260921_34069478.html" target="_blank"
+                                            title="怀化举办公积金新政宣传晚会">
+                                        怀化举办公积金新政宣传晚会
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    右侧导航-->
+    <ul class="affix-toolbar">
+        <li class="affix-toolbar-item affix-toolbar-item-extend">
+            <a href="/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202001/t20200120_11161372.html" target="_blank"><i
+                    class="icon icon-message"></i><span>郑重声明</span></a>
+        </li>
+       <li class="affix-toolbar-item">
+            <a href="/zjt/bsfw/ggfw/xzzq/zzzg_1/index.html" target="_blank"><i
+                    class="icon icon-query"></i><span>下载专区</span></a>
+        </li>
+        <li class="affix-toolbar-item affix-toolbar-item-extend">
+            <a href="/zjt/xxgk/xinxigongkaimulu/tzgg/tzgg2zhyw/202205/t20220507_24466866.html" target="_blank"><i
+                    class="icon icon-notice"></i><span>安全生产举报</span></a>
+        </li>
+        <li class="affix-toolbar-item">
+            <a href="javascript:void(0);" style="cursor: default"><i class="icon icon-search icon-arrow-left"></i><span>农民工人<br>投诉通道</span></a>
+            <div class="affix-toolbar-item-popover">
+                <ul>
+                    <li>
+                        <div class="affix-toolbar-item-popover-title">
+                            公告
+                        </div>
+                    </li>
+                    <li>
+                        <div class="affix-toolbar-item-popover-cont">
+                            湖南省住房和城乡建设厅保障农民工工资支付投诉举报绿色通道：联系人：湖南省建设工程造价管理总站市场科（办公楼205室）黄龙，0731-85588252。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="affix-toolbar-item">
+            <a href="javascript:void(0);" style="cursor: default"><i
+                    class="icon icon-complain icon-arrow-left"></i><span>意见、<br>线索征集</span></a>
+            <div class="affix-toolbar-item-popover">
+                <ul>
+                    <li>
+                        <div class="affix-toolbar-item-popover-title">
+                            公告
+                        </div>
+                    </li>
+                    <li>
+                        <div class="affix-toolbar-item-popover-cont">
+                            1.为贯彻落实省委省政府关于工程建设项目招投标专项整治工作要求，有效解决招投标市场突出问题，我厅特在本网站公布线索征集电子邮箱：hnzjtjsjdc@163.com、投诉举报电话：0731-88950169，欢迎提供涉及全省房屋建筑和市政基础设施工程建设项目招投标问题专项整治相关线索。<br>2.为助力建筑业和房地产业高质量发展，切实帮助企业纾困解难，现面向建筑业企业征集发展过程中遇到的困难问题和相关意见建议。欢迎通过hnzjtjsjdc@163.com邮箱积极反映情况、建言献策。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="affix-toolbar-item">
+            <a href="javascript:void(0);" style="cursor: default"><i
+                    class="icon icon-consult icon-arrow-left"></i><span>网站公告</span></a>
+            <div class="affix-toolbar-item-popover">
+                <ul>
+                    <li>
+                        <div class="affix-toolbar-item-popover-title">
+                            公告
+                        </div>
+                    </li>
+                    <li>
+                        <div class="affix-toolbar-item-popover-cont">
+                            近日，互联网上出现的湖南省住房城乡建设信息网（域名为：http：//*****jsxxw-gov.cn/  备注：*****代表hunan)为假冒网站，
+                            请注意甄别，避免上当受骗，在此声明，我厅唯一门户网站为：湖南省住房和城乡建设厅(http：//zjt.hunan.gov.cn/)；
+                            我厅行业服务网站为：湖南省智慧住建云(http://www.hunanjs.gov.cn/)，
+                            其他正规行业协会网站信息可点击门户网上首页“郑重声明”查看。如果您发现有假冒我厅网站，请拨打电话0731-88950233举报，感谢您的支持。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+       
+      <li class="affix-toolbar-item">
+            <a href="/zjt/bsfw/ggfw/xzzq/c102972/index.html" target="_blank"><i
+                    class="icon icon-gzbgjd"></i><span>安全生产<br>标准化资料</span></a>
+        </li>
+    </ul>
+
+    <!--    底部-->
+    <div class="bottom clear-fix">
+    <div class="website-box">
+        <ul class="website-box-list" id="website-box-list">
+            <li class="website-box-item">
+                <a>国内住建网站<i class="arrow-down"></i></a>
+            </li>
+            <li class="website-box-item">
+                <a>市州主管部门网站<i class="arrow-down"></i></a>
+            </li>
+
+            <li class="website-box-item">
+                <a>市州城乡建设局<i class="arrow-down"></i></a>
+            </li>
+
+            <li class="website-box-item">
+                <a>市州城管网站<i class="arrow-down"></i></a>
+            </li>
+            <li class="website-box-item">
+                <a>省市州公积金网站<i class="arrow-down"></i></a>
+            </li>
+
+            <li class="website-box-item">
+                <a>协会网站<i class="arrow-down"></i></a>
+            </li>
+          
+          <li class="zddt">
+					<a href="/zjt/fzlm/zddt/index.html">站点地图</a>
+				</li>
+          
+        </ul>
+        <ul class="website-box-list website-box-list2" id="website-box-list2">
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="http://219.142.101.111/">中华人民共和国住房和城乡建设部</a></li>
+<li><a href="http://zjw.beijing.gov.cn/">北京市住房和城乡建设委员会</a></li>
+<li><a href="http://zfcxjs.tj.gov.cn/">天津市城乡建设委员会</a></li>
+<li><a href="http://zjw.sh.gov.cn/">上海市住房和城乡建设管理委员会</a></li>
+<li><a href="http://zfcxjw.cq.gov.cn/">重庆市城乡建设委员会</a></li>
+<li><a href="http://zfcxjst.hebei.gov.cn/">河北省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.shanxi.gov.cn/">山西省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.nmg.gov.cn/">内蒙古自治区住房和城乡建设厅</a></li>
+<li><a href="http://zfcxjst.hlj.gov.cn/">黑龙江省住房和城乡建设厅</a></li>
+<li><a href="http://jst.jl.gov.cn/">吉林省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.ln.gov.cn/">辽宁省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.shandong.gov.cn/">山东省住房和城乡建设厅</a></li>
+<li><a href="http://jsszfhcxjst.jiangsu.gov.cn/">江苏省住房和城乡建设厅</a></li>
+<li><a href="http://dohurd.ah.gov.cn/">安徽省住房和城乡建设厅</a></li>
+<li><a href="http://jst.zj.gov.cn/">浙江省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.fujian.gov.cn/">福建省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.jiangxi.gov.cn/">江西省住房和城乡建设厅</a></li>
+<li><a href="https://hnjs.henan.gov.cn/">河南省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.hubei.gov.cn/">湖北省住房和城乡建设厅</a></li>
+<li><a href="http://zfcxjst.gd.gov.cn/">广东省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.gxzf.gov.cn/">广西壮族自治区住房和城乡建设厅</a></li>
+<li><a href="http://zjt.hainan.gov.cn/">海南省住房和城乡建设厅</a></li>
+<li><a href="http://zfcxjst.yn.gov.cn/">云南省住房和城乡建设厅</a></li>
+<li><a href="http://zfcxjst.guizhou.gov.cn/">贵州省住房和城乡建设厅</a></li>
+<li><a href="http://jst.sc.gov.cn/">四川省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.xizang.gov.cn/">西藏自治区住房和城乡建设厅</a></li>
+<li><a href="http://js.shaanxi.gov.cn/">陕西省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.gansu.gov.cn/">甘肃省住房和城乡建设厅</a></li>
+<li><a href="http://jst.nx.gov.cn/">宁夏回族自治区住房和城乡建设厅</a></li>
+<li><a href="http://zjt.qinghai.gov.cn/">青海省住房和城乡建设厅</a></li>
+<li><a href="http://zjt.xinjiang.gov.cn/">新疆维吾尔自治区住房和城乡建设厅</a></li>
+<li><a href="http://jshbj.xjbt.gov.cn/">新疆生产建设兵团住房和城乡建设局</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="http://www.changsha.gov.cn/">长沙市</a></li>
+<li><a href="http://www.hengyang.gov.cn/">衡阳市</a></li>
+<li><a href="http://www.zhuzhou.gov.cn/">株洲市</a></li>
+<li><a href="http://www.xiangtan.gov.cn/">湘潭市</a></li>
+<li><a href="https://www.shaoyang.gov.cn/">邵阳市</a></li>
+<li><a href="https://www.changde.gov.cn/">常德市</a></li>
+<li><a href="http://www.zjj.gov.cn/">张家界</a></li>
+<li><a href="http://www.yiyang.gov.cn/yiyang/index.htm">益阳市</a></li>
+<li><a href="http://www.czs.gov.cn/html/index.html">郴州市</a></li>
+<li><a href="http://www.yzcity.gov.cn/">永州市</a></li>
+<li><a href="http://www.huaihua.gov.cn/">怀化市</a></li>
+<li><a href="http://www.hnloudi.gov.cn/">娄底市</a></li>
+<li><a href="http://www.xxz.gov.cn/">湘西自治州</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="http://rjhj.changsha.gov.cn/">长沙市城市人居环境局</a></li>
+<li><a href="http://szjw.changsha.gov.cn/">长沙市住房和城乡建设局</a></li>
+<li><a href="https://www.hengyang.gov.cn/zjw/">衡阳市住房和城乡建设局</a></li>
+<li><a href="http://zjj.zhuzhou.gov.cn/">株洲市住房和城乡建设局</a></li>
+<li><a href="http://xtjs.xiangtan.gov.cn/">湘潭市住房和城乡建设局</a></li>
+<li><a href="https://zj.shaoyang.gov.cn/zindex.shtml">邵阳市住房和城乡建设局</a></li>
+<li><a href="https://zfjsw.changde.gov.cn/">常德市住房和城乡建设局</a></li>
+<li><a href="http://zjj.zjj.gov.cn/">张家界住房和城乡建设局</a></li>
+<li><a href="http://www.yiyang.gov.cn/jsj/">益阳市住房和城乡建设局</a></li>
+<li><a href="http://zjj.czs.gov.cn/">郴州市住房和城乡建设局</a></li>
+<li><a href="http://zjj.yzcity.gov.cn/">永州市住房和城乡建设局</a></li>
+<li><a href="https://www.huaihua.gov.cn/zjj/">怀化市住房和城乡建设局</a></li>
+<li><a href="http://jsj.yueyang.gov.cn/">岳阳市住房和城乡建设局</a></li>
+<li><a href="http://zjj.hnloudi.gov.cn/">娄底市住房和城乡建设局</a></li>
+<li><a href="http://zjj.xxz.gov.cn/">湘西自治州住房和城乡建设局</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="http://cgj.changsha.gov.cn/">长沙市城市管理和执法监督局</a></li>
+<li><a href="https://www.hengyang.gov.cn/cgj/">衡阳市城市管理和综合执法局</a></li>
+<li><a href="http://cgj.zhuzhou.gov.cn/">株洲市城市管理和综合执法局</a></li>
+<li><a href="http://xtcg.xiangtan.gov.cn/">湘潭市城市管理和综合执法局</a></li>
+<li><a href="https://cgj.shaoyang.gov.cn/">邵阳市城市管理和综合执法局</a></li>
+<li><a href="https://cgj.changde.gov.cn/">常德市城市管理和综合执法局</a></li>
+<li><a href="http://scg.zjj.gov.cn/">张家界市城市管理和综合执法局</a></li>
+<li><a href="http://csgl.czs.gov.cn/">郴州市城市管理和综合执法局</a></li>
+<li><a href="http://cgj.yzcity.gov.cn/">永州市城市管理和综合执法局</a></li>
+<li><a href="https://www.huaihua.gov.cn/cgzfj/">怀化市城市管理和综合执法局</a></li>
+<li><a href="http://cgj.hnloudi.gov.cn/">娄底市城市管理和综合执法局</a></li>
+<li><a href="http://cgj.yueyang.gov.cn/index.htm">岳阳市城市管理和综合执法局</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="https://www.xzgjj.cn">湖南省直单位住房公积金管理中心</a></li>
+<li><a href="http://gjjzx.changsha.gov.cn/">长沙市住房公积金管理中心</a></li>
+<li><a href="https://www.ldgjj.com/">娄底市住房公积金管理中心</a></li>
+<li><a href="http://gjj.zhuzhou.gov.cn/">株洲市住房公积金管理中心</a></li>
+<li><a href="http://wz.xtzfgjj.org.cn/">湘潭市住房公积金管理中心</a></li>
+<li><a href="https://www.xxgjj.com/">湘西州住房公积金管理中心</a></li>
+<li><a href="http://www.yueyang.gov.cn/yygjj/">岳阳市住房公积金管理中心</a></li>
+<li><a href="http://www.hnsygjj.cn/">邵阳市住房公积金管理中心</a></li>
+<li><a href="http://www.cdsgjj.com.cn/">常德市住房公积金管理中心</a></li>
+<li><a href="http://zfgjj.yiyang.gov.cn/zfgjj/index.htm">益阳市住房公积金管理中心</a></li>
+<li><a href="http://gjj.czs.gov.cn/">郴州市住房公积金管理中心</a></li>
+<li><a href="http://zfgjj.yzcity.gov.cn/">永州市住房公积金管理中心</a></li>
+<li><a href="https://www.huaihua.gov.cn/gjj/">怀化市住房公积金管理中心</a></li>
+<li><a href="https://www.hengyang.gov.cn/hyszfgjj/">衡阳市住房公积金管理中心</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="website-box-item">
+                <div class="website-select-list-bg">
+                    <ul class="website-select-list">
+
+                            <li><a href="http://www.hnsfdc.com/">湖南省房地产业协会</a></li>
+<li><a href="http://www.hnjsrcw.com/">湖南建设人力资源网</a></li>
+<li><a href="http://www.hunanjz.com/">湖南建筑信息网</a></li>
+<li><a href="http://www.hnkcsj.com/">湖南勘察设计协会</a></li>
+<li><a href="http://www.hnztb.org/">湖南省建设工程招标投标网</a></li>
+<li><a href="http://www.hunancj.org.cn/">湖南省城乡建设行业协会</a></li>
+<li><a href="https://www.hnjkjn.com/">湖南省建设科技与建筑节能协会</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+<div class="info-box">
+        <div class="info-container" style="
+    width: 1868px;
+">
+            <div class="info-bg1">
+                <div class="title">我要举报</div>
+                <div class="test">
+                    举报电话：0731-88950102<br>
+                    来信地址：长沙市雨花区高升路266号驻<br>
+                    省住建厅纪检监察组
+                </div>
+            </div>
+            
+     <div class="info-bg2" style="width: 1285px;padding: 0 20px;">
+             
+               <div style="display: inline-block;">   地址：湖南省长沙市雨花区高升路266号<br>
+                邮编：410116&nbsp;&nbsp;&nbsp;&nbsp;总值班电话：0731-88950000<br>
+               信访问题服务电话：0731-88950284</div>
+               <div style="display: inline-block;margin-left: 13px;"> 政务A10窗口&ensp;(三类人员): 0731-82210779<br>
+政务A12窗口&ensp;(建筑业资质): 0731-82210771<br>
+政务A13窗口&ensp;(勘察、设计资质及注册人员) : 0731-82210772<br>
+           </div>
+              <div style="display: inline-block;margin-left: 13px;"> 
+                    政务A14窗口&ensp;(安全生产许可证、检测资质): 0731-82210773<br>
+政务A16窗口&ensp;(建造师) : 0731-82210775<br>
+政务A17窗 口&ensp;(造价工程师、房地产、监理资质、外省企业入湘信息报送) : 0731-82210776<br>
+</div>
+            </div>
+            <div class="info-bg3" style="
+    left: 40px;
+">
+                <a href="http://bszs.conac.cn/sitename?method=show&amp;id=12A4F96AA48A5E9AE053022819AC14D8" target="_blank">
+                    <img class="dzjg-icon" src="/zjt/xhtml/images/bottom_dzjg_icon.png">
+                </a>
+                     <script id="_jiucuo_" sitecode='4300000046' src='/zjt/xhtml/js/jiucuo.js'></script>
+
+            </div>
+            <div class="info-bg4">
+                <img class="weixin-icon" src="/zjt/xhtml/images/zjt_weixin.png" alt="" style="right: 70px;">
+            </div>
+        </div>
+    </div>
+    <div class="organizer-box">
+        <div class="organizer-container">
+            <div class="foot-box">
+                <img src="/zjt/xhtml/images/zjt_weixin_m.png" alt="">
+            </div>
+            <div class="foot-right">
+                <span>主办单位：湖南省住房和城乡建设厅</span>
+                <span>承办单位：湖南省政务服务和大数据中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span>政府网站标识码：4300000046</span>
+<span>  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43011102002159" target="_blank" style="
+    color: #fff;
+">公安备案号 43011102002159&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </a><a href="http://beian.miit.gov.cn " target="_blank" style=" color: #fff;">备案号：湘ICP备10205723号-2</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="/zjt/xhtml/css/zjt_footer.css" rel="stylesheet" type="text/css">
+<script src="/zjt/xhtml/js/zjt_footer.js"></script>
+<style>
+  
+#_span_jiucuo img {
+     margin-left: 85px !important;
+    width: 110px;
+    height: 55px;
+    margin-top: 4px !important;
+}
+@media (max-width: 768px) {
+     .info-container {
+        width: 90% !important;
+       margin-left:10%;
+       
+    }
+  
+  .info-bg2 div{
+     display:none!important;
+  }
+  .info-bg2 div:first-child{
+     display:block!important;
+  }
+}
+
+</style>
+<script src="https://auth.mangren.com/boots/zjt.hunan.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<script language="JavaScript">var _trackDataType = 'web';var _trackData = _trackData || [];</script>
+<script type="text/javascript" charset="utf-8" id="kpyfx_js_id_10006614" src="//fxsjcj.kaipuyun.cn/count/10006614/10006614.js"></script>
+    
+        
+<script type="text/javascript" charset="utf-8" src="//pvjs.jktong.com/plugs/stat.js?token=305b92add351bafde5b9ef4c43f1f9ec"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2065ef23a4ec8fcfcce145e712d7f60f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+  
+
+
+  
+  
+<script src="/zjt/xhtml/js/zjt_common.js"></script>
+<script src="/zjt/xhtml/js/zjt_index.js"></script>
+
+<script src="https://auth.mangren.com/boots/zjt.hunan.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<style rel="stylesheet" type="text/css">
+    .Hj-EasyRead-Container {
+        margin-left: 600px;
+    }
+</style>
+</body>
+  
+ <!-- 置灰 S -->
+<!--<style type="text/css">
+	.zjt-head-container,.nav-list-bg,.content,.sy_tout,.zjt-hdjl,.bsfw-box,.hyjs-box,.zjt-hdjl,.bottom,.affix-toolbar,.zjt-search,.Hj-EasyRead-Container {-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray(100%);}
+	body {
+		    background: url(/zjt/xhtml/images/bg_banner_gray.png) no-repeat center top #fff;
+		    background-size: 100% auto;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+	   $('.zjt-logo img').prop('src','/zjt/xhtml/images/zjt_logo.png');
+	  })
+  </script>-->
+<!-- 置灰 E -->
+
+<!--湖南统一业务js，如飘红、置灰等,需要jquery-->
+<script src="https://hd.hunan.gov.cn/xhtml/js/hn_common_biz.js" id="hn_common_biz"></script>
+
+  <style>
+  
+  .bsfw-bsrd ul li {
+    line-height: 27px;
+  }
+  </style>
+</html>

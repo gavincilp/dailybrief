@@ -1,0 +1,550 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var reg = new RegExp("divid=[0-9a-zA-z-_]{0,}");
+		var divid = reg.exec(document.referrer).toString().split("=")[1];
+		document.getElementById('divid').value = divid;
+	}
+	);
+</script>
+
+<table width="100%" align="center">
+<tr>
+	<td>
+		 <form id="searchform" name="searchform" action="" method="post">
+		 	<input type="hidden" name="infotypeId" id="infotypeId" value="SD0202">
+		 	<input type="hidden" name="jdid" id="jdid" value="14">
+		 	<input type="hidden" name="divid" id="divid" value="div160091">
+		 	<input type="hidden" name="area" id="area" value="">
+		 	<input type="hidden" name="sortfield" id="sortfield" value="top:0,createdatetime:0,orderid:0">
+			<input type="hidden" name="strSearchUrl" id="strSearchUrl" value="/module/xxgk/search.jsp">
+			<input type="hidden" name="standardXxgk" id="standardXxgk" value="0">
+            <span class="currentpos" style="font-size: 15px;line-height: 40px;padding-left: 10px;">当前位置：<span title='法规文件 >>政策文件'><a href='#' title='法规文件' onclick="funclick1('SD02','createdatetime:0,orderid:0')">法规文件</a> >><a href='#' title='政策文件' onclick="funclick1('SD0202','createdatetime:0,orderid:0')">政策文件</a></span></span>
+<style type="text/css">
+.currentpos span a{font-size: 15px;line-height: 40px;padding-left: 10px;}
+</style>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="tb_title tb_search" style="border-top:1px #ccc solid;padding-left:0px;">
+	<tr class="opr_tr" height="40">
+		<td>
+			<table border="0" cellspacing="0" cellpadding="0" align="right">
+				<tr style="font-size: 15px;color: #3D3D3D;font-family: 微软雅黑;line-height: 40px;">
+					<td width="50" align="center" style="font-size: 15px;font-family: 微软雅黑;">标题：</td>
+					<td valign="middle">
+						<input name="vc_title" type="text" size="20"style="font-size: 15px;font-family: 微软雅黑;width: 280px;" class="input_text" value=""></td>
+					<td width="80" align="center"style="font-size: 15px;font-family: 微软雅黑;">索引号：</td>
+					<td valign="middle">
+						<input name="vc_number" type="text" size="20"style="font-size: 15px;font-family: 微软雅黑;width: 280px;" class="input_text" value=""></td>
+					<td width="60" valign="middle" align="center">
+						<input type="button" name="btnsearch" value="检索" onclick="funSearch('/module/xxgk/search.jsp');"style="font-size: 15px;font-family: 微软雅黑;width: 100px;border: none;height: 27px;margin: 0 10px;">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+		</form>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" style="border:1px #d2d2d2 solid; border-top:none">
+	<tr style="font-size: 15px;font-weight:bold;color: #3D3D3D;font-family: 微软雅黑;line-height: 180%;background-color:#e9ede5;">
+		<td align='center' width='475' style="font-family: 微软雅黑;font-size: 15px;">标题</td>
+		<td align='center' width='180' style="font-family: 微软雅黑;font-size: 15px;">发布单位</td>
+		<td align='center' width='80' style="font-family: 微软雅黑;font-size: 15px;">发布日期</td>
+		<td height='32' width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/UBnVwdh_hfoOJ8pi1RgFVQ' target='_blank' title='一图读懂丨“十五五”山东住房城乡建设事业高质量发展这样干→' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				一图读懂丨“十五五”山东住房城乡建设事业高质量发展这样干→
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-23
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/mPl26J7rdyN9lrt-0sgGVA' target='_blank' title='答记者问丨今后五年，山东计划改造提升老旧片区、老旧街区厂区240个' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨今后五年，山东计划改造提升老旧片区、老旧街区厂区2...
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-23
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/V7dSgmpZzkGVCHXtYZ0eXg' target='_blank' title='答记者问丨坚持“三化”方向，聚力提升“齐鲁建造”核心竞争力和品牌影响力' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨坚持“三化”方向，聚力提升“齐鲁建造”核心竞争力和...
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-23
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/FQSvVG8fKucJ9l36Jx16og' target='_blank' title='“十五五”山东住房城乡建设高质量发展规划来了' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				“十五五”山东住房城乡建设高质量发展规划来了
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-20
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/10/20/art_121752_10363222.html?xxgkhide=1' target='_blank' title='《关于建立建设工程消防验收（备案）和公众聚集场所投入使用、营业前消防安全检查协同工作机制的通知》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于建立建设工程消防验收（备案）和公众聚集场所投入使用、营...
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-20
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/10/12/art_121752_10365202.html?xxgkhide=1' target='_blank' title='《山东省住房城乡建设事业高质量发展“十五五”规划》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《山东省住房城乡建设事业高质量发展“十五五”规划》政策解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-12
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/10/9/art_121752_10361717.html?xxgkhide=1' target='_blank' title='《关于印发山东省建设项目联合验收“一件事”实施方案的通知》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于印发山东省建设项目联合验收“一件事”实施方案的通知》政...
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-10-09
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/9/22/art_121752_10359137.html?xxgkhide=1' target='_blank' title='《山东省二级注册建造师继续教育实施办法》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《山东省二级注册建造师继续教育实施办法》政策解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-09-22
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/F-PbufW1FQ9ZdOcIdx28nA' target='_blank' title='答记者问丨“一镇一档、一村一档”，山东建立文化保护名录体系' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨“一镇一档、一村一档”，山东建立文化保护名录体系
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-28
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/IvMuLR8yrUwngHeEN0G5xQ' target='_blank' title='答记者问丨潍坊获批国家历史文化名城，山东擦亮名城金名片' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨潍坊获批国家历史文化名城，山东擦亮名城金名片
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-28
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/HuE9M3Qot94ZeovkczozLA' target='_blank' title='权威发布丨山东实施匠心传承工程，讲好齐风鲁韵文脉故事' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				权威发布丨山东实施匠心传承工程，讲好齐风鲁韵文脉故事
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-28
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/8/27/art_121752_10356257.html?xxgkhide=1' target='_blank' title='《关于优化提升房屋市政工程招标投标监管和服务的通知》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于优化提升房屋市政工程招标投标监管和服务的通知》政策解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-27
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/8/26/art_121752_10356177.html?xxgkhide=1' target='_blank' title='《关于深化小城镇创新提升行动的意见》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于深化小城镇创新提升行动的意见》政策解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-26
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/8/17/art_121752_10356037.html?xxgkhide=1' target='_blank' title='《山东省城镇容貌和环境卫生管理办法》修订情况解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《山东省城镇容貌和环境卫生管理办法》修订情况解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-08-17
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/7/24/art_121752_10354807.html?xxgkhide=1' target='_blank' title='《关于开展全省建筑企业造价管理能力提升行动的通知》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于开展全省建筑企业造价管理能力提升行动的通知》政策解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-24
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/7/20/art_121752_10355777.html?xxgkhide=1' target='_blank' title='《山东省餐厨废弃物管理办法》修正情况解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《山东省餐厨废弃物管理办法》修正情况解读
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-20
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/hr3Hvnt0JsyMWfUa3557Yw' target='_blank' title='答记者问丨提升住宅设计品质，山东提出这些硬标准' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨提升住宅设计品质，山东提出这些硬标准
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-17
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/gNsTj00PiJ-PLaRmWNfHRQ' target='_blank' title='答记者问丨山东绘制“好房子”标准体系树状图' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				答记者问丨山东绘制“好房子”标准体系树状图
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-17
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_odd" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='https://mp.weixin.qq.com/s/6EoIksJmCnlhtgW8uWmzow' target='_blank' title='权威发布丨7方面20条措施，山东实施房屋品质提升工程' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				权威发布丨7方面20条措施，山东实施房屋品质提升工程
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-17
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+	<tr class="tr_main_value_even" style="font-size:15px;color: #3D3D3D;font-family: 微软雅黑;line-height:32px;">
+		<td align='left' width='475' style="padding-left: 10px;line-height:32px;"> ·
+			<a href='http://zjt.shandong.gov.cn/art/2026/7/16/art_121752_10354688.html?xxgkhide=1' target='_blank' title='《关于实施房屋品质提升工程 加快推进“好房子”建设的通知》政策解读' class='bt_link xxgk_link' style='line-height:25px;font-size: 15px;font-family: 微软雅黑;'>
+				《关于实施房屋品质提升工程 加快推进“好房子”建设的通知》政...
+			</a>
+			<style type="text/css">
+				.xxgk_link br{display: none;}
+			</style>
+		</td>
+		<td align='center' width='180'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			<div style="width:180px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;" title="山东省住房和城乡建设厅">
+				山东省住房和城乡建设厅
+			</div>
+		</td>
+		<td align='center' width='80'style="font-family: 微软雅黑;font-size: 15px;line-height:32px;">
+			
+2026-07-16
+		</td>
+		<td width='7'></td>
+	</tr>
+	
+</table>
+		<TABLE width="100%" border="0" cellspacing="0" cellpadding="0" class='tb_title' style="font-size: 14px;background-color: white;"><FORM method="post" name='pageForm' action='/module/xxgk/search.jsp' onsubmit="funGo('/module/xxgk/search.jsp');"><TR><TD align="right" width='45%'><a class="pgBtn disabledTd" href="Javascript:funGoPage('/module/xxgk/search.jsp',1);">首 页</a><a class="pgBtn disabledTd" href="javascript:return false;">上一页</a><a class="pgBtn" href="Javascript:funGoPage('/module/xxgk/search.jsp',2);">下一页</a><a class="pgBtn" href="Javascript:funGoPage('/module/xxgk/search.jsp',82);">尾 页</a><a class="pgBtn" href="Javascript:funGoPage('/module/xxgk/search.jsp',1);">刷 新</a></TD><TD align="left" width='55%'><TABLE border='0' cellspacing='0' cellpadding='0'><TR><TD><span >&nbsp;&nbsp;共1627条记录&nbsp;&nbsp;第&nbsp;</span></TD><TD><input type='text' name='currpage' id='currpage' class='inp_page current' onkeyup="value=value.replace(/[^\d]/g,'',0)" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^-,\d]/g,'',0))"size='1' maxlength='2' value='1' onkeypress="pressGopage('/module/xxgk/search.jsp',82)"></TD><TD><span >&nbsp;页&nbsp;/&nbsp;共&nbsp;82&nbsp;页&nbsp;</span></TD></TR></TABLE></TD></TR></FORM></TABLE><style type="text/css">
+    .pgBtn {
+        width: 50px;
+        height: 28px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 1px;
+        border: 1px solid #9b9595;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 190%;
+        color: #444;
+    }
+    .pgBtn1 {
+        padding: 0px 10px;
+        height: 28px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 1px;
+        border: 1px solid #9b9595;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 190%;
+        color: #444;
+    }
+    a {text-decoration: none}
+    a:hover {text-decoration: none}
+    .current {
+        width: 30px;
+        height: 23px;
+        line-height: 23px;
+        text-align: center;
+        border: 1px solid #CCCCCC;
+        font-size: 13px;
+    }
+    .focus {
+        background-color: #288df0;
+        color: #FFF;
+        cursor: default;
+    }
+    .disabledTd {
+        cursor: default;
+        background: none;
+        color: #c0b8b8;
+        outline: none;
+    }
+</style>
+	</td>
+</tr>
+</table>
