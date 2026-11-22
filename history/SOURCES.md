@@ -2,7 +2,7 @@
 
 > 本文件放在仓库 `history/` 下，供**云端任务与本地任务**的子代理共同读取。
 > 云端沙箱读不到本机的工作区笔记，凡涉及「官网真实入口 / 不可达站点 / 已破解接口 / 内容校验陷阱」的知识，一律以本文件为准，并**每期复核、按实修正**（本文件随仓库同步）。
-> 最后核对日期：2026-11-11
+> 最后核对日期：2026-11-23
 
 ---
 
@@ -137,3 +137,29 @@
 - **沈阳／大连**：`zjj.shenyang.gov.cn`、`zjj.dl.gov.cn`、`zfcxjw.shenyang.gov.cn`、`jsj.dl.gov.cn`、`zfcxjsw.dl.gov.cn` 全部 DNS 000；两市门户 `www.shenyang.gov.cn`／`www.dl.gov.cn` 200 但无住建局栏目直链 → 两市仍为盲区。
 - **河北**：列表与详情全 412（curl 与 Playwright 真实 Chromium 均 412），仅首页内联栏可读，持续按「未获取来源」记录。
 - **甘肃**：412 持续不可达。
+
+### 2026-11-23 期新增／修正（第 87 期实测）
+
+> **本期最大教训：窗口口径造成系统性盲区。** 第 86 期窗口按「前日 07:00 至当日 07:30」滚动 24 小时设计，而子代理多在 07:00—07:30 启动检索，**「前日 07:00 至前日 17:30」这 10 小时成为固定盲区**；6 条收录件（北京 555号、南宁 438号 与联合抽查、银川质量与巡查整改、佛山租赁通报）挂网时间集中在 **11-20 16:39—17:28**，恰落该区间，第 86 期全部漏采。**后续派单统一改为「按发布日期倒查 3 个自然日」，不再用滚动 24 小时。**
+
+- **杭州**：`cxjw.hangzhou.gov.cn` **栏目页已变为空壳页（10.5 KB）**，「首页 title 内联可直接抓 art 链接」的旧结论**作废**；改调 JPAAS：webId=3232、tplSetId=zSjHGhwwTGtHWwuV6OwMD、tagId=**国务院List**、pageId=1692623，条目正则 `exchange_content_item_time`。`fgj.hangzhou.gov.cn` 房产交易栏 `col1229265248` 仍是 `location.href` 回首页壳页（1.8 KB）。
+- **宁波**：条目结构为 `<a class="label-text">` ＋ `<div class="time">`（**与杭州 `<li>` 结构不同**）；本期 `totalRecord` 非 0，接口正常（上期「恒返 0」为间歇）。
+- **上海**：`/zdgk/index.html` **单页 10 条常为同日批量发布**，判零新增必须并读 `index_2.html`（第 2 页），否则会误判「全站最新＝11-13」。
+- **深圳**：政策法规栏是**表格**结构（`td.t3` 日期 ＋ `td.wh.t4` 文号），**不是** `<li><span>YY-MM-DD</span>`；`/xxgk/tzgg/` 实测 **302 回首页镜像**，真实通知列表未暴露。
+- **山东**：`search.jsp` 返回「共 1980 条」却**无任何条目行**（十种参数组合均如此），该接口**账面可用、实际不可用**；https 持续 502、http 200（首页 `Maketime` 11-23 01:40，说明站点在运行）。
+- **江苏**：xxgk 接口各 infotypeId **全部返回「共 0 条」**，须**留空** infotypeId 才返回全站 1866 条（无法按栏目切分）。
+- **安徽**：`/site/label/8888` **只传 catId 会恒返「系统繁忙」（31 B）**；须按页面 `action=list` 的**全参数**（含 `catIds`、`file=/jh4/zjt/xxgk/publicInfoList_newest2022`）调用；栏目树在 `/6804621/6991.js`。
+- **江西**：`-articleList.json` 已 **404**；改读列表页 HTML 内嵌 **`var articleList`**（可取文号与 pubDate）。
+- **湖南**：栏目目录 403；首页「页面生成时间」可作零新增佐证（本期 11-21 13:47:55）。
+- **四川**：`tonggao/`、`gongshitg/` 目录 **403**，`c101416` 等栏目已 404；可读列表为 `c101428/article_list.shtml`（分页 `_2`）。
+- **河北**：https 首页 **200 可读**（http 302→https），但**栏目与详情仍全 412**；首页内联仅能作「有无新增」定性判断，**任何河北条目须详情可读方可入简报**。
+- **黑龙江**：须用 `/zfcxjst/c114764/public_list.shtml`，直接 `/c114764/` 返 403。
+- **山西**：实域 `zjt.shanxi.gov.cn`（任务书 `zjj.*` 为 NXDOMAIN）。
+- **内蒙古**：`/zwgk/zcwj/` 404，改 `/zwgk/zcfg/`。
+- **南宁**：`zjj.nanning.gov.cn` 政策文件栏 `/xxgk/fdzdgknr/zcwjcx/` 可读（详情页 `<title>` 带栏目前后缀，标题比对须去尾缀）；市场管理栏 `/dtzx/tzgg/scgl_37653/`。
+- **银川**：子站 `zjj.yinchuan.gov.cn` 不可达；改**银川市政府门户** `www.yinchuan.gov.cn` 住建局信息公开（`/xxgk/bmxxgkml/szjj_2202/xxgkml_2205/bmqtwj_2213/`），**页面同时有「成文日期」与「发布日期」两个字段，须双记**（本期巡查整改通知成文 11-16、挂网 11-20）。
+- **佛山**：`fszj.foshan.gov.cn/zwgk/txgg/content/post_*.html`，`<title>` 仅站名，标题在 `<meta ArticleTitle>`（**含 `<br/>` 需清理**）。
+- **北京**：规范性文件栏 `/bjjs/xxgk/zcwj2024/gfxwj40/xxyx/`；**详情页 `_yfx_pubtime` 为挂网日、正文落款为成文日**，两者常差 2 日；`<meta PubDate>` 只到日。
+- **烟台**：**站内检索 `jsearch/search.do` 关键词不生效**（返回全站信息流，「保租」命中 0 次），**不可作为任何结论的证据**（第 2 期确认）；必须走栏目接口。门户 col43171 接口 `paramJson` 须紧凑 JSON。
+- **雅安／泰州**：泰州住建局真实域名 **`jsj.taizhou.gov.cn`**（200，站点标题含「住房和城乡建设」），**`zjj.taizhou.gov.cn` 为市政府**——两者易混，务必核站点标题。
+- **domains 陷阱补记**：无锡 `zjj.wuxi.gov.cn`＝民族宗教事务局；扬州、聊城 `zjj.*` 亦非住建局；台州与泰州同 `zjj.` 前缀易混。
