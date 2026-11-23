@@ -167,3 +167,24 @@
 - **烟台**：**站内检索 `jsearch/search.do` 关键词不生效**（返回全站信息流，「保租」命中 0 次），**不可作为任何结论的证据**（第 2 期确认）；必须走栏目接口。门户 col43171 接口 `paramJson` 须紧凑 JSON。
 - **雅安／泰州**：泰州住建局真实域名 **`jsj.taizhou.gov.cn`**（200，站点标题含「住房和城乡建设」），**`zjj.taizhou.gov.cn` 为市政府**——两者易混，务必核站点标题。
 - **domains 陷阱补记**：无锡 `zjj.wuxi.gov.cn`＝民族宗教事务局；扬州、聊城 `zjj.*` 亦非住建局；台州与泰州同 `zjj.` 前缀易混。
+
+### 2026-11-24 期新增／修正（第 88 期实测）
+
+- **住建部：JPAAS 文件库接口存在索引滞后（★重要）**。本期首页 `<meta MakeTime>` 已由 11-21 00:01:12 重建为 **2026-11-23 19:14:53**，但政策文件库接口（pageId=`vhiC3JxmPC8o7Lqg4Jw0E`）最新仍停 11-19；首页「政策发布」栏内联的 11-23 18:30 燃气执法案例通知，接口以 pageSize=10／30 两种参数均未返回。**判零新增须「接口＋首页内联＋详情页 PubDate」三读，不能只看接口最新日期。**
+  - 补：首页内联可正则提取 5 类政策性文件直链（`/gongkai/zc/wjk/art/...`），逐条读 `<meta PubDate>` 即可确认是否在窗口内（本期 4 条首页高亮政策件 PubDate 分别为 11-11、10-23、10-26、10-15，均在窗口外）。
+  - 征求意向栏 `/gongkai/fdzdgknr/zqyj/` 列表显示的是**截止日期**（12-15），不是发布日期，勿误判为新件。
+- **深圳**：`zjj.sz.gov.cn/xxgk/tzgg/content/post_*.html` 详情页 `<meta ArticleTitle>`／`<meta PubDate>`（精确到分钟）可读；清单页 `index_1.html` 仍 404，首页默认列表约 21 条。政策法规栏为表格结构（`td.t3` 日期＋`td.wh.t4` 文号）。
+- **佛山**：`fszj.foshan.gov.cn/zwgk/zcwj/jsgc/content/post_*.html` 为「部门规范性文件」栏（废止类通知在此，非 `/zwgk/txgg/`）；`<meta ArticleTitle>` 含 `<br/>` 需清理；`<title>` 仅站名。
+- **中山**：`jsj.zs.gov.cn/zwgk/gggs/content/post_*.html`，`<meta ArticleTitle>`／`PubDate` 可读；文号在正文首行「文号：中建通〔2026〕98号」，`<title>` 仅站名。
+- **贵州**：`zfcxjst.guizhou.gov.cn/zwgk/zcwj/zxwj/<yyyymm>/t<id>.html` 正文常仅一段「现印发给你们」，**制度条款在附件 docx**（`./P0<id>.docx` 相对路径）；可用 `zipfile` 读 `word/document.xml` 去标签取全文。
+- **宁波**：「其他文件」栏 col1229325543 的 `<meta PubDate>` 可能与列表日期差 1 日（甬建发42号列表 11-20、PubDate 11-19 15:36），**以 PubDate 为准判窗口**。
+- **上海**：`/zdgk/index.html` URL 中的 `20261123` 是**挂网路径月份**，非发文日；实例「延长《上海市建设工程定额管理实施细则》有效期」（沪建标定〔2026〕40号）`<meta PubDate>` 实为 **2026-02-02**。判窗口必须读 PubDate。
+- **陕西**：`zfcxjst.shaanxi.gov.cn` 已 **NXDOMAIN**，实域迁至 **`js.shaanxi.gov.cn`**（200 可读）。
+- **山东**：`search.jsp` 本期恢复可用（空 infotypeId 返回 6567 条），与此前「共 0 条」记载相反 → 标记为**间歇可用，仍需并读静态栏**。
+- **北京**：`bjjs.beijing.gov.cn` 本期 000，改用 **`zjw.beijing.gov.cn`**。
+- **四川**：`c101428/article_list.shtml` 最新 11-23（川建标函〔2026〕1190号 5 项地方标准），`_2` 分页为 10-21；`tonggao/`、`gongshitg/` 仍 403。
+- **河北**：https 首页 200，栏目与详情**仍全 412**（本期再次证实）。
+- **辽宁**：`/zjt/zmhd94/yjzj/<id>/index.shtml` 意见征集页「发布时间：2026年11月23日」可读，但**制度内容全在 doc 附件**、正文无量化指标。
+- **湖南**：省级搜索 API 可用，窗口内仅 1 条（职称评审公示）；`tzgg2zhyw` 目录 403。
+- **广西**：`zjt.gxzf.gov.cn/zfxxgk/fdzdgknr/yjzj1/t<id>.shtml`「意见征集」栏可直读（**用 http**），含 PubDate 到分钟；法规文件栏仍为 Vue 壳页。
+- **烟台**：局站政策法规 col22907 全量 59 条、门户部门文件 col99956 全量 99 条，可一次枚举判窗口；`jsearch` 关键词不生效复验确认（第 3 次）。烟建建管〔2026〕15号 详情页 404，正文以局站 09-10 版为准。
