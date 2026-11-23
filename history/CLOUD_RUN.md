@@ -83,6 +83,21 @@ git config user.name  "workbuddy-bot"
 git config user.email "xinggavin@foxmail.com"
 ```
 
+## 三·五、★ 发布前门禁（强制，2026-11-23 起）
+
+生成 HTML 之后、维护索引页与 push **之前**，必须执行：
+
+```bash
+python3 history/verify_brief.py --file 住建动态简报_YYYY-MM-DD.html
+```
+
+- **退出码 0 才允许继续**；退出码 1 表示存在阻断项，**禁止 commit / push**，须先修正再重跑。
+- 门禁检查五项：①**重复收录**（本期条目与全部历史期次按「文号细键→标题指纹→文号粗键＋标题相似度」三级比对）；②**页头统计与实际标签数一致**；③条目编号连续、div 标签平衡；④**tracking.json 同文号重复建档**；⑤条目链接非空。
+- 输出中 `[X]` 为阻断项，`[!]` 为提示（如同一机关同年同序号的**文号碰撞**、同期副本跳过），`[i]` 为信息。
+- 判定口径：任一被收录文件若在**更早的简报**中已作为正文条目出现，且本期标【首次出现】或【多次出现】，一律视为**重复收录**——因为同一文件第 2 次进正文的说法不成立（日报正文不重复收录同一文件）。唯一例外是【延续跟进】（征求意见稿→定稿、印发→施行等跨期进展），脚本自动放行并标注。
+
+**为什么要有这一步**：第 87 期（2026-11-23）曾把第 85 期已收录的北京 京建发〔2026〕555号 再次作为【首次出现】收录，原因是判重靠人工记忆与「整体推断」。**「我记得没采过」不是判重，「检索命中 0 次」才是。**
+
 ## 四、生成与维护索引页
 
 ```bash
@@ -100,6 +115,7 @@ cp 住建简报列表.html index.html
 
 ```bash
 cd site
+python3 history/verify_brief.py --file 住建动态简报_YYYY-MM-DD.html || { echo "门禁未通过，禁止发布"; exit 1; }
 git add -A
 git commit -m "每日简报 YYYY-MM-DD"
 git push origin main          # remote 应为 git@github.com:gavincilp/dailybrief.git
