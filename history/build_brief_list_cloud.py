@@ -297,7 +297,7 @@ def build_html(issues, today):
   <!-- 时间分层分组（新期在上；近一周默认展开） -->
 
 __BODY__
-  <div class="no-result" id="noResult">未找到匹配的简报，请尝试其他关键字。</div>
+  <div class="no-result" id="noResult">无匹配结果（请尝试其他关键字）</div>
 
   <div class="footer">
     住建政策每日简报 · 汇总索引 · 本页自动维护，每次生成当日简报后同步更新<br>
