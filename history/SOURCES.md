@@ -226,3 +226,21 @@
 - **云南**：`zfcxjst.yn.gov.cn` 正文偶为**扫描件图片（8 页）**，须逐页目视核读；页面 gzip 未声明 Content-Encoding 的旧问题仍在。
 - **南京**：`fcj.nanjing.gov.cn` 须带完整浏览器头；详情页 `<meta ArticleTitle>` 与标题一致，可作校验锚点。
 - **武汉**：`zcfg.json` 条数（110）与最新成文日（10-12）未变，但**字节数／MD5 会因既有条目字段微调而变化**（本期 86,533→86,608、MD5 变）→ **「零新增」硬证据只能用「条数＋最新日期」，不能用 MD5**。
+
+### 2026-11-27 期新增／修正（第 91 期实测）
+
+- **住建部**：全站 `<meta PubDate>` 批量改写**第 2 期证实**（抽查 09-21 河流流量测验标准、11-09 高处坠落 建安办函〔2026〕44号、11-18 辽宁造价电子证照 建办厅函〔2026〕273号，PubDate 现均为 11-25 17:5x）→ **窗口判定只用「政策发布栏挂网日＋文件库发文日期＋正文发布时间」**。首页 `MakeTime` 本期 11-26 19:51:53（与 11-26 19:51 挂网的工信部转载件对应）。**工作动态 pageId=`919e942639b5477d96e4c97471c61d9f` 的 tagId 须用「栏目-list」，用「内容1」返回空模板**；政策发布 pageId=`8soTiiRMg3k87m5e2CQit`。文件库 pageId=`vhiC3JxmPC8o7Lqg4Jw0E` 第 3 页可回溯到 11-04（90 条）。征求意见栏列表显示**截止日期**，勿当发布日。
+- **杭州（★重要）**：`cxjw.hangzhou.gov.cn` 征意页 `jpaas-jsurvey-web-server/front/dczj/showJsurveys.do?formId=…` **裸 curl 返回 403**，**带浏览器 UA 后 200**（本期实测）。征意页尾部有「发布时间：YYYY-MM-DD／截止时间：YYYY-MM-DD」两字段可直接读，落款为委名＋日期，无分钟。意见征集栏 `col1229800811` 的 index 为 JS 壳页，须从 JPAAS 列表取 `formId`。
+- **东莞**：`zjj.dg.gov.cn/.../content/post_*.html` **http 访问返回 301，须 `-L` 跟跳**；详情标题在 `<h1>`（无 ArticleTitle），`<meta PubDate>` 精确到秒（本期 11-26 11:20:18）；`gkmlpt/api/all/796?page=1&sid=1` 直出 JSON，**真实地址在 `post_url` 字段**（旧 `4/<id>/post_` 格式 404）。
+- **佛山**：`fszj.foshan.gov.cn/zwgk/txgg/content/post_*.html`，`<title>` 仅站名，标题在 `<meta ArticleTitle>`（**含 `<br/>` 需清理**）；`<meta PubDate>` 与正文「发布时间」同值，正文落款常早 1 日。
+- **杭州（续）**：`fgj.hangzhou.gov.cn` JPAAS webId=3107、tplSetId=tequEn2sVguRAoeaDLIw0（通知公告 list／法规 list）。
+- **广州**：部门文件真实通道为 `/gkmlpt/api/all/1090?page=1&sid=1`（JSON），规范性文件 1089；公文库详情页同时有「成文日期」与「发布日期」两字段（705号 成文 11-20／发布 11-24），**判窗口用发布日期**。
+- **山东**：https 仍 502、http 200；`search.jsp` 本期 **POST（jdid=14、divid=div160091、infotypeId=SD02，共 1655 条）可用**；通知公告详情正文有「发布日期:YYYY-MM-DD HH:MM」；规范性文件 SD020205 最新 06-25、政策解读 SD02020701 最新 11-23。
+- **福建**：旧域 `zfcxjst.fujian.gov.cn` 本期 **NXDOMAIN**，实域 **`zjt.fujian.gov.cn`**（`/xxgk/zxwj/`、`/xxgk/tzgg/` 最新均 11-17）。
+- **江苏**：省级列表 200（全文 1869 条），**详情页无完整浏览器头＋Referer 返回 403**；已由南京 `fcj.nanjing.gov.cn`、南通 `zj.nantong.gov.cn`、苏州 `zfcjj.suzhou.gov.cn` 三市兜底（苏州详情同样须 UA＋Referer，发布日期在「【发布日期 ：…】」字段）。
+- **湖北**：`gfxwj/zcwj.json` 已 **404**，由 `qtzdgkwj/zcwj.json`（1579 条）覆盖。
+- **上海**：`zjw.sh.gov.cn/zdgk/index.html` 须并读 `index_2.html`；本期两页 20 条中 10 条同日批量（meta PubDate 为 2026-02-02 旧文重挂），**从第 3 条起即到 11-05**。`fgj.sh.gov.cn` 主动公开 6 子栏最新 11-18（沪房物业〔2026〕162号）。
+- **武汉**：`zcfg.json` 110 条、86,608B、最新 DOCRELTIME 2026-10-12；「零新增」硬证据只用「条数＋最新日期」。`/zwdt/zgdt/` 住更动态最新 11-23。政策解读栏 11-25 挂网两条旧稿（PubDate 07-18／08-02，ContentSource 为「武汉发布」「长江日报」）。
+- **烟台（★接口变化）**：局站 col22907 **首调带 `paramJson` 返回「参数不合法！」**，须严格用页面原始参数（`parseType=bulidstatic&webId=179&tplSetId=GC2egDexn2qAbtVty6wAZ&pageType=column&tagId=当前栏目list&editType=null&pageId=<纯数字>`）；列表日期类名为 **`span.fr`**（非 `f_right`）。门户 col99956／99959／99961／11795／43171 的 JPAAS 返回条目**不带日期**，须逐条读详情 `<meta PubDate>`。CMS `class="yxx" title` 可读完整有效性表述（如绿建 2号「自 2023-12-10 施行、有效期至 2026-12-09」），`class="sxrq" title` 为毫秒时间戳；但 13号 等未按届满日刷新，**不可单独采信**。
+- **烟台（口径）**：门户部门文件栏窗口内出现**住房公积金中心**公文（烟住〔2026〕31／33／34号，成文 9 月、11-25 集中挂网）→ **属住房公积金类，按本简报筛选规则明确排除**，不因「挂网在住建栏目」而收录；如需留痕，只在台账段说明。
+- **判重铁律补例（2026-11-27）**：本期两例对照——①**苏州 苏州建函设〔2026〕202号**：11-24 挂网，第 90 期**已明判剔除**（年度行政检查工作安排），本期 G 组重新上报时**维持原判、不因新发现即反转**；②**湖南挂证通报**：第 90 期**已明判剔除**（个案查处），本期复核后**改判收录**，理由是内含可复用治理机制。→ **判重不仅要比「是否收录过」，还要比「是否已判过、判的理由是否仍成立」**；改判必须写明理由与新证据。
